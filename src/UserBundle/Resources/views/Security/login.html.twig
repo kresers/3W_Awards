@@ -1,0 +1,5 @@
+{% extends "UserBundle::base.html.twig" %}
+
+{% block fos_user_content %}
+    {{ include('@User/Security/login_content.html.twig') }}
+{% endblock fos_user_content %}
