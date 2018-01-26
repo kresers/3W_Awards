@@ -12,5 +12,5 @@ The team behind 3W Awards are a group of passionate developpers and project mana
 
 Branches names should always start with the detailed objective. 
 
-features/sliderHomepage
+features/sliderHomepage <br>
 fix/userBug
