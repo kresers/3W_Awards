@@ -1,3 +1,6 @@
+![alt text](https://i.imgur.com/zDdwdhH.png "Logo Title Text 1") &nbsp;
+![alt text](https://i.imgur.com/Mvxn8pr.png "Logo Title Text 1")
+
 # 3W Awards
 
 Welcome to the 3W Awards project. 
@@ -14,3 +17,4 @@ Branches names should always start with the detailed objective.
 
 features/sliderHomepage <br>
 fix/userBug
+
