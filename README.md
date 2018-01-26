@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/oZJqG0E.png "Logo Title Text 1") &nbsp;
+![alt text](https://i.imgur.com/oZJqG0E.png "Logo Title Text 1") <br>
 ![alt text](https://i.imgur.com/zDdwdhH.png "Logo Title Text 1") &nbsp;
 ![alt text](https://i.imgur.com/Mvxn8pr.png "Logo Title Text 1")
 
