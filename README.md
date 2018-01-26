@@ -7,3 +7,10 @@ Welcome to the 3W Awards project.
 Anyone with a website will be able to publish there work on 3w Awards and receive ratings and maybe become nominated for awards ! 
 
 The team behind 3W Awards are a group of passionate developpers and project managers.
+
+# Workflow
+
+Branches names should always start with the detailed objective. 
+
+features/sliderHomepage
+fix/userBug
