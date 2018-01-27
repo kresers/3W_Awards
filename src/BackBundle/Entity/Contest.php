@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Contests
+ * Contest
  *
- * @ORM\Table(name="contests")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\ContestsRepository")
+ * @ORM\Table(name="contest")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\ContestRepository")
  */
-class Contests
+class Contest
 {
     /**
      * @var int
@@ -38,14 +38,14 @@ class Contests
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="contest_date", type="datetimetz")
+     * @ORM\Column(name="contest_date", type="datetime")
      */
     private $contestDate;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="contestant", type="integer")
+     * @ORM\Column(name="contestant", type="string", length=255)
      */
     private $contestant;
 
@@ -79,7 +79,7 @@ class Contests
      *
      * @param string $libelle
      *
-     * @return Contests
+     * @return Contest
      */
     public function setLibelle($libelle)
     {
@@ -103,7 +103,7 @@ class Contests
      *
      * @param integer $winnerId
      *
-     * @return Contests
+     * @return Contest
      */
     public function setWinnerId($winnerId)
     {
@@ -127,7 +127,7 @@ class Contests
      *
      * @param \DateTime $contestDate
      *
-     * @return Contests
+     * @return Contest
      */
     public function setContestDate($contestDate)
     {
@@ -151,7 +151,7 @@ class Contests
      *
      * @param integer $contestant
      *
-     * @return Contests
+     * @return Contest
      */
     public function setContestant($contestant)
     {
@@ -175,7 +175,7 @@ class Contests
      *
      * @param integer $memberRating
      *
-     * @return Contests
+     * @return Contest
      */
     public function setMemberRating($memberRating)
     {
@@ -199,7 +199,7 @@ class Contests
      *
      * @param integer $juryRating
      *
-     * @return Contests
+     * @return Contest
      */
     public function setJuryRating($juryRating)
     {

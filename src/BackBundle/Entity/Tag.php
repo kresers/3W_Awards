@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Categories
+ * Tag
  *
- * @ORM\Table(name="categories")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\CategoriesRepository")
+ * @ORM\Table(name="tag")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\TagRepository")
  */
-class Categories
+class Tag
 {
     /**
      * @var int
@@ -44,7 +44,7 @@ class Categories
      *
      * @param string $libelle
      *
-     * @return Categories
+     * @return Tag
      */
     public function setLibelle($libelle)
     {
