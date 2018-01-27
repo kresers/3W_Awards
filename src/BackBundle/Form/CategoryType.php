@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class TechnologiesType extends AbstractType
+class CategoryType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -20,7 +20,7 @@ class TechnologiesType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BackBundle\Entity\Technologies'
+            'data_class' => 'BackBundle\Entity\Category'
         ));
     }
 
@@ -29,7 +29,7 @@ class TechnologiesType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'backbundle_technologies';
+        return 'backbundle_categories';
     }
 
 

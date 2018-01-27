@@ -6,21 +6,21 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ContestsType extends AbstractType
+class WebsiteTypeType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('libelle')->add('winnerId')->add('contestDate')->add('contestant')->add('memberRating')->add('juryRating');
+        $builder->add('libelle');
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BackBundle\Entity\Contests'
+            'data_class' => 'BackBundle\Entity\WebsiteType'
         ));
     }
 
@@ -29,7 +29,7 @@ class ContestsType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'backbundle_contests';
+        return 'backbundle_websitestype';
     }
 
 

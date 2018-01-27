@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CategoriesType extends AbstractType
+class ColorType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -20,7 +20,7 @@ class CategoriesType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BackBundle\Entity\Categories'
+            'data_class' => 'BackBundle\Entity\Color'
         ));
     }
 
@@ -29,7 +29,7 @@ class CategoriesType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'backbundle_categories';
+        return 'backbundle_colors';
     }
 
 
