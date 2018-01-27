@@ -3,8 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
-    ],
-    "content-hash": "c95aa8745a0c5707b0b1133c35116925",
+    "content-hash": "e321119dfe6d73af314da9c8855f0d46",
     "packages": [
         {
             "name": "composer/ca-bundle",
