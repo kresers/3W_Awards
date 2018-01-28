@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Websites
+ * Website
  *
- * @ORM\Table(name="websites")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\WebsitesRepository")
+ * @ORM\Table(name="website")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\WebsiteRepository")
  */
-class Websites
+class Website
 {
     /**
      * @var int
@@ -149,7 +149,7 @@ class Websites
      *
      * @param string $libelle
      *
-     * @return Websites
+     * @return Website
      */
     public function setLibelle($libelle)
     {
@@ -173,7 +173,7 @@ class Websites
      *
      * @param string $description
      *
-     * @return Websites
+     * @return Website
      */
     public function setDescription($description)
     {
@@ -197,7 +197,7 @@ class Websites
      *
      * @param string $activitySector
      *
-     * @return Websites
+     * @return Website
      */
     public function setActivitySector($activitySector)
     {
@@ -221,7 +221,7 @@ class Websites
      *
      * @param string $object
      *
-     * @return Websites
+     * @return Website
      */
     public function setObject($object)
     {
@@ -245,7 +245,7 @@ class Websites
      *
      * @param float $budget
      *
-     * @return Websites
+     * @return Website
      */
     public function setBudget($budget)
     {
@@ -269,7 +269,7 @@ class Websites
      *
      * @param string $languages
      *
-     * @return Websites
+     * @return Website
      */
     public function setLanguages($languages)
     {
@@ -293,7 +293,7 @@ class Websites
      *
      * @param string $target
      *
-     * @return Websites
+     * @return Website
      */
     public function setTarget($target)
     {
@@ -317,7 +317,7 @@ class Websites
      *
      * @param string $editedBy
      *
-     * @return Websites
+     * @return Website
      */
     public function setEditedBy($editedBy)
     {
@@ -341,7 +341,7 @@ class Websites
      *
      * @param string $customerName
      *
-     * @return Websites
+     * @return Website
      */
     public function setCustomerName($customerName)
     {
@@ -365,7 +365,7 @@ class Websites
      *
      * @param string $customerSize
      *
-     * @return Websites
+     * @return Website
      */
     public function setCustomerSize($customerSize)
     {
@@ -389,7 +389,7 @@ class Websites
      *
      * @param string $credits
      *
-     * @return Websites
+     * @return Website
      */
     public function setCredits($credits)
     {
@@ -413,7 +413,7 @@ class Websites
      *
      * @param \DateTime $publishedAt
      *
-     * @return Websites
+     * @return Website
      */
     public function setPublishedAt($publishedAt)
     {
@@ -437,7 +437,7 @@ class Websites
      *
      * @param string $pictures
      *
-     * @return Websites
+     * @return Website
      */
     public function setPictures($pictures)
     {
@@ -461,7 +461,7 @@ class Websites
      *
      * @param string $styles
      *
-     * @return Websites
+     * @return Website
      */
     public function setStyles($styles)
     {
@@ -485,7 +485,7 @@ class Websites
      *
      * @param string $comportments
      *
-     * @return Websites
+     * @return Website
      */
     public function setComportments($comportments)
     {
@@ -509,7 +509,7 @@ class Websites
      *
      * @param integer $accessibility
      *
-     * @return Websites
+     * @return Website
      */
     public function setAccessibility($accessibility)
     {
