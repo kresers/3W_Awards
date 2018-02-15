@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Technologies
+ * WebsiteType
  *
- * @ORM\Table(name="technologies")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\TechnologiesRepository")
+ * @ORM\Table(name="website_type")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\WebsiteTypeRepository")
  */
-class Technologies
+class WebsiteType
 {
     /**
      * @var int
@@ -44,7 +44,7 @@ class Technologies
      *
      * @param string $libelle
      *
-     * @return Technologies
+     * @return WebsiteType
      */
     public function setLibelle($libelle)
     {

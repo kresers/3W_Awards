@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Colors
+ * Color
  *
- * @ORM\Table(name="colors")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\ColorsRepository")
+ * @ORM\Table(name="color")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\ColorRepository")
  */
-class Colors
+class Color
 {
     /**
      * @var int
@@ -44,7 +44,7 @@ class Colors
      *
      * @param string $libelle
      *
-     * @return Colors
+     * @return Color
      */
     public function setLibelle($libelle)
     {

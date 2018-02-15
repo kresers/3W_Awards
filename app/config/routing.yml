@@ -1,3 +1,8 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 back:
     resource: "@BackBundle/Controller/"
     type:     annotation
@@ -6,4 +11,7 @@ front:
     resource: "@FrontBundle/Controller/"
     type:     annotation
     prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
