@@ -2,8 +2,7 @@ services:
     back.util.crud:
         class: BackBundle\Util\Crud
         arguments:
-            - "@doctrine.orm.entity_manager"
-            - "@templating"
+            - "@service_container"
     submit_listener:
         class: BackBundle\EventListener\SubmitListener
         tags:
