@@ -63,4 +63,3 @@ class CategoryAwards
         return $this->label;
     }
 }
-

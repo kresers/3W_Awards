@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="parameters")
  * @ORM\Entity(repositoryClass="BackBundle\Repository\parametersRepository")
  */
-class parameters
+class Parameters
 {
     /**
      * @var int
@@ -24,226 +24,16 @@ class parameters
     /**
      * @var string
      *
-     * @ORM\Column(name="applicationNale", type="string", length=255)
+     * @ORM\Column(name="libelle", type="string", length=255)
      */
-    private $applicationNale;
+    private $libelle;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
+     * @ORM\Column(name="value", type="string", length=255)
      */
-    private $logo;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="adress", type="string", length=255)
-     */
-    private $adress;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="adress2", type="string", length=255)
-     */
-    private $adress2;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="phoneNumber", type="integer")
-     */
-    private $phoneNumber;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="fax", type="string", length=255)
-     */
-    private $fax;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="emailRequest", type="string", length=255)
-     */
-    private $emailRequest;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="ponderationNote", type="integer")
-     */
-    private $ponderationNote;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="ponderationNoteMembers", type="integer")
-     */
-    private $ponderationNoteMembers;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="numberOfScreens", type="integer")
-     */
-    private $numberOfScreens;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="sizeMaxUpload", type="integer")
-     */
-    private $sizeMaxUpload;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="numberMaxTags", type="integer")
-     */
-    private $numberMaxTags;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="type", type="string", length=255)
-     */
-    private $type;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="category", type="string", length=255)
-     */
-    private $category;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="numberOfStaff", type="integer")
-     */
-    private $numberOfStaff;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="revenue", type="integer")
-     */
-    private $revenue;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="websiteType", type="string", length=255)
-     */
-    private $websiteType;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="target", type="string", length=255)
-     */
-    private $target;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="graphicalStyle", type="string", length=255)
-     */
-    private $graphicalStyle;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="behavior", type="string", length=255)
-     */
-    private $behavior;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="countries", type="string", length=255)
-     */
-    private $countries;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="languages", type="string", length=255)
-     */
-    private $languages;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="mainColors", type="string", length=255)
-     */
-    private $mainColors;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="cms", type="string", length=255)
-     */
-    private $cms;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="frameworks", type="string", length=255)
-     */
-    private $frameworks;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="devLanguage", type="string", length=255)
-     */
-    private $devLanguage;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="techFront", type="string", length=255)
-     */
-    private $techFront;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="missions", type="string", length=255)
-     */
-    private $missions;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="evaluations", type="string", length=255)
-     */
-    private $evaluations;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="professions", type="string", length=255)
-     */
-    private $professions;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="socialNetworks", type="string", length=255)
-     */
-    private $socialNetworks;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="blogCategories", type="string", length=255)
-     */
-    private $blogCategories;
+    private $value;
 
 
     /**
@@ -1023,5 +813,52 @@ class parameters
     {
         return $this->blogCategories;
     }
-}
 
+    /**
+     * Set libelle
+     *
+     * @param string $libelle
+     *
+     * @return Parameters
+     */
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Get libelle
+     *
+     * @return string
+     */
+    public function getLibelle()
+    {
+        return $this->libelle;
+    }
+
+    /**
+     * Set value
+     *
+     * @param string $value
+     *
+     * @return Parameters
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+
+    /**
+     * Get value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+}
