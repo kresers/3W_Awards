@@ -58,29 +58,28 @@ class LoadContestData implements FixtureInterface{
                 'tab_juryRating'       => '19',
                 'tab_memberRating'     => '17',
             ],
-
         ];
 
         $ind=0;
 
 
-            foreach ($tab_contest as $item){
-                $exist_contest = $manager->getRepository('BackBundle:Contest')->findOneBy(
-                    ['libelle' => $item]
-                );
-                $item['tab_contestDate'] = new \DateTime();
+        foreach ($tab_contest as $item){
+            $exist_contest = $manager->getRepository('BackBundle:Contest')->findOneBy(
+                ['libelle' => $item]
+            );
+            $item['tab_contestDate'] = new \DateTime();
 
-                if ($exist_contest == '') {
-                    $contest = new Contest();
-                    $contest->setLibelle($item['tab_contest']);
-                    $contest->setContestant($item['tab_contestant']);
-                    $contest->setWinnerId($item['tab_winner_id']);
-                    $contest->setContestDate($item['tab_contestDate']);
-                    $contest->setJuryRating($item['tab_juryRating']);
-                    $contest->setMemberRating($item['tab_memberRating']);
-                    $manager->persist($contest);
-                }
-                $ind++;
+            if ($exist_contest == '') {
+                $contest = new Contest();
+                $contest->setLibelle($item['tab_contest']);
+                $contest->setContestant($item['tab_contestant']);
+                $contest->setWinnerId($item['tab_winner_id']);
+                $contest->setContestDate($item['tab_contestDate']);
+                $contest->setJuryRating($item['tab_juryRating']);
+                $contest->setMemberRating($item['tab_memberRating']);
+                $manager->persist($contest);
+            }
+            $ind++;
         }
         $manager->flush();
     }
