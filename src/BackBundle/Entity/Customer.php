@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * agency
+ * customer
  *
- * @ORM\Table(name="agency")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\agencyRepository")
+ * @ORM\Table(name="customer")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\customerRepository")
  */
-class agency
+class Customer
 {
     /**
      * @var int
@@ -34,6 +34,13 @@ class agency
      * @ORM\Column(name="country", type="string", length=255)
      */
     private $country;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
 
     /**
      * @var string
@@ -133,14 +140,12 @@ class agency
      */
     private $revenue;
 
-
     /**
      * @var string
      *
      * @ORM\Column(name="website", type="string", length=255)
      */
     private $website;
-
 
     /**
      * @var int
@@ -152,9 +157,16 @@ class agency
     /**
      * @var int
      *
-     * @ORM\Column(name="numberDuns", type="integer")
+     * @ORM\Column(name="numeroDuns", type="integer")
      */
-    private $numberDuns;
+    private $numeroDuns;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="admin", type="string", length=255)
+     */
+    private $admin;
 
 
     /**
@@ -172,7 +184,7 @@ class agency
      *
      * @param string $name
      *
-     * @return agency
+     * @return customer
      */
     public function setName($name)
     {
@@ -196,7 +208,7 @@ class agency
      *
      * @param string $country
      *
-     * @return agency
+     * @return customer
      */
     public function setCountry($country)
     {
@@ -216,27 +228,51 @@ class agency
     }
 
     /**
-     * Set categories
+     * Set type
      *
-     * @param string $categories
+     * @param string $type
      *
-     * @return agency
+     * @return customer
      */
-    public function setCategories($categories)
+    public function setType($type)
     {
-        $this->categories = $categories;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get categories
+     * Get type
      *
      * @return string
      */
-    public function getCategories()
+    public function getType()
     {
-        return $this->categories;
+        return $this->type;
+    }
+
+    /**
+     * Set ctegories
+     *
+     * @param string $ctegories
+     *
+     * @return customer
+     */
+    public function setCtegories($ctegories)
+    {
+        $this->ctegories = $ctegories;
+
+        return $this;
+    }
+
+    /**
+     * Get ctegories
+     *
+     * @return string
+     */
+    public function getCtegories()
+    {
+        return $this->ctegories;
     }
 
     /**
@@ -244,7 +280,7 @@ class agency
      *
      * @param string $logo
      *
-     * @return agency
+     * @return customer
      */
     public function setLogo($logo)
     {
@@ -268,7 +304,7 @@ class agency
      *
      * @param string $adress
      *
-     * @return agency
+     * @return customer
      */
     public function setAdress($adress)
     {
@@ -292,7 +328,7 @@ class agency
      *
      * @param string $adress2
      *
-     * @return agency
+     * @return customer
      */
     public function setAdress2($adress2)
     {
@@ -316,7 +352,7 @@ class agency
      *
      * @param integer $postalCode
      *
-     * @return agency
+     * @return customer
      */
     public function setPostalCode($postalCode)
     {
@@ -340,7 +376,7 @@ class agency
      *
      * @param string $city
      *
-     * @return agency
+     * @return customer
      */
     public function setCity($city)
     {
@@ -364,7 +400,7 @@ class agency
      *
      * @param integer $phoneNumber
      *
-     * @return agency
+     * @return customer
      */
     public function setPhoneNumber($phoneNumber)
     {
@@ -388,7 +424,7 @@ class agency
      *
      * @param string $fax
      *
-     * @return agency
+     * @return customer
      */
     public function setFax($fax)
     {
@@ -412,7 +448,7 @@ class agency
      *
      * @param string $presentation
      *
-     * @return agency
+     * @return customer
      */
     public function setPresentation($presentation)
     {
@@ -436,7 +472,7 @@ class agency
      *
      * @param string $expertise
      *
-     * @return agency
+     * @return customer
      */
     public function setExpertise($expertise)
     {
@@ -460,7 +496,7 @@ class agency
      *
      * @param string $notes
      *
-     * @return agency
+     * @return customer
      */
     public function setNotes($notes)
     {
@@ -484,7 +520,7 @@ class agency
      *
      * @param \DateTime $creationDate
      *
-     * @return agency
+     * @return customer
      */
     public function setCreationDate($creationDate)
     {
@@ -508,7 +544,7 @@ class agency
      *
      * @param integer $staffNumber
      *
-     * @return agency
+     * @return customer
      */
     public function setStaffNumber($staffNumber)
     {
@@ -532,7 +568,7 @@ class agency
      *
      * @param integer $revenue
      *
-     * @return agency
+     * @return customer
      */
     public function setRevenue($revenue)
     {
@@ -556,7 +592,7 @@ class agency
      *
      * @param string $website
      *
-     * @return agency
+     * @return customer
      */
     public function setWebsite($website)
     {
@@ -580,7 +616,7 @@ class agency
      *
      * @param integer $tvaNumber
      *
-     * @return agency
+     * @return customer
      */
     public function setTvaNumber($tvaNumber)
     {
@@ -592,7 +628,7 @@ class agency
     /**
      * Get tvaNumber
      *
-     * @return integer
+     * @return int
      */
     public function getTvaNumber()
     {
@@ -600,26 +636,51 @@ class agency
     }
 
     /**
-     * Set numberDuns
+     * Set numeroDuns
      *
-     * @param integer $numberDuns
+     * @param integer $numeroDuns
      *
-     * @return agency
+     * @return customer
      */
-    public function setNumberDuns($numberDuns)
+    public function setNumeroDuns($numeroDuns)
     {
-        $this->numberDuns = $numberDuns;
+        $this->numeroDuns = $numeroDuns;
 
         return $this;
     }
 
     /**
-     * Get numberDuns
+     * Get numeroDuns
      *
-     * @return integer
+     * @return int
      */
-    public function getNumberDuns()
+    public function getNumeroDuns()
     {
-        return $this->numberDuns;
+        return $this->numeroDuns;
+    }
+
+    /**
+     * Set admin
+     *
+     * @param string $admin
+     *
+     * @return customer
+     */
+    public function setAdmin($admin)
+    {
+        $this->admin = $admin;
+
+        return $this;
+    }
+
+    /**
+     * Get admin
+     *
+     * @return string
+     */
+    public function getAdmin()
+    {
+        return $this->admin;
     }
 }
+

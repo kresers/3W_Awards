@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="awards")
  * @ORM\Entity(repositoryClass="BackBundle\Repository\awardsRepository")
  */
-class awards
+class Awards
 {
     /**
      * @var int
