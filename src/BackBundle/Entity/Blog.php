@@ -218,4 +218,3 @@ class Blog
         return $this->description;
     }
 }
-
