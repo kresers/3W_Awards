@@ -2,3 +2,7 @@ services:
 #    back.example:
 #        class: BackBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+  submit_listener:
+      class: BackBundle\EventListener\SubmitListener
+      tags:
+        - { name: doctrine.event_listener , event: onSubmitChange  }
