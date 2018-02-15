@@ -168,6 +168,18 @@ class Customer
      */
     private $admin;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\CategoryAwards")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categoryAwards;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Agency", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $agency;
+
 
     /**
      * Get id
@@ -682,5 +694,93 @@ class Customer
     {
         return $this->admin;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->agency = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Set categories
+     *
+     * @param string $categories
+     *
+     * @return Customer
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return string
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set categoryAwards
+     *
+     * @param \BackBundle\Entity\CategoryAwards $categoryAwards
+     *
+     * @return Customer
+     */
+    public function setCategoryAwards(\BackBundle\Entity\CategoryAwards $categoryAwards)
+    {
+        $this->categoryAwards = $categoryAwards;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryAwards
+     *
+     * @return \BackBundle\Entity\CategoryAwards
+     */
+    public function getCategoryAwards()
+    {
+        return $this->categoryAwards;
+    }
+
+    /**
+     * Add agency
+     *
+     * @param \BackBundle\Entity\Agency $agency
+     *
+     * @return Customer
+     */
+    public function addAgency(\BackBundle\Entity\Agency $agency)
+    {
+        $this->agency[] = $agency;
+
+        return $this;
+    }
+
+    /**
+     * Remove agency
+     *
+     * @param \BackBundle\Entity\Agency $agency
+     */
+    public function removeAgency(\BackBundle\Entity\Agency $agency)
+    {
+        $this->agency->removeElement($agency);
+    }
+
+    /**
+     * Get agency
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAgency()
+    {
+        return $this->agency;
+    }
+}

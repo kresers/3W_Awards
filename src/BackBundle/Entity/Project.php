@@ -189,6 +189,20 @@ class Project
      */
     private $averageJuryGrade;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\CategoryAwards")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categoryAwards;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Customer")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $customer;
+
+
 
     /**
      * Get id
@@ -775,5 +789,52 @@ class Project
     {
         return $this->averageJuryGrade;
     }
-}
 
+    /**
+     * Set categoryAwards
+     *
+     * @param \BackBundle\Entity\CategoryAwards $categoryAwards
+     *
+     * @return Project
+     */
+    public function setCategoryAwards(\BackBundle\Entity\CategoryAwards $categoryAwards)
+    {
+        $this->categoryAwards = $categoryAwards;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryAwards
+     *
+     * @return \BackBundle\Entity\CategoryAwards
+     */
+    public function getCategoryAwards()
+    {
+        return $this->categoryAwards;
+    }
+
+    /**
+     * Set customer
+     *
+     * @param \BackBundle\Entity\Customer $customer
+     *
+     * @return Project
+     */
+    public function setCustomer(\BackBundle\Entity\Customer $customer)
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Get customer
+     *
+     * @return \BackBundle\Entity\Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+}
