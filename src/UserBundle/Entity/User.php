@@ -121,6 +121,11 @@ class User extends BaseUser
      */
     protected $optIn;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Project", cascade={"persist"})
+     */
+    protected $project;
+
 
     public function __construct()
     {

@@ -156,6 +156,11 @@ class Agency
      */
     private $numberDuns;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Customer", cascade={"persist"})
+     */
+    private $customer;
+
 
     /**
      * Get id
@@ -621,5 +626,46 @@ class Agency
     public function getNumberDuns()
     {
         return $this->numberDuns;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->customer = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add customer
+     *
+     * @param \BackBundle\Entity\Customer $customer
+     *
+     * @return Agency
+     */
+    public function addCustomer(\BackBundle\Entity\Customer $customer)
+    {
+        $this->customer[] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Remove customer
+     *
+     * @param \BackBundle\Entity\Customer $customer
+     */
+    public function removeCustomer(\BackBundle\Entity\Customer $customer)
+    {
+        $this->customer->removeElement($customer);
+    }
+
+    /**
+     * Get customer
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
     }
 }
