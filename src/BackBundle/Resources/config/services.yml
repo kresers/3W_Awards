@@ -1,4 +1,6 @@
 services:
-#    back.example:
-#        class: BackBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    back.util.crud:
+        class: BackBundle\Util\Crud
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@templating"
