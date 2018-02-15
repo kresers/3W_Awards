@@ -44,9 +44,5 @@ class HomeController extends Controller
         }
         $formview = $form->createView();
         return $this->render('@Back/Home/formulaire.html.twig',array('lesForm'=>$listForm,'form'=>$formview));
-
-
-
-
     }
 }
