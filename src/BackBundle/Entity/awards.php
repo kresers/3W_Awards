@@ -5,12 +5,12 @@ namespace BackBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Awards
+ * awards
  *
  * @ORM\Table(name="awards")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\AwardsRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\awardsRepository")
  */
-class Awards
+class awards
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Awards
     /**
      * @var string
      *
-     * @ORM\Column(name="libelle", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $libelle;
+    private $name;
 
 
     /**
@@ -40,27 +40,27 @@ class Awards
     }
 
     /**
-     * Set libelle
+     * Set name
      *
-     * @param string $libelle
+     * @param string $name
      *
-     * @return Awards
+     * @return awards
      */
-    public function setLibelle($libelle)
+    public function setName($name)
     {
-        $this->libelle = $libelle;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get libelle
+     * Get name
      *
      * @return string
      */
-    public function getLibelle()
+    public function getName()
     {
-        return $this->libelle;
+        return $this->name;
     }
 }
 

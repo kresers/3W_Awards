@@ -43,7 +43,7 @@ class LoadContestData implements FixtureInterface{
                 'tab_memberRating'      => '17',
             ],
             [
-                'tab_contest'           => 'Compétition pour l\'awards du meilleur site agence',
+                'tab_contest'           => 'Compétition pour l\'awards du meilleur site agency',
                 'tab_contestant'        => 'Agence isaris',
                 'tab_winner_id'         => '5',
                 'tab_contestDate'       => '01/05/2018',
