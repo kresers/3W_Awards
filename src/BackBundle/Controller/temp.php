@@ -58,7 +58,6 @@ class LoadContestData implements FixtureInterface{
                 'tab_juryRating'       => '19',
                 'tab_memberRating'     => '17',
             ],
-
         ];
 
         $ind=0;
