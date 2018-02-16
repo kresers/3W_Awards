@@ -13,7 +13,9 @@ class ParametersType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('applicationNale')->add('logo')->add('adress')->add('adress2')->add('phoneNumber')->add('fax')->add('emailRequest')->add('ponderationNote')->add('ponderationNoteMembers')->add('numberOfScreens')->add('sizeMaxUpload')->add('numberMaxTags')->add('type')->add('category')->add('numberOfStaff')->add('revenue')->add('websiteType')->add('target')->add('graphicalStyle')->add('behavior')->add('countries')->add('languages')->add('mainColors')->add('cms')->add('frameworks')->add('devLanguage')->add('techFront')->add('missions')->add('evaluations')->add('professions')->add('socialNetworks')->add('blogCategories');
+        $builder
+            ->add('logo')
+            ->add('value');
     }/**
      * {@inheritdoc}
      */
@@ -31,6 +33,4 @@ class ParametersType extends AbstractType
     {
         return 'backbundle_parameters';
     }
-
-
 }
