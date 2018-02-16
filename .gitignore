@@ -19,7 +19,6 @@
 # Managed by Composer
 /back/app/bootstrap.php.cache
 /back/var/bootstrap.php.cache
-/back/bin/*
 
 # Assets and user uploads
 /back/web/bundles/
@@ -36,11 +35,12 @@
 /back/**/Entity/*~
 
 #the phpStorm file ...
-/back/.idea/*
+/.idea/*
+.idea/workspace.xml
 
 #the vendor ...
-/vendor/*
+/back/vendor/*
 
 #parce que bordas à MAC  !!!!
-app/config/parameters.yml
+back/app/config/parameters.yml
 .DS_Store
