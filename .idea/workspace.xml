@@ -2,203 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eda288a2-0eb2-4bb4-ae1d-518765b5b3c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/AppCache.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/nav.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_prod.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_test.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/console" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build_all.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/composer.phar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/3wawards-1.3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/CharteGraphique1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/CharteGraphique2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Fiche.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Footer.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Home.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Home1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Home1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/Navbar.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/css/animate.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/css/demo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/css/paper-dashboard.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/css/themify-icons.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/fonts/themify.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/fonts/themify.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/fonts/themify.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/fonts/themify.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/apple-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/faces/face-0.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/faces/face-1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/faces/face-2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/faces/face-3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/favicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/new_logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/img/tim_80x80.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/bootstrap-checkbox-radio.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/bootstrap-notify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/chartist.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/demo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/jquery-1.10.2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/js/paper-dashboard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper-dashboard.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_alerts.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_cards.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_chartist.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_checkbox-radio.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_dropdown.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_footers.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_inputs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_misc.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_navbars.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_responsive.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_sidebar-and-main-panel.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_tables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_typography.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/_variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_cards.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_chartist.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_icons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_inputs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_labels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_navbars.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_sidebar.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_tabs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_transparency.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/assets/sass/paper/mixins/_vendor-prefixes.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/changelog.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/dashboard.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/documentation/css/documentation.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/documentation/documentation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/icons.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/maps.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/notifications.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/table.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/template.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/typography.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/upgrade.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/paper-dashboard-free-v1.1.2/user.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/BackBundle.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Controller/HomeController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Controller/temp.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Agency.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Awards.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Blog.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/CategoryAwards.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Customer.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Parameters.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Entity/Project.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/EventListener/SubmitListener.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/AgencyRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/AwardsRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/BlogRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/CategoryAwardsRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/CustomerRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/ParametersRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Repository/ProjectRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/config/services.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/css/animate.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/css/demo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/css/paper-dashboard.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/css/themify-icons.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/fonts/themify.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/fonts/themify.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/fonts/themify.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/fonts/themify.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/bootstrap-checkbox-radio.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/bootstrap-notify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/chartist.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/demo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/jquery-1.10.2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/js/paper-dashboard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper-dashboard.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_alerts.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_cards.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_chartist.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_checkbox-radio.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_dropdown.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_footers.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_inputs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_misc.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_navbars.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_responsive.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_sidebar-and-main-panel.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_tables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_typography.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/_variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_cards.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_chartist.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_icons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_inputs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_labels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_navbars.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_sidebar.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_tabs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_transparency.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/sass/paper/mixins/_vendor-prefixes.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/public/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/views/Home/formulaire.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/views/Home/index.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Resources/views/layout.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/BackBundle/Util/Crud.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Controller/DefaultController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/FrontBundle/FrontBundle.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Resources/config/services.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Repository/UserRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/config/services.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login_content.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/base.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/UserBundle.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tests/BackBundle/Controller/DefaultControllerTest.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tests/FrontBundle/Controller/DefaultControllerTest.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tests/UserBundle/Controller/DefaultControllerTest.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/update.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/var/cache/.gitkeep" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/var/logs/.gitkeep" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/var/sessions/.gitkeep" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/app.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/apple-touch-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/config.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/robots.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -211,7 +16,28 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -225,8 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DataFixtures/ContestFixtures.php" />
-        <option value="$PROJECT_DIR$/src/DataFixtures/ColorFixtures.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/AwardsFixtures.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/ORM/AwardsFixtures.php" />
@@ -276,6 +100,8 @@
         <option value="$PROJECT_DIR$/src/BackBundle/Entity/Awards.php" />
         <option value="$PROJECT_DIR$/src/BackBundle/Entity/Agency.php" />
         <option value="$PROJECT_DIR$/src/BackBundle/Entity/Parameters.php" />
+        <option value="$PROJECT_DIR$/back/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -338,6 +164,7 @@
     <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -353,7 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -361,37 +188,11 @@
               <item name="3W_Awards" type="b2602c69:ProjectViewProjectNode" />
               <item name="3W_Awards" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="3W_Awards" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3W_Awards" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="3W_Awards" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3W_Awards" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="3W_Awards" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3W_Awards" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BackBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="3W_Awards" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3W_Awards" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BackBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,7 +201,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\3W_Awards\back\app\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\3W_Awards\back" />
       <recent name="C:\wamp\www\3W_Awards\src\BackBundle" />
       <recent name="C:\wamp\www\3W_Awards\src\DataFixtures\ORM" />
     </key>
@@ -437,24 +242,25 @@
       <workItem from="1517471494786" duration="1203000" />
       <workItem from="1518688760348" duration="12250000" />
       <workItem from="1518768675724" duration="3219000" />
+      <workItem from="1518773516840" duration="1077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37869000" />
+    <option name="totallyTimeSpent" value="38946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33282208" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3326087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -462,6 +268,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -479,35 +286,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Functionality.php" />
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Tag.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Technology.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Website.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/WebsiteType.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Category.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="649" column="14" lean-forward="false" selection-start-line="649" selection-start-column="14" selection-end-line="649" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock" />
+    <entry file="file://$PROJECT_DIR$/composer.json" />
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/DataFixtures/ORM/LoadAwardsData.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Contest.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Country.php" />
@@ -519,220 +305,48 @@
     <entry file="file://$PROJECT_DIR$/src/BackBundle/DataFixtures/ORM/LoadContestData.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/DataFixtures/ORM/LoadFunctionalityData.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/DataFixtures/ORM/LoadCountryData.php" />
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/template/nav.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml" />
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/template/nav.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/Home/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml" />
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/config/services.yml" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/config/services.yml" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Blog.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Jury.php" />
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/ProjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/ParametersRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/BlogRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/AwardsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/AgencyRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/ProjectRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/ParametersRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/BlogRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/AwardsRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/AgencyRepository.php" />
     <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Info3WAwards.php" />
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/CustomerRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Repository/CustomerRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Customer.php" />
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Awards.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Project.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Parameters.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Agency.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Util/Crud.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/Home/formulaire.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Controller/temp.php" />
+    <entry file="file://$PROJECT_DIR$/src/BackBundle/Controller/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/back/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Customer.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Awards.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Entity/Agency.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Util/Crud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Resources/views/Home/formulaire.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Controller/temp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-876">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="322">
+          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding />
         </state>
       </provider>
