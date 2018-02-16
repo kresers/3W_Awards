@@ -36,7 +36,7 @@
 /back/**/Entity/*~
 
 #the phpStorm file ...
-/back/.idea/*
+.idea/*
 
 #the vendor ...
 /vendor/*
