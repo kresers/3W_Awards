@@ -7,16 +7,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 
-class HomeController extends Controller
+class ParametersController extends Controller
 {
     /**
-     * @Route("/home", name="back_home")
+     * @Route("/parameters", name="back_home")
      * Description : this function return the list of Obj
      * @Template
      */
     public function indexAction()
     {
-        return $this->render('@Back/Home/index.html.twig');
     }
 
     /**
