@@ -42,8 +42,6 @@
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
 
-#the phpStorm file ...
-**/.idea/*
 
 #the vendor ...
 /vendor/*
