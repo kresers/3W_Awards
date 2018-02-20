@@ -1,8 +1,8 @@
 ﻿
 
 #the phpStorm file ...
-.idea/*
-.idea/workspace.xml
+/.idea/*
+/.idea/workspace.xml
 
 
 .DS_Store
