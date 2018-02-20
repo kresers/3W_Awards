@@ -1,46 +1,6 @@
-﻿# Cache and logs (Symfony2)
-back/app/cache/*
-back/app/logs/*
-
-
-
-# Email spool folder
-/back/app/spool/*
-
-# Cache, session files and logs (Symfony3)
-back/var/cache/*
-back/var/logs/*
-back/var/sessions/*
-
-# Parameters
-back/app/config/parameters.yml
-back/app/config/parameters.ini
-
-# Managed by Composer
-back/app/bootstrap.php.cache
-back/var/bootstrap.php.cache
-
-# Assets and user uploads
-back/web/bundles/
-back/web/uploads/
-
-# PHPUnit
-back/app/phpunit.xml
-back/phpunit.xml
-
-# Build data
-back/build/
-
-# Backup entities generated with doctrine:generate:entities command
-back/**/Entity/*~
+﻿
 
 #the phpStorm file ...
-.idea/*
-.idea/workspace.xml
+/.idea/*
 
-#the vendor ...
-/back/vendor/*
-
-#parce que bordas à MAC  !!!!
-back/app/config/parameters.yml
 .DS_Store
