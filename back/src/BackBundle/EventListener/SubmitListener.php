@@ -30,18 +30,17 @@ class SubmitListener
 
         $entityName = $em->getMetadataFactory()->getMetadataFor(get_class($object))->getName();
         $repository = $this->container->get('doctrine')->getManager()->getRepository($entityName);
-        $searchedObject = $repository->findOneBy(array('libelle'=> $object->getLibelle()));
-        dump($searchedObject,$object);
-        die;
+        //object->getCode()
+        $objectExist = $repository->findOneBy(array('libelle'=> $object->getLibelle()));
 
-        /*if ($object->getLibelle() !== $searchedObject->getLibelle())
+        if(isset($objectExist))
         {
             return new Response('la valeur que vous souhaitez ajouter existe déjà');
         }
         else
         {
             return true;
-        }*/
+        }
         // return true
         // sinon
         // return une httpResponse('la valeur que vous souhaitez ajouter existe déja')
