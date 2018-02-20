@@ -2,50 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eda288a2-0eb2-4bb4-ae1d-518765b5b3c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/assets/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/BackBundle/Api/UserAPI.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/.angular-cli.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.e2e-spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.po.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/e2e/tsconfig.e2e.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/protractor.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.prod.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/main.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/polyfills.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/test.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.app.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.spec.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/src/typings.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/tsconfig.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/tslint.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run_project.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/app/AppKernel.php" afterPath="$PROJECT_DIR$/back/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/app/config/config.yml" afterPath="$PROJECT_DIR$/back/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/app/config/routing.yml" afterPath="$PROJECT_DIR$/back/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/composer.json" afterPath="$PROJECT_DIR$/back/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/composer.lock" afterPath="$PROJECT_DIR$/back/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/back/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/back/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/back/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/back/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/back/vendor/composer/installed.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,8 +30,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="419">
+              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -83,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/back/src/BackBundle/EventListener/SubmitListener.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -103,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/back/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="799">
-              <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+              <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -286,7 +244,7 @@
       <path value="$PROJECT_DIR$/vendor/fig/link-util" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-129" />
     <option name="y" value="161" />
     <option name="width" value="1936" />
@@ -400,15 +358,15 @@
       <workItem from="1518773516840" duration="1662000" />
       <workItem from="1518778545646" duration="12000" />
       <workItem from="1518778603542" duration="9034000" />
-      <workItem from="1519150579378" duration="1335000" />
+      <workItem from="1519150579378" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49912000" />
+    <option name="totallyTimeSpent" value="50250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23880596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -566,7 +524,7 @@
     <entry file="file://$PROJECT_DIR$/back/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
-          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -574,15 +532,15 @@
     <entry file="file://$PROJECT_DIR$/back/src/BackBundle/EventListener/SubmitListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="419">
+          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
           <folding />
         </state>
       </provider>
