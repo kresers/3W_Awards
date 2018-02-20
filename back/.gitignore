@@ -43,7 +43,7 @@
 **/Entity/*~
 
 #the phpStorm file ...
-/.idea/*
+**/.idea/*
 
 #the vendor ...
 /vendor/*
