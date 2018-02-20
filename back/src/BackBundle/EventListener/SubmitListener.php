@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class SubmitListener
 {
     private $container;
+
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
@@ -30,7 +31,8 @@ class SubmitListener
         $entityName = $em->getMetadataFactory()->getMetadataFor(get_class($object))->getName();
         $repository = $this->container->get('doctrine')->getManager()->getRepository($entityName);
         $searchedObject = $repository->findOneBy(array('libelle'=> $object->getLibelle()));
-        dump($object);
+        dump($searchedObject,$object);
+        die;
 
         /*if ($object->getLibelle() !== $searchedObject->getLibelle())
         {
