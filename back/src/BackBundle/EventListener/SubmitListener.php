@@ -20,21 +20,26 @@ class SubmitListener
         $this->onSubmitChangeListener($event);
     }
 
+
     public function onSubmitChangeListener(LifecycleEventArgs $event)
     {
+        //On récupeère l'objet du formulaire et l'entityManager
         $statesubmit = $event->getObject();
         $em = $this->container->get('doctrine')->getEntityManager();
-        // tu vas récuperer l'object en base par le code bia un findByOne sur le code(libelle_id)
-        // si il n'existe pas
-        $object = $statesubmit;
 
-        $entityName = $em->getMetadataFactory()->getMetadataFor(get_class($object))->getName();
+
+        // On récupere le nom de l'entité afin de le passer au getRepository de manière dynamique
+        $entityName = $em->getMetadataFactory()->getMetadataFor(get_class($statesubmit))->getName();
         $repository = $this->container->get('doctrine')->getManager()->getRepository($entityName);
-        //object->getCode()
-        $objectExist = $repository->findOneBy(array('libelle'=> $object->getLibelle()));
 
+        //findOneBy pour avoir l'objet en bdd                   $statesubmit->getCode()
+        $objectExist = $repository->findOneBy(array('libelle'=> $statesubmit->getLibelle()));
+
+        //Si l'object est définie alors on return un new Response
         if(isset($objectExist))
         {
+            dump($objectExist);
+            die;
             return new Response('la valeur que vous souhaitez ajouter existe déjà');
         }
         else
