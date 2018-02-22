@@ -7,7 +7,6 @@ use Doctrine\ORM\Event\LifecycleEventArgs;
 
 class SubmitListener
 {
-
     public function postPersist(LifecycleEventArgs $event)
     {
         $this->onSubmitChangeListener($event);
@@ -15,8 +14,6 @@ class SubmitListener
 
     public function onSubmitChangeListener(LifecycleEventArgs $event)
     {
-        $statesubmit = $event->getObject();
-        dump($statesubmit);
-        die;
+
     }
 }
