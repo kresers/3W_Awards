@@ -1,6 +1,5 @@
 <?php
 
-
 namespace BackBundle\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
@@ -15,18 +14,17 @@ class SubmitListener
     {
         $this->container = $container;
     }
+
     public function postPersist(LifecycleEventArgs $event)
     {
         $this->onSubmitChangeListener($event);
     }
-
 
     public function onSubmitChangeListener(LifecycleEventArgs $event)
     {
         //On récupeère l'objet du formulaire et l'entityManager
         $statesubmit = $event->getObject();
         $em = $this->container->get('doctrine')->getEntityManager();
-
 
         // On récupere le nom de l'entité afin de le passer au getRepository de manière dynamique
         $entityName = $em->getMetadataFactory()->getMetadataFor(get_class($statesubmit))->getName();
@@ -38,8 +36,6 @@ class SubmitListener
         //Si l'object est définie alors on return un new Response
         if(isset($objectExist))
         {
-            dump($objectExist);
-            die;
             return new Response('la valeur que vous souhaitez ajouter existe déjà');
         }
         else
