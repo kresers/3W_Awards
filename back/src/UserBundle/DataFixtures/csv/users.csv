@@ -1,5 +1,5 @@
 firstname;lastname;country;gender;roles;email;password
-Thomas;Focqueu;France;M;ROLE_ADMIN;thomas.focqueu@hotmail.fr;fourchette
-Valentin;Regnier;France;M;ROLE_ADMIN;valentinregnier@hotmail.com;farcy
-Maxime;Bordas;Angleterre;M;ROLE_ADMIN;mbordas@gmail.com;bobo
-Sebastien;Toursel;Irlande;F;ROLE_ADMIN;Stoursel@outlook.fr;nia
+Thomas;Focqueu;France;M;ADMIN;thomas.focqueu@hotmail.fr;123
+Valentin;Regnier;France;M;ADMIN;valentinregnier@hotmail.com;123
+Maxime;Bordas;Angleterre;M;USER;mbordas@gmail.com;123
+Sebastien;Toursel;Irlande;F;USER;Stoursel@outlook.fr;123

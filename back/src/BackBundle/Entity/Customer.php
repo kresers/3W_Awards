@@ -52,7 +52,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
+     * @ORM\Column(name="logo", type="string", length=255 , nullable=true)
      */
     private $logo;
 
@@ -164,7 +164,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="admin", type="string", length=255)
+     * @ORM\Column(name="admin", type="string", length=255, nullable=true)
      */
     private $admin;
 

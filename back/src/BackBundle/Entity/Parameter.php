@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="parameters")
  * @ORM\Entity(repositoryClass="BackBundle\Repository\parametersRepository")
  */
-class Parameters
+class Parameter
 {
     /**
      * @var int
@@ -31,7 +31,7 @@ class Parameters
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
      */
     private $logo;
 
@@ -86,7 +86,7 @@ class Parameters
      *
      * @param string $applicationNale
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setApplicationNale($applicationNale)
     {
@@ -110,7 +110,7 @@ class Parameters
      *
      * @param string $logo
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setLogo($logo)
     {
@@ -134,7 +134,7 @@ class Parameters
      *
      * @param string $adress
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setAdress($adress)
     {
@@ -158,7 +158,7 @@ class Parameters
      *
      * @param string $adress2
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setAdress2($adress2)
     {
@@ -182,7 +182,7 @@ class Parameters
      *
      * @param integer $phoneNumber
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setPhoneNumber($phoneNumber)
     {
@@ -206,7 +206,7 @@ class Parameters
      *
      * @param string $fax
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setFax($fax)
     {
@@ -230,7 +230,7 @@ class Parameters
      *
      * @param string $emailRequest
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setEmailRequest($emailRequest)
     {
@@ -254,7 +254,7 @@ class Parameters
      *
      * @param integer $ponderationNote
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setPonderationNote($ponderationNote)
     {
@@ -278,7 +278,7 @@ class Parameters
      *
      * @param integer $ponderationNoteMembers
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setPonderationNoteMembers($ponderationNoteMembers)
     {
@@ -302,7 +302,7 @@ class Parameters
      *
      * @param integer $numberOfScreens
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setNumberOfScreens($numberOfScreens)
     {
@@ -326,7 +326,7 @@ class Parameters
      *
      * @param integer $sizeMaxUpload
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setSizeMaxUpload($sizeMaxUpload)
     {
@@ -350,7 +350,7 @@ class Parameters
      *
      * @param integer $numberMaxTags
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setNumberMaxTags($numberMaxTags)
     {
@@ -374,7 +374,7 @@ class Parameters
      *
      * @param string $type
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setType($type)
     {
@@ -398,7 +398,7 @@ class Parameters
      *
      * @param string $category
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setCategory($category)
     {
@@ -422,7 +422,7 @@ class Parameters
      *
      * @param integer $numberOfStaff
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setNumberOfStaff($numberOfStaff)
     {
@@ -446,7 +446,7 @@ class Parameters
      *
      * @param integer $revenue
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setRevenue($revenue)
     {
@@ -470,7 +470,7 @@ class Parameters
      *
      * @param string $websiteType
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setWebsiteType($websiteType)
     {
@@ -494,7 +494,7 @@ class Parameters
      *
      * @param string $target
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setTarget($target)
     {
@@ -518,7 +518,7 @@ class Parameters
      *
      * @param string $graphicalStyle
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setGraphicalStyle($graphicalStyle)
     {
@@ -542,7 +542,7 @@ class Parameters
      *
      * @param string $behavior
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setBehavior($behavior)
     {
@@ -566,7 +566,7 @@ class Parameters
      *
      * @param string $countries
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setCountries($countries)
     {
@@ -590,7 +590,7 @@ class Parameters
      *
      * @param string $languages
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setLanguages($languages)
     {
@@ -614,7 +614,7 @@ class Parameters
      *
      * @param string $mainColors
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setMainColors($mainColors)
     {
@@ -638,7 +638,7 @@ class Parameters
      *
      * @param string $cms
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setCms($cms)
     {
@@ -662,7 +662,7 @@ class Parameters
      *
      * @param string $frameworks
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setFrameworks($frameworks)
     {
@@ -686,7 +686,7 @@ class Parameters
      *
      * @param string $devLanguage
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setDevLanguage($devLanguage)
     {
@@ -710,7 +710,7 @@ class Parameters
      *
      * @param string $techFront
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setTechFront($techFront)
     {
@@ -734,7 +734,7 @@ class Parameters
      *
      * @param string $missions
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setMissions($missions)
     {
@@ -758,7 +758,7 @@ class Parameters
      *
      * @param string $evaluations
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setEvaluations($evaluations)
     {
@@ -782,7 +782,7 @@ class Parameters
      *
      * @param string $professions
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setProfessions($professions)
     {
@@ -806,7 +806,7 @@ class Parameters
      *
      * @param string $socialNetworks
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setSocialNetworks($socialNetworks)
     {
@@ -830,7 +830,7 @@ class Parameters
      *
      * @param string $blogCategories
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setBlogCategories($blogCategories)
     {
