@@ -17,7 +17,7 @@ class Crud
     }
 
     /* this function create and submit entity wich you have get in parameters*/
-    public function AddOrEditEntity(Entity $entity, ContainerInterface $container, $entityName)
+    public function AddOrEditEntity(Entity $entity, $entityName)
     {
         $entity = new Entity();
         $em = $this->em;

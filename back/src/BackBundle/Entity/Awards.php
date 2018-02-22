@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * awards
  *
  * @ORM\Table(name="awards")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\awardsRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\AwardsRepository")
  */
 class Awards
 {

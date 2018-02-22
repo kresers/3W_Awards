@@ -33,7 +33,6 @@ class HomeController extends Controller
         $testForm = new TestForm();
 
         $form = $this->createForm(TestFormType::class,$testForm);
-
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())
         {

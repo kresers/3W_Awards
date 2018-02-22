@@ -3,19 +3,18 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@BackBundle/Resources/config/services.yml" }
-    - { resource: "@FrontBundle/Resources/config/services.yml" }
     - { resource: "@UserBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     serializer:
         enabled: true
     #esi: ~
-    translator: ~
+    translator: { fallbacks: [ "fr" ] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -93,3 +92,127 @@ fos_rest:
 sensio_framework_extra:
     view: { annotations: false }
     request: { converters: true }
+
+# app/config/config.yml
+easy_admin:
+    entities:
+        Agency:
+            class:  BackBundle\Entity\Agency
+            list:
+                title: "Les Agences"
+                actions:
+                    - { name: 'new', label: 'Ajouter une Agence' }
+        Awards:
+            class: BackBundle\Entity\Awards
+            list:
+                title: "Les Prix"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Prix' }
+                fields:
+                    - { property: 'name', label: 'Nom'}
+                    - { property: 'categoryAwards', label: 'Catégorie'}
+                    - { property: 'project', label: 'Projet'}
+            form:
+                title: "Ajouter un Prix"
+                fields:
+                   - { property: 'name', label: 'Nom'}
+                   - { property: 'categoryAwards', label: 'Catégorie'}
+                   - { property: 'project', label: 'Projet'}
+        Blog:
+            class: BackBundle\Entity\Blog
+            list:
+                title: "Les Blogs"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Blog' }
+        CategoryAwards:
+            class: BackBundle\Entity\CategoryAwards
+            list:
+                title: "Les Catégories de Prix"
+                fields:
+                     - { property: 'label', label: 'Libelle'}
+                actions:
+                    - { name: 'new', label: 'Ajouter une Catégorie' }
+            form:
+                title: "Ajouter une catégorie de prix"
+                fields:
+                    - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
+
+        Customer:
+            class: BackBundle\Entity\Customer
+            list:
+                title: "Les Clients"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Client' }
+                fields:
+                    - { property: 'logo', label: 'Logo'}
+                    - { property: 'name', label: 'Nom'}
+                    - { property: 'country', label: 'Pays'}
+                    - { property: 'type', label: 'Type'}
+                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'city', label: 'Ville'}
+                    - { property: 'agency', label: 'Agence'}
+            form:
+                title: "Ajouter un client"
+                fields:
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Détails du client', icon: 'user' }
+                    - { property: 'name', label: 'Nom'}
+                    - { property: 'country', label: 'Pays'}
+                    - { property: 'type', label: 'Type'}
+                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'categoryAwards', label: 'Catégories de Prix'}
+                    - { property: 'logo', label: 'Logo'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
+                    - { property: 'adress', label: 'Adresse'}
+                    - { property: 'adress2', label: 'Adresse 2'}
+                    - { property: 'postalCode', label: 'Code Postal'}
+                    - { property: 'city', label: 'Ville'}
+                    - { property: 'phoneNumber', label: 'Numéro de Téléphone'}
+                    - { property: 'fax', label: 'Fax'}
+                    - { type: 'group', css_class: 'col-sm-12', label: 'Informations complémentaire', icon: 'pencil' }
+                    - { type: 'section', label: 'A Propos', icon: 'search' }
+                    - { property: 'presentation', label: 'Présentation'}
+                    - { property: 'expertise', label: 'Expertise'}
+                    - { property: 'notes', label: 'Notes'}
+                    - { property: 'creationDate', label: 'Date de création', type: 'date'}
+                    - { type: 'section', label: 'Chiffres clés', icon: 'minus-square' }
+                    - { property: 'staffNumber', label: 'Nombres de salarié'}
+                    - { property: 'revenue', label: 'Chiffre d affaire'}
+                    - { property: 'website', label: 'Site internet', type: 'url'}
+                    - { property: 'tvaNumber', label: 'Numéro de TVA'}
+                    - { property: 'numeroDuns', label: 'numéroDuns?'}
+                    - { type: 'group', css_class: 'col-sm-12', label: 'Autres', icon: 'mobile' }
+                    - { property: 'admin', label: 'Admin'}
+                    - { property: 'agency', label: 'Agence'}
+
+        Parameters:
+            class: BackBundle\Entity\Parameters
+            list:
+                title: "Les Paramètres"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Paramètre' }
+        Project:
+            class: BackBundle\Entity\Project
+            list:
+                title: "Les projets"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Projet' }
+    site_name: '<img src="https://i.imgur.com/vawr75B.png" />'
+    design:
+        form_theme: 'vertical'
+        brand_color: 'grey'
+        color_scheme: 'light'
+        assets:
+            favicon: '../docs/favicon.png'
+        menu:
+            - { entity: 'Project', label: 'Projet', icon: 'suitcase'}
+            - { entity: 'Agency', label: 'Agences', icon: 'anchor'}
+            - { entity: 'Blog', label: 'Blog', icon: 'pencil'}
+            - { entity: 'Customer', label: 'Clients', icon: 'address-book'}
+            - label: 'Les Prix'
+            - { entity: 'Awards', label: 'Prix', icon: 'trophy'}
+            - { entity: 'CategoryAwards', label: 'Catégorie de Prix', icon: 'certificate'}
+            - label: 'Outils'
+            - { entity: 'Parameters', label: 'Paramètres', icon: 'cog'}
+
+
+

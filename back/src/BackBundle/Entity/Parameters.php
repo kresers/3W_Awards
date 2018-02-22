@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * parameters
  *
  * @ORM\Table(name="parameters")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\parametersRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\ParametersRepository")
  */
 class Parameters
 {
