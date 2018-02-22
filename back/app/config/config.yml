@@ -9,6 +9,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    app.path.customer_images: web/uploads/images/customers
 
 framework:
     serializer:
@@ -93,6 +94,14 @@ sensio_framework_extra:
     view: { annotations: false }
     request: { converters: true }
 
+# image upload
+vich_uploader:
+    db_driver: orm
+    mappings:
+        product_images:
+            uri_prefix: '%app.path.customer_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/customers'
+
 # app/config/config.yml
 easy_admin:
     entities:
@@ -144,7 +153,7 @@ easy_admin:
                 actions:
                     - { name: 'new', label: 'Ajouter un Client' }
                 fields:
-                    - { property: 'logo', label: 'Logo'}
+                    - { property: 'image', label: 'Logo', type: 'image', base_path: '%app.path.customer_images%' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'country', label: 'Pays'}
                     - { property: 'type', label: 'Type'}
@@ -156,33 +165,33 @@ easy_admin:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails du client', icon: 'user' }
                     - { property: 'name', label: 'Nom'}
-                    - { property: 'country', label: 'Pays'}
                     - { property: 'type', label: 'Type'}
+                    - { property: 'website', label: 'Site internet', type: 'url'}
                     - { property: 'categories', label: 'Catégorie'}
                     - { property: 'categoryAwards', label: 'Catégories de Prix'}
-                    - { property: 'logo', label: 'Logo'}
+                    - { property: 'imageFile', label: 'Logo', type: 'file', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
                     - { property: 'adress', label: 'Adresse'}
                     - { property: 'adress2', label: 'Adresse 2'}
                     - { property: 'postalCode', label: 'Code Postal'}
                     - { property: 'city', label: 'Ville'}
+                    - { property: 'country', label: 'Pays'}
                     - { property: 'phoneNumber', label: 'Numéro de Téléphone'}
-                    - { property: 'fax', label: 'Fax'}
                     - { type: 'group', css_class: 'col-sm-12', label: 'Informations complémentaire', icon: 'pencil' }
-                    - { type: 'section', label: 'A Propos', icon: 'search' }
-                    - { property: 'presentation', label: 'Présentation'}
+                    - { property: 'presentation', label: 'Présentation', type: 'ckeditor'}
                     - { property: 'expertise', label: 'Expertise'}
-                    - { property: 'notes', label: 'Notes'}
+                    - { property: 'notes', label: 'Notes', type: 'ckeditor'}
                     - { property: 'creationDate', label: 'Date de création', type: 'date'}
-                    - { type: 'section', label: 'Chiffres clés', icon: 'minus-square' }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Chiffres clés', icon: 'minus-square' }
                     - { property: 'staffNumber', label: 'Nombres de salarié'}
-                    - { property: 'revenue', label: 'Chiffre d affaire'}
-                    - { property: 'website', label: 'Site internet', type: 'url'}
+                    - { property: 'revenue', label: 'Chiffre d affaire', type: 'money', type_options: { currency: 'EUR' }}
                     - { property: 'tvaNumber', label: 'Numéro de TVA'}
                     - { property: 'numeroDuns', label: 'numéroDuns?'}
-                    - { type: 'group', css_class: 'col-sm-12', label: 'Autres', icon: 'mobile' }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Autres', icon: 'mobile' }
                     - { property: 'admin', label: 'Admin'}
                     - { property: 'agency', label: 'Agence'}
+                    - { property: 'fax', label: 'Fax'}
+
 
         Parameters:
             class: BackBundle\Entity\Parameters
