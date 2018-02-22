@@ -16,7 +16,5 @@ class SubmitListener
     public function onSubmitChangeListener(LifecycleEventArgs $event)
     {
         $statesubmit = $event->getObject();
-        dump($statesubmit);
-        die;
     }
 }
