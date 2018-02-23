@@ -2,7 +2,7 @@
 
 namespace BackBundle\Controller;
 
-use BackBundle\Entity\Parameters;
+use BackBundle\Entity\Parameter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -22,7 +22,7 @@ class ParametersController extends Controller
 
 
         $em = $this->getDoctrine()->getManager();
-        $parameters = new Parameters();
+        $parameters = new Parameter();
         $data = $this->get('back.util.crud')->AddOrEditEntity($parameters);
         // change this to parameters
         return $this->render('@Back/Home/parameters.html.twig');
