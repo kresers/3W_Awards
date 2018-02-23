@@ -9,7 +9,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    app.path.customer_images: web/uploads/images/customers
+    app.path.customer_images: uploads/images/customers
 
 framework:
     serializer:
@@ -96,12 +96,16 @@ sensio_framework_extra:
 vich_uploader:
     db_driver: orm
     mappings:
-        product_images:
+        customer_images:
             uri_prefix: '%app.path.customer_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/customers'
 
 # app/config/config.yml
 easy_admin:
+    list:
+        actions:
+            - { name: 'edit', icon: 'pencil', label: '', title: "Edit"}
+            - { name: 'delete', icon: 'trash', label: '', title: "Delete"}
     entities:
         Agency:
             class:  BackBundle\Entity\Agency
@@ -131,6 +135,24 @@ easy_admin:
                 title: "Les Blogs"
                 actions:
                     - { name: 'new', label: 'Ajouter un Blog' }
+                fields:
+                    - { property: 'id', label: 'Id'}
+                    - { property: 'articleTitle', label: 'Titre'}
+                    - { property: 'status', label: 'Status', type: 'boolean'}
+                    - { property: 'publicationDate', label: 'Date de publication', type: 'date'}
+                    - { property: 'type', label: 'Type'}
+                    - { property: 'category', label: 'Catégorie'}
+            form:
+                    title: "Ajouter un article"
+                    fields:
+                        - { type: 'group', css_class: 'col-sm-9', label: 'Article', icon: 'pencil' }
+                        - { property: 'articleTitle', label: 'Titre'}
+                        - { property: 'resume', label: 'Résumé', type: 'ckeditor'}
+                        - { property: 'description', label: 'Article', type: 'ckeditor'}
+                        - { type: 'group', css_class: 'col-sm-3', label: 'Détails', icon: 'search' }
+                        - { property: 'status', label: 'Status'}
+                        - { property: 'publicationDate', label: 'Date de publication', type: 'date'}
+                        - { property: 'category', label: 'Catégorie'}
         CategoryAwards:
             class: BackBundle\Entity\CategoryAwards
             list:
@@ -143,7 +165,6 @@ easy_admin:
                 title: "Ajouter une catégorie de prix"
                 fields:
                     - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
-
         Customer:
             class: BackBundle\Entity\Customer
             list:
@@ -151,6 +172,7 @@ easy_admin:
                 actions:
                     - { name: 'new', label: 'Ajouter un Client' }
                 fields:
+                    - { property: 'id', label: 'Id'}
                     - { property: 'image', label: 'Logo', type: 'image', base_path: '%app.path.customer_images%' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'country', label: 'Pays'}
@@ -167,7 +189,7 @@ easy_admin:
                     - { property: 'website', label: 'Site internet', type: 'url'}
                     - { property: 'categories', label: 'Catégorie'}
                     - { property: 'categoryAwards', label: 'Catégories de Prix'}
-                    - { property: 'imageFile', label: 'Logo', type: 'file', }
+                    - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
                     - { property: 'adress', label: 'Adresse'}
                     - { property: 'adress2', label: 'Adresse 2'}
@@ -187,10 +209,8 @@ easy_admin:
                     - { property: 'numeroDuns', label: 'numéroDuns?'}
                     - { type: 'group', css_class: 'col-sm-6', label: 'Autres', icon: 'mobile' }
                     - { property: 'admin', label: 'Admin'}
-                    - { property: 'agency', label: 'Agence'}
+#                    - { property: 'agency', label: 'Agence'}
                     - { property: 'fax', label: 'Fax'}
-
-
         Parameters:
             class: BackBundle\Entity\Parameters
             list:

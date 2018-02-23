@@ -45,6 +45,7 @@
 
 #the vendor ...
 /vendor/*
+/vendor/composer/ClassLoader.php
 
 #parce que bordas à MAC  !!!!
 app/config/parameters.yml
