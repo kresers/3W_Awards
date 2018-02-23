@@ -1,9 +1,0 @@
-back:
-    resource: "@BackBundle/Controller/"
-    type:     annotation
-    prefix:   /administration
-front:
-    resource: "@FrontBundle/Controller/"
-    type:     annotation
-    prefix:   /
-

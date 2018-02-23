@@ -1,0 +1,18 @@
+{% extends '@Back/layout.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block main_title %}
+    Formulaire
+{% endblock %}
+{% block content %}
+    <div class="col-md-6">
+        {% for form in lesForm %}
+            <p>{{ form.libelle }}</p>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" class="btn btn-default" />
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
