@@ -22,7 +22,7 @@ class ParametersType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BackBundle\Entity\Parameters'
+            'data_class' => 'BackBundle\Entity\Parameter'
         ));
     }
 
