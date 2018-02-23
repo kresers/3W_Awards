@@ -55,11 +55,6 @@ class Customer
     /**
      * @ORM\Column(type="string", length=255)
      * @var string
-<<<<<<< HEAD
-     *
-     * @ORM\Column(name="logo", type="string", length=255 , nullable=true)
-=======
->>>>>>> master
      */
     private $image;
 
@@ -199,7 +194,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="admin", type="string", length=255, nullable=true)
+     * @ORM\Column(name="admin", type="string", length=255)
      */
     private $admin;
 
