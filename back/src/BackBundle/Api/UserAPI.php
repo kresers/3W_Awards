@@ -18,5 +18,6 @@ class UserAPI extends Controller
     {
         $em = $this->getDoctrine();
         $users = $em->getRepository('UserBundle:User')->findAll();
+
     }
 }
