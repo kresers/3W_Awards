@@ -64,9 +64,9 @@ class Agency
     private $adress2;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="postalCode", type="integer")
+     * @ORM\Column(name="postalCode", type="string", length=255)
      */
     private $postalCode;
 
@@ -80,7 +80,7 @@ class Agency
     /**
      * @var int
      *
-     * @ORM\Column(name="phoneNumber", type="integer")
+     * @ORM\Column(name="phoneNumber", type="string", length=255)
      */
     private $phoneNumber;
 
