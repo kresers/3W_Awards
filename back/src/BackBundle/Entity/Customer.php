@@ -843,4 +843,10 @@ class Customer
     {
         return $this->updatedAt;
     }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return (string) $this->getName();
+    }
 }
