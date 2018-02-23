@@ -10,6 +10,8 @@ imports:
 parameters:
     locale: fr
     app.path.customer_images: uploads/images/customers
+    app.path.agency_images: uploads/images/agency
+    app.path.parameter_images: uploads/images/parameter
 
 framework:
     serializer:
@@ -99,6 +101,12 @@ vich_uploader:
         customer_images:
             uri_prefix: '%app.path.customer_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/customers'
+        agency_images:
+            uri_prefix: '%app.path.agency_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/agency'
+        parameter_images:
+            uri_prefix: '%app.path.parameter_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/parameter'
 
 # app/config/config.yml
 easy_admin:
@@ -113,6 +121,41 @@ easy_admin:
                 title: "Les Agences"
                 actions:
                     - { name: 'new', label: 'Ajouter une Agence' }
+                fields:
+                    - { property: 'id', label: 'Id'}
+                    - { property: 'image', label: 'Logo', type: 'image', base_path: '%app.path.agency_images%' }
+                    - { property: 'name', label: 'Nom'}
+                    - { property: 'country', label: 'Pays'}
+                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'city', label: 'Ville'}
+                    - { property: 'customer', label: 'Client'}
+            form:
+                title: "Ajouter une Agences"
+                fields:
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Détails de l''''agence', icon: 'user' }
+                    - { property: 'name', label: 'Nom'}
+                    - { property: 'website', label: 'Site internet', type: 'url'}
+                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
+                    - { property: 'adress', label: 'Adresse'}
+                    - { property: 'adress2', label: 'Adresse 2'}
+                    - { property: 'postalCode', label: 'Code Postal'}
+                    - { property: 'city', label: 'Ville'}
+                    - { property: 'country', label: 'Pays'}
+                    - { property: 'phoneNumber', label: 'Numéro de Téléphone'}
+                    - { type: 'group', css_class: 'col-sm-12', label: 'Informations complémentaire', icon: 'pencil' }
+                    - { property: 'presentation', label: 'Présentation', type: 'ckeditor'}
+                    - { property: 'expertise', label: 'Expertise'}
+                    - { property: 'notes', label: 'Notes', type: 'ckeditor'}
+                    - { property: 'creationDate', label: 'Date de création', type: 'date'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Chiffres clés', icon: 'minus-square' }
+                    - { property: 'staffNumber', label: 'Nombres de salarié'}
+                    - { property: 'revenue', label: 'Chiffre d affaire', type: 'money', type_options: { currency: 'EUR' }}
+                    - { property: 'tvaNumber', label: 'Numéro de TVA'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Autres', icon: 'mobile' }
+                    - { property: 'customer', label: 'Client'}
+                    - { property: 'fax', label: 'Fax'}
         Awards:
             class: BackBundle\Entity\Awards
             list:
@@ -217,12 +260,64 @@ easy_admin:
                 title: "Les Paramètres"
                 actions:
                     - { name: 'new', label: 'Ajouter un Paramètre' }
+                fields:
+                    - { property: 'id', label: 'Id'}
+                    - { property: 'image', label: 'Logo', type: 'image', base_path: '%app.path.parameter_images%' }
+                    - { property: 'applicationNale', label: 'Nom'}
+            form:
+                title: "Ajouter un paramètre"
+                fields:
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Détails du client', icon: 'user' }
+                    - { property: 'applicationNale', label: 'Nom'}
+                    - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
+                    - { property: 'updatedAt', label: 'Mise à jour le:', type: 'date'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
+                    - { property: 'adress', label: 'Adresse'}
+                    - { property: 'adress2', label: 'Adresse 2'}
+                    - { property: 'phoneNumber', label: 'Numéro de Téléphone'}
+                    - { property: 'fax', label: 'Fax'}
+                    - { property: 'emailRequest', label: 'Email', type: 'email'}
         Project:
             class: BackBundle\Entity\Project
             list:
                 title: "Les projets"
                 actions:
                     - { name: 'new', label: 'Ajouter un Projet' }
+                fields:
+                    - { property: 'id', label: 'Id'}
+                    - { property: 'projectName', label: 'Nom'}
+                    - { property: 'customer', label: 'Client'}
+                    - { property: 'websiteType', label: 'Type'}
+            form:
+                title: "Ajouter un project"
+                fields:
+                    - { type: 'group', css_class: 'col-sm-9', label: 'Détails du projet', icon: 'pencil' }
+                    - { property: 'projectName', label: 'Nom'}
+                    - { property: 'projectDescription', label: 'Présentation', type: 'ckeditor'}
+                    - { property: 'keywords', label: 'Mots Clés'}
+                    - { property: 'websiteType', label: 'Type'}
+                    - { property: 'activityArea', label: 'Activités'}
+                    - { property: 'target', label: 'Cible'}
+                    - { property: 'projectFocus', label: 'Focus'}
+                    - { property: 'languages', label: 'Langues'}
+                    - { property: 'createdBy', label: 'Crée par'}
+                    - { property: 'clientName', label: 'Nom du client'}
+                    - { property: 'releaseDate', label: 'Date de release', type: 'date'}
+                    - { property: 'givingToAgency', label: 'Given to agency'}
+                    - { property: 'keyFunctionnality', label: 'Fonctionnalité clé'}
+                    - { property: 'techFront', label: 'Technos'}
+                    - { property: 'devLanguages', label: 'Language de dev'}
+                    - { property: 'framework', label: 'Framework'}
+                    - { property: 'cms', label: 'CMS'}
+                    - { property: 'technicalChallenges', label: 'Challenge technique'}
+                    - { property: 'focalPoints', label: 'Point focal'}
+                    - { property: 'customer', label: 'Client'}
+                    - { type: 'group', css_class: 'col-sm-3', label: 'Social', icon: 'user' }
+                    - { property: 'viewNumber', label: 'Nombre de vue'}
+                    - { property: 'likeNumber', label: 'Nombre de like'}
+                    - { property: 'averageGrade', label: 'Note moyenne'}
+                    - { property: 'averageJuryGrade', label: 'Note moyenne du jury'}
+                    - { property: 'categoryAwards', label: 'Catégorie de prix'}
     site_name: '<img src="https://i.imgur.com/vawr75B.png" />'
     design:
         form_theme: 'vertical'
