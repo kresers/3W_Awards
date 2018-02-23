@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * parameters
  *
  * @ORM\Table(name="parameters")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\parametersRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\ParametersRepository")
  */
 class Parameters
 {
@@ -24,16 +24,51 @@ class Parameters
     /**
      * @var string
      *
-     * @ORM\Column(name="libelle", type="string", length=255)
+     * @ORM\Column(name="applicationNale", type="string", length=255)
      */
-    private $libelle;
+    private $applicationNale;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="value", type="string", length=255)
+     * @ORM\Column(name="logo", type="string", length=255)
      */
-    private $value;
+    private $logo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adress", type="string", length=255)
+     */
+    private $adress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adress2", type="string", length=255)
+     */
+    private $adress2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="phoneNumber", type="integer")
+     */
+    private $phoneNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fax", type="string", length=255)
+     */
+    private $fax;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailRequest", type="string", length=255)
+     */
+    private $emailRequest;
 
 
     /**
@@ -812,53 +847,5 @@ class Parameters
     public function getBlogCategories()
     {
         return $this->blogCategories;
-    }
-
-    /**
-     * Set libelle
-     *
-     * @param string $libelle
-     *
-     * @return Parameters
-     */
-    public function setLibelle($libelle)
-    {
-        $this->libelle = $libelle;
-
-        return $this;
-    }
-
-    /**
-     * Get libelle
-     *
-     * @return string
-     */
-    public function getLibelle()
-    {
-        return $this->libelle;
-    }
-
-    /**
-     * Set value
-     *
-     * @param string $value
-     *
-     * @return Parameters
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-
-        return $this;
-    }
-
-    /**
-     * Get value
-     *
-     * @return string
-     */
-    public function getValue()
-    {
-        return $this->value;
     }
 }
