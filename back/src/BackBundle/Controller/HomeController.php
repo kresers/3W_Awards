@@ -31,7 +31,6 @@ class HomeController extends Controller
         $listForm = $testFormRepository->findAll();
 
         $testForm = new TestForm();
-
         $form = $this->createForm(TestFormType::class,$testForm);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())

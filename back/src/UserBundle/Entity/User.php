@@ -26,98 +26,98 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="gender", type="string", length=255)
+     * @ORM\Column(name="gender", type="string", length=255, nullable=true))
      */
     protected $gender;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastName", type="string", length=255)
+     * @ORM\Column(name="lastName", type="string", length=255, nullable=true)
      */
     protected $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="firstName", type="string", length=255)
+     * @ORM\Column(name="firstName", type="string", length=255, nullable=true)
      */
     protected $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="country", type="string", length=255, nullable=true)
      */
     protected $country;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="picture", type="string", length=255)
+     * @ORM\Column(name="picture", type="string", length=255, nullable=true)
      */
     protected $picture;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birthDate", type="datetime")
+     * @ORM\Column(name="birthDate", type="datetime", nullable=true)
      */
     protected $birthDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="job", type="string", length=255)
+     * @ORM\Column(name="job", type="string", length=255,nullable=true)
      */
     protected $job;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="memberOfJury", type="string", length=255)
+     * @ORM\Column(name="memberOfJury", type="string", length=255,nullable=true)
      */
     protected $memberOfJury;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="presentation", type="string", length=255)
+     * @ORM\Column(name="presentation", type="string", length=255,nullable=true)
      */
     protected $presentation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="keyword", type="string", length=255)
+     * @ORM\Column(name="keyword", type="string", length=255,nullable=true)
      */
     protected $keyword;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="website", type="string", length=255)
+     * @ORM\Column(name="website", type="string", length=255,nullable=true)
      */
     protected $website;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="social", type="string", length=255)
+     * @ORM\Column(name="social", type="string", length=255,nullable=true)
      */
     protected $social;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="autNotification", type="boolean")
+     * @ORM\Column(name="autNotification", type="boolean",nullable=true)
      */
     protected $autoNotification;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="optIn", type="string", length=255)
+     * @ORM\Column(name="optIn", type="string", length=255,nullable=true)
      */
     protected $optIn;
 
