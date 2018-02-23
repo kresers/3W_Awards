@@ -334,7 +334,7 @@ easy_admin:
             - { entity: 'Awards', label: 'Prix', icon: 'trophy'}
             - { entity: 'CategoryAwards', label: 'Catégorie de Prix', icon: 'certificate'}
             - label: 'Outils'
-            - { entity: 'Parameter', label: 'Paramètres', icon: 'cog'}
+            - { entity: 'Parameters', label: 'Paramètres', icon: 'cog'}
 
 lexik_jwt_authentication:
     private_key_path: '%kernel.root_dir%/../var/jwt/private.pem'
