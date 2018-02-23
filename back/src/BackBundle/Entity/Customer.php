@@ -60,6 +60,7 @@ class Customer
 
     /**
      * @Vich\UploadableField(mapping="customer_images", fileNameProperty="image")
+     *
      * @var File
      */
     private $imageFile;
