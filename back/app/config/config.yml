@@ -82,16 +82,14 @@ fos_user:
         sender_name: 3awards
 
 fos_rest:
-    body_converter:
-        enabled: true
+    routing_loader:
+        default_format: json
     view:
-        formats: { json: true, xml: false, rss: false }
-    serializer:
-        serialize_null: true
+        view_response_listener: true
 
 # disable @View  of SensioFrameworkExtraBundle
 sensio_framework_extra:
-    view: { annotations: false }
+    view: { annotations: true }
     request: { converters: true }
 
 # image upload
@@ -229,3 +227,10 @@ lexik_jwt_authentication:
     pass_phrase:      '%jwt_key_pass_phrase%'
     token_ttl:        3600
 
+nelmio_cors:
+    paths:
+        '^/api/':
+            allow_origin: ['http://localhost:4200']
+            allow_headers: ['origin', 'content-type', 'authorization']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+            max_age: 3600
