@@ -6,5 +6,7 @@ services:
             - "@templating"
     submit_listener:
         class: BackBundle\EventListener\SubmitListener
+        arguments:
+            - "@service_container"
         tags:
           - { name: doctrine.event_listener , event: postPersist  }

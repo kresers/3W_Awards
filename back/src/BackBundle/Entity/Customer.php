@@ -3,12 +3,15 @@
 namespace BackBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * customer
  *
  * @ORM\Table(name="customer")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\customerRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\CustomerRepository")
+ * @Vich\Uploadable
  */
 class Customer
 {
@@ -50,11 +53,42 @@ class Customer
     private $categories;
 
     /**
+     * @ORM\Column(type="string", length=255)
      * @var string
+<<<<<<< HEAD
      *
      * @ORM\Column(name="logo", type="string", length=255 , nullable=true)
+=======
+>>>>>>> master
      */
-    private $logo;
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="customer_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+    // ...
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
 
     /**
      * @var string
@@ -285,30 +319,6 @@ class Customer
     public function getCtegories()
     {
         return $this->ctegories;
-    }
-
-    /**
-     * Set logo
-     *
-     * @param string $logo
-     *
-     * @return customer
-     */
-    public function setLogo($logo)
-    {
-        $this->logo = $logo;
-
-        return $this;
-    }
-
-    /**
-     * Get logo
-     *
-     * @return string
-     */
-    public function getLogo()
-    {
-        return $this->logo;
     }
 
     /**
@@ -782,5 +792,59 @@ class Customer
     public function getAgency()
     {
         return $this->agency;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Customer
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Customer
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }
