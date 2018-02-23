@@ -53,20 +53,20 @@ class Customer
     private $categories;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $image;
 
     /**
-     * @Vich\UploadableField(mapping="customer_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="customer_images", fileNameProperty="image", nullable=true)
      *
      * @var File
      */
     private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime" , nullable=true)
      * @var \DateTime
      */
     private $updatedAt;
@@ -194,7 +194,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="admin", type="string", length=255)
+     * @ORM\Column(name="admin", type="string", length=255, nullable=true)
      */
     private $admin;
 
