@@ -1,0 +1,18 @@
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <i class="material-icons">reorder</i>
+      <img [src]="imgLogo" alt="3w_awards">
+      Les meilleurs site du web dans chaque catégorie
+    </a>
+    <ul class="navbar-nav ml-auto custum">
+        <app-search></app-search>
+      <li>
+        <i class="material-icons">account_box</i>
+        <button class="btn btn-outline-danger my-2 my-sm-0 round" type="submit">Soumettre un site</button>
+        <select name="lang" id="">
+          <option value="France" selected>FR</option>
+          <option value="English">EN</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
