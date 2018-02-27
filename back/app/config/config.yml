@@ -312,13 +312,60 @@ easy_admin:
                     - { property: 'technicalChallenges', label: 'Challenge technique'}
                     - { property: 'focalPoints', label: 'Point focal'}
                     - { property: 'customer', label: 'Client'}
+                    - { property: 'color', label: 'Couleurs'}
+                    - { property: 'country', label: 'Pays'}
+                    - { property: 'technology', label: 'Technologies'}
                     - { type: 'group', css_class: 'col-sm-3', label: 'Social', icon: 'user' }
                     - { property: 'viewNumber', label: 'Nombre de vue'}
                     - { property: 'likeNumber', label: 'Nombre de like'}
                     - { property: 'averageGrade', label: 'Note moyenne'}
                     - { property: 'averageJuryGrade', label: 'Note moyenne du jury'}
                     - { property: 'categoryAwards', label: 'Catégorie de prix'}
-    site_name: '<img src="https://i.imgur.com/vawr75B.png" />'
+        Colors:
+            class: BackBundle\Entity\Colors
+            list:
+                title: "Les Couleurs"
+                fields:
+                     - { property: 'label', label: 'Libelle'}
+                actions:
+                    - { name: 'new', label: 'Ajouter une couleur' }
+            form:
+                title: "Ajouter une couleur"
+                fields:
+                    - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
+        Technologies:
+            class: BackBundle\Entity\Technologies
+            list:
+                title: "Les Technos"
+                fields:
+                     - { property: 'label', label: 'Libelle'}
+                actions:
+                    - { name: 'new', label: 'Ajouter une techno' }
+            form:
+                title: "Ajouter une techno"
+                fields:
+                    - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
+        Country:
+            class: BackBundle\Entity\Country
+            list:
+                title: "Les Pays"
+                fields:
+                     - { property: 'label', label: 'Libelle'}
+                actions:
+                    - { name: 'new', label: 'Ajouter un pays' }
+            form:
+                title: "Ajouter un pays"
+                fields:
+                    - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
+        User:
+            class: UserBundle\Entity\User
+            list:
+                title: "Les Utilisateurs"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Utilisateur' }
+            form:
+                title: "Ajouter un nouvelle utilisateur"
+
     design:
         form_theme: 'vertical'
         brand_color: 'grey'
@@ -326,15 +373,21 @@ easy_admin:
         assets:
             favicon: '../docs/favicon.png'
         menu:
-            - { entity: 'Project', label: 'Projet', icon: 'suitcase'}
             - { entity: 'Agency', label: 'Agences', icon: 'anchor'}
             - { entity: 'Blog', label: 'Blog', icon: 'pencil'}
-            - { entity: 'Customer', label: 'Clients', icon: 'address-book'}
             - label: 'Les Prix'
             - { entity: 'Awards', label: 'Prix', icon: 'trophy'}
             - { entity: 'CategoryAwards', label: 'Catégorie de Prix', icon: 'certificate'}
             - label: 'Outils'
             - { entity: 'Parameters', label: 'Paramètres', icon: 'cog'}
+            - label: 'Site internet'
+            - { entity: 'Project', label: 'Projet', icon: 'suitcase'}
+            - { entity: 'Colors', label: 'Couleurs', icon: 'paint-brush'}
+            - { entity: 'Technologies', label: 'Technos', icon: 'wrench'}
+            - { entity: 'Country', label: 'Pays', icon: 'globe'}
+            - label: 'Personnes'
+            - { entity: 'User', label: 'Utilisateurs', icon: 'user'}
+            - { entity: 'Customer', label: 'Clients', icon: 'address-book'}
 
 lexik_jwt_authentication:
     private_key_path: '%kernel.root_dir%/../var/jwt/private.pem'
