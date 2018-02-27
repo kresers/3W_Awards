@@ -1,34 +1,59 @@
-.round{
-  border-radius: 17px;
-}
-.custom{
-  flex-direction: row;
+/* Navbar Left */
+.custom_left_element_navbar{
+  margin: 0 0 80px 100px
 }
 .navigation{
   display: flex;
   align-items: center;
 }
+
+/* Burger_menu */
 .burger_menu_custom{
   display:flex;
-  margin-top:3%;
+  margin:0;
 }
+.burger_menu_custom p {
+  margin: 0 0 0 5px;
+}
+.material-icons {
+  padding-top: 4px;
+}
+
+/* Slogan */
 .logo_slogan{
   display:flex;
+  margin-left: 20px;
 }
 .logo_slogan p{
-  margin-top:3%;
+  padding-top: 17px;
 }
 .vertical_line_red{
-  margin:3%;
-  width:5px;
   border-left:1px solid red;
   height:30px;
+  margin: 20px;
+}
+
+/* Navbar right */
+
+.custom_right_element_navbar{
+  margin: 0px 0px 80px 0px
+}
+
+.custom_right_element_navbar p{
+  margin: 10px;
+}
+
+.custom_right_element_navbar button{
+  border: 2px solid red;
+  margin-right: 10px;
 }
 
 .vertical_line_grey{
-  margin:3%;
-  width:5px;
   border-left:1px solid darkgrey;
-  height:15px;
+  height:20px;
 }
 
+/* css general */
+.round{
+  border-radius: 17px;
+}
