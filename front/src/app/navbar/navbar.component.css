@@ -1,6 +1,34 @@
 .round{
   border-radius: 17px;
 }
-.custum{
+.custom{
   flex-direction: row;
 }
+.navigation{
+  display: flex;
+  align-items: center;
+}
+.burger_menu_custom{
+  display:flex;
+  margin-top:3%;
+}
+.logo_slogan{
+  display:flex;
+}
+.logo_slogan p{
+  margin-top:3%;
+}
+.vertical_line_red{
+  margin:3%;
+  width:5px;
+  border-left:1px solid red;
+  height:30px;
+}
+
+.vertical_line_grey{
+  margin:3%;
+  width:5px;
+  border-left:1px solid darkgrey;
+  height:15px;
+}
+
