@@ -478,4 +478,38 @@ class User extends BaseUser
     {
         return $this->optIn;
     }
+
+    /**
+     * Add project
+     *
+     * @param \BackBundle\Entity\Project $project
+     *
+     * @return User
+     */
+    public function addProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \BackBundle\Entity\Project $project
+     */
+    public function removeProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProject()
+    {
+        return $this->project;
+    }
 }
