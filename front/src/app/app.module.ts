@@ -8,6 +8,8 @@ import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { WebsiteFrontComponent } from './website-front/website-front.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { FrontCardsComponent } from './front-cards/front-cards.component';
 
 
 @NgModule({
@@ -16,6 +18,9 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     SearchComponent,
     CarouselComponent,
+    WebsiteFrontComponent,
+    FooterComponent,
+    FrontCardsComponent
     WebsiteFrontComponent,
     LoginComponent
   ],

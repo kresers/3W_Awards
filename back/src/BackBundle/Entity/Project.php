@@ -202,6 +202,21 @@ class Project
      */
     private $customer;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Colors", cascade={"persist"})
+     */
+    private $color;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Technologies", cascade={"persist"})
+     */
+    private $technology;
+
+    /**
+     * @ORM\OneToMany(targetEntity="BackBundle\Entity\Country", mappedBy="Project")
+     */
+    private $country;
+
 
 
     /**
@@ -836,5 +851,120 @@ class Project
     public function getCustomer()
     {
         return $this->customer;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->color = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add color
+     *
+     * @param \BackBundle\Entity\Colors $color
+     *
+     * @return Project
+     */
+    public function addColor(\BackBundle\Entity\Colors $color)
+    {
+        $this->color[] = $color;
+
+        return $this;
+    }
+
+    /**
+     * Remove color
+     *
+     * @param \BackBundle\Entity\Colors $color
+     */
+    public function removeColor(\BackBundle\Entity\Colors $color)
+    {
+        $this->color->removeElement($color);
+    }
+
+    /**
+     * Get color
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * Add technology
+     *
+     * @param \BackBundle\Entity\Technologies $technology
+     *
+     * @return Project
+     */
+    public function addTechnology(\BackBundle\Entity\Technologies $technology)
+    {
+        $this->technology[] = $technology;
+
+        return $this;
+    }
+
+    /**
+     * Remove technology
+     *
+     * @param \BackBundle\Entity\Technologies $technology
+     */
+    public function removeTechnology(\BackBundle\Entity\Technologies $technology)
+    {
+        $this->technology->removeElement($technology);
+    }
+
+    /**
+     * Get technology
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTechnology()
+    {
+        return $this->technology;
+    }
+
+    /**
+     * Add country
+     *
+     * @param \BackBundle\Entity\Country $country
+     *
+     * @return Project
+     */
+    public function addCountry(\BackBundle\Entity\Country $country)
+    {
+        $this->country[] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Remove country
+     *
+     * @param \BackBundle\Entity\Country $country
+     */
+    public function removeCountry(\BackBundle\Entity\Country $country)
+    {
+        $this->country->removeElement($country);
+    }
+
+    /**
+     * Get country
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return (string) $this->getProjectName();
     }
 }
