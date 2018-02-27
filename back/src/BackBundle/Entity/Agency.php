@@ -3,12 +3,15 @@
 namespace BackBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * agency
  *
  * @ORM\Table(name="agency")
- * @ORM\Entity(repositoryClass="BackBundle\Repository\agencyRepository")
+ * @ORM\Entity(repositoryClass="BackBundle\Repository\AgencyRepository")
+ * @Vich\Uploadable
  */
 class Agency
 {
@@ -43,11 +46,37 @@ class Agency
     private $categories;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
-     *
-     * @ORM\Column(name="logo", type="string", length=255)
      */
-    private $logo;
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="agency_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+    // ...
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
 
     /**
      * @var string
@@ -245,28 +274,58 @@ class Agency
     }
 
     /**
-     * Set logo
+     * Set image
      *
-     * @param string $logo
+     * @param string $image
      *
-     * @return agency
+     * @return Agency
      */
-    public function setLogo($logo)
+    public function setImage($image)
     {
-        $this->logo = $logo;
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Get logo
+     * Get image
      *
      * @return string
      */
-    public function getLogo()
+    public function getImage()
     {
-        return $this->logo;
+        return $this->image;
     }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Agency
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
 
     /**
      * Set adress
