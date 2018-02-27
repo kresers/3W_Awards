@@ -327,12 +327,14 @@ easy_admin:
                 title: "Les Couleurs"
                 fields:
                      - { property: 'label', label: 'Libelle'}
+                     - { property: 'hexa', label: 'Hexadecimal'}
                 actions:
                     - { name: 'new', label: 'Ajouter une couleur' }
             form:
                 title: "Ajouter une couleur"
                 fields:
                     - { property: 'label', label: 'Titre', css_class: 'col-sm-4'}
+                    - { property: 'hexa', label: 'Hexa', css_class: 'col-sm-4'}
         Technologies:
             class: BackBundle\Entity\Technologies
             list:

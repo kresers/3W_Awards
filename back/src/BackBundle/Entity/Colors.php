@@ -28,6 +28,13 @@ class Colors
      */
     private $label;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hexa", type="string", length=255)
+     */
+    private $hexa;
+
 
     /**
      * Get id
@@ -67,5 +74,29 @@ class Colors
     {
         // TODO: Implement __toString() method.
         return (string) $this->getLabel();
+    }
+
+    /**
+     * Set hexa
+     *
+     * @param string $hexa
+     *
+     * @return Colors
+     */
+    public function setHexa($hexa)
+    {
+        $this->hexa = $hexa;
+
+        return $this;
+    }
+
+    /**
+     * Get hexa
+     *
+     * @return string
+     */
+    public function getHexa()
+    {
+        return $this->hexa;
     }
 }
