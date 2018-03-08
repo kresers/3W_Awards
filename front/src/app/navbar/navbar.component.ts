@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthenticationService} from "../authentication/authentication.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
 
-  imgLogo = 'assets/img/logo.png'
-
-  constructor() { }
+  imgLogo = 'assets/img/logo.png';
+  authorized:boolean;
+  constructor(private auth:AuthenticationService) { }
 
   ngOnInit() {
+    this.authorized = this.auth.isAutorized('ROLE_ADMIN')
+      console.log(this.authorized);
   }
 
 }

@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {AuthenticationService} from "angular-authentication-service";
+import {AuthenticationService} from "../authentication/authentication.service";
+import {Router, RouterModule} from "@angular/router";
+
 
 @Component({
     selector: 'app-login',
@@ -12,7 +13,9 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     error: string = '';
 
-    constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService, private router: Router) {
+    constructor(private formBuilder: FormBuilder,
+                private authenticationService: AuthenticationService,
+                private router: Router) {
         this.loginForm = formBuilder.group({
             'username': ['', Validators.required],
             'password': ['', Validators.required]
@@ -23,14 +26,13 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit() {
-        this.authenticationService.login(this.loginForm.value)
+        this.authenticationService.authenticate(this.loginForm.value)
             .subscribe(
                 data => {
-                    localStorage.setItem('id_token', data.access_token);
-                    this.router.navigate(['post']);
+                    localStorage.setItem('id_token', data.token);
+                    this.router.navigate(['admin']);
                 },
                 error => this.error = error.message
             );
     }
-
 }

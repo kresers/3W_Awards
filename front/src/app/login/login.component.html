@@ -1,19 +1,57 @@
-<h1>Login</h1>
-<div>
-  <div [hidden]="!error" class="alert alert-danger" role="alert">
-    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    <span class="sr-only">Error:</span>
 
-  </div>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Username*" formControlName="username">
+<!-- authentication/authentication.component.html -->
+
+<a style="cursor: pointer" data-toggle="modal" data-target="#myModal"><i class="far fa-user"></i></a>
+<!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+<!-- Modal HTML -->
+
+<div id="myModal" class="modal fade">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+
+            </div>
+
+            <div class="modal-body">
+
+                <h1>Login</h1>
+                <div>
+                    <div [hidden]="!error" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username*" formControlName="username">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password*" formControlName="password">
+                        </div>
+
+                        <button type="submit"  class="btn btn-success pull-right" [disabled]="!loginForm.valid">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                <button type="button" class="btn btn-primary">Save changes</button>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password*" formControlName="password">
-    </div>
-
-    <button type="submit" class="btn btn-success pull-right" [disabled]="!loginForm.valid">Submit</button>
-  </form>
 </div>

@@ -54,7 +54,6 @@ class LoadAgencyData implements FixtureInterface
                 $agency->setName($name);
                 $agency->setCountry($country);
                 $agency->setCategories($categories);
-                $agency->setLogo($logo);
                 $agency->setAdress($adress);
                 $agency->setAdress2($adress2);
                 $agency->setPostalCode($postalCodes);
