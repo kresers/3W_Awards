@@ -14,10 +14,6 @@ back:
     type:     annotation
     prefix:   /administration
 
-api:
-    resource: "@BackBundle/Api/"
-    type:     annotation
-    prefix:   /
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

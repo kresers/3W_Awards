@@ -1,56 +1,56 @@
-<nav class="navbar navbar-light bg-light" id="navigation">
-  <div class="col-md-6">
-    <div class="navbar-brand navigation custom_left_element_navbar" href="#">
-      <div class="burger_menu_custom">
-      <p> Menu</p>
-        <!-- Collapse button -->
-        <button class="navbar-toggler toggler-example noborder" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">NOMINÉS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">AWARDS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">AGENCES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">JURY</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">BLOG</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">JOBS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SHOP</a>
-            </li>
-          </ul>
-          <!-- Links -->
+<nav class="col-md-12 navbar navbar-light bg-light" id="navigation">
+    <div class="col-md-6">
+      <div class="navbar-brand navigation custom_left_element_navbar" href="#">
+        <div class="burger_menu_custom">
+          <p> Menu</p>
+          <!-- Collapse button -->
+          <button class="navbar-toggler toggler-example noborder" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                  aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NOMINÉS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">AWARDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">AGENCES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">JURY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">JOBS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SHOP</a>
+              </li>
+            </ul>
+            <!-- Links -->
+          </div>
+          <!-- Collapsible content -->
         </div>
-        <!-- Collapsible content -->
-      </div>
-      <div class="logo_slogan">
-      <img [src]="imgLogo" alt="3w_awards">
-        <div class="vertical_line_red"> </div>
-        <p> Les meilleurs site du web dans chaque catégorie </p>
+        <div class="logo_slogan">
+          <img [src]="imgLogo" alt="3w_awards">
+          <div class="vertical_line_red"> </div>
+          <p> Les meilleurs site du web dans chaque catégorie </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="navbar-brand navigation custom_right_element_navbar">
-      <i class="fas fa-search"></i>
-      <i class="far fa-user"></i>
-        <p>Connexion</p>
+    <div class="col-md-4">
+      <div class="navbar-brand navigation custom_right_element_navbar">
+        <i class="fas fa-search"></i>
+        <app-login></app-login>
+        <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
         <div class="vertical_line_grey"></div>
         <p>inscription</p>
         <button class="btn btn-outline-danger my-2 my-sm-0 round" type="submit">Soumettre un site</button>
@@ -58,6 +58,6 @@
           <option value="France" selected>FR</option>
           <option value="English">EN</option>
         </select>
+      </div>
     </div>
-  </div>
 </nav>

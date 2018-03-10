@@ -13,7 +13,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @ORM\Entity(repositoryClass="BackBundle\Repository\ParametersRepository")
  * @Vich\Uploadable
  */
-class Parameters
+class Parameter
 {
     /**
      * @var int
@@ -112,7 +112,7 @@ class Parameters
      *
      * @param string $applicationNale
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setApplicationNale($applicationNale)
     {
@@ -134,7 +134,7 @@ class Parameters
      *
      * @param string $image
      *
-     * @return Parameters
+     * @return Parameter
      */
     public function setImage($image)
     {
@@ -162,7 +162,7 @@ class Parameters
      *
      * @param string $adress
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setAdress($adress)
     {
@@ -184,7 +184,7 @@ class Parameters
      *
      * @param string $adress2
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setAdress2($adress2)
     {
@@ -206,7 +206,7 @@ class Parameters
      *
      * @param integer $phoneNumber
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setPhoneNumber($phoneNumber)
     {
@@ -228,7 +228,7 @@ class Parameters
      *
      * @param string $fax
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setFax($fax)
     {
@@ -250,7 +250,7 @@ class Parameters
      *
      * @param string $emailRequest
      *
-     * @return parameters
+     * @return Parameter
      */
     public function setEmailRequest($emailRequest)
     {
@@ -274,7 +274,7 @@ class Parameters
      *
      * @param \DateTime $updatedAt
      *
-     * @return Parameters
+     * @return Parameter
      */
     public function setUpdatedAt($updatedAt)
     {
