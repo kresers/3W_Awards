@@ -58,7 +58,8 @@
   border-radius: 17px;
 }
 #navigation{
-  position: absolute;
+  position: relative;
+  min-height: 150px;
 }
 
 .noborder{

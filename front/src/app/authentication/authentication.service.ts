@@ -1,17 +1,18 @@
 // authentication/authentication.service.ts
-import {Injectable} from '@angular/core';
+
 import {Http, Response, Headers, RequestOptions, URLSearchParams} from '@angular/http';
 import {tokenNotExpired} from 'angular2-jwt';
-
 import 'rxjs/add/operator/map';
 import {Router} from "@angular/router";
 import * as JWT from 'jwt-decode';
+import {Injectable} from "@angular/core";
 
 @Injectable()
 export class AuthenticationService {
 
     constructor(private http: Http, private router: Router) {
     }
+    authorization: boolean;
 
     authenticate(user: any) {
         let url = 'http://127.0.0.1:8000/api/login_check';
@@ -29,6 +30,7 @@ export class AuthenticationService {
 
     /* this function delete the token and redirect the current user to the homepage */
     logout() {
+        this.authorization = false;
         localStorage.removeItem('id_token');
     }
 
@@ -50,15 +52,16 @@ export class AuthenticationService {
     */
     isAutorized(role) {
         let roles = this.getRolesCurrentUser();
+        let authorization = false ;
         roles.forEach(function (value)
         {
             console.log(value);
             console.log(role);
             if(role == value)
             {
-                return true;
+                authorization = true;
             }
         });
-        return false;
+        return authorization;
 }
 }

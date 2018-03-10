@@ -10,12 +10,20 @@ export class NavbarComponent implements OnInit {
 
 
   imgLogo = 'assets/img/logo.png';
-  authorized:boolean;
-  constructor(private auth:AuthenticationService) { }
+  constructor(private auth:AuthenticationService) {
+  }
 
   ngOnInit() {
-    this.authorized = this.auth.isAutorized('ROLE_ADMIN')
-      console.log(this.authorized);
+
+  }
+
+  autorized()
+  {
+      if(localStorage.getItem('id_token'))
+      {
+          return this.auth.isAutorized('ROLE_ADMIN');
+      }
+
   }
 
 }
