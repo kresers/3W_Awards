@@ -2,12 +2,11 @@
     <div class="col-md-6">
       <div class="navbar-brand navigation custom_left_element_navbar" href="#">
         <div class="burger_menu_custom">
-          <p> Menu</p>
           <!-- Collapse button -->
-          <button class="navbar-toggler toggler-example noborder" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                  aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+          <button  (click)="showBtn()" class="navbar-toggler  noborder" type="button"><i class="fas fa-bars"></i>
+          </button><p> Menu</p>
           <!-- Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <div id="menu-nav" >
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">

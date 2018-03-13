@@ -1,6 +1,6 @@
 /* Navbar Left */
 .custom_left_element_navbar{
-  margin: 0 0 8% -3%
+  margin: 0 0 8%;
 }
 .navigation{
   display: flex;
@@ -17,6 +17,16 @@
 }
 .material-icons {
   padding-top: 4px;
+}
+
+#menu-nav{
+  background: #5e5e5e;
+  display: none;
+  z-index: 10;
+}
+
+.nav-link{
+  padding: 0;
 }
 
 /* Slogan */
@@ -36,7 +46,7 @@
 /* Navbar right */
 
 .custom_right_element_navbar{
-  margin: 0px 0px 15% -15%;
+  margin: 0px 0px 15%;
 }
 
 .custom_right_element_navbar p{
