@@ -58,7 +58,7 @@
   border-radius: 17px;
 }
 #navigation{
-  position: relative;
+  position: absolute;
   min-height: 150px;
 }
 
