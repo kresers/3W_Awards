@@ -5,17 +5,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Http, HttpModule, RequestOptions } from '@angular/http';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AppComponent } from './app.component';
-import { Routing } from './app.routing';
+import { AppRouting } from './app.routing';
 import { AuthGuard } from './_guard/index';
 import { AuthenticationService } from './authentication/authentication.service';
 import { PostComponent } from './post/post.component';
-import {NavbarComponent} from "./navbar/navbar.component";
-import {SearchComponent} from "./search/search.component";
-import {CarouselComponent} from "./carousel/carousel.component";
-import {WebsiteFrontComponent} from "./website-front/website-front.component";
-import {FooterComponent} from "./footer/footer.component";
-import {FrontCardsComponent} from "./front-cards/front-cards.component";
-import {LoginComponent} from "./login/login.component";
+import {NavbarComponent} from './navbar/navbar.component';
+import {SearchComponent} from './search/search.component';
+import {CarouselComponent} from './carousel/carousel.component';
+import {WebsiteFrontComponent} from './website-front/website-front.component';
+import {FooterComponent} from './footer/footer.component';
+import {FrontCardsComponent} from './front-cards/front-cards.component';
+import {LoginComponent} from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp( new AuthConfig({}), http, options);
@@ -33,12 +34,13 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsiteFrontComponent,
         LoginComponent,
         PostComponent,
+        HomeComponent,
     ],
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpModule,
-        Routing,
+        AppRouting,
     ],
     providers: [
         {

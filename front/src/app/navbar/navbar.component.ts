@@ -26,4 +26,8 @@ export class NavbarComponent implements OnInit {
   showBtn() {
     document.getElementById('menu-nav').style.display = 'block';
   }
+
+  openSite(/*objet de type site*/) {
+    /* */
+  }
 }
