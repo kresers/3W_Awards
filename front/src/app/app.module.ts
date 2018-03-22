@@ -23,6 +23,7 @@ import { WebsiteComponent } from './website/website.component';
 import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilInfoComponent } from './profil-info/profil-info.component';
+import {RecaptchaComponent} from "ng-recaptcha";
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -47,6 +48,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         HomeComponent,
         ProfilComponent,
         ProfilInfoComponent,
+        RecaptchaComponent
+
     ],
     imports: [
         BrowserModule,
