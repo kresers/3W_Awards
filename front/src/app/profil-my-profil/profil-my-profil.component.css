@@ -1,0 +1,21 @@
+.greyBackground {
+    background-color: #dddddd;
+}
+
+.myProfil {
+    margin-top: 4px;
+}
+
+.noRoundedCorners {
+    border-radius: 0;
+}
+
+.formDiv {
+    margin-left: 120px;
+    padding-top: 40px;
+}
+
+h1 h2
+{
+    font-weight: 700i;
+}

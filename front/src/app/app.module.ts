@@ -22,6 +22,7 @@ import { WebsiteComponent } from './website/website.component';
 import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilInfoComponent } from './profil-info/profil-info.component';
+import { ProfilMyProfilComponent } from './profil-my-profil/profil-my-profil.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -45,6 +46,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         HomeComponent,
         ProfilComponent,
         ProfilInfoComponent,
+        ProfilMyProfilComponent,
     ],
     imports: [
         BrowserModule,
