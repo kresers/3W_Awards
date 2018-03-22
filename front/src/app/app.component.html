@@ -1,5 +1,4 @@
-<li *ngIf="hasAuthToken()"><a (click)="logout()" href="#">Logout</a></li>
 <app-navbar></app-navbar>
-<app-carousel></app-carousel>
-<app-front-cards></app-front-cards>
+<li *ngIf="hasAuthToken()"><a (click)="logout()" href="#">Logout</a></li>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
