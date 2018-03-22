@@ -10,6 +10,7 @@
     border-radius: 0;
 }
 
+
 .formDiv {
     margin-left: 120px;
     padding-top: 40px;
@@ -42,4 +43,22 @@ h2, p, label, button {
     background-color: #eb1c24;
     color: white;
     font-weight: 700;
+}
+
+.resizePP {
+    width: 45%;
+}
+
+.imageProfil {
+    float: right;
+}
+
+.upload {
+    width: 110px;
+    height: 75%;
+    border-radius: 50px;
+}
+
+.fa-info-circle{
+    color: grey;
 }
