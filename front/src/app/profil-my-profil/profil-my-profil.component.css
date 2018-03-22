@@ -13,9 +13,33 @@
 .formDiv {
     margin-left: 120px;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-h1 h2
-{
-    font-weight: 700i;
+.optInSubmit {
+    margin-left: 185px;
+}
+
+h2, p, label, button {
+    font-family: 'Monserrat', 'Open Sans', sans-serif;
+    font-weight: 400;
+    color:  grey;
+}
+
+.cancel {
+    width: 150px;
+    height: 75%;
+    border-radius: 50px;
+    background-color: white;
+    border-color: white;
+    color: #eb1c24;
+    font-weight: 700;
+}
+
+.submit {
+    width: 150px;
+    border-radius: 50px;
+    background-color: #eb1c24;
+    color: white;
+    font-weight: 700;
 }
