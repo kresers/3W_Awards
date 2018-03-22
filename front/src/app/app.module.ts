@@ -20,6 +20,8 @@ import {LoginComponent} from "./login/login.component";
 import { LikeComponent } from './like/like.component';
 import { WebsiteComponent } from './website/website.component';
 import { HomeComponent } from './home/home.component';
+import { ProfilComponent } from './profil/profil.component';
+import { ProfilInfoComponent } from './profil-info/profil-info.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -41,6 +43,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         LikeComponent,
         WebsiteComponent,
         HomeComponent,
+        ProfilComponent,
+        ProfilInfoComponent,
     ],
     imports: [
         BrowserModule,

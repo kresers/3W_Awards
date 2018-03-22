@@ -1,0 +1,19 @@
+.call-to-action {
+    border-radius: 50px;
+}
+
+.tags {
+    border-radius: 50px;
+    background-color: #89898b;
+    color: white;
+    border-color: #89898b;
+}
+.tags:hover {
+    background-color: white;
+    color: dimgrey;
+}
+
+
+.grey {
+    color: dimgrey;
+}
