@@ -16,6 +16,8 @@ import {WebsiteFrontComponent} from "./website-front/website-front.component";
 import {FooterComponent} from "./footer/footer.component";
 import {FrontCardsComponent} from "./front-cards/front-cards.component";
 import {LoginComponent} from "./login/login.component";
+import { LikeComponent } from './like/like.component';
+import { WebsiteComponent } from './website/website.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp( new AuthConfig({}), http, options);
@@ -33,6 +35,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsiteFrontComponent,
         LoginComponent,
         PostComponent,
+        LikeComponent,
+        WebsiteComponent,
     ],
     imports: [
         BrowserModule,
