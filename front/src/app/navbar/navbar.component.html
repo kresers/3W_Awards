@@ -1,13 +1,52 @@
-<nav class="col-md-12 navbar navbar-light bg-light" id="navigation">
+<nav class="navbar navbar-light bg-light">
+  <div class="left-nav">
+  <div class="dropdown">
+    <button class="btn-menu" type="button" data-toggle="dropdown">
+      <i class="fas fa-bars"></i>
+      Menu
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">NOMINÉS</a></li>
+      <li><a href="#">AWARDS</a></li>
+      <li><a href="#">AGENCES</a></li>
+      <li><a href="#">JURY</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">JOBS</a></li>
+      <li><a href="#">SHOP</a></li>
+    </ul>
+  </div>
+    <a rel="home" href="#" title="logo 3WAwards">
+      <img [src]="imgLogo" alt="3w_awards">
+    </a>
+    <div class="vertical_line_red"> </div>
+    <p> Les meilleurs site du web dans chaque catégorie </p>
+  </div>
+  <div class="right-nav">
+    <i class="fas fa-search"></i>
+    <app-login></app-login>
+    <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
+    <span>Connection </span>
+    <div class="vertical_line_grey"> </div>
+    <span> Inscription </span>
+    <button class="btn btn-outline-danger" type="submit">Soumettre un site</button>
+    <select class="dropdown-lang" name="lang" id="">
+      <option value="France" selected>FR</option>
+      <option value="English">EN</option>
+    </select>
+    <span class="caret"></span>
+  </div>
+</nav>
+
+
+
+<!--<nav class="col-md-12 navbar navbar-light bg-light" id="navigation">
     <div class="col-md-6">
       <div class="navbar-brand navigation custom_left_element_navbar" href="#">
         <div class="burger_menu_custom">
-          <!-- Collapse button -->
           <button  (click)="showBtn()" class="navbar-toggler  noborder" type="button"><i class="fas fa-bars"></i>
           </button><p> Menu</p>
-          <!-- Collapsible content -->
           <div id="menu-nav" >
-            <!-- Links -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -34,9 +73,7 @@
                 <a class="nav-link" href="#">SHOP</a>
               </li>
             </ul>
-            <!-- Links -->
           </div>
-          <!-- Collapsible content -->
         </div>
         <div class="logo_slogan">
           <img [src]="imgLogo" alt="3w_awards">
@@ -59,4 +96,4 @@
         </select>
       </div>
     </div>
-</nav>
+</nav> -->
