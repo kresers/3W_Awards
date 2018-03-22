@@ -24,17 +24,15 @@
   </div>
   <div class="right-nav">
     <i class="fas fa-search"></i>
-    <app-login></app-login>
     <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
-    <span>Connection </span>
+    <app-login></app-login>
     <div class="vertical_line_grey"> </div>
     <span> Inscription </span>
     <button class="btn btn-outline-danger" type="submit">Soumettre un site</button>
-    <select class="dropdown-lang" name="lang" id="">
+    <select name="lang" id="">
       <option value="France" selected>FR</option>
       <option value="English">EN</option>
     </select>
-    <span class="caret"></span>
   </div>
 </nav>
 

@@ -1,5 +1,10 @@
 #cover{
-  z-index: 1;
-padding-top: 8.5%;
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 340px) {
+  #cover {
+    margin-top: -90px;
+  }
 }
 
