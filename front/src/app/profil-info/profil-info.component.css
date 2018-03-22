@@ -15,5 +15,18 @@
 
 
 .grey {
-    color: dimgrey;
+    color: grey;
+}
+
+.greyBackground {
+    background-color: #dddddd;
+}
+
+.central {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.resizePP{
+    width: 20%;
 }
