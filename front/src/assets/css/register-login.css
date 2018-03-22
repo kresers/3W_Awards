@@ -1,0 +1,43 @@
+.center
+{
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 17px;
+    font-family: 'Monserrat', 'Open Sans', sans-serif;
+    color: grey;
+}
+
+.content-form-group
+{
+    margin: 0 auto !important;
+    max-width: 470px;
+    padding-top: 15px;
+}
+
+.space-top
+{
+    margin-top: 20px;
+}
+
+.input-register-login
+{
+    max-height: 38px !important;
+    border-radius: 50px !important;
+    border: 2px solid #ddd !important;
+    vertical-align: middle;
+    max-width: 260px !important;
+}
+
+.row-group
+{
+    padding-top: 5px !important;
+    margin-right: -40px;
+}
+
+.close
+{
+    margin-top: -14px;
+    margin-right: -9px;
+    color: grey;
+    font-weight: 900;
+}

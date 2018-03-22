@@ -1,13 +1,11 @@
+p{
+  font-size: 12px;
+}
 .footer{
-  background-color: #343434;
-  margin-top: 3%;
-  padding-top: 2em;
+  background-color: #39393A;
 }
 .about{
   width: 20em;
-}
-.about p{
-  font-size: 0.9em;
 }
 
 .mapsite{
