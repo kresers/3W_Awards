@@ -7,6 +7,7 @@ import { AuthGuard } from './_guard/index';
 import {LoginComponent} from './login/login.component';
 import { HomeComponent} from './home/home.component';
 import {AgencyComponent} from './agency/agency.component';
+import {ProfilComponent} from './profil/profil.component';
 
 const routes: Routes = [
     {
@@ -19,7 +20,11 @@ const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+    },
+    {
+        path: 'profil',
+        component: ProfilComponent,
     },
     {
         path: 'admin',

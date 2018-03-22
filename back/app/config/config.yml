@@ -112,6 +112,7 @@ vich_uploader:
 
 # app/config/config.yml
 easy_admin:
+    site_name: '3w Awards'
     list:
         actions:
             - { name: 'edit', icon: 'pencil', label: '', title: "Edit"}
@@ -369,6 +370,18 @@ easy_admin:
                     - { name: 'new', label: 'Ajouter un Utilisateur' }
             form:
                 title: "Ajouter un nouvelle utilisateur"
+        VoteCriteria:
+            class: BackBundle\Entity\VoteCriteria
+            list:
+                title: "Les Critères de Votes"
+                actions:
+                    - { name: 'new', label: 'Ajouter un Critère'}
+            form:
+                title: "Ajouter un Critère"
+                fields:
+                    - { property: 'name', label: 'Titre', css_class: 'col-sm-4'}
+                    - { property: 'color', label: 'Couleur', css_class: 'col-sm-4'}
+                    - { property: 'categoryAwards', label: 'Catégorie de Prix', css_class: 'col-sm-4'}
 
     design:
         form_theme: 'vertical'
@@ -382,6 +395,7 @@ easy_admin:
             - label: 'Les Prix'
             - { entity: 'Awards', label: 'Prix', icon: 'trophy'}
             - { entity: 'CategoryAwards', label: 'Catégorie de Prix', icon: 'certificate'}
+            - { entity: 'VoteCriteria', label: 'Critères de Votes', icon: 'star'}
             - label: 'Outils'
             - { entity: 'Parameter', label: 'Paramètres', icon: 'cog'}
             - label: 'Site internet'
@@ -392,6 +406,7 @@ easy_admin:
             - label: 'Personnes'
             - { entity: 'User', label: 'Utilisateurs', icon: 'user'}
             - { entity: 'Customer', label: 'Clients', icon: 'address-book'}
+
 
 lexik_jwt_authentication:
     private_key_path: '%kernel.root_dir%/../var/jwt/private.pem'
