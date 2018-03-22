@@ -10,17 +10,20 @@ import { AuthGuard } from './_guard/index';
 import { AuthenticationService } from './authentication/authentication.service';
 import { PostComponent } from './post/post.component';
 
-import {NavbarComponent} from "./navbar/navbar.component";
-import {SearchComponent} from "./search/search.component";
-import {CarouselComponent} from "./carousel/carousel.component";
-import {WebsiteFrontComponent} from "./website-front/website-front.component";
-import {FooterComponent} from "./footer/footer.component";
-import {FrontCardsComponent} from "./front-cards/front-cards.component";
-import {LoginComponent} from "./login/login.component";
+import {NavbarComponent} from './navbar/navbar.component';
+import {SearchComponent} from './search/search.component';
+import {CarouselComponent} from './carousel/carousel.component';
+import {WebsiteFrontComponent} from './website-front/website-front.component';
+import {FooterComponent} from './footer/footer.component';
+import {FrontCardsComponent} from './front-cards/front-cards.component';
+import {LoginComponent} from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LikeComponent } from './like/like.component';
 import { WebsiteComponent } from './website/website.component';
 import { HomeComponent } from './home/home.component';
+import { AgencyComponent } from './agency/agency.component';
+import { CardsAgencyComponent } from './cards-agency/cards-agency.component';
+import { InfoAgencyComponent } from './info-agency/info-agency.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilInfoComponent } from './profil-info/profil-info.component';
 import {RecaptchaComponent} from "ng-recaptcha";
@@ -46,6 +49,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         LikeComponent,
         WebsiteComponent,
         HomeComponent,
+        AgencyComponent,
+        CardsAgencyComponent,
+        InfoAgencyComponent,
         ProfilComponent,
         ProfilInfoComponent,
         RecaptchaComponent
