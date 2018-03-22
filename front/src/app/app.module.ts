@@ -26,6 +26,7 @@ import { CardsAgencyComponent } from './cards-agency/cards-agency.component';
 import { InfoAgencyComponent } from './info-agency/info-agency.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilInfoComponent } from './profil-info/profil-info.component';
+import {RecaptchaComponent} from "ng-recaptcha";
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -53,6 +54,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         InfoAgencyComponent,
         ProfilComponent,
         ProfilInfoComponent,
+        RecaptchaComponent
+
     ],
     imports: [
         BrowserModule,
