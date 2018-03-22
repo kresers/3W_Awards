@@ -35,7 +35,7 @@ class LoadUserData implements FixtureInterface
                 $username_canonical = $username.$file;
                 $country = $datas[2];
                 $gender = $datas[3];
-                $tabRoles = 'ROLES_'.$datas[4];
+                $tabRoles = 'ROLE_'.$datas[4];
                 $email = $datas[5];
                 $pass = $datas[6];
 
@@ -48,6 +48,7 @@ class LoadUserData implements FixtureInterface
                 $user->setPlainPassword($pass);
                 $user->setCountry($country);
                 $user->setGender($gender);
+                $user->setEnabled(true);
                 $user->setRoles(array($tabRoles));
                 $user->setEmail($email);
                 $user->setEmailCanonical($email);
