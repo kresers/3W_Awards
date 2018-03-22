@@ -17,6 +17,9 @@ import {FooterComponent} from './footer/footer.component';
 import {FrontCardsComponent} from './front-cards/front-cards.component';
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AgencyComponent } from './agency/agency.component';
+import { CardsAgencyComponent } from './cards-agency/cards-agency.component';
+import { InfoAgencyComponent } from './info-agency/info-agency.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp( new AuthConfig({}), http, options);
@@ -35,6 +38,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         LoginComponent,
         PostComponent,
         HomeComponent,
+        AgencyComponent,
+        CardsAgencyComponent,
+        InfoAgencyComponent,
     ],
     imports: [
         BrowserModule,
