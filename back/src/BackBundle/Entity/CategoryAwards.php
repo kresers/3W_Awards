@@ -28,6 +28,11 @@ class CategoryAwards
      */
     private $label;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\VoteCriteria", cascade={"persist"})
+     */
+    private $voteCriteria;
+
 
     /**
      * Get id
@@ -67,5 +72,46 @@ class CategoryAwards
     {
         // TODO: Implement __toString() method.
         return (string) $this->getLabel();
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->voteCriteria = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add voteCriterium
+     *
+     * @param \BackBundle\Entity\VoteCriteria $voteCriterium
+     *
+     * @return CategoryAwards
+     */
+    public function addVoteCriterium(\BackBundle\Entity\VoteCriteria $voteCriterium)
+    {
+        $this->voteCriteria[] = $voteCriterium;
+
+        return $this;
+    }
+
+    /**
+     * Remove voteCriterium
+     *
+     * @param \BackBundle\Entity\VoteCriteria $voteCriterium
+     */
+    public function removeVoteCriterium(\BackBundle\Entity\VoteCriteria $voteCriterium)
+    {
+        $this->voteCriteria->removeElement($voteCriterium);
+    }
+
+    /**
+     * Get voteCriteria
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVoteCriteria()
+    {
+        return $this->voteCriteria;
     }
 }
