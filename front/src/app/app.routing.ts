@@ -1,18 +1,26 @@
 // app.routing.ts
+import { NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './_guard/index';
-import {LoginComponent} from "./login/login.component";
-import {AppComponent} from "./app.component";
+import {LoginComponent} from './login/login.component';
+import {AppComponent} from './app.component';
+import { HomeComponent} from './home/home.component';
+import {ProfilComponent} from "./profil/profil.component";
 
-const APP_ROUTES: Routes = [
+const routes: Routes = [
     {
         path: '',
-        component: AppComponent
+        component: HomeComponent,
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+    },
+    {
+        path: 'profil',
+        component: ProfilComponent,
     },
     {
         path: 'admin',
@@ -22,4 +30,14 @@ const APP_ROUTES: Routes = [
     { path: '**', redirectTo: '' }
 ];
 
-export const Routing = RouterModule.forRoot(APP_ROUTES);
+@NgModule({
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+  ],
+  exports: [RouterModule],
+  declarations:  [],
+})
+
+export class AppRouting {
+}
