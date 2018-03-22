@@ -1,6 +1,8 @@
 /* All general css for the application */
 
 @import "css/register-login.css";
+@import "css/cards.css";
+@import "css/profile.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://use.fontawesome.com/releases/v5.0.7/css/all.css";
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,700,700i,900";
