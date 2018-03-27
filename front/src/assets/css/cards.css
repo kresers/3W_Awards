@@ -1,8 +1,11 @@
+.spacing{
+  padding-bottom: 5%;
+}
 .grey{
   background-color: #DDDDDD;
 }
 .card-body{
-  height: 105px;
+  height: 120px;
 }
 .card-title{
   font-size: 14px;
@@ -16,10 +19,10 @@
 .text-muted{
   font-size: 14px;
 }
-a{
-  color: #999999;
+.links{
+  color: #989898;
 }
-a:hover{
+.links:hover{
   color: #5b5b5b;
   text-decoration: none;
 }
@@ -31,7 +34,13 @@ a:hover{
 .card:hover img{
   opacity: 0.6 !important;
 }
-.card{
-  margin: 55px 35px 55px 35px;
+.footerCard{
+  display: flex;
+}
+.date{
+
+}
+.linking{
+  margin-left: 25%;
 }
 
