@@ -6,19 +6,17 @@
       Menu
     </button>
     <ul class="dropdown-menu">
-      <li><a href="#">HOME</a></li>
+      <li><a [routerLink]="['/']">HOME</a></li>
       <li><a href="#">NOMINÉS</a></li>
       <li><a href="#">AWARDS</a></li>
-      <li><a href="#">AGENCES</a></li>
+      <li><a [routerLink]="['/agency']">AGENCES</a></li>
       <li><a href="#">JURY</a></li>
       <li><a href="#">BLOG</a></li>
       <li><a href="#">JOBS</a></li>
       <li><a href="#">SHOP</a></li>
     </ul>
   </div>
-    <a rel="home" href="#" title="logo 3WAwards">
-      <img [src]="imgLogo" alt="3w_awards">
-    </a>
+      <img [src]="imgLogo" routerLink="/" alt="3w_awards">
     <div class="vertical_line_red"> </div>
     <p> Les meilleurs site du web dans chaque catégorie </p>
   </div>
