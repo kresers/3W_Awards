@@ -1,42 +1,72 @@
-<div class="grey" >
-  <div class="mt-1">
-    <div class="text-center">
-    <span>12 Sites Nominées | 3 Awards Gagnée </span><br><br>
-    </div>
+<div class="grey spacing" >
+  <div class="pt-5">
+    <p class="text-center font-weight-bold">12 sites Nominées  3 awards gagnés</p>
   </div>
   <div class="container">
     <div class="card-deck">
       <!-- il faut faire un *ngFor afin de récupérer les site sous formes de cards   -->
       <div class="card">
-        <img class="card-img-top" src="http://via.placeholder.com/420x300" alt="Card image cap">
+        <img class="card-img-top" [routerLink]="['/agency']" src="http://via.placeholder.com/420x300" alt="Card image cap">
         <div class="card-body">
           <p class="card-title">Ruya</p>
-          <p class="card-text">Par <a href="">Ruya</a> United states</p>
-          <p class="text-muted">29 novembre 2017</p>
+          <p class="card-text">Par <a class="links" [routerLink]="['/agency']">Ruya</a> United states</p>
+          <div class="footerCard">
+            <div class="date">
+              <p class="text-muted">29 novembre 2017</p>
+            </div>
+            <div class="linking">
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card">
-        <img class="card-img-top" src="http://via.placeholder.com/420x300" alt="Card image cap">
+        <img class="card-img-top" src="http://via.placeholder.com/420x300"  [routerLink]="['/client']" alt="Card image cap">
         <div class="card-body">
           <p class="card-title">Creative by toto</p>
-          <p class="card-text">Par <a href="">Digistudio</a> Japon</p>
-          <p class="text-muted">28 novembre 2017</p>
+          <p class="card-text">Par <a class="links" [routerLink]="['/client']">Digistudio</a> Japon</p>
+          <div class="footerCard">
+            <div class="date">
+              <p class="text-muted">28 novembre 2017</p>
+            </div>
+            <div class="linking">
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card">
         <img class="card-img-top" src="http://via.placeholder.com/420x300" alt="Card image cap">
         <div class="card-body">
           <p class="card-title">ANNA ESHWOOD</p>
-          <p class="card-text">Par <a href="">Korellis</a> Anglterre </p>
-          <p class="text-muted">27 novembre 2017</p>
+          <p class="card-text">Par <a class="links" href="">Korellis</a> Angleterre </p>
+          <div class="footerCard">
+            <div class="date">
+              <p class="text-muted">27 novembre 2017</p>
+            </div>
+            <div class="linking">
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card">
         <img class="card-img-top" src="http://via.placeholder.com/420x300" alt="Card image cap">
         <div class="card-body">
           <p class="card-title">G-LLERY</p>
-          <p class="card-text">Par <a href="">Samix</a> Espagne</p>
-          <p class="text-muted">26 novembre 2017</p>
+          <p class="card-text">Par <a class="links" href="">Samix</a> Espagne</p>
+          <div class="footerCard">
+            <div class="date">
+              <p class="text-muted">26 novembre 2017</p>
+            </div>
+            <div class="linking">
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
