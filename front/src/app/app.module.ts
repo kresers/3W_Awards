@@ -31,6 +31,7 @@ import {RecaptchaComponent} from 'ng-recaptcha';
 import { ClientComponent } from './client/client.component';
 import { ClientCardsComponent } from './client-cards/client-cards.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
+import { ProfileNotedProjectsComponent } from './profile-noted-projects/profile-noted-projects.component';
 
 
 
@@ -63,7 +64,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         RecaptchaComponent,
         ClientComponent,
         ClientCardsComponent,
-        ClientInfoComponent
+        ClientInfoComponent,
+        ProfileNotedProjectsComponent
     ],
     imports: [
         BrowserModule,
