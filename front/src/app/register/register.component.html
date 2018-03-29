@@ -7,31 +7,35 @@
             <div class="modal-body">
                 <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="title-modal text-center">Inscription</h4>
-                <div>
+                <div class="space-top">
                     <!--&lt;!&ndash;<div [hidden]="!error" class="alert alert-danger" role="alert">&ndash;&gt;-->
                     <!--&lt;!&ndash;<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&ndash;&gt;-->
                     <!--&lt;!&ndash;<span class="sr-only">Error:</span>&ndash;&gt;-->
                     <!--</div>-->
-                    <form [formGroup]="registerForm" >
-                        <div class="form-group">
-                            <label>Prénom:</label>
-                            <input type="text" class="form-control" placeholder="" formControlName="prenom">
+                    <form [formGroup]="registerForm">
+                        <div class="form-group content-form-group row">
+                            <label class="text-right row-group col-sm-4">Prénom : </label>
+                            <input type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
+                                   placeholder="" formControlName="prenom">
                         </div>
-                        <div class="form-group">
-                            <label>Nom ou pseudo:</label>
-                            <input type="text" class="form-control" placeholder="" formControlName="nomPseudo">
+                        <div class="form-group content-form-group row">
+                            <label class="text-right row-group col-sm-4">Nom ou pseudo: </label>
+                            <input type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
+                                   placeholder="" formControlName="nomPseudo">
                         </div>
-                        <div class="form-group">
-                            <label>E-mail:</label>
-                            <input type="text" class="form-control" placeholder="" formControlName="email">
+                        <div class="form-group content-form-group row">
+                            <label class="text-right row-group col-sm-4">E-mail:</label>
+                            <input type="text" class="input-register-login center form-control col-sm-8 col-xs-12" placeholder="" formControlName="email">
                         </div>
-                        <div class="form-group">
-                            <label>Mot de passe:</label>
-                            <input type="password" class="form-control" placeholder="" formControlName="mdp">
+                        <div class="form-group content-form-group row">
+                            <label class="text-right row-group col-sm-4">Mot de passe:</label>
+                            <input type="password" class="input-register-login center form-control col-sm-8 col-xs-12" placeholder="" formControlName="mdp">
                         </div>
-                        <button type="submit" class="btn btn-success pull-right" [disabled]="!registerForm.valid">
-                            Créer mon compte
-                        </button>
+                        <div class="center-btn">
+                            <button type="submit" class="btn-red btn pull-right" [disabled]="!registerForm.valid">
+                                Créer mon compte
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

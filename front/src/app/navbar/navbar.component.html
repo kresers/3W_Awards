@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light">
   <div class="left-nav">
   <div class="dropdown">
     <button class="btn-menu" type="button" data-toggle="dropdown">
@@ -6,19 +6,17 @@
       Menu
     </button>
     <ul class="dropdown-menu">
-      <li><a href="#">HOME</a></li>
+      <li><a [routerLink]="['/']">HOME</a></li>
       <li><a href="#">NOMINÉS</a></li>
       <li><a href="#">AWARDS</a></li>
-      <li><a href="#">AGENCES</a></li>
+      <li><a [routerLink]="['/agency']">AGENCES</a></li>
       <li><a href="#">JURY</a></li>
       <li><a href="#">BLOG</a></li>
       <li><a href="#">JOBS</a></li>
       <li><a href="#">SHOP</a></li>
     </ul>
   </div>
-    <a rel="home" href="#" title="logo 3WAwards">
-      <img [src]="imgLogo" alt="3w_awards">
-    </a>
+      <img [src]="imgLogo" routerLink="/" alt="3w_awards">
     <div class="vertical_line_red"> </div>
     <p> Les meilleurs site du web dans chaque catégorie </p>
   </div>
@@ -27,7 +25,8 @@
     <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
     <app-login></app-login>
     <div class="vertical_line_grey"> </div>
-    <span> Inscription </span>
+    <!--<span> Inscription </span>-->
+    <app-register></app-register>
     <button class="btn btn-outline-danger" type="submit">Soumettre un site</button>
     <select name="lang" id="">
       <option value="France" selected>FR</option>

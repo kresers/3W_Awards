@@ -1,0 +1,46 @@
+.spacing{
+  padding-bottom: 5%;
+}
+.grey{
+  background-color: #DDDDDD;
+}
+.card-body{
+  height: 120px;
+}
+.card-title{
+  font-size: 14px;
+}
+.card-text{
+  font-size: 14px;
+}
+.card-title{
+  font-size: 14px;
+}
+.text-muted{
+  font-size: 14px;
+}
+.links{
+  color: #989898;
+}
+.links:hover{
+  color: #5b5b5b;
+  text-decoration: none;
+}
+
+.card-img-top{
+  display: block;
+  opacity: 1;
+}
+.card:hover img{
+  opacity: 0.6 !important;
+}
+.footerCard{
+  display: flex;
+}
+.date{
+
+}
+.linking{
+  margin-left: 25%;
+}
+
