@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './_guard/index';
 import {LoginComponent} from './login/login.component';
-import { HomeComponent} from './home/home.component';
+import {HomeComponent} from './home/home.component';
 import {AgencyComponent} from './agency/agency.component';
 import {ProfilComponent} from './profil/profil.component';
 import {ClientComponent} from './client/client.component';
