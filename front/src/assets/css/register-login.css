@@ -41,3 +41,15 @@
     color: grey;
     font-weight: 900;
 }
+
+.space-modal
+{
+    margin-top: 250px;
+}
+
+@media (max-width: 600px) {
+    .space-modal label
+    {
+        text-align: left !important;
+    }
+}
