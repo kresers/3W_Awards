@@ -1,8 +1,8 @@
+.spacing{
+  padding-bottom: 5%;
+}
 .grey{
   background-color: #DDDDDD;
-}
-.card-body{
-  height: 105px;
 }
 .card-title{
   font-size: 14px;
@@ -10,16 +10,13 @@
 .card-text{
   font-size: 14px;
 }
-.card-title{
-  font-size: 14px;
-}
 .text-muted{
   font-size: 14px;
 }
-a{
-  color: #999999;
+.links{
+  color: #989898;
 }
-a:hover{
+.links:hover{
   color: #5b5b5b;
   text-decoration: none;
 }
@@ -31,7 +28,93 @@ a:hover{
 .card:hover img{
   opacity: 0.6 !important;
 }
-.card{
-  margin: 55px 35px 55px 35px;
+.card .card-body{
+  padding: 0.8rem;
+}
+.card-columns .card {
+  display: flex !important;
+  width: 100% !important;
+}
+
+
+.footerCard{
+  display: flex;
+}
+.footerCard .date p{
+  font-size:11px;
+  margin: 6px 0 0;
+}
+.footerCard .linking i{
+  font-size: 10px;
+}
+.container .card-columns{
+  column-count: 4;
+}
+.footerCard .linking {
+  margin-left: 7%;
+}
+/* responsive */
+@media screen and (max-width: 1199px){
+  .footerCard{
+    display:block;
+  }
+  .footerCard .linking {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 991px){
+  .container .card-columns{
+    column-count: 2;
+  }
+  .footerCard{
+    display:flex;
+  }
+  .footerCard .linking {
+    margin-left: 10%;
+  }
+  .footerCard .date p{
+    font-size:13px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 766px){
+  .footerCard .date p{
+    font-size:10px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 10px;
+  }
+  .footerCard .linking {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 574px){
+  .container .card-columns{
+    column-count: 1;
+  }
+  .footerCard .date p{
+    font-size:12px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 11px;
+  }
+  .footerCard .linking {
+    margin-left: 45%;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footerCard{
+    display:block;
+  }
+  .footerCard .linking {
+    margin-left: 0;
+  }
 }
 

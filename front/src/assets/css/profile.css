@@ -1,7 +1,6 @@
 .call-to-action {
   border-radius: 50px;
 }
-
 .tags {
   border-radius: 50px;
   background-color: #89898b;
@@ -12,21 +11,13 @@
   background-color: white;
   color: dimgrey;
 }
-
-
-.grey {
-  color: grey;
-}
-
 .greyBackground {
   background-color: #dddddd;
 }
-
 .central {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
 .resizePP{
   width: 20%;
 }

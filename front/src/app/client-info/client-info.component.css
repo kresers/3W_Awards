@@ -1,4 +1,8 @@
-.infoAgency{
+i{
+  font-size: 12px;
+  color: #989898;
+}
+.infoClient{
   height: 80px;
   background-color: #FFFFFF;
 }
@@ -35,3 +39,4 @@
 .resizePP{
   width: 20%;
 }
+

@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import { HomeComponent} from './home/home.component';
 import {AgencyComponent} from './agency/agency.component';
 import {ProfilComponent} from './profil/profil.component';
+import {ClientComponent} from './client/client.component';
 
 const routes: Routes = [
     {
@@ -25,6 +26,10 @@ const routes: Routes = [
     {
         path: 'profil',
         component: ProfilComponent,
+    },
+    {
+      path: 'client',
+      component: ClientComponent,
     },
     {
         path: 'admin',
