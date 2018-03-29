@@ -4,16 +4,10 @@
 .grey{
   background-color: #DDDDDD;
 }
-.card-body{
-  height: 120px;
-}
 .card-title{
   font-size: 14px;
 }
 .card-text{
-  font-size: 14px;
-}
-.card-title{
   font-size: 14px;
 }
 .text-muted{
@@ -34,13 +28,89 @@
 .card:hover img{
   opacity: 0.6 !important;
 }
+.card .card-body{
+  padding: 0.8rem;
+}
+
+
 .footerCard{
   display: flex;
 }
-.date{
-
+.footerCard .date p{
+  font-size:11px;
+  margin: 6px 0 0;
 }
-.linking{
-  margin-left: 25%;
+.footerCard .linking i{
+  font-size: 10px;
+}
+.container .card-columns{
+  column-count: 4;
+}
+.footerCard .linking {
+  margin-left: 7%;
+}
+
+/* responsive */
+@media screen and (max-width: 1199px){
+  .footerCard{
+    display:block;
+  }
+  .footerCard .linking {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 991px){
+  .container .card-columns{
+    column-count: 2;
+  }
+  .footerCard{
+    display:flex;
+  }
+  .footerCard .linking {
+    margin-left: 10%;
+  }
+  .footerCard .date p{
+    font-size:13px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 766px){
+  .footerCard .date p{
+    font-size:10px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 10px;
+  }
+  .footerCard .linking {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 574px){
+  .container .card-columns{
+    column-count: 1;
+  }
+  .footerCard .date p{
+    font-size:12px;
+    margin: 6px 0 0;
+  }
+  .footerCard .linking i{
+    font-size: 11px;
+  }
+  .footerCard .linking {
+    margin-left: 45%;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footerCard{
+    display:block;
+  }
+  .footerCard .linking {
+    margin-left: 0;
+  }
 }
 
