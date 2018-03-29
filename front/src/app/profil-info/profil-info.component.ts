@@ -14,6 +14,8 @@ export class ProfilInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  id: any;
+
   addActiveClass(id:any) {
     this.id = id;
   }
