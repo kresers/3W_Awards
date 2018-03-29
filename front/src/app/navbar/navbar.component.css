@@ -102,7 +102,10 @@
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 660px) {
+  .navbar{
+    height:110px;
+  }
   .right-nav .btn-outline-danger{
     display:none;
   }
@@ -116,7 +119,10 @@
     height:53px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 440px) {
+  .navbar{
+    height:75px;
+  }
   .right-nav select{
     font-size:12px;
   }
