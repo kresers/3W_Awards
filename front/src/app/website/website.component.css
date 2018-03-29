@@ -1,7 +1,48 @@
 .tags {
     border-radius: 50px;
+    font-size: 12px !important;
+    max-width: 300px;
 }
 
 .grey {
     color: dimgrey;
+}
+
+.album
+{
+    background-color: #DDDDDD !important;
+}
+
+.special-container
+{
+    max-width: 832px ;
+    margin: 0 auto;
+}
+
+.tags:hover
+{
+    color: dimgrey;
+    font-weight: 500;
+    font-size: 12px !important;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.position-album
+{
+    margin-top: -100px;
+}
+
+.panel-info
+{
+    background-color: white;
+    padding: 15px;
+}
+
+
+.grey-website
+{
+    margin-top: -20px;
+    color: dimgrey;
+    margin-bottom: 20px;
 }
