@@ -6,7 +6,7 @@
         <div class="text-center central">
             <img src="http://www.businesspme.net/public/_upload/images/photos_personnes/11_img-9909-1-carre-zoom.jpg"
                  class="rounded-circle img-thumbnail resizePP" alt="...">
-            <h1>Olivier Salesse</h1>
+            <h1>Olivier SALESSE</h1>
             <span>Membre</span><span class="grey"> | UX/UI designer | France</span><br><br>
             <button type="button" class="btn btn-outline-secondary call-to-action">SITE WEB</button>
             <button type="button" class="btn btn-outline-secondary call-to-action"><i class="fa fa-share"></i></button>
@@ -17,5 +17,29 @@
             <button type="button" class="btn btn-outline-secondary tags">E-MARKETING</button>
             <button type="button" class="btn btn-outline-secondary tags">UI DESIGN</button>
         </div>
+        <ul class="nav nav-tabs tabCenter">
+            <li class="nav-item">
+                <a class="nav-link active disabled tabs" (click)="id = 1" [ngClass]="{'active': id === 1 }" [routerLink]="['myProfil']" >Mon Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" (click)="id = 2" [ngClass]="{'active': id === 2 }">Mes favoris</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"   (click)="id = 3" [ngClass]="{'active': id === 3 }" [routerLink]="['profilNotedProjects']">Projets notés</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" >Projets soumis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Agences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Awards obtenus</a>
+            </li>
+
+        </ul>
     </div>
 </div>

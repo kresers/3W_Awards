@@ -6,13 +6,14 @@
     border-radius: 50px;
     background-color: #89898b;
     color: white;
-    border-color: #89898b;
-}
-.tags:hover {
-    background-color: white;
-    color: dimgrey;
+    border-color: transparent;
 }
 
+.tags:hover {
+    background-color: white;
+    border-color: transparent;
+    color: dimgrey;
+}
 
 .grey {
     color: grey;
@@ -20,6 +21,7 @@
 
 .greyBackground {
     background-color: #dddddd;
+    border-bottom: 3px solid white;
 }
 
 .central {
@@ -27,6 +29,33 @@
     padding-bottom: 40px;
 }
 
-.resizePP{
+.tabCenter {
+    position: relative;
+    left: 6%;
+}
+
+.resizePP {
     width: 20%;
 }
+
+.nav-tabs .nav-link.active {
+    text-decoration: none;
+    border-bottom: 3px solid red;
+    background-color: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+}
+
+ul {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    color:  grey;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Monserrat', 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
