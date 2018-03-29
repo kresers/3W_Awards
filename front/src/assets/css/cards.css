@@ -31,6 +31,10 @@
 .card .card-body{
   padding: 0.8rem;
 }
+.card-columns .card {
+  display: flex !important;
+  width: 100% !important;
+}
 
 
 .footerCard{
@@ -49,7 +53,6 @@
 .footerCard .linking {
   margin-left: 7%;
 }
-
 /* responsive */
 @media screen and (max-width: 1199px){
   .footerCard{
@@ -77,6 +80,7 @@
     font-size: 13px;
   }
 }
+
 @media screen and (max-width: 766px){
   .footerCard .date p{
     font-size:10px;
