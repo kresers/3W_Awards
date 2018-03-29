@@ -20,6 +20,7 @@
 
 .greyBackground {
     background-color: #dddddd;
+    border-bottom: 3px solid white;
 }
 
 .central {
@@ -36,7 +37,7 @@
     width: 20%;
 }
 
-.active a {
+.nav-tabs .nav-link.active {
     text-decoration: none;
-    border-bottom: 10px solid red;
+    border-bottom: 3px solid red;
 }
