@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilInfoComponent implements OnInit {
 
+  isActive = true;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  addActiveClass(id:any) {
+    this.id = id;
+  }
+
+
 
 }

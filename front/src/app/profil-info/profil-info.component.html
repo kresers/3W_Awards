@@ -6,7 +6,7 @@
         <div class="text-center central">
             <img src="http://www.businesspme.net/public/_upload/images/photos_personnes/11_img-9909-1-carre-zoom.jpg"
                  class="rounded-circle img-thumbnail resizePP" alt="...">
-            <h1>Olivier Salesse</h1>
+            <h1>Olivier SALESSE</h1>
             <span>Membre</span><span class="grey"> | UX/UI designer | France</span><br><br>
             <button type="button" class="btn btn-outline-secondary call-to-action">SITE WEB</button>
             <button type="button" class="btn btn-outline-secondary call-to-action"><i class="fa fa-share"></i></button>
@@ -19,19 +19,22 @@
         </div>
         <ul class="nav nav-tabs tabCenter">
             <li class="nav-item">
-                <a class="nav-link active tabs" href="#">Mon Profil</a>
+                <a class="nav-link active tabs" (click)="isActive = !isActive" [routerLink]="['myProfil']" >Mon Profil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Projets que j'aime</a>
+                <a class="nav-link disabled active" [class.active]="isActive">Mes favoris</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Projets notés</a>
+                <a [routerLink]="['profilNotedProjects']" class="nav-link disabled">Projets notés</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Clients administrés</a>
+                <a class="nav-link disabled" href="#">Projets soumis</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Agences administrées</a>
+                <a class="nav-link disabled" href="#">Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Agences</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Awards obtenus</a>
