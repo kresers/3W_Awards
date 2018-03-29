@@ -27,6 +27,16 @@
     padding-bottom: 40px;
 }
 
+.tabCenter {
+    position: relative;
+    left: 10%;
+}
+
 .resizePP{
     width: 20%;
+}
+
+.active a {
+    text-decoration: none;
+    border-bottom: 10px solid red;
 }
