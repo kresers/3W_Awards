@@ -5,10 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './_guard/index';
 import {LoginComponent} from './login/login.component';
-import { HomeComponent} from './home/home.component';
+import {HomeComponent} from './home/home.component';
 import {AgencyComponent} from './agency/agency.component';
 import {ProfilComponent} from './profil/profil.component';
 import {ClientComponent} from './client/client.component';
+import {ProfileNotedProjectsComponent} from "./profile-noted-projects/profile-noted-projects.component";
+import {ProfilInfoComponent} from "./profil-info/profil-info.component";
+import {ProfilMyProfilComponent} from "./profil-my-profil/profil-my-profil.component";
 
 const routes: Routes = [
     {
@@ -26,6 +29,16 @@ const routes: Routes = [
     {
         path: 'profil',
         component: ProfilComponent,
+        children:[
+            {
+                path: 'myProfil',
+                component: ProfilMyProfilComponent
+            },
+            {
+                path: 'profilNotedProjects',
+                component: ProfileNotedProjectsComponent,
+            }
+        ]
     },
     {
       path: 'client',

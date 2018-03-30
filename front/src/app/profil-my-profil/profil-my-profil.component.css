@@ -2,9 +2,6 @@
     background-color: #dddddd;
 }
 
-.myProfil {
-    margin-top: 4px;
-}
 
 .noRoundedCorners {
     border-radius: 0;
@@ -21,7 +18,7 @@
     margin-left: 185px;
 }
 
-h2, p, label, button {
+p, label, button {
     font-family: 'Monserrat', 'Open Sans', sans-serif;
     font-weight: 400;
     color:  grey;
@@ -61,4 +58,9 @@ h2, p, label, button {
 
 .fa-info-circle{
     color: grey;
+}
+
+.vertical_line_red{
+    border-left:2px solid red;
+    padding-left: -2px;
 }
