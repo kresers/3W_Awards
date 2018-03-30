@@ -1,16 +1,41 @@
 .custom_position{
   position: relative;
-  top: -75px;
+  top: -95px;
+}
+.headCarousel {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: #fff;
+  top: 45px;
+  z-index: 1;
+  margin-left: 2%;
 }
 
+.headCarousel .dateinfo{
+  flex-grow: 1;
+}
+.headCarousel .carouselbtn{
+  margin-right: 2%;
+}
+.headCarousel .carouselbtn button{
+  border-radius:50px;
+  border-color: #cccccc;
+  background-color: transparent;
+  color: #cccccc;
+}
+
+img{
+  filter:  brightness(0.3);
+}
 @media screen and (max-width: 660px) {
   .custom_position{
-    top: -40px;
+    top: -65px;
   }
 }
 @media screen and (max-width: 440px) {
   .custom_position{
-    top: -25px;
+    top: -50px;
   }
 }
 
