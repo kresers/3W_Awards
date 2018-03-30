@@ -33,6 +33,7 @@
 }
 .left-nav p{
   margin-top:14px;
+  text-transform: uppercase;
 }
 .vertical_line_red{
   border-left:1px solid red;
@@ -77,7 +78,7 @@
   margin: 10px;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1260px) {
   .vertical_line_red {
     display: none;
   }
