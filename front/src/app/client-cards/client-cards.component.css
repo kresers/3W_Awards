@@ -2,3 +2,28 @@ i{
   font-size: 12px;
   color: #989898;
 }
+.vertical_line_grey{
+  border-left:1px solid #666;
+  height: 19px;
+  margin: 31px 14px 0 7px;
+}
+.container .header-cards{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .header-cards span {
+  margin:25px 10px 25px 0;
+  text-transform: uppercase;
+  font-size:20px;
+}
+
+@media screen and (max-width:440px){
+  .container .header-cards span {
+    font-size:12px;
+  }
+  .vertical_line_grey{
+    height: 12px;
+    margin: 28px 10px 0 2px;
+  }
+}
