@@ -1,17 +1,16 @@
 .custom_position{
   position: relative;
-  top: -95px;
+  top: -175px;
 }
 .headCarousel {
   display: flex;
   flex-direction: row;
   position: relative;
   color: #fff;
-  top: 45px;
+  top: 135px;
   z-index: 1;
   margin-left: 2%;
 }
-
 .headCarousel .dateinfo{
   flex-grow: 1;
 }
@@ -24,18 +23,80 @@
   background-color: transparent;
   color: #cccccc;
 }
-
-img{
-  filter:  brightness(0.3);
+/*Info*/
+.bodyCarousel{
+  display: flex;
+  position: relative;
+  color: #fff;
+  top: 210px;
+  z-index: 1;
+  justify-content: center;
 }
+/*Links*/
+.linksCarousel{
+  display: flex;
+  position: relative;
+  color: #fff;
+  top: 435px;
+  z-index: 1;
+  justify-content: center;
+}
+.linksCarousel .linksBtn button{
+  border-radius:50px;
+  border-color: #cccccc;
+  background-color: transparent;
+  color: #cccccc;
+}
+.linksCarousel .linksBtn button:hover{
+  border-radius:50px;
+  border-color: #cccccc;
+  background-color: #FFFFFF;
+  color: #343434;
+}
+img{
+  filter:  brightness(0.15);
+}
+/* responsive*/
 @media screen and (max-width: 660px) {
   .custom_position{
-    top: -65px;
+    top: -150px;
+  }
+  .bodyCarousel{
+    top: 140px;
+  }
+  .linksCarousel{
+    top: 200px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .linksCarousel {
+    top: 370px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .linksCarousel{
+    top : 280px;
+    }
+}
+@media screen and (max-width: 767px) {
+  .linksCarousel{
+    top : 210px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .linksCarousel{
+    top : 185px;
   }
 }
 @media screen and (max-width: 440px) {
   .custom_position{
-    top: -50px;
+    top: -140px;
+  }
+  .bodyCarousel{
+    top: 140px;
+  }
+  .linksCarousel{
+    top: 150px;
   }
 }
 
