@@ -1,42 +1,126 @@
+/* global css for page */
+.info-client-page {
+  background-color: #dddddd;
+  margin-top: -60px;
+}
+.central {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+span{
+  color:grey;
+}
+
+/* Style for the profil picture*/
+.resizePP{
+  width: 222px;
+  height: 222px;
+}
+
+/* style for the bottom of the pictures (icon + description)*/
+.vertical_line_grey{
+  border-left:1px solid #666;
+  height: 13px;
+  margin: 7px 12px 6px;
+}
+.font-bold{
+  font-weight: bold;
+}
 i{
   font-size: 12px;
   color: #989898;
 }
-.infoClient{
-  height: 80px;
-  background-color: #FFFFFF;
+.desc-agency{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom:15px;
+}
+.social-rate{
+  margin-bottom:15px;
 }
 
-.call-to-action {
+/* Style for buttons*/
+.description-btn button{
   border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.tags {
+.category-btn{
+  display: block;
+}
+.category-btn button{
+  margin-top:5px;
+  margin-right: 1%;
+  width:auto;
   border-radius: 50px;
   background-color: #89898b;
   color: white;
   border-color: #89898b;
 }
-.tags:hover {
+.category-btn button:hover {
   background-color: white;
   color: dimgrey;
 }
 
-
-.grey {
-  color: grey;
+/* style for all informations in the white div*/
+.infoClient{
+  height: auto;
+  background-color: #FFFFFF;
+}
+.infoClient .info{
+  margin-right: 5%;
+}
+.infoClient .container{
+  display: flex;
+  flex-direction: column;
+}
+.infoClient .container .row{
+  justify-content: center;
+}
+.infoClient .header-info p{
+  font-weight:bold;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.infoClient .footer-info p{
+  font-weight: bold;
+  margin-bottom: 15px;
+  color:grey;
 }
 
-.greyBackground {
-  background-color: #dddddd;
+/* Responsive */
+@media screen and (max-width:1198px){
+  .infoClient .info {
+    text-align: center;
+  }
 }
-
-.central {
-  padding-top: 40px;
-  padding-bottom: 40px;
+@media screen and (max-width: 660px) {
+  .info-client-page {
+    margin-top: -35px;
+  }
 }
+@media screen and (max-width: 440px) {
+  .info-client-page {
+    margin-top: -25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  button{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:350px){
+  span{
+    font-size:12px;
+  }
+  p{
+    font-size:14px;
+  }
+  .vertical_line_grey{
+    height: 12px;
+    margin: 4px 12px 6px;
 
-.resizePP{
-  width: 20%;
+  }
 }
 
