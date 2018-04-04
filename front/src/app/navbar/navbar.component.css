@@ -38,7 +38,7 @@
 .vertical_line_red{
   border-left:1px solid red;
   height:30px;
-  margin: 15px;
+  margin: 3px;
 }
 .right-nav{
   display: flex;
