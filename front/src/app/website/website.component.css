@@ -10,9 +10,10 @@ h2
     color: #999999;
     font-size: 14px;
     text-align: center;
-
 }
-
+#dispNone{
+  display: none;
+}
 
 /* css for intro + panel info */
 
@@ -85,18 +86,32 @@ h2
     margin-top: 10px;
 }
 
-.main-color {
-    border-radius: 100%;
-    width: 20px;
-    height: 21px;
-    float: left;
-    margin-right: 3px;
-    display: block;
+#line{
+  margin-top: -10px;
+
 }
 
-.line
-{
-    margin-top: -10px;
+#line div{
+  border-radius: 100%;
+  width: 20px;
+  height: 21px;
+  float: left;
+  margin-right: 3px;
+  display: block;
+}
+.ratingStar div{
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 12px;
+  height: 25px;
+  width: 100px;
+  margin-top: -5%;
+  position: relative;
+  padding: 0;
+}
+
+.ratingStar .starsDev{
+ margin-top: 1%;
 }
 
 .style-column
@@ -114,18 +129,6 @@ h2
     .space-left {
         margin-left: inherit;
     }
-}
-
-.star-ratings-css {
-
-    unicode-bidi: bidi-override;
-    color: #c5c5c5;
-    font-size: 12px;
-    height: 25px;
-    width: 100px;
-    margin-top: -15px;
-    position: relative;
-    padding: 0;
 }
 
 /* end panel focus*/
@@ -190,10 +193,3 @@ h2
 {
     line-height: 1;
 }
-
-#dev-tech .star-ratings-css
-{
-    margin-top: 5px;
-}
-
-/* en panel collapsable*/
