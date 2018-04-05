@@ -12,6 +12,7 @@ import {ClientComponent} from './client/client.component';
 import {ProfileNotedProjectsComponent} from "./profile-noted-projects/profile-noted-projects.component";
 import {ProfilInfoComponent} from "./profil-info/profil-info.component";
 import {ProfilMyProfilComponent} from "./profil-my-profil/profil-my-profil.component";
+import {WebsiteComponent} from "./website/website.component";
 
 const routes: Routes = [
     {
@@ -48,6 +49,10 @@ const routes: Routes = [
         path: 'admin',
         component: PostComponent,
         canActivate: [AuthGuard]
+    },
+    {
+        path: 'website',
+        component: WebsiteComponent,
     },
     { path: '**', redirectTo: '' }
 ];

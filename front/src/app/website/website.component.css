@@ -1,7 +1,195 @@
+/* general css */
+
+.btn
+{
+    max-width: 100% !important;
+}
+h2
+{
+    font-weight: 700;
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+}
+#dispNone{
+  display: none;
+}
+
+/* css for intro + panel info */
+
+.panel-info {
+    background-color: white;
+    padding: 20px;
+}
+
 .tags {
     border-radius: 50px;
+    font-size: 12px !important;
+    max-width: 300px;
 }
 
 .grey {
     color: dimgrey;
+}
+
+.album {
+    background-color: #DDDDDD !important;
+}
+
+.special-container {
+    max-width: 832px;
+    margin: 0 auto;
+}
+
+.tags:hover {
+    color: dimgrey;
+    font-weight: 500;
+    font-size: 12px !important;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.position-album {
+    margin-top: -100px;
+}
+
+.grey-website {
+    margin-top: -20px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.country-drag {
+    max-width: 16px;
+    margin-bottom: 4px;
+    margin-right: 7px;
+}
+
+.checked {
+    color: grey;
+}
+
+/* end css for intro and panel info */
+
+/* panel focus */
+
+.panel-focus {
+    background-color: #e6e6e6;
+    padding: 15px;
+}
+
+.text-grey {
+    color: dimgrey;
+}
+
+.space-panel {
+    margin-top: 10px;
+}
+
+#line{
+  margin-top: -10px;
+
+}
+
+#line div{
+  border-radius: 100%;
+  width: 20px;
+  height: 21px;
+  float: left;
+  margin-right: 3px;
+  display: block;
+}
+.ratingStar div{
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 12px;
+  height: 25px;
+  width: 100px;
+  margin-top: -5%;
+  position: relative;
+  padding: 0;
+}
+
+.ratingStar .starsDev{
+ margin-top: 1%;
+}
+
+.style-column
+{
+    line-height: 1;
+    margin-top: -14px;
+}
+
+.space-left
+{
+    margin-left: 36px;
+}
+
+@media (max-width: 768px) {
+    .space-left {
+        margin-left: inherit;
+    }
+}
+
+/* end panel focus*/
+
+
+/* panel collapsable */
+
+.clickable{
+    cursor: pointer;
+}
+
+.card-header  {
+    background-color: #e6e6e6 ;
+    border-bottom: none;
+}
+
+.card-body
+{
+    border-top: none;
+    background-color: #e6e6e6 ;
+}
+
+.card
+{
+    margin-top: 10px;
+}
+
+.grey-card
+{
+    background-color: #39393A;
+}
+
+.btn-white
+{
+    color: dimgrey;
+    font-weight: 500;
+    font-size: 12px !important;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.btn-grey
+{
+    background-color: grey;
+    color: white;
+}
+
+.negativ-top-margin
+{
+    margin-top: -28px;
+}
+
+#dev-tech .grey-website
+{
+    color:lightgrey;
+    margin-bottom: inherit;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+#dev-tech .text-grey
+{
+    line-height: 1;
 }
