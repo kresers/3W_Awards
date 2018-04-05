@@ -140,4 +140,10 @@
   .btn-menu {
     width:76px;
   }
+  .dropdown-menu{
+    min-width:76px;
+  }
+  .dropdown-menu a{
+    font-size: 14px;
+  }
 }
