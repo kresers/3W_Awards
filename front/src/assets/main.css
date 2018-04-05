@@ -4,8 +4,8 @@
 @import "css/profile.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://use.fontawesome.com/releases/v5.0.7/css/all.css";
-
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700,700i,900";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 .btn-red {
     background-color: #eb1c24;
@@ -26,4 +26,17 @@ html {
 .grey_text{
   color: #989898;
 }
+
+.tags
+{
+    margin-bottom:10px;
+    max-width: 150px;
+}
+
+.delete-row-padding
+{
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+}
+
 
