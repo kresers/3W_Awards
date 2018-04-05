@@ -70,11 +70,11 @@
         <div class="row delete-row-padding panel-focus space-panel">
             <div class="col-md-3">
                 <p class="card-text text-grey"><b>Couleurs dominantes</b></p>
-                <div class="line">
-                    <div style="background-color: white" class="main-color"></div>
-                    <div style="background-color: orange" class="main-color"></div>
-                    <div style="background-color: lightgrey" class="main-color"></div>
-                    <div style="background-color: grey" class="main-color"></div>
+                <div id="line" class="line">
+                    <div style="background-color: white" ></div>
+                    <div style="background-color: orange" ></div>
+                    <div style="background-color: lightgrey" ></div>
+                    <div style="background-color: grey" ></div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -87,9 +87,9 @@
                     <p class="style-column card-text grey-website"><b>Adaptative design</b></p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div   class="col-md-3 ratingStar">
                 <p class="card-text text-grey"><b>Accèssibilité</b></p>
-                <div class="star-ratings-css">
+                <div >
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>
@@ -104,7 +104,7 @@
                     <h2>MISSIONS CONFIEES A L'AGENCE<span class="float-right clickable card-collapsed"><i class="fa fa-chevron-down"></i></span></h2>
                 </div>
             </div>
-            <div style="display: none" class="card-body negativ-top-margin">
+            <div id="dispNone"  class="card-body negativ-top-margin">
                 <div class="center-btn">
                     <button type="button" class="btn btn-outline-secondary btn-white tags">CONSEIL</button>
                     <button type="button" class="btn btn-outline-secondary btn-white tags">DEVELOPPEMENT FRONT</button>
@@ -122,7 +122,7 @@
                     <h2>FONCTIONNALITES CLES<span class="float-right clickable card-collapsed"><i class="fa fa-chevron-down"></i></span></h2>
                 </div>
             </div>
-            <div style="display: none" class="card-body negativ-top-margin">
+            <div id="dispNone" class="card-body negativ-top-margin">
                 <div class="center-btn">
                     <button type="button" class="btn btn-outline-secondary btn-grey tags">CATALOGUE</button>
                     <button type="button" class="btn btn-outline-secondary btn-grey tags">PRISE DE RDV EN LIGNE</button>
@@ -142,7 +142,7 @@
                     <h2>DEVELOPPEMENT TECHNIQUE<span class="float-right clickable card-collapsed"><i class="fa fa-chevron-down"></i></span></h2>
                 </div>
             </div>
-            <div style="display: none" class="card-body grey-card negativ-top-margin">
+            <div id="dispNone"  class="card-body grey-card negativ-top-margin">
                 <div class="row delete-row-padding">
                     <div class="col-md-3">
                         <p class="style-column card-text grey-website"><b>Front</b></p>
@@ -156,9 +156,9 @@
                         <p class="style-column card-text grey-website"><b>CMS</b></p>
                         <p class="card-text text-grey"><b>Smartbase (propriétaire)</b></p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="style-column card-text grey-website"><b>Chalenge technique</b></p>
-                        <div class="star-ratings-css">
+                    <div class="col-md-3 ratingStar">
+                        <p class="style-column card-text grey-website"><b>Challenge technique</b></p>
+                        <div class="starsDev">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked "></span>
                             <span class="fa fa-star checked"></span>
@@ -174,5 +174,4 @@
             </div>
         </div>
     </div>
-
 </div>
