@@ -78,6 +78,11 @@
   margin: 10px;
 }
 
+@media screen and (max-width: 1280px) {
+  .vertical_line_red{
+    display: none;
+  }
+}
 @media screen and (max-width: 1260px) {
   .vertical_line_red {
     display: none;
