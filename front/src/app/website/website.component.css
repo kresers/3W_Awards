@@ -245,53 +245,53 @@ h2
     text-align: center;
 }
 .clearfix .c100 .slice .bar{
-    border-color: red;
+    border-color: #ef1923;
 }
 .clearfix .c100:nth-child(2) .slice .bar {
-    border-color: orange;
+    border-color: #fa9800;
 }
 .clearfix .c100:nth-child(3) .slice .bar {
-    border-color: green;
+    border-color: #99d12e;
 }
 .clearfix .c100:nth-child(4) .slice .bar {
-    border-color: pink;
+    border-color: #f80097;
 }
 .clearfix .c100:nth-child(5) .slice .bar {
-    border-color: purple;
+    border-color: #97379b;
 }
 .clearfix .c100:nth-child(6) .slice .bar {
-    border-color: deepskyblue;
+    border-color: #69a1d4;
 }
 .clearfix .c100:nth-child(7) .slice .bar {
-    border-color: blue;
+    border-color: #0ea19b;
 }
 .clearfix .c100 .slice .fill{
-    border-color: red;
+    border-color: #ef1923;
 }
 .clearfix .c100:nth-child(2) .slice .fill {
-    border-color: orange;
+    border-color: #fa9800;
 }
 .clearfix .c100:nth-child(3) .slice .fill {
-    border-color: green;
+    border-color: #99d12e;
 }
 .clearfix .c100:nth-child(4) .slice .fill {
-    border-color: pink;
+    border-color: #f80097;
 }
 .clearfix .c100:nth-child(5) .slice .fill {
-    border-color: purple;
+    border-color: #97379b;
 }
 .clearfix .c100:nth-child(6) .slice .fill {
-    border-color: deepskyblue;
+    border-color: #69a1d4;
 }
 .clearfix .c100:nth-child(7) .slice .fill {
-    border-color: blue;
+    border-color: #0ea19b;
 }
 
 .total_rate{
     display: flex;
     flex-direction: row;
     width: 20%;
-    background-color:red;
+    background-color:#eb1c24;
     height: 240px;
     position: absolute;
     right: 0;
@@ -302,7 +302,7 @@ h2
     margin: 75px auto;
 }
 .total_rate .c100:after {
-    background-color: red;
+    background-color: #eb1c24;
     top:0.04em;
     left:0.04em;
     width: 0.92em;
