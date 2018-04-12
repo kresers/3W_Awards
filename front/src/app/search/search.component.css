@@ -1,3 +1,9 @@
 .round{
   border-radius: 17px;
 }
+
+
+input:focus {
+  text-decoration: none ;
+}
+
