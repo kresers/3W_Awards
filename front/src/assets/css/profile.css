@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .call-to-action {
   border-radius: 50px;
 }
