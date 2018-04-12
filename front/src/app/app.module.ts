@@ -27,7 +27,6 @@ import { InfoAgencyComponent } from './info-agency/info-agency.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilInfoComponent } from './profil-info/profil-info.component';
 import { ProfilMyProfilComponent } from './profil-my-profil/profil-my-profil.component';
-import {RecaptchaComponent} from 'ng-recaptcha';
 import { ClientComponent } from './client/client.component';
 import { ClientCardsComponent } from './client-cards/client-cards.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
@@ -61,7 +60,6 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ProfilComponent,
         ProfilInfoComponent,
         ProfilMyProfilComponent,
-        RecaptchaComponent,
         ClientComponent,
         ClientCardsComponent,
         ClientInfoComponent,
