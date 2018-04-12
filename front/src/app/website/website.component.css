@@ -61,7 +61,7 @@ h2
 }
 
 .position-album {
-    margin-top: -100px;
+    margin-top: -200px;
 }
 
 .grey-website {
@@ -204,6 +204,33 @@ h2
 {
     line-height: 1;
 }
+#dev-tech.card{
+    margin-bottom: 30px;
+}
+#dev-tech1 .grey-website
+{
+    color:lightgrey;
+    margin-bottom: inherit;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+#dev-tech1 .text-grey
+{
+    line-height: 1;
+}
+#dev-tech2 .grey-website
+{
+    color:lightgrey;
+    margin-bottom: inherit;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+#dev-tech2 .text-grey
+{
+    line-height: 1;
+}
 
 .panel-note .content{
     display: flex;
@@ -329,4 +356,84 @@ h2
 }
 .total_rate .c100 .slice .fill{
     border-color: #fff;
+}
+#dev-tech2 .total_rate {
+    background-color: #7f1d98;
+}
+#dev-tech2 .total_rate .c100:after {
+    background-color: #7f1d98;
+}
+
+@media screen and (max-width:1200px){
+    .clearfix .c100{
+        font-size: 70px;
+    }
+    .clearfix .c100:after{
+        top: 0.035em;
+        left: 0.035em;
+    }
+    .total_rate .c100{
+        font-size: 70px;
+        margin: 85px auto;
+    }
+    .total_rate .c100:after{
+        top: 0.035em;
+        left: 0.035em;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .clearfix .c100{
+        font-size: 55px;
+    }
+    .clearfix .c100:after{
+        top: 0.03em;
+        left: 0.03em;
+    }
+    .clearfix .c100 p{
+        font-size: 10px;
+        position: absolute;
+        top: 70px;
+        left: -10px;
+    }
+    .total_rate .c100{
+        font-size: 55px;
+        margin: 95px auto;
+    }
+    .total_rate .c100:after{
+        top: 0.035em;
+        left: 0.035em;
+    }
+    .total_rate .c100 p{
+        font-size: 10px;
+        position: absolute;
+        top: 70px;
+        left: -10px;
+    }
+}
+@media screen and (max-width:766px) {
+    .panel-info h5{
+        width: 100%;
+        margin-left:0;
+    }
+    .clearfix{
+        display:none;
+    }
+    .total_rate{
+        height: 180px;
+        width:100%;
+    }
+    .total_rate .c100{
+        font-size: 100px;
+        margin: 25px auto;
+    }
+    .total_rate .c100:after {
+        top: 0.045em;
+    }
+    .total_rate .c100 p{
+        font-size: 17px;
+        position: absolute;
+        top: 110px;
+        left: 13px;
+    }
 }
