@@ -2,6 +2,7 @@
 @import "css/register-login.css";
 @import "css/cards.css";
 @import "css/profile.css";
+@import "css/circle.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://use.fontawesome.com/releases/v5.0.7/css/all.css";
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700,700i,900";
@@ -16,6 +17,35 @@
 
 html {
     font-family: 'Monserrat', 'Open Sans', sans-serif;
+}
+.container_custom {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .container_custom {
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container_custom {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container_custom {
+        max-width: 720px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container_custom {
+        max-width: 540px;
+    }
 }
 
 .center-btn {

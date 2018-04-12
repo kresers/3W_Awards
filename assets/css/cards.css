@@ -45,7 +45,7 @@
 .footerCard .linking i{
   font-size: 10px;
 }
-.container .card-columns{
+.container_custom .card-columns{
   column-count: 4;
 }
 .footerCard .linking {
@@ -61,7 +61,7 @@
   }
 }
 @media screen and (max-width: 991px){
-  .container .card-columns{
+  .container_custom .card-columns{
     column-count: 2;
   }
   .footerCard{
@@ -92,7 +92,7 @@
   }
 }
 @media screen and (max-width: 574px){
-  .container .card-columns{
+  .container_custom .card-columns{
     column-count: 1;
   }
   .footerCard .date p{
