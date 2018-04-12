@@ -4,28 +4,30 @@ p{
 .footer{
   background-color: #39393A;
 }
+.content{
+  padding: 3% 5% 3% 5%;
+}
 .about{
   width: 20em;
 }
-
+.about p  {
+  color: #989898;
+}
 .mapsite{
   padding-left: 3%;
 }
-
-.social{
-  font-size:1em;
-  color: grey;
-}
-
-.grey_text{
+.mapsite p {
+  margin: 0;
   color: #989898;
 }
-
-.nomargin{
-  margin: 0px;
-}
-
 .links{
   text-decoration: underline;
   text-decoration-color: #989898;
+}
+.latestsubmitted p {
+  color: #989898;
+}
+.social{
+  font-size:1em;
+  color: grey;
 }

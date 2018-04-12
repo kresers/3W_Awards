@@ -1,102 +1,165 @@
 .custom_position{
   position: relative;
-  top: -175px;
+  top: -75px;
+  height: 444px;
 }
 .headCarousel {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  color: #fff;
-  top: 135px;
-  z-index: 1;
-  margin-left: 2%;
-}
+     display: flex;
+     flex-direction: row;
+     position: relative;
+     color: #fff;
+     top: -460px;
+     z-index: 1;
+     margin-left: 2%;
+   }
 .headCarousel .dateinfo{
-  flex-grow: 1;
-}
+     flex-grow: 1;
+   }
 .headCarousel .carouselbtn{
-  margin-right: 2%;
-}
+     margin-right: 2%;
+   }
 .headCarousel .carouselbtn button{
-  border-radius:50px;
-  border-color: #cccccc;
-  background-color: transparent;
-  color: #cccccc;
+     border-radius:50px;
+     border: 1px solid #ccc;
+     background-color: transparent;
+     color: #cccccc;
 }
 /*Info*/
 .bodyCarousel{
-  display: flex;
-  position: relative;
-  color: #fff;
-  top: 210px;
-  z-index: 1;
-  justify-content: center;
+     display: flex;
+     position: relative;
+     color: #fff;
+     top: -280px;
+     z-index: 1;
+     justify-content: center;
 }
 /*Links*/
 .linksCarousel{
-  display: flex;
-  position: relative;
-  color: #fff;
-  top: 435px;
-  z-index: 1;
-  justify-content: center;
-}
+     display: flex;
+     position: relative;
+     color: #fff;
+     top: -135px;
+     z-index: 1;
+     justify-content: center;
+   }
 .linksCarousel .linksBtn button{
-  border-radius:50px;
-  border-color: #cccccc;
+  border-radius: 50px;
   background-color: transparent;
-  color: #cccccc;
+  color: #ccc;
+  border: 1px solid #fff;
+  padding: 2px 15px 2px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size:14px;
+}
+.linksCarousel .linksBtn button:first-child{
+  background-color: #fff;
+  color:grey;
+}
+.linksCarousel .linksBtn button:first-child:hover{
+  background-color: transparent;
+  color:#fff;
 }
 .linksCarousel .linksBtn button:hover{
-  border-radius:50px;
-  border-color: #cccccc;
-  background-color: #FFFFFF;
-  color: #343434;
+     border-radius:50px;
+     border:1px solid #ccc;
+     background-color: #FFFFFF;
+     color: #343434;
 }
+
+.carousel-control-prev, .carousel-control-next
+{
+  height: 87%;
+}
+
 img{
-  filter:  brightness(0.15);
-}
-/* responsive*/
-@media screen and (max-width: 660px) {
+    filter:  brightness(0.15);
+    height:490px;
+  }
+
+@media screen and (max-width: 1199px) {
+
   .custom_position{
-    top: -150px;
+    height: 360px;
+  }
+  .headCarousel{
+    top: -380px;
   }
   .bodyCarousel{
-    top: 140px;
+    top: -255px;
   }
   .linksCarousel{
-    top: 200px;
+    top: -135px;
   }
-}
-@media screen and (max-width: 1199px) {
-  .linksCarousel {
-    top: 370px;
+  .carousel-control-prev, .carousel-control-next {
+    height: 82%;
+  }
+  img{
+    height:410px;
   }
 }
 @media screen and (max-width: 991px) {
-  .linksCarousel{
-    top : 280px;
-    }
-}
-@media screen and (max-width: 767px) {
-  .linksCarousel{
-    top : 210px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .linksCarousel{
-    top : 185px;
-  }
-}
-@media screen and (max-width: 440px) {
   .custom_position{
-    top: -140px;
+    height: 245px;
+  }
+  .headCarousel{
+    top: -285px;
   }
   .bodyCarousel{
-    top: 140px;
+    top: -210px;
   }
   .linksCarousel{
-    top: 150px;
+    top: -125px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    height: 73%;
+  }
+  img{
+    height:300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .custom_position{
+    height: 155px;
+  }
+  .headCarousel{
+    top: -200px;
+  }
+  .bodyCarousel{
+    top: -170px;
+  }
+  .linksCarousel{
+    top: -125px;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    height: 65%;
+  }
+  img{
+    height:215px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .custom_position{
+    height: 155px;
+  }
+  .headCarousel{
+    top: -205px;
+    font-size:12px;
+  }
+  .bodyCarousel{
+    top: -170px;
+    font-size:12px;
+  }
+  .linksCarousel{
+    top: -115px;
+  }
+  .linksCarousel .linksBtn button {
+    font-size: 12px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    height: 65%;
   }
 }
 
