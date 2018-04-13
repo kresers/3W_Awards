@@ -1,8 +1,5 @@
-<!--**********************-->
-<!--HEADER OF PROFIL-->
-<!--**********************-->
 <div class="greyBackground">
-    <div class="container">
+    <div class="container_custom">
         <div class="text-center central">
             <img src="http://www.businesspme.net/public/_upload/images/photos_personnes/11_img-9909-1-carre-zoom.jpg"
                  class="rounded-circle img-thumbnail resizePP" alt="...">
@@ -17,29 +14,30 @@
             <button type="button" class="btn btn-outline-secondary tags">E-MARKETING</button>
             <button type="button" class="btn btn-outline-secondary tags">UI DESIGN</button>
         </div>
-        <ul class="nav nav-tabs tabCenter">
-            <li class="nav-item">
-                <a class="nav-link disabled" routerLinkActive="active" [routerLink]="['myProfil']">Mon Profil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" routerLinkActive="active">Mes favoris</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled"   routerLinkActive="active" [routerLink]="['profilNotedProjects']">Projets notés</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" >Projets soumis</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Clients</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Agences</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Awards obtenus</a>
-            </li>
-
-        </ul>
+        <div class="profil-menu">
+            <ul class="nav nav-tabs tabCenter">
+                <li class="nav-item">
+                    <a class="nav-link disabled" routerLinkActive="active" [routerLink]="['myProfil']">Mon Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" routerLinkActive="active">Mes favoris</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled"   routerLinkActive="active" [routerLink]="['profilNotedProjects']">Projets notés</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" >Projets soumis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Agences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Awards obtenus</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
