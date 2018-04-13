@@ -24,14 +24,5 @@ class AgencyController extends Controller
         return array('agency' => $agency);
     }
 
-//    /**
-//     * @param User $user
-//     * @return array
-//     * @Rest\View()
-//     * @ParamConverter("user", class="FreshApiTestBundle:User")
-//     */
-//    public function getUserAction(User $user)
-//    {
-//        return array('user' => $user);
-//    }
+
 }
