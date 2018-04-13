@@ -1,5 +1,5 @@
-categoryAwards	name	Country	type	categories	adress	adress2	PostalCode	city	phoneNumber	fax	presentation	expertise	notes	creationDate	staffNumber	revenue	website	tvaNumber	numeroDuns
-Label 1	name 1	Country 1	type 1	categories 1	adress 1	adress11	95270	city 1	134685265	fax 1	presentation 1	expertise 1	1	05/01/2000 00:00	1	102	website 1	10	2
-Label 2	name 2	Country 2	type 2	categories 2	adress 2	adress12	95270	city 2	134685265	fax 2	presentation 2	expertise 2	2	06/01/2000 00:00	1	102	website 2	10	2
-Label 3	name 3	Country 3	type 3	categories 3	adress 3	adress13	95270	city 3	134685265	fax 3	presentation 3	expertise 3	3	07/01/2000 00:00	1	102	website 3	10	2
-Label 4	name 4	Country 4	type 4	categories 4	adress 4	adress14	95270	city 4	134685265	fax 4	presentation 4	expertise 4	18	08/01/2000 00:00	1	102	website 4	10	2
+categoryAwards;name;Country;type;categories;adress;adress2;PostalCode;city;phoneNumber;fax;presentation;expertise;notes;creationDate;staffNumber;revenue;website;tvaNumber;numeroDuns
+Label 1;name 1;Country 1;type 1;categories 1;adress 1;adress11;95270;city 1;134685265;fax 1;presentation 1;expertise 1;1;05/01/2000 00:00;1;102;website 1;10;2
+Label 2;name 2;Country 2;type 2;categories 2;adress 2;adress12;95270;city 2;134685265;fax 2;presentation 2;expertise 2;2;06/01/2000 00:00;1;102;website 2;10;2
+Label 3;name 3;Country 3;type 3;categories 3;adress 3;adress13;95270;city 3;134685265;fax 3;presentation 3;expertise 3;3;07/01/2000 00:00;1;102;website 3;10;2
+Label 4;name 4;Country 4;type 4;categories 4;adress 4;adress14;95270;city 4;134685265;fax 4;presentation 4;expertise 4;18;08/01/2000 00:00;1;102;website 4;10;2

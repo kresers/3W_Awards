@@ -32,7 +32,6 @@ class LoadAgencyData implements FixtureInterface
                 $name = $datas[0];
                 $country = $datas[1];
                 $categories = $datas[2];
-                $logo = $datas[3];
                 $adress = $datas[4];
                 $adress2 = $datas[5];
                 $postalCodes = $datas[6];
