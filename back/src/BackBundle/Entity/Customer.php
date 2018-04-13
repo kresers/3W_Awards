@@ -200,7 +200,7 @@ class Customer
 
     /**
      * @ORM\ManyToOne(targetEntity="BackBundle\Entity\CategoryAwards")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $categoryAwards;
 
