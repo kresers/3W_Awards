@@ -24,3 +24,7 @@ api_login_check:
 agency:
     type:   rest
     resource:   BackBundle\Controller\AgencyController
+
+website:
+    type:   rest
+    resource:   BackBundle\Controller\WebsiteController
