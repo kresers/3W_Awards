@@ -25,6 +25,6 @@ agency:
     type:   rest
     resource:   BackBundle\Controller\AgencyController
 
-website:
+websites:
     type:   rest
     resource:   BackBundle\Controller\WebsiteController

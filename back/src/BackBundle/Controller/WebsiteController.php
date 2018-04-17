@@ -13,7 +13,7 @@ class WebsiteController extends Controller
      * @return array
      * @Rest\View()
      */
-    public function getWebsiteAction()
+    public function getWebsitesAction()
     {
         $em = $this->getDoctrine()->getManager();
 
