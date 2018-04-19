@@ -15,7 +15,7 @@ export class AuthenticationService {
     authorization: boolean;
 
     authenticate(user: any) {
-        let url = 'http://127.0.0.1:8000/api/login_check';
+        let url = 'https://3wawards.lycee-stvincent.net/api/login_check';
         let body = new URLSearchParams();
         body.append('username', user.username);
         body.append('password', user.password);
