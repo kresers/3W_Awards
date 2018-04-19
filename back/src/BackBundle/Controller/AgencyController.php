@@ -67,3 +67,4 @@ class AgencyController extends FOSRestController
 
         return array('agency' => $agency);
     }
+}
