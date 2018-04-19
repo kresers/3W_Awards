@@ -18,9 +18,7 @@ class AgencyController extends Controller
     public function getAgencyAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $agency = $em->getRepository(Agency::class)->findAll();
-
         return array('agency' => $agency);
     }
 
