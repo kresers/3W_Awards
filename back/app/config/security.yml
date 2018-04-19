@@ -9,6 +9,9 @@ security:
         fos_userbundle:
             id: fos_user.user_provider.username
     firewalls:
+        api_doc:
+            pattern: ^/api/doc
+            security: false
         login:
             pattern:  ^/api/login
             stateless: true
@@ -27,6 +30,7 @@ security:
             guard:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
+
         main:
             pattern: ^/
             form_login:
