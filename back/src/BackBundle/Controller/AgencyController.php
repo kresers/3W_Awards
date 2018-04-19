@@ -6,8 +6,10 @@ namespace BackBundle\Controller;
 use BackBundle\Entity\Agency;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;;
 
 
 class AgencyController extends FOSRestController
@@ -42,19 +44,20 @@ class AgencyController extends FOSRestController
     }
 
     /**
-     * Get the list of all agencies.
+     * Get all agency.
      *
      * @ApiDoc(
-     *     section="Agency",
-     *     description="Get the list of all agencies."
+     *     section="agencies",
+     *     description="Get all agency."
      * )
      *
-     * @Get(
+     *
+     * @Rest\Get(
      *     path="/agency",
      *     name="app_agency_all_show"
      * )
      *
-     * @View
+     * @Rest\View
      */
     public function showAllAction()
     {

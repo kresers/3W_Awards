@@ -6,8 +6,6 @@ use BackBundle\Entity\Project;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use FOS\RestBundle\Controller\Annotations\Get;
-use FOS\RestBundle\Controller\Annotations\View;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -41,7 +39,7 @@ class WebsiteController extends FOSRestController
      * @Rest\View
      *
      */
-    public function showAction(Projet $website)
+    public function showAction(Project $website)
     {
  
         return $website;
