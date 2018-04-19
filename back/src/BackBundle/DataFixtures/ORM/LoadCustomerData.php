@@ -57,7 +57,7 @@ class LoadCustomerData implements FixtureInterface
                 
                 //set datas
                 $customer = new Customer();
-                $customer->setCategoryAwards($categDB);
+                //$customer->setCategoryAwards($categDB);
                 $customer->setName($name);
                 $customer->setCountry($country);
                 $customer->setType($type);
