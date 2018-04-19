@@ -4,8 +4,7 @@
 namespace BackBundle\Controller;
 
 use BackBundle\Entity\Agency;
-use FOS\RestBundle\Controller\Annotations\Get;
-use FOS\RestBundle\Controller\Annotations\View;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -13,31 +12,26 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AgencyController extends Controller
 {
     /**
-     * @Get(
-     *     path = "/agency/{id}",
-     *     name = "app_agency_show",
-     *     requirements = {"id"="\d+"}
-     * )
-     * @View
-     *
+     * @return array
+     * @Rest\View()
      */
-    public function showAction(Agency $agency)
-    {
-        return $agency;
-    }
-
-    /**
-     * @Get(
-     *     path="/agency",
-     *     name="app_agency_all_show"
-     * )
-     *
-     * @View
-     */
-    public function showAllAction()
+    public function getAgencyAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $allAgency = $em->getRepository(Agency::class)->findAll();
-        return $allAgency;
+
+        $agency = $em->getRepository(Agency::class)->findAll();
+
+        return array('agency' => $agency);
     }
+
+//    /**
+//     * @param User $user
+//     * @return array
+//     * @Rest\View()
+//     * @ParamConverter("user", class="FreshApiTestBundle:User")
+//     */
+//    public function getUserAction(User $user)
+//    {
+//        return array('user' => $user);
+//    }
 }
