@@ -2,6 +2,7 @@
 
 namespace UserBundle\Controller;
 
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\Annotations\View;
@@ -12,6 +13,22 @@ class ClientController extends Controller
 {
 
     /**
+     *
+     * Get a client by ID.
+     *
+     * @ApiDoc(
+     *     section="Client",
+     *     description="Get a client by ID.",
+     *     requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The clients unique identifier."
+     *         }
+     *     }
+     * )
+     *
      * @Get(
      *     path = "/client/{id}",
      *     name = "app_client_show",
@@ -26,6 +43,14 @@ class ClientController extends Controller
     }
 
     /**
+     *
+     * Get all clients.
+     *
+     * @ApiDoc(
+     *     section="Client",
+     *     description="Get all clients."
+     * )
+     *
      * @Get(
      *     path="/client",
      *     name="app_client_all_show"
