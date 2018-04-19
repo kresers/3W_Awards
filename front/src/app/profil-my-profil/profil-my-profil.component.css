@@ -1,12 +1,86 @@
-.profil{
-    width:80%;
+.page-my-profil{
+    background-color: #dddddd;
+    display:flex;
+    flex-direction: row;
+}
+.page-my-profil .profil-info{
+    display: flex;
+    flex-direction: row;
+    width:70%;
     margin: 0 auto;
 }
-.civility{
-    margin-right: 15%;
+.identity{
+    padding-top:40px;
 }
+.informations{
+    width: 100%;
+}
+.custom_info{
+    display: flex;
+    flex-direction: row;
 
+}
+.civility-checkbox{
+    margin-left: 27%;
+}
+.civility-checkbox label{
+    margin-right:10px;
+}
+.civility-checkbox label input{
+    margin-right:7px;
+}
+.imageProfil{
+    text-align: center;
+}
+.imageProfil p{
+    padding-top: 100px;
+    color:grey;
+}
+.resizePP {
+    width: 60%;
+}
+.vertical_line_red{
+    border-left:2px solid red;
+    padding-left: -2px;
+}
+.upload-content .fa-info-circle{
+    color: grey;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:8px;
+}
+.upload-content .upload{
+    border-radius:20px;
+    font-size:14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:grey;
+}
+.form-check{
+    padding-left: 2.25rem;
+}
+@media screen and (max-width:901px){
+    .page-my-profil .profil-info{
+        flex-direction: column-reverse;
+    }
+    .resizePP{
+        width: 20%;
+    }
+    .imageProfil p{
+        padding-top: 10px;
+    }
+    .identity{
+        padding-top:5px;
+    }
+    .custom_info label{
+        min-width: 63px;
+    }
+    .civility-checkbox {
 
+        margin-left: 10%;
+
+    }
+}
 
 
 /*.greyBackground {
@@ -69,7 +143,4 @@ p, label, button {
     margin-top:20px;
     margin-left:8px;
 }
-.vertical_line_red{
-    border-left:2px solid red;
-    padding-left: -2px;
-}*/
+*/
