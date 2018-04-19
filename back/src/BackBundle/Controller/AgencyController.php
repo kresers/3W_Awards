@@ -4,14 +4,15 @@
 namespace BackBundle\Controller;
 
 use BackBundle\Entity\Agency;
-use FOS\RestBundle\Controller\Annotations\Get;
-use FOS\RestBundle\Controller\Annotations\View;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;;
 
 
-class AgencyController extends Controller
+class AgencyController extends FOSRestController
 {
     /**
      * Get an agency from the ID.
@@ -29,12 +30,12 @@ class AgencyController extends Controller
      *     }
      * )
      *
-     * @Get(
+     * @Rest\Get(
      *     path = "/agency/{id}",
      *     name = "app_agency_show",
      *     requirements = {"id"="\d+"}
      * )
-     * @View
+     * @Rest\@View
      *
      */
     public function showAction(Agency $agency)
@@ -43,24 +44,27 @@ class AgencyController extends Controller
     }
 
     /**
-     * Get the list of all agencies.
+     * Get all agency.
      *
      * @ApiDoc(
-     *     section="Agency",
-     *     description="Get the list of all agencies."
+     *     section="agencies",
+     *     description="Get all agency."
      * )
      *
-     * @Get(
+     *
+     * @Rest\Get(
      *     path="/agency",
      *     name="app_agency_all_show"
      * )
      *
-     * @View
+     * @Rest\View
      */
     public function showAllAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $allAgency = $em->getRepository(Agency::class)->findAll();
-        return $allAgency;
+
+        $agency = $em->getRepository(Agency::class)->findAll();
+
+        return array('agency' => $agency);
     }
 }
