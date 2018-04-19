@@ -6,6 +6,9 @@ use BackBundle\Entity\Project;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use FOS\RestBundle\Controller\Annotations\Get;
+use FOS\RestBundle\Controller\Annotations\View;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -14,6 +17,22 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 class WebsiteController extends FOSRestController
 {
     /**
+     * Get an website from the ID.
+     *
+     * @ApiDoc(
+     *     section="Website",
+     *     description="Get an website from the ID.",
+     *     requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The websites unique identifier."
+     *         }
+     *     }
+     * )
+     *
+     *
      * @Rest\Get(
      *     path = "/website/{id}",
      *     name = "app_website_show",
@@ -22,14 +41,21 @@ class WebsiteController extends FOSRestController
      * @Rest\View
      *
      */
-    public function showAction()
+    public function showAction(Projet $website)
     {
-        $website = new Project();
-        $website->setDevLanguages('Symfony');
+ 
         return $website;
     }
 
     /**
+     * Get all websites.
+     *
+     * @ApiDoc(
+     *     section="Website",
+     *     description="Get all websites."
+     * )
+     *
+     *
      * @Rest\Get(
      *     path="/websites",
      *     name="app_websites_all_show"
@@ -60,7 +86,6 @@ class WebsiteController extends FOSRestController
         $em = $this->getDoctrine()->getManager();
 
         $em->persist($project);
-        dump($project); die();
 
         return $this->view($project, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_website_show', ['id' => $project->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
     }
