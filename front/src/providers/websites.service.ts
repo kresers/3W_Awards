@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
-import {Website} from '../website-form/website';
+import {Website} from '../app/model/website';
 
 const httpOptions = {
   headers: new HttpHeaders({
