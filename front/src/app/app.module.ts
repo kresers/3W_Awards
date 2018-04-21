@@ -1,16 +1,15 @@
 // app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Http, HttpModule, RequestOptions } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { AuthGuard } from './_guard/index';
-import { AuthenticationService } from './authentication/authentication.service';
+import { AuthenticationService } from '../providers/authentication.service';
 import { PostComponent } from './post/post.component';
-
 import {NavbarComponent} from './navbar/navbar.component';
 import {SearchComponent} from './search/search.component';
 import {CarouselComponent} from './carousel/carousel.component';
@@ -34,6 +33,11 @@ import { ClientInfoComponent } from './client-info/client-info.component';
 import { ProfileNotedProjectsComponent } from './profile-noted-projects/profile-noted-projects.component';
 import { WebsiteFormComponent } from './website-form/website-form.component';
 
+import {UserService} from '../providers/user-service.service';
+import {JwtInterceptor} from '../interceptor/jwt.interceptor';
+import {ErrorInterceptor} from '../interceptor/error.interceptor';
+import { AlertComponent } from './alert/alert.component';
+import {AlertService} from '../providers/alert.service';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -66,7 +70,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ClientCardsComponent,
         ClientInfoComponent,
         ProfileNotedProjectsComponent,
-        WebsiteFormComponent
+        WebsiteFormComponent,
+        AlertComponent,
     ],
     imports: [
         BrowserModule,
@@ -74,6 +79,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ReactiveFormsModule,
         HttpModule,
         AppRouting,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     providers: [
         {
@@ -83,6 +91,10 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         },
         AuthGuard,
         AuthenticationService,
+        UserService,
+        JwtInterceptor,
+        ErrorInterceptor,
+        AlertService
     ],
     bootstrap: [AppComponent]
 })

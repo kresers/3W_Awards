@@ -4,6 +4,7 @@
 namespace BackBundle\Controller;
 
 use BackBundle\Entity\Agency;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations\Get;
@@ -40,7 +41,7 @@ class AgencyController extends Controller
      * @View
      *
      */
-    public function showAction(Agency $agency)
+    public function getAgencyAction()
     {
         return $agency;
     }
@@ -69,4 +70,15 @@ class AgencyController extends Controller
 
         return array('agency' => $agency);
     }
+
+//    /**
+//     * @param User $user
+//     * @return array
+//     * @Rest\View()
+//     * @ParamConverter("user", class="FreshApiTestBundle:User")
+//     */
+//    public function getUserAction(User $user)
+//    {
+//        return array('user' => $user);
+//    }
 }

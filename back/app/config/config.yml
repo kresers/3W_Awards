@@ -83,24 +83,28 @@ fos_user:
         address: contact@3wawards.com
         sender_name: 3awards
 
+#conf-fos:
+#    namespace_prefix: "BackBundle"
+#    path: "@BackBundle/Resources/config/serializer"
 
-# FOSRestBundle
 fos_rest:
-    body_converter:
-        enabled: true
-    view:
-        formats: { json: true, xml: false, rss: false }
-        view_response_listener: true
-    serializer:
-        serialize_null: true
-    format_listener:
-        rules:
-            - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+   body_converter:
+       enabled: true
+       validate: true
+       validation_errors_argument: violations
+   view:
+       formats: { json: true, xml: false, rss: false }
+       view_response_listener: true
+   serializer:
+       serialize_null: true
+   format_listener:
+       rules:
+           - { path: '^/', priorities: ['json'], fallback_format: 'json' }
 #    param_fetcher_listener: true
 #    body_listener: true
 #    format_listener: true
 #    view:
-#        view_response_listener: 'force'
+#        view_response_listener: ‘force’
 #        formats:
 #            xml: true
 #            json : true
@@ -112,6 +116,13 @@ fos_rest:
 #        default_engine: twig
 #    routing_loader:
 #        default_format: json
+
+
+# disable @View  of SensioFrameworkExtraBundle
+sensio_framework_extra:
+   view: { annotations: true }
+
+
 
 
 # disable @View  of SensioFrameworkExtraBundle
