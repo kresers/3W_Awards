@@ -9,15 +9,20 @@ import {HomeComponent} from './home/home.component';
 import {AgencyComponent} from './agency/agency.component';
 import {ProfilComponent} from './profil/profil.component';
 import {ClientComponent} from './client/client.component';
-import {ProfileNotedProjectsComponent} from "./profile-noted-projects/profile-noted-projects.component";
-import {ProfilInfoComponent} from "./profil-info/profil-info.component";
-import {ProfilMyProfilComponent} from "./profil-my-profil/profil-my-profil.component";
-import {WebsiteComponent} from "./website/website.component";
+import {ProfileNotedProjectsComponent} from './profile-noted-projects/profile-noted-projects.component';
+import {ProfilInfoComponent} from './profil-info/profil-info.component';
+import {ProfilMyProfilComponent} from './profil-my-profil/profil-my-profil.component';
+import {WebsiteComponent} from './website/website.component';
+import {WebsiteFormComponent} from './website-form/website-form.component';
 
 const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
+    },
+    {
+        path: 'submitWebsite',
+        component: WebsiteFormComponent,
     },
     {
       path: 'agency',
@@ -30,7 +35,7 @@ const routes: Routes = [
     {
         path: 'profil',
         component: ProfilComponent,
-        children:[
+        children: [
             {
                 path: 'myProfil',
                 component: ProfilMyProfilComponent

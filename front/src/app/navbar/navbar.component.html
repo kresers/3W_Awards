@@ -29,7 +29,7 @@
     <div class="vertical_line_grey"> </div>
     <!--<span> Inscription </span>-->
     <app-register></app-register>
-    <button class="btn btn-outline-danger" type="submit">Soumettre un site</button>
+    <a [routerLink]="['/submitWebsite']"><button class="btn btn-outline-danger">Soumettre un site</button></a>
     <select name="lang" id="">
       <option value="France" selected>FR</option>
       <option value="English">EN</option>
