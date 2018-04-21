@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Http, HttpModule, RequestOptions } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
@@ -31,6 +32,7 @@ import { ClientComponent } from './client/client.component';
 import { ClientCardsComponent } from './client-cards/client-cards.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
 import { ProfileNotedProjectsComponent } from './profile-noted-projects/profile-noted-projects.component';
+import { WebsiteFormComponent } from './website-form/website-form.component';
 
 
 
@@ -63,10 +65,12 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ClientComponent,
         ClientCardsComponent,
         ClientInfoComponent,
-        ProfileNotedProjectsComponent
+        ProfileNotedProjectsComponent,
+        WebsiteFormComponent
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         ReactiveFormsModule,
         HttpModule,
         AppRouting,
