@@ -1,0 +1,5 @@
+BackBundle\Entity\User:
+    exclusion_policy: all
+    properties:
+        salt:
+            expose: true

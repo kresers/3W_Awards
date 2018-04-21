@@ -12,6 +12,7 @@ export class AuthenticationService {
 
     constructor(private http: Http, private router: Router) {
     }
+
     authorization: boolean;
 
     authenticate(user: any) {
@@ -26,8 +27,6 @@ export class AuthenticationService {
             .post(url, body.toString(), options)
             .map((data: Response) => data.json());
     }
-
-
     /* this function delete the token and redirect the current user to the homepage */
     logout() {
         this.authorization = false;
@@ -52,16 +51,14 @@ export class AuthenticationService {
     */
     isAutorized(role) {
         let roles = this.getRolesCurrentUser();
-        let authorization = false ;
-        roles.forEach(function (value)
-        {
+        let authorization = false;
+        roles.forEach(function (value) {
             console.log(value);
             console.log(role);
-            if(role == value)
-            {
+            if (role == value) {
                 authorization = true;
             }
         });
         return authorization;
-}
+    }
 }
