@@ -19,11 +19,12 @@
     </div>
       <img [src]="imgLogo" routerLink="/" alt="3w_awards">
     <div class="vertical_line_red"> </div>
-    <p> Les meilleurs site du web dans chaque catégorie </p>
+    <p id="textNavBar"> Les meilleurs site du web dans chaque catégorie </p>
   </div>
   <div class="right-nav">
-    <i class="fas fa-search"></i>
-    <a *ngIf="autorized()" href="https://3wawards.lycee-stvincent.net/admin/?action=list&entity=Agency" target="_self">Administration</a>
+    <i id="searchIcon" class="fas fa-search" (click)="openSearch()"></i>
+    <app-search *ngIf="search"></app-search>
+    <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
     <app-login></app-login>
     <div class="vertical_line_grey"> </div>
     <!--<span> Inscription </span>-->
