@@ -3,9 +3,9 @@
 import {Http, Response, Headers, RequestOptions, URLSearchParams} from '@angular/http';
 import {tokenNotExpired} from 'angular2-jwt';
 import 'rxjs/add/operator/map';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import * as JWT from 'jwt-decode';
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class AuthenticationService {

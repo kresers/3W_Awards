@@ -1,8 +1,18 @@
 <div class="container">
   <h1>Wesbite Form</h1>
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required>
+  <form (ngSubmit)="f.form.valid && add()" #f="ngForm">
+    <div>
+      <label >Nom du projet</label>
+      <input [(ngModel)]="model.projectName" #projectName="ngModel" type="text">
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <div>
+      <label >Description du projet</label>
+      <input [(ngModel)]="model.projectDescription" #projectDescription="ngModel" type="text">
+    </div>
+  </form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" required>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
 </div>

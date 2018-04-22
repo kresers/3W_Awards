@@ -1,18 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import { appConfig} from '../app/app.config';
 import {Website} from '../app/model/website';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
+    'Content-Type':  'application/x-www-form-urlencoded',
   })
 };
 
 @Injectable()
 export class WebsitesService {
-  websiteUrl = '';
+  websiteUrl = appConfig.apiUrl + '/websites';
   constructor(private http: HttpClient) {}
 
   getWebsite(): Observable<Website> {
