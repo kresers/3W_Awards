@@ -56,7 +56,7 @@ const routes: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'website',
+        path: 'website/:id',
         component: WebsiteComponent,
     },
     { path: '**', redirectTo: '' }
