@@ -22,7 +22,7 @@ export class WebsiteFormComponent implements OnInit {
     this.websiteService.addWebsite(this.model)
       .subscribe(
         data => {
-          this.alertService.success('Ajout du site effectué avec succès', true);
+          console.log(data);
         }
       );
   }

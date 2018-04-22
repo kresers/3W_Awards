@@ -15,8 +15,13 @@ export class WebsitesService {
   websiteUrl = appConfig.apiUrl + '/websites';
   constructor(private http: HttpClient) {}
 
-  getWebsite(): Observable<Website> {
+  /**GET all Website*/
+  getWebsites(): Observable<Website> {
     return this.http.get<Website>(this.websiteUrl);
+  }
+  getWebsite(id: number): Observable<{}>{
+    const url = `${this.websiteUrl}/${id}`;
+    return this.http.get(url);
   }
   /** Post: add a new website into the database */
   addWebsite(website: Website): Observable<Website> {

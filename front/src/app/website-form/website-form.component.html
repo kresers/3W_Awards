@@ -9,6 +9,12 @@
       <label >Description du projet</label>
       <input [(ngModel)]="model.projectDescription" #projectDescription="ngModel" type="text">
     </div>
+    <div>
+      <label >technologies</label>
+      <select >
+        <option *ngFor="let tech of model.technologies.label" [value]="tech">{{tech}}</option>
+      </select>
+    </div>
   </form>
   <div class="form-group">
     <label for="name">Name</label>

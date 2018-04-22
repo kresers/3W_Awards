@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {WebsitesService} from '../../providers/websites.service';
+import {Website} from "../model/website";
+
 
 @Component({
   selector: 'app-website',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsiteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private websiteService: WebsitesService) { }
 
   ngOnInit() {
+  }
+
+  getWebsite(){
+    this.websiteService.getWebsite(1);
   }
 
 

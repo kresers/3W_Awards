@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WebsitesService} from "../../providers/websites.service";
 
 @Component({
   selector: 'app-front-cards',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontCardsComponent implements OnInit {
 
-  constructor() { }
+  constructor( private websiteService: WebsitesService) { }
 
   ngOnInit() {
+  }
+  getAll(){
+    this.websiteService.getWebsites();
   }
 
 }

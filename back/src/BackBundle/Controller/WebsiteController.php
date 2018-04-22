@@ -33,7 +33,7 @@ class WebsiteController extends FOSRestController
      *
      *
      * @Get(
-     *     path = "/website/{id}",
+     *     path = "/websites/{id}",
      *     name = "app_website_show",
      *     requirements = {"id"="\d+"}
      * )
