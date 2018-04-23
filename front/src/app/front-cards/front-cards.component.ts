@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {WebsitesService} from "../../providers/websites.service";
 
 @Component({
@@ -8,11 +8,13 @@ import {WebsitesService} from "../../providers/websites.service";
 })
 export class FrontCardsComponent implements OnInit {
 
-  constructor( private websiteService: WebsitesService) { }
+  constructor(private websiteService: WebsitesService) {
+  }
 
   ngOnInit() {
   }
-  getAll(){
+
+  getAll() {
     this.websiteService.getWebsites();
   }
 

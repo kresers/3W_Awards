@@ -6,33 +6,35 @@
 <!-- Modal HTML -->
 
 <div id="myModal" class="modal fade space-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="title-modal text-center">Login</h4>
-                <div>
-                    <div [hidden]="!error" class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                    </div>
-                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                        <div class="form-group content-form-group row">
-                            <label class="text-right row-group col-sm-4">Nom ou pseudo: </label>
-                            <input type="text" class="input-register-login center form-control col-sm-8 col-xs-12"  formControlName="username">
-                        </div>
-                        <div class="form-group content-form-group row">
-                            <label class="text-right row-group col-sm-4">Mot de passe</label>
-                            <input type="password" class="input-register-login center form-control col-sm-8 col-xs-12"  formControlName="password">
-                        </div>
-                        <div class="center-btn">
-                            <button type="submit" class="btn-red btn pull-right" [disabled]="!loginForm.valid">
-                                Connexion
-                            </button>
-                        </div>
-                    </form>
-                </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="title-modal text-center">Login</h4>
+        <div>
+          <div [hidden]="!error" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group content-form-group row">
+              <label class="text-right row-group col-sm-4">Nom ou pseudo: </label>
+              <input type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
+                     formControlName="username">
             </div>
+            <div class="form-group content-form-group row">
+              <label class="text-right row-group col-sm-4">Mot de passe</label>
+              <input type="password" class="input-register-login center form-control col-sm-8 col-xs-12"
+                     formControlName="password">
+            </div>
+            <div class="center-btn">
+              <button type="submit" class="btn-red btn pull-right" [disabled]="!loginForm.valid">
+                Connexion
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </div>

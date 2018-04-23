@@ -3,121 +3,141 @@
   background-color: #dddddd;
   margin-top: -60px;
 }
+
 .central {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-span{
-  color:grey;
+
+span {
+  color: grey;
 }
 
 /* Style for the profil picture*/
-.resizePP{
+.resizePP {
   width: 222px;
   height: 222px;
 }
 
 /* style for the bottom of the pictures (icon + description)*/
-.vertical_line_grey{
-  border-left:1px solid #666;
+.vertical_line_grey {
+  border-left: 1px solid #666;
   height: 13px;
   margin: 7px 12px 6px;
 }
-.font-bold{
+
+.font-bold {
   font-weight: bold;
 }
-i{
+
+i {
   font-size: 12px;
   color: #989898;
 }
-.desc-agency{
+
+.desc-agency {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
-.social-rate{
-  margin-bottom:15px;
+
+.social-rate {
+  margin-bottom: 15px;
 }
 
 /* Style for buttons*/
-.description-btn button{
+.description-btn button {
   border-radius: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.category-btn{
+
+.category-btn {
   display: block;
 }
-.category-btn button{
-  margin-top:5px;
+
+.category-btn button {
+  margin-top: 5px;
   margin-right: 1%;
-  width:auto;
+  width: auto;
   border-radius: 50px;
   background-color: #89898b;
   color: white;
   border-color: #89898b;
 }
+
 .category-btn button:hover {
   background-color: white;
   color: dimgrey;
 }
 
 /* style for all informations in the white div*/
-.infoClient{
+.infoClient {
   height: auto;
   background-color: #FFFFFF;
 }
-.infoClient .info{
+
+.infoClient .info {
   margin-right: 5%;
 }
-.infoClient .container{
+
+.infoClient .container {
   display: flex;
   flex-direction: column;
 }
-.infoClient .container .row{
+
+.infoClient .container .row {
   justify-content: center;
 }
-.infoClient .header-info p{
-  font-weight:bold;
+
+.infoClient .header-info p {
+  font-weight: bold;
   margin-top: 15px;
   margin-bottom: 0;
 }
-.infoClient .footer-info p{
+
+.infoClient .footer-info p {
   font-weight: bold;
   margin-bottom: 15px;
-  color:grey;
+  color: grey;
 }
 
 /* Responsive */
-@media screen and (max-width:1198px){
+@media screen and (max-width: 1198px) {
   .infoClient .info {
     text-align: center;
   }
 }
+
 @media screen and (max-width: 660px) {
   .info-client-page {
     margin-top: -35px;
   }
 }
+
 @media screen and (max-width: 440px) {
   .info-client-page {
     margin-top: -25px;
   }
 }
+
 @media screen and (max-width: 400px) {
-  button{
+  button {
     font-size: 14px;
   }
 }
-@media screen and (max-width:350px){
-  span{
-    font-size:12px;
+
+@media screen and (max-width: 350px) {
+  span {
+    font-size: 12px;
   }
-  p{
-    font-size:14px;
+
+  p {
+    font-size: 14px;
   }
-  .vertical_line_grey{
+
+  .vertical_line_grey {
     height: 12px;
     margin: 4px 12px 6px;
 

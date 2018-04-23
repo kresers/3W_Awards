@@ -1,15 +1,15 @@
-.dspflex{
+.dspflex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.round{
+
+.round {
   border-radius: 17px;
 }
 
-
 input:focus {
-  text-decoration: none ;
+  text-decoration: none;
 }
 
 /* Switch  */
@@ -17,6 +17,7 @@ input:focus {
   font-size: 1rem;
   position: relative;
 }
+
 .switch input {
   position: relative;
   height: 1px;
@@ -28,6 +29,7 @@ input:focus {
   overflow: hidden;
   padding: 0;
 }
+
 .switch input + label {
   position: relative;
   min-width: calc(calc(2.375rem * .8) * 2);
@@ -41,6 +43,7 @@ input:focus {
   vertical-align: middle;
   text-indent: calc(calc(calc(2.375rem * .8) * 2) + .5rem);
 }
+
 .switch input + label::before,
 .switch input + label::after {
   content: '';
@@ -51,12 +54,14 @@ input:focus {
   bottom: 0;
   display: block;
 }
+
 .switch input + label::before {
   right: 0;
   background-color: #dee2e6;
   border-radius: calc(2.375rem * .8);
   transition: 0.2s all;
 }
+
 .switch input + label::after {
   top: 2px;
   left: 2px;
@@ -66,42 +71,53 @@ input:focus {
   background-color: white;
   transition: 0.2s all;
 }
+
 .switch input:checked + label::before {
   background-color: #b2b2b2;
 }
+
 .switch input:checked + label::after {
   margin-left: calc(2.375rem * .8);
 }
+
 .switch input:focus + label::before {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(0, 136, 221, 0.25);
 }
+
 .switch input:disabled + label {
   color: #868e96;
   cursor: not-allowed;
 }
+
 .switch input:disabled + label::before {
   background-color: #e9ecef;
 }
+
 .switch.switch-sm {
   font-size: 0.875rem;
 }
+
 .switch.switch-sm input + label {
   min-width: calc(calc(1.9375rem * .8) * 2);
   height: calc(1.9375rem * .8);
   line-height: calc(1.9375rem * .8);
   text-indent: calc(calc(calc(1.9375rem * .8) * 2) + .5rem);
 }
+
 .switch.switch-sm input + label::before {
   width: calc(calc(1.9375rem * .8) * 2);
 }
+
 .switch.switch-sm input + label::after {
   width: calc(calc(1.9375rem * .8) - calc(2px * 2));
   height: calc(calc(1.9375rem * .8) - calc(2px * 2));
 }
+
 .switch.switch-sm input:checked + label::after {
   margin-left: calc(1.9375rem * .8);
 }
+
 .switch + .switch {
   margin-left: 1rem;
 }

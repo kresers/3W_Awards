@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Website} from '../model/website';
 import {WebsitesService} from '../../providers/websites.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
@@ -13,7 +13,8 @@ export class WebsiteFormComponent implements OnInit {
   websiteForm: FormGroup;
   model: any = {};
 
-  constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private alertService: AlertService) { }
+  constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private alertService: AlertService) {
+  }
 
   ngOnInit() {
   }

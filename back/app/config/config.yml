@@ -118,12 +118,6 @@ fos_rest:
 #        default_format: json
 
 
-# disable @View  of SensioFrameworkExtraBundle
-sensio_framework_extra:
-   view: { annotations: true }
-
-
-
 
 # disable @View  of SensioFrameworkExtraBundle
 sensio_framework_extra:

@@ -2,16 +2,16 @@
   <h1>Wesbite Form</h1>
   <form (ngSubmit)="f.form.valid && add()" #f="ngForm">
     <div>
-      <label >Nom du projet</label>
+      <label>Nom du projet</label>
       <input [(ngModel)]="model.projectName" #projectName="ngModel" type="text">
     </div>
     <div>
-      <label >Description du projet</label>
+      <label>Description du projet</label>
       <input [(ngModel)]="model.projectDescription" #projectDescription="ngModel" type="text">
     </div>
     <div>
-      <label >technologies</label>
-      <select >
+      <label>technologies</label>
+      <select>
         <option *ngFor="let tech of model.technologies.label" [value]="tech">{{tech}}</option>
       </select>
     </div>

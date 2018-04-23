@@ -1,4 +1,4 @@
 export class Award {
-  id : number;
-  label : string;
+  id: number;
+  label: string;
 }

@@ -1,3 +1,3 @@
-export  class Tag {
+export class Tag {
 
 }
