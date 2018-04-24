@@ -18,6 +18,7 @@ export class Website {
   created_by: string;
   client_name: any;
   release_date: string;
+  giving_to_agency: string
   keyFunctionnality: string;
   tech_front: string;
   dev_languages: string;
