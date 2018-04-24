@@ -25,7 +25,7 @@ export class WebsitesService {
   /** Get the Website from the database  */
   getWebsite(id: number): Observable<{}> {
     const url = `${this.websiteUrl}/${id}`;
-    return this.http.get(url);
+    return this.http.get<Website>(url);
   }
 
   /** Post: add a new website into the database */

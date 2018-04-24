@@ -10,14 +10,25 @@ import {Website} from "../model/website";
 })
 export class WebsiteComponent implements OnInit {
 
+  website: Website;
   constructor(private websiteService: WebsitesService) {
   }
 
   ngOnInit() {
   }
 
-  getWebsite() {
-    this.websiteService.getWebsite(1);
+  getWebsites() {
+    this.websiteService.getWebsites()
+      .subscribe(
+        website => this.website = website
+      );
+  }
+
+  getWebsite(website) {
+    this.websiteService.getWebsite(website.id)
+      .subscribe(
+        data => this.website = website
+      );
   }
 
 
