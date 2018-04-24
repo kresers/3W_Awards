@@ -15,20 +15,15 @@ export class WebsiteComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getWebsite(1)
   }
 
-  getWebsites() {
-    this.websiteService.getWebsites()
-      .subscribe(
-        website => this.website = website
-      );
-  }
-
-  getWebsite(website) {
-    this.websiteService.getWebsite(website.id)
-      .subscribe(
-        data => this.website = website
-      );
+  getWebsite(int) {
+    this.websiteService.getWebsite(int)
+      .subscribe(data => {
+        console.log(data);
+        this.website = data
+      });
   }
 
 

@@ -1,6 +1,6 @@
 <app-carousel></app-carousel>
 
-<div class="album position-album py-5 bg-light">
+<div *ngIf="website" class="album position-album py-5 bg-light">
   <div class="container_custom">
     <div class="special-container">
       <p class="text-center font-weight-bold">Site e-commerce de l'activité automobile du groupe Gueudet avec
@@ -26,7 +26,7 @@
     <div class="row delete-row-padding panel-info">
       <div class="col-md-3">
         <p class="card-text"><b>Type de site</b></p>
-        <p class="card-text grey-website"><b>Portail groupe</b></p>
+        <p class="card-text grey-website"><b>{{website.website_type}}</b></p>
 
         <p class="card-text"><b>Secteur d'activité</b></p>
         <p class="grey-website card-text"><b>Automobile</b></p>
@@ -39,7 +39,7 @@
         <p class="card-text grey-website"><b>Refonte globale</b></p>
 
         <p class="card-text"><b>Budget</b></p>
-        <p class="card-text grey-website"><b>100-150 K€</b></p>
+        <p class="card-text grey-website"><b>{{website.project_budget}}</b></p>
 
         <p class="card-text"><b>Langues</b></p>
         <p class="card-text grey-website"><b>FR</b></p>
