@@ -48,7 +48,7 @@ export class WebsitesService {
     );
   }
 
-  /** PUT: update the hero on the server. Returns the updated hero upon success. */
+  /** PUT: update the website on the server. Returns the updated website upon success. */
   updateWebsite(website: Website): Observable<Website> {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'my-new-auth-token');

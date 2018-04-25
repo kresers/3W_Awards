@@ -14,15 +14,12 @@ export class FrontCardsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAll()
   }
 
   getAll() {
-    this.websiteService.getWebsites();
-  }
-
-  getWebsite(website) {
-    this.websiteService.getWebsite(website.id)
-      .subscribe(data => {
+    this.websiteService.getWebsites()
+      .subscribe( data => {
         console.log(data);
         this.website = data
       });
