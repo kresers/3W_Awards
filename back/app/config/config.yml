@@ -118,12 +118,6 @@ fos_rest:
 #        default_format: json
 
 
-# disable @View  of SensioFrameworkExtraBundle
-sensio_framework_extra:
-   view: { annotations: true }
-
-
-
 
 # disable @View  of SensioFrameworkExtraBundle
 sensio_framework_extra:
@@ -449,11 +443,10 @@ lexik_jwt_authentication:
     token_ttl:        3600
 
 nelmio_cors:
-    paths:
-        '^/api/':
-            allow_origin: ['http://localhost:4200']
-            allow_headers: ['origin', 'content-type', 'authorization']
-            allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
-            max_age: 3600
+    defaults:
+          allow_origin: ['*']
+          allow_headers: [ 'content-type', 'authorization']
+          allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+          max_age: 3600
 
 nelmio_api_doc: ~
