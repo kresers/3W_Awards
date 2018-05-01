@@ -107,7 +107,7 @@
     </div>
     <div formArrayName="technology" class="form-group">
         <div>
-      <label>color</label>
+      <label>technology</label>
       <select [formControlName]="technology" >
         <option *ngFor="let technology of technology" [value]="technology.label">{{technology.label}} </option>
       </select>
@@ -115,7 +115,7 @@
     </div>
     <div  formArrayName="award" class="form-group">
         <div>
-      <label>color</label>
+      <label>award</label>
       <select [formControlName]="award" >
         <option *ngFor="let award of award" [value]="award.label">{{award.label}} </option>
       </select>
