@@ -212,11 +212,6 @@ class Project
      */
     private $technology;
 
-    /**
-     * @ORM\OneToMany(targetEntity="BackBundle\Entity\Country", mappedBy="Project")
-     */
-    private $country;
-
 
 
     /**
@@ -928,39 +923,6 @@ class Project
         return $this->technology;
     }
 
-    /**
-     * Add country
-     *
-     * @param \BackBundle\Entity\Country $country
-     *
-     * @return Project
-     */
-    public function addCountry(\BackBundle\Entity\Country $country)
-    {
-        $this->country[] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Remove country
-     *
-     * @param \BackBundle\Entity\Country $country
-     */
-    public function removeCountry(\BackBundle\Entity\Country $country)
-    {
-        $this->country->removeElement($country);
-    }
-
-    /**
-     * Get country
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
 
     public function __toString()
     {

@@ -1,151 +1,180 @@
-.navbar{
-  display:flex;
+.navbar {
+  display: flex;
   align-items: flex-start;
   height: 160px;
 }
+
 .btn-menu {
   background-color: transparent;
-  cursor:pointer;
-  border:none;
+  cursor: pointer;
+  border: none;
   width: 90px;
   height: 35px;
 }
-.show .btn-menu{
-  background-color:#39393A;
-  color:#ddd;
+
+.show .btn-menu {
+  background-color: #39393A;
+  color: #ddd;
 }
-.dropdown-menu{
-  border:none;
-  min-width:90px;
-  background-color:#39393A;
-  margin:0;
-  border-radius:unset;
-  top:35px;
+
+.dropdown-menu {
+  border: none;
+  min-width: 90px;
+  background-color: #39393A;
+  margin: 0;
+  border-radius: unset;
+  top: 35px;
 }
-.dropdown-menu a{
-  color:#ddd;
+
+.dropdown-menu a {
+  color: #ddd;
   margin-left: 5px;
 }
-.left-nav{
+
+.left-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.left-nav p{
-  margin-top:14px;
+
+.left-nav p {
+  margin-top: 14px;
   text-transform: uppercase;
 }
-.vertical_line_red{
-  border-left:1px solid red;
-  height:30px;
+
+.vertical_line_red {
+  border-left: 1px solid red;
+  height: 30px;
   margin: 15px;
 }
-.right-nav{
+
+.right-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 67px;
 }
-.right-nav i{
+
+.right-nav i {
   margin-right: 40px;
   color: #666;
   font-size: 19px;
 }
-.right-nav span{
+
+.right-nav span {
   text-transform: uppercase;
-  color:#666;
-  font-size:14px;
+  color: #666;
+  font-size: 14px;
 }
-.right-nav .btn-outline-danger{
+
+.right-nav .btn-outline-danger {
   border: 2px solid red;
   border-radius: 20px;
   margin-left: 25px;
   text-transform: uppercase;
-  font-size:14px;
+  font-size: 14px;
 }
 
-.right-nav select{
+.right-nav select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin-left:15px;
-  border:none;/* remove default arrow */
+  margin-left: 15px;
+  border: none; /* remove default arrow */
   background-color: transparent;
 }
-.vertical_line_grey{
-  border-left:1px solid #666;
-  height:14px;
+
+.vertical_line_grey {
+  border-left: 1px solid #666;
+  height: 14px;
   margin: 10px;
 }
 
 @media screen and (max-width: 1280px) {
-  .vertical_line_red{
+  .vertical_line_red {
     display: none;
   }
 }
+
 @media screen and (max-width: 1260px) {
   .vertical_line_red {
     display: none;
   }
-  .left-nav p{
-    display:none;
+
+  .left-nav p {
+    display: none;
   }
-  .right-nav i{
-    margin-right:10px;
-  }
-}
-@media screen and (max-width:800px){
-  .right-nav span{
-    display:none;
-  }
-  .right-nav .vertical_line_grey{
-    display:none;
+
+  .right-nav i {
+    margin-right: 10px;
   }
 }
-@media screen and (max-width:850px) {
+
+@media screen and (max-width: 800px) {
+  .right-nav span {
+    display: none;
+  }
+
+  .right-nav .vertical_line_grey {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .right-nav .btn-outline-danger {
     margin-left: 0;
   }
 }
 
 @media screen and (max-width: 660px) {
-  .right-nav .btn-outline-danger{
-    display:none;
+  .right-nav .btn-outline-danger {
+    display: none;
   }
-  .right-nav select{
-    margin-left:0;
+
+  .right-nav select {
+    margin-left: 0;
   }
-  .left-nav img{
-    width:160px;
+
+  .left-nav img {
+    width: 160px;
   }
-  .right-nav{
-    height:53px;
+
+  .right-nav {
+    height: 53px;
   }
 }
+
 @media screen and (max-width: 440px) {
-  .navbar{
-    height:130px;
+  .navbar {
+    height: 130px;
   }
-  .right-nav select{
-    font-size:12px;
+
+  .right-nav select {
+    font-size: 12px;
   }
-  .left-nav img{
-    width:104px;
+
+  .left-nav img {
+    width: 104px;
   }
-  .right-nav{
-    height:34px;
+
+  .right-nav {
+    height: 34px;
   }
-  .right-nav i{
-    font-size:12px;
-    margin-right:3px;
+
+  .right-nav i {
+    font-size: 12px;
+    margin-right: 3px;
   }
+
   .btn-menu {
-    width:76px;
+    width: 76px;
   }
-  .dropdown-menu{
-    min-width:76px;
+
+  .dropdown-menu {
+    min-width: 76px;
   }
-  .dropdown-menu a{
+
+  .dropdown-menu a {
     font-size: 14px;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../../providers/authentication.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   search = false;
   imgLogo = 'assets/img/logo.png';
+
   constructor(private auth: AuthenticationService) {
   }
 
@@ -19,9 +20,9 @@ export class NavbarComponent implements OnInit {
   }
 
   autorized() {
-      if (localStorage.getItem('id_token')) {
-          return this.auth.isAutorized('ROLE_ADMIN');
-      }
+    if (localStorage.getItem('id_token')) {
+      return this.auth.isAutorized('ROLE_ADMIN');
+    }
   }
 
   openSearch() {
