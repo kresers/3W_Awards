@@ -19,6 +19,10 @@ class WebsiteController extends FOSRestController
     /**
      * Get an website from the ID.
      *
+     ** @ApiDoc(
+     *     section="Website",
+     *     description="Get a website with his ID."
+     * )
      *
      * @Get(
      *     path = "/websites/{id}",
@@ -61,6 +65,11 @@ class WebsiteController extends FOSRestController
     }
 
     /**
+     *
+     * * @ApiDoc(
+     *     section="Website",
+     *     description="Create a website."
+     * )
      * @Post(
      *     path="/websites",
      *     name="app_website_create"
