@@ -6,17 +6,15 @@ import 'rxjs/add/operator/map';
 import {Router} from '@angular/router';
 import * as JWT from 'jwt-decode';
 import {Injectable} from '@angular/core';
+import {appConfig} from "../app/app.config";
 
 @Injectable()
 export class AuthenticationService {
-
     constructor(private http: Http, private router: Router) {
     }
-
     authorization: boolean;
-
     authenticate(user: any) {
-        let url = 'https://3wawards.lycee-stvincent.net/api/login_check';
+        let url = appConfig.loginUrl;
         let body = new URLSearchParams();
         body.append('username', user.username);
         body.append('password', user.password);

@@ -1,0 +1,16 @@
+{
+  "/administration/api/*": {
+    "target": "http://localhost:8000/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+
+  "/api/login_check/*": {
+    "target": "http://localhost:8000/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
+
