@@ -1,24 +1,127 @@
 <div class="container">
   <h1>Wesbite Form</h1>
-  <form (ngSubmit)="f.form.valid && add()" #f="ngForm">
-    <div>
-      <label>Nom du projet</label>
-      <input [(ngModel)]="model.projectName" #projectName="ngModel" type="text">
+  <form  [formGroup]="websiteForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>project_name</label>
+        <input type="text" class="form-control" formControlName="project_name" required>
     </div>
-    <div>
-      <label>Description du projet</label>
-      <input [(ngModel)]="model.projectDescription" #projectDescription="ngModel" type="text">
+    <div class="form-group">
+        <label>project_name</label>
+        <input type="text" class="form-control" formControlName="project_description" required>
     </div>
-    <div>
-      <label>technologies</label>
-      <select>
-        <option *ngFor="let tech of model.technologies.label" [value]="tech">{{tech}}</option>
+    <div class="form-group">
+        <label>keywords</label>
+        <input type="text" class="form-control" formControlName="keywords" required>
+    </div>
+    <div class="form-group">
+        <label>website_type</label>
+        <input type="text" class="form-control" formControlName="website_type" required>
+    </div>
+    <div class="form-group">
+        <label>activity_area</label>
+        <input type="text" class="form-control" formControlName="activity_area" required>
+    </div>
+    <div class="form-group">
+        <label>target</label>
+        <input type="text" class="form-control" formControlName="target" required>
+    </div>
+    <div class="form-group">
+        <label>project_focus</label>
+        <input type="text" class="form-control" formControlName="project_focus" required>
+    </div>
+    <div class="form-group">
+        <label>project_budget</label>
+        <input type="number" class="form-control" formControlName="project_budget" required>
+    </div>
+    <div class="form-group">
+        <label>languages</label>
+        <input type="text" class="form-control" formControlName="languages" required>
+    </div>
+    <div class="form-group">
+        <label>created_by</label>
+        <input type="text" class="form-control" formControlName="created_by" required>
+    </div>
+    <div class="form-group">
+        <label>client_name</label>
+        <input type="text" class="form-control" formControlName="client_name" required>
+    </div>
+    <div class="form-group">
+        <label>release_date</label>
+        <input type="text" class="form-control" formControlName="release_date" required>
+    </div>
+    <div class="form-group">
+        <label>giving_to_agency</label>
+        <input type="text" class="form-control" formControlName="giving_to_agency" required>
+    </div>
+    <div class="form-group">
+        <label>keyFunctionnality</label>
+        <input type="text" class="form-control" formControlName="keyFunctionnality" required>
+    </div>
+    <div class="form-group">
+        <label>tech_front</label>
+        <input type="text" class="form-control" formControlName="tech_front" required>
+    </div>
+    <div class="form-group">
+        <label>dev_languages</label>
+        <input type="text" class="form-control" formControlName="dev_languages" required>
+    </div>
+    <div class="form-group">
+        <label>framework</label>
+        <input type="text" class="form-control" formControlName="framework" required>
+    </div>
+    <div class="form-group">
+        <label>cms</label>
+        <input type="text" class="form-control" formControlName="cms" required>
+    </div>
+    <div class="form-group">
+        <label>technical_challenges</label>
+        <input type="text" class="form-control" formControlName="technical_challenges" required>
+    </div>
+    <div class="form-group">
+        <label>focal_points</label>
+        <input type="text" class="form-control" formControlName="focal_points" required>
+    </div>
+    <div class="form-group">
+        <label>view_number</label>
+        <input type="number" class="form-control" formControlName="view_number" required>
+    </div>
+    <div class="form-group">
+        <label>like_number</label>
+        <input type="number" class="form-control" formControlName="like_number" required>
+    </div>
+    <div class="form-group">
+        <label>average_grade</label>
+        <input type="number" class="form-control" formControlName="average_grade" required>
+    </div>
+    <div class="form-group">
+        <label>average_jury_grade</label>
+        <input type="number" class="form-control" formControlName="average_jury_grade" required>
+    </div>
+    <div formArrayName="color" class="form-group">
+      <div>
+        <label>color</label>
+        <select [formControlName]="color" >
+          <option *ngFor="let color of color" [value]="color.label">{{color.label}} </option>
+        </select>
+      </div>
+    </div>
+    <div formArrayName="technology" class="form-group">
+        <div>
+      <label>technology</label>
+      <select [formControlName]="technology" >
+        <option *ngFor="let technology of technology" [value]="technology.label">{{technology.label}} </option>
       </select>
     </div>
-  </form>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" required>
-  </div>
+    </div>
+    <div  formArrayName="award" class="form-group">
+        <div>
+      <label>award</label>
+      <select [formControlName]="award" >
+        <option *ngFor="let award of award" [value]="award.label">{{award.label}} </option>
+      </select>
+    </div>
+    </div>
   <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <pre>{{websiteForm.value | json}}</pre>
 </div>

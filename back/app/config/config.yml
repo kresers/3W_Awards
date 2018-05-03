@@ -99,7 +99,9 @@ fos_rest:
        serialize_null: true
    format_listener:
        rules:
-           - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+           - { path: '^/administration/api', priorities: ['json'], fallback_format: 'json' }
+           - { path: '^/admin', priorities: [ 'text/html', '*/*'], fallback_format: html, prefer_extension: true }
+           - { path: '^/login', priorities: [ 'text/html', '*/*'], fallback_format: html, prefer_extension: true }
 #    param_fetcher_listener: true
 #    body_listener: true
 #    format_listener: true
@@ -344,7 +346,6 @@ easy_admin:
                     - { property: 'focalPoints', label: 'Point focal'}
                     - { property: 'customer', label: 'Client'}
                     - { property: 'color', label: 'Couleurs'}
-                    - { property: 'country', label: 'Pays'}
                     - { property: 'technology', label: 'Technologies'}
                     - { type: 'group', css_class: 'col-sm-3', label: 'Social', icon: 'user' }
                     - { property: 'viewNumber', label: 'Nombre de vue'}
@@ -444,9 +445,11 @@ lexik_jwt_authentication:
 
 nelmio_cors:
     defaults:
-          allow_origin: ['*']
-          allow_headers: [ 'content-type', 'authorization']
-          allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
-          max_age: 3600
+    paths:
+        '/administration/api':
+              allow_origin: ['*']
+              allow_headers: [ 'content-type', 'authorization']
+              allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+              max_age: 3600
 
 nelmio_api_doc: ~
