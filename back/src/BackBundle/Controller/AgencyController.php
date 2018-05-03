@@ -41,7 +41,7 @@ class AgencyController extends Controller
      * @View
      *
      */
-    public function getAgencyAction()
+    public function getAgencyAction(Agency $agency)
     {
         return $agency;
     }
