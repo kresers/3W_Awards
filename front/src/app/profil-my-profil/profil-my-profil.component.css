@@ -1,27 +1,106 @@
-.greyBackground {
-  background-color: #dddddd;
+.page-my-profil{
+    background-color: #dddddd;
+    display:flex;
+    flex-direction: row;
+}
+.page-my-profil .profil-info{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    margin: 0 auto;
+}
+.identity{
+    padding-top:40px;
+}
+.informations{
+    width: 100%;
+}
+.custom_info{
+    display: flex;
+    flex-direction: row;
+
+}
+.civility-checkbox{
+    margin-left: 27%;
+}
+.civility-checkbox label{
+    margin-right:10px;
+}
+.civility-checkbox label input{
+    margin-right:7px;
+}
+.imageProfil{
+    text-align: center;
+}
+.imageProfil p{
+    padding-top: 100px;
+    color:grey;
+}
+.resizePP {
+    width: 60%;
+}
+.vertical_line_red{
+    border-left:2px solid red;
+    padding-left: -2px;
+}
+.upload-content .fa-info-circle{
+    color: grey;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:8px;
+}
+.upload-content .upload{
+    border-radius:20px;
+    font-size:14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:grey;
+}
+.form-check{
+    padding-left: 2.25rem;
+}
+@media screen and (max-width:901px){
+    .page-my-profil .profil-info{
+        flex-direction: column-reverse;
+    }
+    .resizePP{
+        width: 20%;
+    }
+    .imageProfil p{
+        padding-top: 10px;
+    }
+    .identity{
+        padding-top:5px;
+    }
+    .custom_info label{
+        min-width: 63px;
+    }
+    .civility-checkbox {
+
+        margin-left: 10%;
+
+    }
 }
 
+
+/*.greyBackground {
+    background-color: #dddddd;
+}
 .noRoundedCorners {
   border-radius: 0;
 }
-
 .formDiv {
-  margin-left: 120px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+    width: 80%;
+    margin:0 auto;
 }
-
 .optInSubmit {
   margin-left: 185px;
 }
-
 p, label, button {
   font-family: 'Monserrat', 'Open Sans', sans-serif;
   font-weight: 400;
   color: grey;
 }
-
 .cancel {
   width: 150px;
   height: 75%;
@@ -31,7 +110,6 @@ p, label, button {
   color: #eb1c24;
   font-weight: 700;
 }
-
 .submit {
   width: 150px;
   border-radius: 50px;
@@ -39,26 +117,30 @@ p, label, button {
   color: white;
   font-weight: 700;
 }
-
 .resizePP {
-  width: 45%;
+    width: 70%;
 }
-
 .imageProfil {
-  float: right;
+    position:absolute;
+    left:85%;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
 }
-
 .upload {
-  width: 110px;
-  height: 75%;
-  border-radius: 50px;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
 }
-
-.fa-info-circle {
-  color: grey;
+.upload-content{
+    display:flex;
+    flex-direction: row;
 }
-
-.vertical_line_red {
-  border-left: 2px solid red;
-  padding-left: -2px;
+.upload-content .fa-info-circle{
+    color: grey;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:8px;
 }
+*/
