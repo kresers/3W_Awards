@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from '../authentication/authentication.service';
+import {Component, OnInit} from '@angular/core';
+import {AuthenticationService} from '../../providers/authentication.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,9 @@ import {AuthenticationService} from '../authentication/authentication.service';
 export class NavbarComponent implements OnInit {
 
 
+  search = false;
   imgLogo = 'assets/img/logo.png';
+
   constructor(private auth: AuthenticationService) {
   }
 
@@ -18,13 +20,17 @@ export class NavbarComponent implements OnInit {
   }
 
   autorized() {
-      if (localStorage.getItem('id_token')) {
-          return this.auth.isAutorized('ROLE_ADMIN');
-      }
+    if (localStorage.getItem('id_token')) {
+      return this.auth.isAutorized('ROLE_ADMIN');
+    }
   }
 
-  showBtn() {
-    document.getElementById('menu-nav').style.display = 'block';
+  openSearch() {
+    this.search = true;
+    if (this.search = true) {
+      document.getElementById('textNavBar').style.display = 'none';
+      document.getElementById('searchIcon').style.display = 'none';
+    }
   }
 
   openSite(/*objet de type site*/) {

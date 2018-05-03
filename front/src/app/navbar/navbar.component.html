@@ -17,25 +17,27 @@
 
       </ul>
     </div>
-      <img [src]="imgLogo" routerLink="/" alt="3w_awards">
-    <div class="vertical_line_red"> </div>
-    <p> Les meilleurs site du web dans chaque catégorie </p>
+    <img [src]="imgLogo" routerLink="/" alt="3w_awards">
+    <div class="vertical_line_red"></div>
+    <p id="textNavBar"> Les meilleurs site du web dans chaque catégorie </p>
   </div>
   <div class="right-nav">
-    <i class="fas fa-search"></i>
+    <i id="searchIcon" class="fas fa-search" (click)="openSearch()"></i>
+    <app-search *ngIf="search"></app-search>
     <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
     <app-login></app-login>
-    <div class="vertical_line_grey"> </div>
+    <div class="vertical_line_grey"></div>
     <!--<span> Inscription </span>-->
     <app-register></app-register>
-    <button class="btn btn-outline-danger" type="submit">Soumettre un site</button>
+    <a [routerLink]="['/submitWebsite']">
+      <button class="btn btn-outline-danger">Soumettre un site</button>
+    </a>
     <select name="lang" id="">
       <option value="France" selected>FR</option>
       <option value="English">EN</option>
     </select>
   </div>
 </nav>
-
 
 
 <!--<nav class="col-md-12 navbar navbar-light bg-light" id="navigation">

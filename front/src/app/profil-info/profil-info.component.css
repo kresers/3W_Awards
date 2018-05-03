@@ -59,19 +59,19 @@ h1 {
     text-transform: uppercase;
 }
 .nav-tabs .nav-link.active {
-    text-decoration: none;
-    border-bottom: 3px solid red;
-    background-color: transparent;
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
+  text-decoration: none;
+  border-bottom: 3px solid red;
+  background-color: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
 }
 
 ul {
-    font-family: 'Monserrat', sans-serif;
-    font-weight: 600;
-    color:  grey;
-    text-transform: uppercase;
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 600;
+  color: grey;
+  text-transform: uppercase;
 }
 .line-under-menu{
     border-top:3px solid #fff;

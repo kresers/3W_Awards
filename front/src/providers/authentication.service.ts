@@ -3,19 +3,18 @@
 import {Http, Response, Headers, RequestOptions, URLSearchParams} from '@angular/http';
 import {tokenNotExpired} from 'angular2-jwt';
 import 'rxjs/add/operator/map';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import * as JWT from 'jwt-decode';
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
+import {appConfig} from "../app/app.config";
 
 @Injectable()
 export class AuthenticationService {
-
     constructor(private http: Http, private router: Router) {
     }
     authorization: boolean;
-
     authenticate(user: any) {
-        let url = 'http://127.0.0.1:8000/api/login_check';
+        let url = appConfig.loginUrl;
         let body = new URLSearchParams();
         body.append('username', user.username);
         body.append('password', user.password);
@@ -26,8 +25,6 @@ export class AuthenticationService {
             .post(url, body.toString(), options)
             .map((data: Response) => data.json());
     }
-
-
     /* this function delete the token and redirect the current user to the homepage */
     logout() {
         this.authorization = false;
@@ -52,16 +49,14 @@ export class AuthenticationService {
     */
     isAutorized(role) {
         let roles = this.getRolesCurrentUser();
-        let authorization = false ;
-        roles.forEach(function (value)
-        {
+        let authorization = false;
+        roles.forEach(function (value) {
             console.log(value);
             console.log(role);
-            if(role == value)
-            {
+            if (role == value) {
                 authorization = true;
             }
         });
         return authorization;
-}
+    }
 }

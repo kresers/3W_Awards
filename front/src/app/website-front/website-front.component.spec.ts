@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { WebsiteFrontComponent } from './website-front.component';
+import {WebsiteFrontComponent} from './website-front.component';
 
 describe('WebsiteFrontComponent', () => {
   let component: WebsiteFrontComponent;
@@ -8,9 +8,9 @@ describe('WebsiteFrontComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WebsiteFrontComponent ]
+      declarations: [WebsiteFrontComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

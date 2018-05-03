@@ -4,6 +4,10 @@ easy_admin_bundle:
     type:     annotation
     prefix:   /admin
 
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
@@ -12,11 +16,12 @@ user:
 back:
     resource: "@BackBundle/Controller/"
     type:     annotation
-    prefix:   /administration
-
+    prefix:   /administration/api
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 api_login_check:
     path: /api/login_check
+
+
