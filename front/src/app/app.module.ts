@@ -39,6 +39,7 @@ import {ErrorInterceptor} from '../interceptor/error.interceptor';
 import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
 import {WebsitesService} from "../providers/websites.service";
+import {AgencyService} from "../providers/agency.service";
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -96,7 +97,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     JwtInterceptor,
     ErrorInterceptor,
     AlertService,
-    WebsitesService
+    WebsitesService,
+    AgencyService
   ],
   bootstrap: [AppComponent]
 })
