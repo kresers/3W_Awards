@@ -13,6 +13,13 @@ export class AuthenticationService {
     constructor(private http: Http, private router: Router) {
     }
     authorization: boolean;
+
+    /**
+     *
+     * Description : This function call api to know if current user have good credential
+     * @param user
+     * @returns {Observable<any>}
+     */
     authenticate(user: any) {
         let url = appConfig.loginUrl;
         let body = new URLSearchParams();
@@ -35,18 +42,38 @@ export class AuthenticationService {
         return tokenNotExpired();
     }
 
-    /* this function return all roles of the current user was loggin */
-    getRolesCurrentUser() {
+    /**
+     * Description : this function return all roles of the current user was loggin
+     * @returns {Array<string>}
+     */
+    getRolesCurrentUser():Array<string> {
         let token = localStorage.getItem('id_token');
         let tokenDecode = JWT(token);
 
         return tokenDecode.roles;
     }
 
-    /* this function return true or false if the current user can access to the page
-    * params :
-    * role -> the role you want restrict
-    */
+    /**
+     * Description: this function return if the current user is logged or not
+     * @returns {boolean}
+     */
+    isLogged()
+    {
+        if(localStorage.getItem('id_token'))
+        {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
+
+    /**
+     * Description : this function return true or false if the current user can access to the page
+     * @param role -> the role you want restrict
+     * @returns {boolean}
+     */
     isAutorized(role) {
         let roles = this.getRolesCurrentUser();
         let authorization = false;

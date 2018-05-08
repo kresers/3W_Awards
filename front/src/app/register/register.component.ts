@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
           this.loading = false;
         },
         error => {
-          this.alertService.error(error);
+          this.alertService.error('Faudra que l on vérifie les patterns');
           this.loading = false;
         });
   }

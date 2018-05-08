@@ -1,0 +1,16 @@
+{
+  "/administration/api/*": {
+    "target": "nianiania",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+
+  "/api/login_check/*": {
+    "target": "niania chez plus c'est quoi le domaine zeubi je verrais plus tard",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
+

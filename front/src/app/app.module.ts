@@ -40,6 +40,7 @@ import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
 import {WebsitesService} from "../providers/websites.service";
 import {AgencyService} from "../providers/agency.service";
+import { NavbarProfilComponent } from './navbar-profil/navbar-profil.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -74,6 +75,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     ProfileNotedProjectsComponent,
     WebsiteFormComponent,
     AlertComponent,
+    NavbarProfilComponent,
   ],
   imports: [
     BrowserModule,
