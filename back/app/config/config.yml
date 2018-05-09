@@ -346,6 +346,7 @@ easy_admin:
                     - { property: 'focalPoints', label: 'Point focal'}
                     - { property: 'customer', label: 'Client'}
                     - { property: 'color', label: 'Couleurs'}
+                    - { property: 'country', label: 'Pays du Site'}
                     - { property: 'technology', label: 'Technologies'}
                     - { type: 'group', css_class: 'col-sm-3', label: 'Social', icon: 'user' }
                     - { property: 'viewNumber', label: 'Nombre de vue'}

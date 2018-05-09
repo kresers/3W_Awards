@@ -42,7 +42,7 @@
         <p class="card-text grey-website"><b>{{website.project_budget}}</b></p>
 
         <p class="card-text"><b>Langues</b></p>
-        <p class="card-text grey-website"><b>FR</b></p>
+        <p *ngFor="let countryName of website.country" class="card-text grey-website"><b>{{countryName.label}}</b></p>
       </div>
       <div class="col-md-3">
         <p class="card-text"><b>Realisé par</b></p>
@@ -70,11 +70,8 @@
     <div class="row delete-row-padding panel-focus space-panel">
       <div class="col-md-3">
         <p class="card-text text-grey"><b>Couleurs dominantes</b></p>
-        <div id="line" class="line">
-          <div style="background-color: white"></div>
-          <div style="background-color: orange"></div>
-          <div style="background-color: lightgrey"></div>
-          <div style="background-color: grey"></div>
+        <div *ngFor="let couleur of website.color" id="line" class="line">
+          <div style="background-color: {{couleur.hexa}}"></div>
         </div>
       </div>
       <div class="col-md-3">

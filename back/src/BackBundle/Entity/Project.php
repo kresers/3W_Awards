@@ -2,6 +2,7 @@
 
 namespace BackBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -211,6 +212,11 @@ class Project
      * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Technologies", cascade={"persist"})
      */
     private $technology;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Country", cascade={"persist"})
+     */
+    private $country;
 
 
 
@@ -852,7 +858,8 @@ class Project
      */
     public function __construct()
     {
-        $this->color = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->color = new ArrayCollection();
+        $this->country = new ArrayCollection();
     }
 
     /**
@@ -926,7 +933,40 @@ class Project
 
     public function __toString()
     {
-        // TODO: Implement __toString() method.
         return (string) $this->getProjectName();
+    }
+
+    /**
+     * Add country
+     *
+     * @param \BackBundle\Entity\Country $country
+     *
+     * @return Project
+     */
+    public function addCountry(\BackBundle\Entity\Country $country)
+    {
+        $this->country[] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Remove country
+     *
+     * @param \BackBundle\Entity\Country $country
+     */
+    public function removeCountry(\BackBundle\Entity\Country $country)
+    {
+        $this->country->removeElement($country);
+    }
+
+    /**
+     * Get country
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCountry()
+    {
+        return $this->country;
     }
 }
