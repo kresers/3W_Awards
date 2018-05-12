@@ -71,7 +71,7 @@
       <div class="col-md-3">
         <p class="card-text text-grey"><b>Couleurs dominantes</b></p>
         <div *ngFor="let couleur of website.color" id="line" class="line">
-          <div style="background-color: {{couleur.hexa}}"></div>
+          <div ngClass="{{couleur.hexa}}" [style.background-color]="couleur.hexa"></div>
         </div>
       </div>
       <div class="col-md-3">
