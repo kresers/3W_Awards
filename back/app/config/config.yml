@@ -331,6 +331,7 @@ easy_admin:
                     - { property: 'websiteType', label: 'Type'}
                     - { property: 'activityArea', label: 'Activités'}
                     - { property: 'target', label: 'Cible'}
+                    - { property: 'projectBudget', label: 'Budget'}
                     - { property: 'projectFocus', label: 'Focus'}
                     - { property: 'languages', label: 'Langues'}
                     - { property: 'createdBy', label: 'Crée par'}
