@@ -1,9 +1,9 @@
-<div class="info-client-page">
+<div *ngIf="agency" class="info-client-page">
   <div class="container">
     <div class="text-center central">
       <img src="https://pbs.twimg.com/profile_images/877989356903989248/XgFOYKvp_400x400.jpg"
            class="rounded-circle img-thumbnail resizePP">
-      <h1 class="font-bold">Mentalworks</h1>
+      <h1 class="font-bold">{{ agency.name }}</h1>
       <div class="desc-agency">
         <span class="font-bold">Agence Digital</span>
         <div class="vertical_line_grey"></div>

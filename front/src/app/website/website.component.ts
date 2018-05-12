@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WebsitesService} from '../../providers/websites.service';
-import {Website} from "../model/website";
+import {Website} from '../model/website';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
