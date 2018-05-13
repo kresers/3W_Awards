@@ -66,7 +66,6 @@ class Country
 
     public function __toString()
     {
-        // TODO: Implement __toString() method.
         return (string) $this->getLabel();
     }
 }

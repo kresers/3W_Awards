@@ -122,7 +122,6 @@ vich_uploader:
             upload_destination: '%kernel.root_dir%/../web/uploads/images/parameter'
 
 
-
 lexik_jwt_authentication:
     private_key_path: '%kernel.root_dir%/../var/jwt/private.pem'
     public_key_path:  '%kernel.root_dir%/../var/jwt/public.pem'
