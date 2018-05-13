@@ -1,54 +1,59 @@
-<span class="span-inscription" data-toggle="modal" data-target="#myModal2">Inscription</span>
-<div id="myModal2" class="modal fade space-modal">
-  <div class="modal-dialog">
+<span class="span-inscription" (click)="open(content)" >Inscription</span>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="title-modal text-center">Inscription</h4>
-        <div class="space-top">
-          <form (ngSubmit)="f.form.valid && register()" #f="ngForm">
-            <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
-              <label class="text-right row-group col-sm-4">Prénom : </label>
-              <input [(ngModel)]="model.firstName" [ngModelOptions]="{standalone: true}" #prenom="ngModel"
-                     type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
-                     placeholder="">
-              <!--<div *ngIf="f.submitted && !firstName.valid" class="help-block">Champs requis</div>-->
-            </div>
-            <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
-              <label class="text-right row-group col-sm-4">Nom ou pseudo: </label>
-              <input [(ngModel)]="model.lastName" [ngModelOptions]="{standalone: true}"
-                     #lastname="ngModel" type="text"
-                     class="input-register-login center form-control col-sm-8 col-xs-12"
-                     placeholder="">
-              <!--<div *ngIf="f.submitted && !lastName.valid" class="help-block">Champs requis</div>-->
-            </div>
-            <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
-              <label class="text-right row-group col-sm-4">E-mail:</label>
-              <input [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}" #email="ngModel"
-                     type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
-                     placeholder="">
-              <!--<div *ngIf="f.submitted && !email.valid" class="help-block">Champs requis</div>-->
-            </div>
-            <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
-              <label class="text-right row-group col-sm-4">Mot de passe:</label>
-              <input [(ngModel)]="model.password" [ngModelOptions]="{standalone: true}"
-                     #password="ngModel" type="password"
-                     class="input-register-login center form-control col-sm-8 col-xs-12" placeholder="">
-              <!--<div *ngIf="f.submitted && !password.valid" class="help-block">Champs requis</div>-->
-            </div>
-            <div class="center-btn">
+        <div class="modal-body">
+            <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="title-modal text-center">Inscription</h4>
+            <div class="space-top">
+                <form (ngSubmit)="f.form.valid && register()" #f="ngForm">
+                    <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
+                        <label class="text-right row-group col-sm-4">Prénom : </label>
+                        <input [(ngModel)]="model.firstName" [ngModelOptions]="{standalone: true}" #prenom="ngModel"
+                               type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
+                               placeholder="">
+                        <!--<div *ngIf="f.submitted && !firstName.valid" class="help-block">Champs requis</div>-->
+                    </div>
+                    <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
+                        <label class="text-right row-group col-sm-4">Nom ou pseudo: </label>
+                        <input [(ngModel)]="model.lastName" [ngModelOptions]="{standalone: true}"
+                               #lastname="ngModel" type="text"
+                               class="input-register-login center form-control col-sm-8 col-xs-12"
+                               placeholder="">
+                        <!--<div *ngIf="f.submitted && !lastName.valid" class="help-block">Champs requis</div>-->
+                    </div>
+                    <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
+                        <label class="text-right row-group col-sm-4">E-mail:</label>
+                        <input [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}" #email="ngModel"
+                               type="text" class="input-register-login center form-control col-sm-8 col-xs-12"
+                               placeholder="">
+                        <!--<div *ngIf="f.submitted && !email.valid" class="help-block">Champs requis</div>-->
+                    </div>
+                    <div class="form-group content-form-group row" [ngClass]="{ 'has-error': f.submitted }">
+                        <label class="text-right row-group col-sm-4">Mot de passe:</label>
+                        <input [(ngModel)]="model.password" [ngModelOptions]="{standalone: true}"
+                               #password="ngModel" type="password"
+                               class="input-register-login center form-control col-sm-8 col-xs-12" placeholder="">
+                        <!--<div *ngIf="f.submitted && !password.valid" class="help-block">Champs requis</div>-->
+                    </div>
+                    <div class="center-btn">
 
-              <p class="text-center"><img *ngIf="loading"
-                                          src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+                        <p class="text-center"><img *ngIf="loading"
+                                                    src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
 
-              </p>
-              <button [disabled]="loading" class="btn-red btn pull-right">
-                Créer mon compte
-              </button>
+                        </p>
+                        <button [disabled]="loading" class="btn-red btn pull-right">
+                            Créer mon compte
+                        </button>
+                    </div>
+                </form>
             </div>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
+</ng-template>
+<div id="myModal2" class="modal fade space-modal">
+    <div class="modal-dialog">
+
+    </div>
 </div>

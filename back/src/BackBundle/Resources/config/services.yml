@@ -1,12 +1,1 @@
-services:
-    back.util.crud:
-        class: BackBundle\Util\Crud
-        arguments:
-            - "@doctrine.orm.entity_manager"
-            - "@templating"
-    submit_listener:
-        class: BackBundle\EventListener\SubmitListener
-        arguments:
-            - "@service_container"
-        tags:
-          - { name: doctrine.event_listener , event: postPersist  }
+
