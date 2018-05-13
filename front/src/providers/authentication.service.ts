@@ -13,16 +13,23 @@ export class AuthenticationService {
     constructor(private http: Http, private router: Router) {
     }
     authorization: boolean;
+
+    /**
+     *
+     * Description : This function call api to know if current user have good credential
+     * @param user
+     * @returns {Observable<any>}
+     */
     authenticate(user: any) {
         let url = appConfig.loginUrl;
+        // let url = appConfig.loginUrl;
         let body = new URLSearchParams();
         body.append('username', user.username);
         body.append('password', user.password);
         let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
         let options = new RequestOptions({headers: headers});
 
-        return this.http
-            .post(url, body.toString(), options)
+        return this.http.post(url, body.toString(), options)
             .map((data: Response) => data.json());
     }
     /* this function delete the token and redirect the current user to the homepage */
@@ -35,24 +42,61 @@ export class AuthenticationService {
         return tokenNotExpired();
     }
 
-    /* this function return all roles of the current user was loggin */
-    getRolesCurrentUser() {
+    /**
+     * Description : this function return all roles of the current user was loggin
+     * @returns {Array<string>}
+     */
+    getRolesCurrentUser():Array<string> {
         let token = localStorage.getItem('id_token');
         let tokenDecode = JWT(token);
 
         return tokenDecode.roles;
     }
 
-    /* this function return true or false if the current user can access to the page
-    * params :
-    * role -> the role you want restrict
-    */
+    /**
+     * Description: this function return if the current user is logged or not
+     * @returns {boolean}
+     */
+    isLogged()
+    {
+        if(localStorage.getItem('id_token'))
+        {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
+    /**
+     * Description: this function return the username of the current user. We don t user id cause, username is unique
+     */
+    getUsernameCurrentUser()
+    {
+        if(this.isLogged())
+        {
+            let token = localStorage.getItem('id_token');
+            let tokenDecode = JWT(token);
+
+            return tokenDecode.username;
+        }
+        else
+        {
+            return 'Need loggin to get UserName'
+        }
+
+    }
+
+
+    /**
+     * Description : this function return true or false if the current user can access to the page
+     * @param role -> the role you want restrict
+     * @returns {boolean}
+     */
     isAutorized(role) {
         let roles = this.getRolesCurrentUser();
         let authorization = false;
         roles.forEach(function (value) {
-            console.log(value);
-            console.log(role);
             if (role == value) {
                 authorization = true;
             }
