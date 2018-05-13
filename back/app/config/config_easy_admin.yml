@@ -188,6 +188,7 @@ easy_admin:
                     - { property: 'websiteType', label: 'Type'}
                     - { property: 'activityArea', label: 'Activités'}
                     - { property: 'target', label: 'Cible'}
+                    - { property: 'projectBudget', label: 'Budget'}
                     - { property: 'projectFocus', label: 'Focus'}
                     - { property: 'languages', label: 'Langues'}
                     - { property: 'createdBy', label: 'Crée par'}
@@ -203,6 +204,7 @@ easy_admin:
                     - { property: 'focalPoints', label: 'Point focal'}
                     - { property: 'customer', label: 'Client'}
                     - { property: 'color', label: 'Couleurs'}
+                    - { property: 'country', label: 'Pays du Site'}
                     - { property: 'technology', label: 'Technologies'}
                     - { type: 'group', css_class: 'col-sm-3', label: 'Social', icon: 'user' }
                     - { property: 'viewNumber', label: 'Nombre de vue'}
