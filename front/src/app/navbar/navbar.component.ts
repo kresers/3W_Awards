@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../../providers/authentication.service';
+import {Router} from "@angular/router";
+import {appConfig} from "../app.config";
 
 @Component({
     selector: 'app-navbar',
@@ -12,11 +14,16 @@ export class NavbarComponent implements OnInit {
     search = false;
     imgLogo = 'assets/img/logo.png';
 
-    constructor(private auth: AuthenticationService) {
+    constructor(private auth: AuthenticationService,private router:Router) {
     }
 
     ngOnInit() {
 
+    }
+
+    goToLoginBack()
+    {
+        this.router.navigate(['admin', { externalUrl: appConfig.backLoginUrl }]);
     }
 
     /**

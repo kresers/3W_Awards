@@ -4,13 +4,13 @@
     Valentin REGNIER
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Mon profil</a>
+    <a class="dropdown-item clickable" (click)="navToMyProfile()">Mon profil</a>
     <a class="dropdown-item" href="#">Mes favoris</a>
     <a class="dropdown-item" href="#">Projets notés</a>
     <a class="dropdown-item" href="#">Projets soumis</a>
     <a class="dropdown-item" href="#">Clients</a>
     <a class="dropdown-item" href="#">Agences</a>
     <a class="dropdown-item" href="#">Awards obtenus</a>
-    <a class="dropdown-item" href="#"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a>
+    <a *ngIf="hasAuthToken()" (click)="logout()" class="dropdown-item" href="#"><i class="fas fa-sign-out" aria-hidden="true"></i> Deconnexion</a>
   </div>
 </div>

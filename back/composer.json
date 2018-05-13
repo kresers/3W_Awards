@@ -19,6 +19,7 @@
         "doctrine/doctrine-fixtures-bundle": "^2.3.0",
         "doctrine/orm": "^2.5",
         "egeloen/ckeditor-bundle": "^4.0",
+        "firebase/php-jwt": "^5.0",
         "friendsofsymfony/rest-bundle": "@stable",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",

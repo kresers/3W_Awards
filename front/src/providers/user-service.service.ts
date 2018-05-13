@@ -13,8 +13,8 @@ export class UserService {
         return this.http.get<Member[]>(appConfig.apiUrl + '/users');
     }
 
-    getById(_id: string) {
-        return this.http.get(appConfig.apiUrl + '/users/' + _id);
+    getByUsername(username) {
+        return this.http.get(appConfig.apiUrl + '/user/' + username);
     }
 
     create(user: Member) {
