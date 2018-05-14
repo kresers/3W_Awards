@@ -9,37 +9,29 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use UserBundle\Entity\User;
 use FOS\RestBundle\Controller\Annotations\View;
-
+use \Firebase\JWT\JWT;
 
 
 class UserController extends FOSRestController
 {
+
     /**
      * @Rest\Get(
-     *     path = "/user",
+     *     path = "/user/{username}",
      *     name = "app_user_get"
      * )
      * @Rest\View()
      */
-    public function getAction()
+    public function getAction($username, Request $request)
     {
+        $credential = $this->get('lexik_jwt_authentication.security.guard.jwt_token_authenticator')->getCredentials($request); // get token in the request
+        $this->get('back.providers.token_authorization')->RestrictForCurrentUser($credential,$username); // restrict api for current User
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository(User::class)->findAll();
+        $user = $em->getRepository(User::class)->findOneBy([
+            'username' => $username]);
         return array('user' => $user);
     }
 
-    /**
-     * @Rest\Get(
-     *     path = "/client/{id}",
-     *     name = "app_client_show",
-     *     requirements = {"id"="\d+"}
-     * )
-     * @View
-     */
-    public function showAction(User $client)
-    {
-        return [0 => 'yo'];
-    }
 
     /**
      * @Rest\Post("/user/")
@@ -59,7 +51,7 @@ class UserController extends FOSRestController
         $data->setRoles(['ROLE_MEMBRE']);
         $data->setEmailCanonical($email);
         $data->setEmail($email);
-        $data->setUsername(strtoupper($lastName) . ' ' . $firstName );
+        $data->setUsername($lastName);
         $data->setEnabled(1);
         $data->setPlainPassword($password);
         $em = $this->getDoctrine()->getManager();

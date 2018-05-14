@@ -1,0 +1,19 @@
+#profil-dropdown #dropdownMenuButton
+{
+    background-color: inherit;
+    color: #666;
+    border: none;
+    box-shadow: none;
+}
+
+#profil-dropdown img
+{
+    width: 43px;
+    border-radius: 50% ;
+}
+
+#profil-dropdown .show{
+    margin: 1.125rem 43px 0 !important;
+    border-radius: 0px !important;
+    border: none ;
+}

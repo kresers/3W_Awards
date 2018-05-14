@@ -33,4 +33,5 @@ export class Website {
   color: Color;
   technology: Technology;
   award: Award;
+  country: Country;
 }

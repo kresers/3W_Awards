@@ -11,10 +11,8 @@
         <li><a [routerLink]="['/client']">CLIENT</a></li>
         <li><a [routerLink]="['/website']">WEBSITE</a></li>
         <li><a [routerLink]="['/profil']">PROFIL</a></li>
-        <li><a [routerLink]="['/profil/myprofil']">MYPROFIL</a></li>
+        <li><a [routerLink]="['/profil/myProfil']">MYPROFIL</a></li>
         <li><a [routerLink]="['/profil/profilNotedProjects']">PROFIL_NOTED_PROJECTS</a></li>
-
-
       </ul>
     </div>
     <img [src]="imgLogo" routerLink="/" alt="3w_awards">
@@ -24,11 +22,12 @@
   <div class="right-nav">
     <i id="searchIcon" class="fas fa-search" (click)="openSearch()"></i>
     <app-search *ngIf="search"></app-search>
-    <a *ngIf="autorized()" href="http://3wawards/app_dev.php/admin/?action=list&entity=Agency" target="_self">Administration</a>
-    <app-login></app-login>
-    <div class="vertical_line_grey"></div>
+    <app-login *ngIf="!logged()"></app-login>
+    <app-navbar-profil *ngIf="logged()"></app-navbar-profil>
+    <div *ngIf="autorizedAdmin() || !logged() " class="vertical_line_grey"></div>
+    <a class="clickable" *ngIf="autorizedAdmin()" (click)="goToLoginBack()"  target="_self">Administration</a>
     <!--<span> Inscription </span>-->
-    <app-register></app-register>
+    <app-register *ngIf="!logged()"></app-register>
     <a [routerLink]="['/submitWebsite']">
       <button class="btn btn-outline-danger">Soumettre un site</button>
     </a>
