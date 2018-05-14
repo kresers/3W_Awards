@@ -34,9 +34,78 @@
   display: flex;
   position: relative;
   color: #fff;
-  top: -280px;
+  top: -400px;
   z-index: 1;
   justify-content: center;
+}
+
+/* Circle */
+.circleCarousel{
+  display: flex;
+  position: relative;
+  color: #fff;
+  top: -375px;
+  z-index: 1;
+  justify-content: center;
+}
+.clearfix {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+}
+.clearfix .c100 {
+  background-color: transparent;
+  font-size: 70px;
+}
+.clearfix .c100:after {
+  background-color: transparent;
+  top: 0.04em;
+  left: 0.04em;
+  width: 0.92em;
+  height: 0.92em;
+}
+.clearfix .c100 span {
+  color: #fff;
+}
+
+.clearfix .c100 span:hover {
+  color: #fff;
+}
+
+.clearfix .c100 p {
+  font-size: 13px;
+  position: absolute;
+  top: 85px;
+  left: -5px;
+  color: #fff;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+}
+
+.clearfix .c100 .slice .bar {
+  border-color: #ef1923;
+}
+
+.clearfix .c100:nth-child(2) .slice .bar {
+  border-color: #fa9800;
+}
+
+.clearfix .c100:nth-child(3) .slice .bar {
+  border-color: #99d12e;
+}
+
+.clearfix .c100 .slice .fill {
+  border-color: #ef1923;
+}
+
+.clearfix .c100:nth-child(2) .slice .fill {
+  border-color: #fa9800;
+}
+
+.clearfix .c100:nth-child(3) .slice .fill {
+  border-color: #99d12e;
 }
 
 /*Links*/
@@ -84,6 +153,17 @@
 img {
   filter: brightness(0.15);
   height: 490px;
+}
+
+.vertical_line_grey {
+  border-left: 1px solid #666;
+  height: 14px;
+  margin: 7px 10px 10px 10px;
+}
+.textCreation{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1199px) {
@@ -190,6 +270,11 @@ img {
 
   .carousel-control-prev, .carousel-control-next {
     height: 65%;
+  }
+  .vertical_line_grey {
+    border-left: 1px solid #666;
+    height: 14px;
+    margin: 3px 10px 10px 10px;
   }
 }
 
