@@ -1,4 +1,4 @@
-BackBundle\Entity\User:
+UserBundle\Entity\User:
     exclusion_policy: all
     properties:
         salt:

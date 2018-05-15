@@ -1,7 +1,7 @@
 // app.routing.ts
-import {NgModule} from '@angular/core';
+import {InjectionToken, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, ActivatedRouteSnapshot} from '@angular/router';
 import {PostComponent} from './post/post.component';
 import {AuthGuard} from './_guard/index';
 import {LoginComponent} from './login/login.component';
@@ -14,7 +14,11 @@ import {ProfilInfoComponent} from './profil-info/profil-info.component';
 import {ProfilMyProfilComponent} from './profil-my-profil/profil-my-profil.component';
 import {WebsiteComponent} from './website/website.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
+import {AppComponent} from "./app.component";
+import {NavbarComponent} from "./navbar/navbar.component";
 
+
+const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 const routes: Routes = [
     {
         path: '',
@@ -33,7 +37,7 @@ const routes: Routes = [
         component: LoginComponent,
     },
     {
-        path: 'profil',
+        path: 'profil/:username',
         component: ProfilComponent,
         children: [
             {
@@ -59,10 +63,18 @@ const routes: Routes = [
         path: 'website/:id',
         component: WebsiteComponent,
     },
-    {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
+    providers: [
+        {
+            provide: externalUrlProvider,
+            useValue: (route: ActivatedRouteSnapshot) => {
+                const externalUrl = route.paramMap.get('externalUrl');
+                window.open(externalUrl, '_self');
+            },
+        },
+    ],
     imports: [
         CommonModule,
         RouterModule.forRoot(routes),

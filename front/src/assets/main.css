@@ -69,4 +69,14 @@ html {
     margin-right: inherit !important;
 }
 
+#alert-home
+{
+    margin-top: -54px !important;
+    margin-bottom:100px !important;
+}
+
+.clickable
+{
+    cursor: pointer;
+}
 

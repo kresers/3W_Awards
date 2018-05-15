@@ -6,6 +6,7 @@ import {AlertService} from '../../providers/alert.service';
 import {Color} from "../model/color";
 import {Technology} from "../model/technology";
 import {Award} from "../model/award";
+import {Country} from "../model/country";
 
 @Component({
   selector: 'app-website-form',
@@ -35,6 +36,9 @@ export class WebsiteFormComponent implements OnInit {
   get award(): FormArray {
     return this.websiteForm.get('award') as FormArray;
   };
+  get country(): FormArray{
+      return this.websiteForm.get("country") as FormArray;
+  }
 
   createForm()
   {
@@ -66,6 +70,7 @@ export class WebsiteFormComponent implements OnInit {
       color: this.formBuilder.group(new Color()),
       technology: this.formBuilder.group(new Technology()),
       award: this.formBuilder.group(new Award()),
+      country: this.formBuilder.group(new Country()),
     });
   }
 
@@ -80,6 +85,9 @@ export class WebsiteFormComponent implements OnInit {
     );
     let awardDeepCopy: Award = formModel.award.map(
       (award: Award) => Object.assign({}, award)
+    );
+    let coutryDeepCopy: Country = formModel.country.map(
+        (country: Country) => Object.assign({},country)
     );
 
     let saveWebsite: Website = {
@@ -111,6 +119,7 @@ export class WebsiteFormComponent implements OnInit {
       color: colorDeepCopy,
       technology: technologyDeepCopy,
       award: awardDeepCopy,
+      country: coutryDeepCopy,
     };
     return saveWebsite;
   }

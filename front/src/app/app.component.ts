@@ -13,13 +13,7 @@ export class AppComponent {
   constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
 
-  /* return true if user is loggin */
-  hasAuthToken() {
-    return localStorage.getItem('id_token') !== null;
-  }
 
-  logout() {
-    this.authenticationService.logout();
-    this.router.navigate(['home']);
-  }
+
+
 }

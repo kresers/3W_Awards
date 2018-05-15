@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Http, HttpModule, RequestOptions} from '@angular/http';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
 import {AppComponent} from './app.component';
 import {AppRouting} from './app.routing';
@@ -38,8 +38,10 @@ import {JwtInterceptor} from '../interceptor/jwt.interceptor';
 import {ErrorInterceptor} from '../interceptor/error.interceptor';
 import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
-import {WebsitesService} from "../providers/websites.service";
-import {AgencyService} from "../providers/agency.service";
+import {WebsitesService} from '../providers/websites.service';
+import {AgencyService} from '../providers/agency.service';
+import { NavbarProfilComponent } from './navbar-profil/navbar-profil.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {CustomerService} from "../providers/customer.service";
 
 
@@ -75,6 +77,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ProfileNotedProjectsComponent,
         WebsiteFormComponent,
         AlertComponent,
+        NavbarProfilComponent,
     ],
     imports: [
         BrowserModule,
@@ -84,13 +87,14 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         AppRouting,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        NgbModule.forRoot(),
     ],
     providers: [
         {
             provide: AuthHttp,
             useFactory: authHttpServiceFactory,
-            deps: [Http, RequestOptions]
+            deps: [Http, RequestOptions],
         },
         AuthGuard,
         AuthenticationService,
@@ -99,8 +103,13 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ErrorInterceptor,
         AlertService,
         WebsitesService,
+        CustomerService,
         AgencyService,
-        CustomerService
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: JwtInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })
