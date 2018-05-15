@@ -16,59 +16,59 @@ import {WebsiteComponent} from './website/website.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'submitWebsite',
-    component: WebsiteFormComponent,
-  },
-  {
-    path: 'agency',
-    component: AgencyComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'profil',
-    component: ProfilComponent,
-    children: [
-      {
-        path: 'myProfil',
-        component: ProfilMyProfilComponent
-      },
-      {
-        path: 'profilNotedProjects',
-        component: ProfileNotedProjectsComponent,
-      }
-    ]
-  },
-  {
-    path: 'client',
-    component: ClientComponent,
-  },
-  {
-    path: 'admin',
-    component: PostComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'website/:id',
-    component: WebsiteComponent,
-  },
-  {path: '**', redirectTo: ''}
+    {
+        path: '',
+        component: HomeComponent,
+    },
+    {
+        path: 'submitWebsite',
+        component: WebsiteFormComponent,
+    },
+    {
+        path: 'agency/:id',
+        component: AgencyComponent,
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+    },
+    {
+        path: 'profil',
+        component: ProfilComponent,
+        children: [
+            {
+                path: 'myProfil',
+                component: ProfilMyProfilComponent
+            },
+            {
+                path: 'profilNotedProjects',
+                component: ProfileNotedProjectsComponent,
+            }
+        ]
+    },
+    {
+        path: 'client/:id',
+        component: ClientComponent,
+    },
+    {
+        path: 'admin',
+        component: PostComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'website/:id',
+        component: WebsiteComponent,
+    },
+    {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes),
-  ],
-  exports: [RouterModule],
-  declarations: [],
+    imports: [
+        CommonModule,
+        RouterModule.forRoot(routes),
+    ],
+    exports: [RouterModule],
+    declarations: [],
 })
 
 export class AppRouting {

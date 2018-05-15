@@ -1,14 +1,14 @@
-<div class="info-client-page">
+<div *ngIf="customer" class="info-client-page">
   <div class="container">
     <div class="text-center central">
-      <img src="https://www.gueudet.fr/img/gueudet-automobile.png" class="rounded-circle img-thumbnail resizePP">
-      <h1 class="font-bold">Gueudet</h1>
+      <img src="{{customer.image}}" class="rounded-circle img-thumbnail resizePP">
+      <h1 class="font-bold">{{customer.name}}</h1>
       <div class="desc-agency">
-        <span class="font-bold">Grande Entreprise</span>
+        <span class="font-bold">{{ customer.expertise }}</span>
         <div class="vertical_line_grey"></div>
-        <span> Automobile </span>
+        <span> {{customer.categories}} </span>
         <div class="vertical_line_grey"></div>
-        <span> France</span>
+        <span> {{customer.country}}</span>
       </div>
       <div class="social-rate">
         <i class="fas fa-eye"> 999 K</i>
@@ -19,8 +19,7 @@
       <div class="description-btn">
         <button type="button" class="btn btn-outline-secondary">SITE WEB</button>
         <button type="button" class="btn btn-outline-secondary"><i class="fa fa-share"></i></button>
-        <p><strong>Le groupe Guedet est le 2ème distributeurs automobile en France avec un CA de 1.1M d'Euros, 9 Marques
-          et 158 concessions situées principalement dans le nord de la france</strong></p>
+        <p><strong>{{customer.presentation}}</strong></p>
       </div>
       <div class="category-btn">
         <button type="button" class="btn btn-outline-secondary">UX DESIGN</button>
@@ -42,7 +41,7 @@
           <p>Pays</p>
         </div>
         <div class="footer-info">
-          <p>France</p>
+          <p>{{customer.country}}</p>
         </div>
       </div>
       <div class="info">
@@ -50,7 +49,7 @@
           <p>Catégorie</p>
         </div>
         <div class="footer-info">
-          <p>Grande Entreprise</p>
+          <p>{{customer.categories}}</p>
         </div>
       </div>
       <div class="info">
@@ -58,7 +57,7 @@
           <p>Secteur d'activité</p>
         </div>
         <div class="footer-info">
-          <p>Automobile</p>
+          <p>{{ customer.expertise}}</p>
         </div>
       </div>
       <div class="info">
@@ -66,7 +65,7 @@
           <p>Date de création</p>
         </div>
         <div class="footer-info">
-          <p>2000</p>
+          <p>{{customer.creation_date}}</p>
         </div>
       </div>
       <div class="info">
@@ -74,7 +73,7 @@
           <p>Chiffre d'affaires</p>
         </div>
         <div class="footer-info">
-          <p> + de 500M</p>
+          <p>{{customer.revenue}}</p>
         </div>
       </div>
       <div class="info">
@@ -82,7 +81,7 @@
           <p>Effectifs</p>
         </div>
         <div class="footer-info">
-          <p>1200</p>
+          <p>{{customer.staff_number}}</p>
         </div>
       </div>
       <div class="info">

@@ -40,67 +40,69 @@ import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
 import {WebsitesService} from "../providers/websites.service";
 import {AgencyService} from "../providers/agency.service";
+import {CustomerService} from "../providers/customer.service";
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
-  return new AuthHttp(new AuthConfig({}), http, options);
+    return new AuthHttp(new AuthConfig({}), http, options);
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    SearchComponent,
-    CarouselComponent,
-    WebsiteFrontComponent,
-    FooterComponent,
-    FrontCardsComponent,
-    WebsiteFrontComponent,
-    LoginComponent,
-    PostComponent,
-    RegisterComponent,
-    LikeComponent,
-    WebsiteComponent,
-    HomeComponent,
-    AgencyComponent,
-    CardsAgencyComponent,
-    InfoAgencyComponent,
-    ProfilComponent,
-    ProfilInfoComponent,
-    ProfilMyProfilComponent,
-    ClientComponent,
-    ClientCardsComponent,
-    ClientInfoComponent,
-    ProfileNotedProjectsComponent,
-    WebsiteFormComponent,
-    AlertComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    HttpModule,
-    AppRouting,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [
-    {
-      provide: AuthHttp,
-      useFactory: authHttpServiceFactory,
-      deps: [Http, RequestOptions]
-    },
-    AuthGuard,
-    AuthenticationService,
-    UserService,
-    JwtInterceptor,
-    ErrorInterceptor,
-    AlertService,
-    WebsitesService,
-    AgencyService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        SearchComponent,
+        CarouselComponent,
+        WebsiteFrontComponent,
+        FooterComponent,
+        FrontCardsComponent,
+        WebsiteFrontComponent,
+        LoginComponent,
+        PostComponent,
+        RegisterComponent,
+        LikeComponent,
+        WebsiteComponent,
+        HomeComponent,
+        AgencyComponent,
+        CardsAgencyComponent,
+        InfoAgencyComponent,
+        ProfilComponent,
+        ProfilInfoComponent,
+        ProfilMyProfilComponent,
+        ClientComponent,
+        ClientCardsComponent,
+        ClientInfoComponent,
+        ProfileNotedProjectsComponent,
+        WebsiteFormComponent,
+        AlertComponent,
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        HttpModule,
+        AppRouting,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
+    providers: [
+        {
+            provide: AuthHttp,
+            useFactory: authHttpServiceFactory,
+            deps: [Http, RequestOptions]
+        },
+        AuthGuard,
+        AuthenticationService,
+        UserService,
+        JwtInterceptor,
+        ErrorInterceptor,
+        AlertService,
+        WebsitesService,
+        AgencyService,
+        CustomerService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

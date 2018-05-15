@@ -3,7 +3,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {appConfig} from '../app/app.config';
 import {Agency} from '../app/model/agency';
-import {Response} from "@angular/http";
 
 const httpOptions = {
   headers: new HttpHeaders({

@@ -1,15 +1,15 @@
-<div class="info-client-page">
+<div *ngIf="agency" class="info-client-page">
   <div class="container">
     <div class="text-center central">
-      <img src="https://pbs.twimg.com/profile_images/877989356903989248/XgFOYKvp_400x400.jpg"
+      <img src="{{agency.image}}"
            class="rounded-circle img-thumbnail resizePP">
-      <h1 class="font-bold">Mentalworks</h1>
+      <h1 class="font-bold">{{agency.name}}s</h1>
       <div class="desc-agency">
-        <span class="font-bold">Agence Digital</span>
+        <span class="font-bold">{{agency.expertise}}</span>
         <div class="vertical_line_grey"></div>
-        <span> Indépendante </span>
+        <span> {{agency.categories}} </span>
         <div class="vertical_line_grey"></div>
-        <span> France</span>
+        <span> {{agency.country}}</span>
       </div>
       <div class="social-rate">
         <i class="fas fa-eye"> 999 K</i>
@@ -20,8 +20,7 @@
       <div class="description-btn">
         <button type="button" class="btn btn-outline-secondary">SITE WEB</button>
         <button type="button" class="btn btn-outline-secondary"><i class="fa fa-share"></i></button>
-        <p><strong>Le groupe Guedet est le 2ème distributeurs automobile en France avec un CA de 1.1M d'Euros, 9 Marques
-          et 158 concessions situées principalement dans le nord de la france</strong></p>
+        <p><strong>{{agency.presentation}}</strong></p>
       </div>
       <div class="category-btn">
         <button type="button" class="btn btn-outline-secondary">UX DESIGN</button>
@@ -44,7 +43,7 @@
         </div>
         <div class="footer-info">
 
-          <p><i class="fas fa-flag"></i> France</p>
+          <p><i class="fas fa-flag"></i> {{agency.country}}</p>
         </div>
       </div>
       <div class="info">
@@ -52,7 +51,7 @@
           <p>Catégorie</p>
         </div>
         <div class="footer-info">
-          <p>Grande Entreprise</p>
+          <p>{{agency.categories}}</p>
         </div>
       </div>
       <div class="info">
@@ -60,7 +59,7 @@
           <p>Statut</p>
         </div>
         <div class="footer-info">
-          <p>Automobile</p>
+          <p>{{agency.expertise}}</p>
         </div>
       </div>
       <div class="info">
@@ -76,7 +75,7 @@
           <p>Chiffre d'affaires</p>
         </div>
         <div class="footer-info">
-          <p> + de 500M</p>
+          <p> {{agency.revenue}}</p>
         </div>
       </div>
       <div class="info">
@@ -84,7 +83,7 @@
           <p>Effectifs</p>
         </div>
         <div class="footer-info">
-          <p>1200</p>
+          <p>{{agency.staff_number}}</p>
         </div>
       </div>
       <div class="info">
