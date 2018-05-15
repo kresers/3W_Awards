@@ -1,3 +1,6 @@
+import {Website} from './website';
+import {Agency} from './agency';
+
 export class Customer {
   id: number;
   name: string;
@@ -17,8 +20,8 @@ export class Customer {
   creation_date: string;
   staff_number: number;
   revenue: number;
-  website: string;
-  agency: string;
+  website: Website;
+  agency: Agency;
   tva_number: number;
   number_duns: number;
 }

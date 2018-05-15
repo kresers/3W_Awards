@@ -1,3 +1,5 @@
+import {Website} from './website';
+
 export class Agency {
   id: number;
   name: string;
@@ -17,7 +19,7 @@ export class Agency {
   creation_date: string;
   staff_number: number;
   revenue: number;
-  website: string;
+  website: Website;
   tva_number: number;
   number_duns: number;
 }
