@@ -1,11 +1,11 @@
 import {Website} from './website';
 import {Agency} from './agency';
+import {Category} from './category';
 
 export class Customer {
     id: number;
     name: string;
     country: string;
-    categories: string;
     image: string;
     updated_at: string;
     adress: string;
@@ -25,4 +25,5 @@ export class Customer {
     project: Website;
     tva_number: number;
     number_duns: number;
+    category: Category;
 }

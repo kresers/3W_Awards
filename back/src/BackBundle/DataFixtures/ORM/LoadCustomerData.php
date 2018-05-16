@@ -3,6 +3,7 @@
 namespace BackBundle\DataFixtures\ORM;
 
 use BackBundle\BackBundle;
+use BackBundle\Entity\Category;
 use BackBundle\Entity\CategoryAwards;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
@@ -54,14 +55,16 @@ class LoadCustomerData implements FixtureInterface
                 $website = $datas[17];
                 $tvaNumber = $datas[18];
                 $numeroDuns = $datas[19];
-                
+
                 //set datas
                 $customer = new Customer();
                 //$customer->setCategoryAwards($categDB);
                 $customer->setName($name);
                 $customer->setCountry($country);
                 $customer->setType($type);
-                $customer->setCategories($categories);
+                $cat = new Category();
+                $cat->setLabel('UX DESIGN');
+                $customer->addCategory($cat);
                 $customer->setAdress($adress);
                 $customer->setAdress2($adress2);
                 $customer->setPostalCode($postalCode);

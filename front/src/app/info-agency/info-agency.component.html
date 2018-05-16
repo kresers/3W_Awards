@@ -7,7 +7,7 @@
       <div class="desc-agency">
         <span class="font-bold">{{agency.expertise}}</span>
         <div class="vertical_line_grey"></div>
-        <span> {{agency.categories}} </span>
+        <span> {{agency.name}} </span>
         <div class="vertical_line_grey"></div>
         <span> {{agency.country}}</span>
       </div>
@@ -23,12 +23,7 @@
         <p><strong>{{agency.presentation}}</strong></p>
       </div>
       <div class="category-btn">
-        <button type="button" class="btn btn-outline-secondary">UX DESIGN</button>
-        <button type="button" class="btn btn-outline-secondary">WEB DESIGN</button>
-        <button type="button" class="btn btn-outline-secondary">E-MARKETING</button>
-        <button type="button" class="btn btn-outline-secondary">UI DESIGN</button>
-        <button type="button" class="btn btn-outline-secondary">CRM</button>
-        <button type="button" class="btn btn-outline-secondary">Intranet</button>
+        <button *ngFor="let cat of agency.category" type="button" class="btn btn-outline-secondary">{{cat.label}}</button>
       </div>
     </div>
   </div>
@@ -51,7 +46,7 @@
           <p>Catégorie</p>
         </div>
         <div class="footer-info">
-          <p>{{agency.categories}}</p>
+          <p>{{agency.name}}</p>
         </div>
       </div>
       <div class="info">
