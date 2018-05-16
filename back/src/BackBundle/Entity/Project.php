@@ -102,7 +102,7 @@ class Project
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="releaseDate", type="datetime")
+     * @ORM\Column(name="releaseDate", type="date")
      */
     private $releaseDate;
 
@@ -198,8 +198,8 @@ class Project
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Customer")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Customer", inversedBy="project")
+     * @ORM\JoinColumn(name="customer_id", referencedColumnName="id", nullable=false)
      */
     private $customer;
 

@@ -190,6 +190,11 @@ class Agency
      */
     private $customer;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Project", cascade={"persist"})
+     */
+    private $project;
+
 
     /**
      * Get id
@@ -692,6 +697,7 @@ class Agency
     public function __construct()
     {
         $this->customer = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->project = new ArrayCollection();
     }
 
     /**
@@ -726,5 +732,39 @@ class Agency
     public function getCustomer()
     {
         return $this->customer;
+    }
+
+    /**
+     * Add project
+     *
+     * @param \BackBundle\Entity\Project $project
+     *
+     * @return Agency
+     */
+    public function addProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \BackBundle\Entity\Project $project
+     */
+    public function removeProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProject()
+    {
+        return $this->project;
     }
 }

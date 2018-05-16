@@ -36,7 +36,4 @@ blog:
     type:   rest
     resource:   BackBundle\Controller\BlogController
 
-user:
-    type:   rest
-    resource:   UserBundle\Controller\UsersController
 

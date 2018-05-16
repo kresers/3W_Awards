@@ -19,7 +19,8 @@ export class Agency {
   creation_date: string;
   staff_number: number;
   revenue: number;
-  website: Website;
+  project: Website;
+  website: string;
   tva_number: number;
   number_duns: number;
 }

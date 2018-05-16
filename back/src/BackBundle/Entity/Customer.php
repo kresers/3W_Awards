@@ -2,6 +2,7 @@
 
 namespace BackBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -210,6 +211,10 @@ class Customer
      */
     private $agency;
 
+    /**
+     * @ORM\OneToMany(targetEntity="BackBundle\Entity\Project", mappedBy="customer")
+     */
+    private $project;
 
     /**
      * Get id
@@ -706,6 +711,7 @@ class Customer
     public function __construct()
     {
         $this->agency = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->project = new ArrayCollection();
     }
 
     /**
@@ -756,6 +762,8 @@ class Customer
         return $this->categoryAwards;
     }
 
+
+
     /**
      * Add agency
      *
@@ -779,6 +787,8 @@ class Customer
     {
         $this->agency->removeElement($agency);
     }
+
+
 
     /**
      * Get agency
@@ -848,5 +858,39 @@ class Customer
     {
         // TODO: Implement __toString() method.
         return (string) $this->getName();
+    }
+
+    /**
+     * Add project
+     *
+     * @param \BackBundle\Entity\Project $project
+     *
+     * @return Customer
+     */
+    public function addProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \BackBundle\Entity\Project $project
+     */
+    public function removeProject(\BackBundle\Entity\Project $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProject()
+    {
+        return $this->project;
     }
 }
