@@ -113,7 +113,7 @@
   display: flex;
   position: relative;
   color: #fff;
-  top: -135px;
+  top: -220px;
   z-index: 1;
   justify-content: center;
 }
@@ -177,19 +177,35 @@ img {
   }
 
   .bodyCarousel {
-    top: -255px;
+    top: -300px;
   }
 
   .linksCarousel {
-    top: -135px;
+    top: -200px;
   }
 
   .carousel-control-prev, .carousel-control-next {
     height: 82%;
   }
-
   img {
     height: 410px;
+  }
+  /* Circle */
+  .circleCarousel{
+    display: flex;
+    position: relative;
+    color: #fff;
+    top: -290px;
+    z-index: 1;
+    justify-content: center;
+  }
+  .clearfix .c100 {
+    font-size:50px;
+  }
+  .clearfix .c100 p {
+    font-size: 10px;
+    top: 60px;
+    left: -15px;
   }
 }
 
@@ -203,11 +219,11 @@ img {
   }
 
   .bodyCarousel {
-    top: -210px;
+    top: -260px;
   }
 
   .linksCarousel {
-    top: -125px;
+    top: -200px;
   }
 
   .carousel-control-prev, .carousel-control-next {
@@ -216,6 +232,23 @@ img {
 
   img {
     height: 300px;
+  }
+  /* Circle */
+  .circleCarousel{
+    display: flex;
+    position: relative;
+    color: #fff;
+    top: -250px;
+    z-index: 1;
+    justify-content: center;
+  }
+  .clearfix .c100 {
+    font-size:50px;
+  }
+  .clearfix .c100 p {
+    font-size: 10px;
+    top: 60px;
+    left: -15px;
   }
 }
 
@@ -229,11 +262,11 @@ img {
   }
 
   .bodyCarousel {
-    top: -170px;
+    top: -200px;
   }
 
   .linksCarousel {
-    top: -125px;
+    top: -175px;
   }
 
   .carousel-control-prev, .carousel-control-next {
@@ -242,6 +275,23 @@ img {
 
   img {
     height: 215px;
+  }
+  /* Circle */
+  .circleCarousel{
+    display: flex;
+    position: relative;
+    color: #fff;
+    top: -200px;
+    z-index: 1;
+    justify-content: center;
+  }
+  .clearfix .c100 {
+    font-size:40px;
+  }
+  .clearfix .c100 p {
+    font-size: 8px;
+    top: 50px;
+    left: -20px;
   }
 }
 
@@ -261,7 +311,7 @@ img {
   }
 
   .linksCarousel {
-    top: -115px;
+    top: -130px;
   }
 
   .linksCarousel .linksBtn button {
@@ -275,6 +325,9 @@ img {
     border-left: 1px solid #666;
     height: 14px;
     margin: 3px 10px 10px 10px;
+  }
+  .circleCarousel {
+    display:none;
   }
 }
 
