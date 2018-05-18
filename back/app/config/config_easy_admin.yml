@@ -25,6 +25,7 @@ easy_admin:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails de l''''agence', icon: 'user' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'website', label: 'Site internet', type: 'url'}
+                    - { property: 'project', label: ' Sites'}
                     - { property: 'category', label: 'Catégorie'}
                     - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
