@@ -2,6 +2,7 @@
 
 namespace BackBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -45,12 +46,6 @@ class Customer
      */
     private $type;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="categories", type="string", length=255)
-     */
-    private $categories;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -210,6 +205,15 @@ class Customer
      */
     private $agency;
 
+    /**
+     * @ORM\OneToMany(targetEntity="BackBundle\Entity\Project", mappedBy="customer")
+     */
+    private $project;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Category", cascade={"persist"})
+     */
+    private $category;
 
     /**
      * Get id
@@ -293,29 +297,6 @@ class Customer
         return $this->type;
     }
 
-    /**
-     * Set ctegories
-     *
-     * @param string $ctegories
-     *
-     * @return customer
-     */
-    public function setCtegories($ctegories)
-    {
-        $this->ctegories = $ctegories;
-
-        return $this;
-    }
-
-    /**
-     * Get ctegories
-     *
-     * @return string
-     */
-    public function getCtegories()
-    {
-        return $this->ctegories;
-    }
 
     /**
      * Set adress
@@ -705,32 +686,11 @@ class Customer
      */
     public function __construct()
     {
-        $this->agency = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->agency = new ArrayCollection();
+        $this->project = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
-    /**
-     * Set categories
-     *
-     * @param string $categories
-     *
-     * @return Customer
-     */
-    public function setCategories($categories)
-    {
-        $this->categories = $categories;
-
-        return $this;
-    }
-
-    /**
-     * Get categories
-     *
-     * @return string
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
 
     /**
      * Set categoryAwards
@@ -739,7 +699,7 @@ class Customer
      *
      * @return Customer
      */
-    public function setCategoryAwards(\BackBundle\Entity\CategoryAwards $categoryAwards)
+    public function setCategoryAwards(CategoryAwards $categoryAwards)
     {
         $this->categoryAwards = $categoryAwards;
 
@@ -756,6 +716,8 @@ class Customer
         return $this->categoryAwards;
     }
 
+
+
     /**
      * Add agency
      *
@@ -763,7 +725,7 @@ class Customer
      *
      * @return Customer
      */
-    public function addAgency(\BackBundle\Entity\Agency $agency)
+    public function addAgency(Agency $agency)
     {
         $this->agency[] = $agency;
 
@@ -775,10 +737,12 @@ class Customer
      *
      * @param \BackBundle\Entity\Agency $agency
      */
-    public function removeAgency(\BackBundle\Entity\Agency $agency)
+    public function removeAgency(Agency $agency)
     {
         $this->agency->removeElement($agency);
     }
+
+
 
     /**
      * Get agency
@@ -848,5 +812,73 @@ class Customer
     {
         // TODO: Implement __toString() method.
         return (string) $this->getName();
+    }
+
+    /**
+     * Add project
+     *
+     * @param \BackBundle\Entity\Project $project
+     *
+     * @return Customer
+     */
+    public function addProject(Project $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \BackBundle\Entity\Project $project
+     */
+    public function removeProject(Project $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \BackBundle\Entity\Category $category
+     *
+     * @return Customer
+     */
+    public function addCategory(\BackBundle\Entity\Category $category)
+    {
+        $this->category[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \BackBundle\Entity\Category $category
+     */
+    public function removeCategory(\BackBundle\Entity\Category $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
