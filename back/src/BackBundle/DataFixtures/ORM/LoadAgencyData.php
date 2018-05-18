@@ -2,6 +2,7 @@
 
 namespace BackBundle\DataFixtures\ORM;
 
+use BackBundle\Entity\Category;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use BackBundle\Entity\Agency;
@@ -31,7 +32,6 @@ class LoadAgencyData implements FixtureInterface
                 //get datas in csv
                 $name = $datas[0];
                 $country = $datas[1];
-                $categories = $datas[2];
                 $adress = $datas[4];
                 $adress2 = $datas[5];
                 $postalCodes = $datas[6];
@@ -52,7 +52,9 @@ class LoadAgencyData implements FixtureInterface
                 $agency = new Agency();
                 $agency->setName($name);
                 $agency->setCountry($country);
-                $agency->setCategories($categories);
+                $cat = new Category();
+                $cat->setLabel('UX DESIGN');
+                $agency->addCategory($cat);
                 $agency->setAdress($adress);
                 $agency->setAdress2($adress2);
                 $agency->setPostalCode($postalCodes);

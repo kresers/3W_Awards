@@ -1,12 +1,12 @@
 import {Website} from './website';
+import {Agency} from './agency';
 import {Category} from './category';
 
-export class Agency {
+export class Customer {
     id: number;
     name: string;
     country: string;
     image: string;
-    category: Category;
     updated_at: string;
     adress: string;
     adress2: string;
@@ -20,9 +20,10 @@ export class Agency {
     creation_date: string;
     staff_number: number;
     revenue: number;
-    project: Website;
     website: string;
+    agency: Agency;
+    project: Website;
     tva_number: number;
     number_duns: number;
-
+    category: Category;
 }

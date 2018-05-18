@@ -1,16 +1,31 @@
 import {Component, OnInit} from '@angular/core';
+import {AgencyService} from '../../providers/agency.service';
+import {Agency} from '../model/agency';
+import {ActivatedRoute, Params} from '@angular/router';
+
 
 @Component({
-  selector: 'app-info-agency',
-  templateUrl: './info-agency.component.html',
-  styleUrls: ['./info-agency.component.css']
+    selector: 'app-info-agency',
+    templateUrl: './info-agency.component.html',
+    styleUrls: ['./info-agency.component.css']
 })
 export class InfoAgencyComponent implements OnInit {
 
-  constructor() {
-  }
+    agency: Agency;
 
-  ngOnInit() {
-  }
+    constructor(private agencyService: AgencyService, private activatedRoute: ActivatedRoute) {
+    }
+
+    ngOnInit() {
+        this.getAgency();
+    }
+
+    getAgency() {
+        let id = +this.activatedRoute.snapshot.paramMap.get('id');
+        this.agencyService.getAgency(id).subscribe(data => {
+            console.log(data);
+            this.agency = data
+        });
+    }
 
 }

@@ -38,78 +38,80 @@ import {JwtInterceptor} from '../interceptor/jwt.interceptor';
 import {ErrorInterceptor} from '../interceptor/error.interceptor';
 import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
-import {WebsitesService} from "../providers/websites.service";
-import {AgencyService} from "../providers/agency.service";
+import {WebsitesService} from '../providers/websites.service';
+import {AgencyService} from '../providers/agency.service';
 import { NavbarProfilComponent } from './navbar-profil/navbar-profil.component';
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {CustomerService} from "../providers/customer.service";
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
-  return new AuthHttp(new AuthConfig({}), http, options);
+    return new AuthHttp(new AuthConfig({}), http, options);
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    SearchComponent,
-    CarouselComponent,
-    WebsiteFrontComponent,
-    FooterComponent,
-    FrontCardsComponent,
-    WebsiteFrontComponent,
-    LoginComponent,
-    PostComponent,
-    RegisterComponent,
-    LikeComponent,
-    WebsiteComponent,
-    HomeComponent,
-    AgencyComponent,
-    CardsAgencyComponent,
-    InfoAgencyComponent,
-    ProfilComponent,
-    ProfilInfoComponent,
-    ProfilMyProfilComponent,
-    ClientComponent,
-    ClientCardsComponent,
-    ClientInfoComponent,
-    ProfileNotedProjectsComponent,
-    WebsiteFormComponent,
-    AlertComponent,
-    NavbarProfilComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    HttpModule,
-    AppRouting,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NgbModule.forRoot(),
-  ],
-  providers: [
-    {
-      provide: AuthHttp,
-      useFactory: authHttpServiceFactory,
-      deps: [Http, RequestOptions],
-    },
-    AuthGuard,
-    AuthenticationService,
-    UserService,
-    JwtInterceptor,
-    ErrorInterceptor,
-    AlertService,
-    WebsitesService,
-    AgencyService,
-      {
-          provide: HTTP_INTERCEPTORS,
-          useClass: JwtInterceptor,
-          multi: true
-      }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        SearchComponent,
+        CarouselComponent,
+        WebsiteFrontComponent,
+        FooterComponent,
+        FrontCardsComponent,
+        WebsiteFrontComponent,
+        LoginComponent,
+        PostComponent,
+        RegisterComponent,
+        LikeComponent,
+        WebsiteComponent,
+        HomeComponent,
+        AgencyComponent,
+        CardsAgencyComponent,
+        InfoAgencyComponent,
+        ProfilComponent,
+        ProfilInfoComponent,
+        ProfilMyProfilComponent,
+        ClientComponent,
+        ClientCardsComponent,
+        ClientInfoComponent,
+        ProfileNotedProjectsComponent,
+        WebsiteFormComponent,
+        AlertComponent,
+        NavbarProfilComponent,
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        HttpModule,
+        AppRouting,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgbModule.forRoot(),
+    ],
+    providers: [
+        {
+            provide: AuthHttp,
+            useFactory: authHttpServiceFactory,
+            deps: [Http, RequestOptions],
+        },
+        AuthGuard,
+        AuthenticationService,
+        UserService,
+        JwtInterceptor,
+        ErrorInterceptor,
+        AlertService,
+        WebsitesService,
+        CustomerService,
+        AgencyService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: JwtInterceptor,
+            multi: true
+        }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

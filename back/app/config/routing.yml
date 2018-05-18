@@ -11,7 +11,6 @@ NelmioApiDocBundle:
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
-    prefix:   /
 
 back:
     resource: "@BackBundle/Controller/"
@@ -23,5 +22,18 @@ fos_user:
 
 api_login_check:
     path: /api/login_check
+
+
+agency:
+    type:   rest
+    resource:   BackBundle\Controller\AgencyController
+
+awards:
+    type:   rest
+    resource:   BackBundle\Controller\AwardsController
+
+blog:
+    type:   rest
+    resource:   BackBundle\Controller\BlogController
 
 
