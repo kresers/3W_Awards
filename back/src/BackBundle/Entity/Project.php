@@ -191,6 +191,13 @@ class Project
     private $averageJuryGrade;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isNominated", type="boolean")
+     */
+    private $isNominated;
+
+    /**
      * @ORM\ManyToOne(targetEntity="BackBundle\Entity\CategoryAwards")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -968,5 +975,29 @@ class Project
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * Set isNominated
+     *
+     * @param boolean $isNominated
+     *
+     * @return Project
+     */
+    public function setIsNominated($isNominated)
+    {
+        $this->isNominated = $isNominated;
+
+        return $this;
+    }
+
+    /**
+     * Get isNominated
+     *
+     * @return boolean
+     */
+    public function getIsNominated()
+    {
+        return $this->isNominated;
     }
 }
