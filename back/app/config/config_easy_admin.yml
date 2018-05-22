@@ -16,7 +16,7 @@ easy_admin:
                     - { property: 'image', label: 'Logo', type: 'image', base_path: '%app.path.agency_images%' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'country', label: 'Pays'}
-                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'category', label: 'Catégorie'}
                     - { property: 'city', label: 'Ville'}
                     - { property: 'customer', label: 'Client'}
             form:
@@ -25,7 +25,8 @@ easy_admin:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails de l''''agence', icon: 'user' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'website', label: 'Site internet', type: 'url'}
-                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'project', label: ' Sites'}
+                    - { property: 'category', label: 'Catégorie'}
                     - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
                     - { property: 'adress', label: 'Adresse'}
@@ -110,7 +111,7 @@ easy_admin:
                     - { property: 'name', label: 'Nom'}
                     - { property: 'country', label: 'Pays'}
                     - { property: 'type', label: 'Type'}
-                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'category', label: 'Catégorie'}
                     - { property: 'city', label: 'Ville'}
                     - { property: 'agency', label: 'Agence'}
             form:
@@ -120,7 +121,7 @@ easy_admin:
                     - { property: 'name', label: 'Nom'}
                     - { property: 'type', label: 'Type'}
                     - { property: 'website', label: 'Site internet', type: 'url'}
-                    - { property: 'categories', label: 'Catégorie'}
+                    - { property: 'category', label: 'Catégorie'}
                     - { property: 'categoryAwards', label: 'Catégories de Prix'}
                     - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }

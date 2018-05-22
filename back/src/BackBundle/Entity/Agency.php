@@ -2,6 +2,7 @@
 
 namespace BackBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -38,12 +39,6 @@ class Agency
      */
     private $country;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="categories", type="string", length=255)
-     */
-    private $categories;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -190,6 +185,16 @@ class Agency
      */
     private $customer;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Project", cascade={"persist"})
+     */
+    private $project;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Category", cascade={"persist"})
+     */
+    private $category;
+
 
     /**
      * Get id
@@ -249,29 +254,6 @@ class Agency
         return $this->country;
     }
 
-    /**
-     * Set categories
-     *
-     * @param string $categories
-     *
-     * @return agency
-     */
-    public function setCategories($categories)
-    {
-        $this->categories = $categories;
-
-        return $this;
-    }
-
-    /**
-     * Get categories
-     *
-     * @return string
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
 
     /**
      * Set image
@@ -691,7 +673,9 @@ class Agency
      */
     public function __construct()
     {
-        $this->customer = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->customer = new ArrayCollection();
+        $this->project = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
     /**
@@ -701,7 +685,7 @@ class Agency
      *
      * @return Agency
      */
-    public function addCustomer(\BackBundle\Entity\Customer $customer)
+    public function addCustomer(Customer $customer)
     {
         $this->customer[] = $customer;
 
@@ -713,7 +697,7 @@ class Agency
      *
      * @param \BackBundle\Entity\Customer $customer
      */
-    public function removeCustomer(\BackBundle\Entity\Customer $customer)
+    public function removeCustomer(Customer $customer)
     {
         $this->customer->removeElement($customer);
     }
@@ -726,5 +710,73 @@ class Agency
     public function getCustomer()
     {
         return $this->customer;
+    }
+
+    /**
+     * Add project
+     *
+     * @param \BackBundle\Entity\Project $project
+     *
+     * @return Agency
+     */
+    public function addProject(Project $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \BackBundle\Entity\Project $project
+     */
+    public function removeProject(Project $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \BackBundle\Entity\Category $category
+     *
+     * @return Agency
+     */
+    public function addCategory(Category $category)
+    {
+        $this->category[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \BackBundle\Entity\Category $category
+     */
+    public function removeCategory(Category $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
