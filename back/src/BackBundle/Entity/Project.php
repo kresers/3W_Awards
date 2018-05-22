@@ -282,7 +282,7 @@ class Project
     /**
      * @var boolean
      *
-     * @ORM\Column(name="isNominated", type="boolean")
+     * @ORM\Column(name="isNominated", type="boolean", nullable=true)
      */
     private $isNominated;
 

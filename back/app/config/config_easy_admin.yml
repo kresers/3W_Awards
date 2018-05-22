@@ -218,6 +218,7 @@ easy_admin:
                     - { property: 'averageGrade', label: 'Note moyenne'}
                     - { property: 'averageJuryGrade', label: 'Note moyenne du jury'}
                     - { property: 'categoryAwards', label: 'Catégorie de prix'}
+                    - { property: 'isNominated', label: 'Nominé'}
         Colors:
             class: BackBundle\Entity\Colors
             list:
