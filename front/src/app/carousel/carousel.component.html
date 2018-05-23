@@ -3,12 +3,12 @@
     <div *ngIf="website" id="cover">
       <div id="carouselControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div *ngFor="let web of website" class="carousel-item active">
+          <div *ngFor="let web of website; index as i" class="carousel-item" [ngClass]="{'active': i == 0}">
             <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
             <div class="headCarousel">
               <div class="dateinfo">
                 <i class="far fa-star"></i><span>Site du jour</span>
-                <span>30 novembre 2017</span>
+                <span>{{web.release_date.slice(0,10)}}</span>
               </div>
               <div class="carouselbtn">
                 <button><i class="fas fa-share-alt"></i></button>
