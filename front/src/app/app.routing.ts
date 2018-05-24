@@ -29,8 +29,8 @@ const routes: Routes = [
         component: WebsiteFormComponent,
     },
     {
-        path: 'agency',
-        component: AgencyComponent
+        path: 'agency/:id',
+        component: AgencyComponent,
     },
     {
         path: 'login',
@@ -51,22 +51,18 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'admin',
-        resolve: {
-            url: externalUrlProvider,
-        },
-        // We need a component here because we cannot define the route otherwise
-        component: NavbarComponent,
+        path: 'client/:id',
+        component: ClientComponent,
     },
     {
-        path: 'client',
-        component: ClientComponent,
+        path: 'admin',
+        component: PostComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'website/:id',
         component: WebsiteComponent,
     },
-    {path: '**', redirectTo: ''},
 ];
 
 @NgModule({

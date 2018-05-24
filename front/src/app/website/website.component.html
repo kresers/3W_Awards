@@ -42,7 +42,8 @@
         <p class="card-text grey-website"><b>{{website.project_budget}}</b></p>
 
         <p class="card-text"><b>Langues</b></p>
-        <p *ngFor="let countryName of website.country" class="card-text grey-website"><b>{{countryName.label}}</b></p>
+        <p *ngFor="let countryName of website.country" class="card-text grey-website">
+          <b>{{countryName.label}}</b></p>
       </div>
       <div class="col-md-3">
         <p class="card-text"><b>Realisé par</b></p>
@@ -58,7 +59,7 @@
       </div>
       <div class="col-md-3">
         <p class="card-text"><b>Date de publication</b></p>
-        <p class="card-text grey-website"><b>{{website.release_date}}</b></p>
+        <p class="card-text grey-website"><b>{{website.release_date.slice(0,10)}}</b></p>
 
         <p class="card-text"><b>Crédits</b></p>
 

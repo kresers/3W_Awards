@@ -7,6 +7,7 @@ import {Color} from "../model/color";
 import {Technology} from "../model/technology";
 import {Award} from "../model/award";
 import {Country} from "../model/country";
+import {isBoolean} from "util";
 
 @Component({
   selector: 'app-website-form',
@@ -71,6 +72,7 @@ export class WebsiteFormComponent implements OnInit {
       technology: this.formBuilder.group(new Technology()),
       award: this.formBuilder.group(new Award()),
       country: this.formBuilder.group(new Country()),
+      isNominated: ['', Validators.required ],
     });
   }
 
@@ -120,6 +122,7 @@ export class WebsiteFormComponent implements OnInit {
       technology: technologyDeepCopy,
       award: awardDeepCopy,
       country: coutryDeepCopy,
+      isNominated: formModel.isNominated
     };
     return saveWebsite;
   }
