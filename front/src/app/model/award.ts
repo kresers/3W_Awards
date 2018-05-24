@@ -1,4 +1,8 @@
+import {CategAward} from "./categAward";
+
 export class Award {
   id: number;
-  label: string;
+  projectId: number;
+  name: string;
+  category_awards: CategAward;
 }

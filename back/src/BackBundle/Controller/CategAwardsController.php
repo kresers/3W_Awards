@@ -3,26 +3,26 @@
 
 namespace BackBundle\Controller;
 
-use BackBundle\Entity\Awards;
+use BackBundle\Entity\CategoryAwards;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class AwardsController extends Controller
+class CategAwardsController extends Controller
 {
     /**
-     * Get all awards
+     * Get all categories of Awards
      *
      * @ApiDoc(
      *     section="awards",
-     *     description="Get all awards."
+     *     description="Get all categories of awards."
      * )
      *
      *
      * @Rest\Get(
-     *     path="/award",
-     *     name="app_award_all_show"
+     *     path="/award/category",
+     *     name="app_award_category_all_show"
      * )
      *
      * @Rest\View()
@@ -31,17 +31,17 @@ class AwardsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $awards = $em->getRepository(Awards::class)->findAll();
+        $categoryAwards = $em->getRepository(CategoryAwards::class)->findAll();
 
-        return array('awards' => $awards);
+        return array('categoryAwards' => $categoryAwards);
     }
 
     /**
-     * Get an award from the ID.
+     * Get a categ award from the ID.
      *
      * @ApiDoc(
-     *     section="awards",
-     *     description="Get an award from the ID.",
+     *     section="categawards",
+     *     description="Get an categ award from the ID.",
      *     requirements={
      *         {
      *             "name"="id",
@@ -53,16 +53,16 @@ class AwardsController extends Controller
      * )
      *
      * @Rest\Get(
-     *     path = "/award/{id}",
-     *     name = "app_award_show",
+     *     path = "/award/category/{id}",
+     *     name = "app_categ_award_show",
      *     requirements = {"id"="\d+"}
      * )
      * @Rest\View()
      *
      */
-    public function getAwardAction(Awards $award)
+    public function getCategAwardAction(CategoryAwards $categAward)
     {
-        return $award;
+        return $categAward;
     }
 
 }
