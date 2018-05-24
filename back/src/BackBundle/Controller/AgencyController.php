@@ -68,7 +68,7 @@ class AgencyController extends Controller
 
         $agency = $em->getRepository(Agency::class)->findAll();
 
-        return array('agency' => $agency);
+        return $agency;
     }
 
 //    /**
