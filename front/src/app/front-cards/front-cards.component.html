@@ -3,7 +3,7 @@
   <div class="container_custom">
     <div class="card-columns" *ngIf="website">
       <div *ngFor="let web of website" class="card">
-        <img class="card-img-top" [routerLink]="['/website/'+ web.id]" src="http://via.placeholder.com/420x300"
+        <img class="card-img-top" [routerLink]="['/website/', web.id]" src="http://via.placeholder.com/420x300"
              alt="Card image cap">
         <div class="card-body">
           <p class="card-title"></p>

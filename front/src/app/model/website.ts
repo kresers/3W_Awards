@@ -34,4 +34,5 @@ export class Website {
   technology: Technology;
   award: Award;
   country: Country;
+  isNominated: boolean;
 }
