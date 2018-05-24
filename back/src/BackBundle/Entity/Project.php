@@ -4,12 +4,15 @@ namespace BackBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * project
  *
  * @ORM\Table(name="project")
  * @ORM\Entity(repositoryClass="BackBundle\Repository\ProjectRepository")
+ * @Vich\Uploadable
  */
 class Project
 {
@@ -191,9 +194,95 @@ class Project
     private $averageJuryGrade;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $screenshot;
+
+    /**
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="screenshot")
+     * @var File
+     */
+    private $screenshotFile;
+
+
+
+    public function setScreenshotFile(File $screenshot = null)
+    {
+        $this->screenshotFile = $screenshot;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($screenshot) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $second;
+
+    /**
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="second")
+     * @var File
+     */
+    private $secondFile;
+
+
+    public function setScreenshottwoFile(File $second = null)
+    {
+        $this->secondFile = $second;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($second) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    /**
      * @var boolean
      *
-     * @ORM\Column(name="isNominated", type="boolean")
+     * @ORM\Column(name="isNominated", type="boolean", nullable=true)
      */
     private $isNominated;
 
@@ -999,5 +1088,120 @@ class Project
     public function getIsNominated()
     {
         return $this->isNominated;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Project
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Project
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set screenshot
+     *
+     * @param string $screenshot
+     *
+     * @return Project
+     */
+    public function setScreenshot($screenshot)
+    {
+        $this->screenshot = $screenshot;
+
+        return $this;
+    }
+
+
+    /**
+     * Get screenshot
+     *
+     * @return string
+     */
+    public function getScreenshot()
+    {
+        return $this->screenshot;
+    }
+
+    public function getScreenshotFile()
+    {
+        return $this->screenshotFile;
+    }
+
+
+
+    /**
+     * Set second
+     *
+     * @param string $second
+     *
+     * @return Project
+     */
+    public function setSecond($second)
+    {
+        $this->second = $second;
+
+        return $this;
+    }
+
+    /**
+     * Get second
+     *
+     * @return string
+     */
+    public function getSecond()
+    {
+        return $this->second;
+    }
+
+    public function getSecondFile()
+    {
+        return $this->secondFile;
     }
 }
