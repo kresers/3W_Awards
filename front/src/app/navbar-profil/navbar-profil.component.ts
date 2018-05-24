@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../providers/authentication.service";
-import {Router} from "@angular/router";
+import {Router,ActivatedRoute} from "@angular/router";
+import {User} from "../model/user";
+import Member = User.Member;
+import {UserService} from "../../providers/user-service.service";
 
 @Component({
     selector: 'app-navbar-profil',
@@ -9,11 +12,13 @@ import {Router} from "@angular/router";
 })
 export class NavbarProfilComponent implements OnInit {
 
-    constructor(public authenticationService: AuthenticationService, public router: Router) {
+    username:string;
+    user:Member;
+    constructor(public authenticationService: AuthenticationService, public router: Router,public route: ActivatedRoute, private userService: UserService) {
     }
 
     ngOnInit() {
-
+        this.getUser();
     }
 
     /* return true if user is loggin */
@@ -24,6 +29,17 @@ export class NavbarProfilComponent implements OnInit {
     logout() {
         this.authenticationService.logout();
         this.router.navigate(['home']);
+    }
+    getUser() {
+        this.route.params.subscribe(params => {
+            this.username = params['username']; // (+) converts string 'id' to a number
+        });
+        console.log('username : ' + this.username);
+        this.userService.getByUsername(this.username)
+            .subscribe(data => {
+                console.log(data);
+                this.user = data
+            });
     }
 
     navToMyProfile() {

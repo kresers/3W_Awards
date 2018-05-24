@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../providers/user-service.service";
+import {User} from "../model/user";
+import Member = User.Member;
 
 @Component({
     selector: 'app-profil',
@@ -9,7 +11,7 @@ import {UserService} from "../../providers/user-service.service";
 })
 export class ProfilComponent implements OnInit {
     username:string;
-    user:any;
+    user:Member;
 
     constructor(public route: ActivatedRoute,public userService:UserService) {
     }

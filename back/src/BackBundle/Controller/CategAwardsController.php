@@ -33,7 +33,7 @@ class CategAwardsController extends Controller
 
         $categoryAwards = $em->getRepository(CategoryAwards::class)->findAll();
 
-        return array('categoryAwards' => $categoryAwards);
+        return $categoryAwards;
     }
 
     /**

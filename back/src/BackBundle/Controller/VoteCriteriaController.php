@@ -33,7 +33,7 @@ class VoteCriteriaController extends Controller
 
         $voteCriterias = $em->getRepository(VoteCriteria::class)->findAll();
 
-        return array('voteCriterias' => $voteCriterias);
+        return $voteCriterias;
     }
 
     /**

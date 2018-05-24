@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UserService} from "../../providers/user-service.service";
+import {User} from "../model/user";
+import Member = User.Member;
 
 @Component({
   selector: 'app-profil-my-profil',
@@ -7,10 +11,24 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProfilMyProfilComponent implements OnInit {
 
-  constructor() {
+  username: string;
+  user: Member;
+  constructor(public route: ActivatedRoute, private userService: UserService) {
   }
 
   ngOnInit() {
+      this.getUser()
   }
 
+    getUser() {
+        this.route.params.subscribe(params => {
+            this.username = params['username']; // (+) converts string 'id' to a number
+        });
+        console.log('username : ' + this.username);
+        this.userService.getByUsername(this.username)
+            .subscribe(data => {
+                console.log(data);
+                this.user = data
+            });
+    }
 }

@@ -25,6 +25,7 @@ easy_admin:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails de l''''agence', icon: 'user' }
                     - { property: 'name', label: 'Nom'}
                     - { property: 'website', label: 'Site internet', type: 'url'}
+                    - { property: 'project', label: ' Sites'}
                     - { property: 'category', label: 'Catégorie'}
                     - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
@@ -178,12 +179,17 @@ easy_admin:
                     - { property: 'projectName', label: 'Nom'}
                     - { property: 'customer', label: 'Client'}
                     - { property: 'websiteType', label: 'Type'}
+                    - { property: 'image', label: 'Screenshot', type: 'image', base_path: '%%app.path.project_images%' }
+                    - { property: 'screenshot', label: 'Screenshot2', type: 'image', base_path: '%app.path.project_images%' }
+                    - { property: 'second', label: 'Screenshot3', type: 'image', base_path: '%app.path.project_images%' }
             form:
                 title: "Ajouter un project"
                 fields:
                     - { type: 'group', css_class: 'col-sm-9', label: 'Détails du projet', icon: 'pencil' }
                     - { property: 'projectName', label: 'Nom'}
                     - { property: 'projectDescription', label: 'Présentation', type: 'ckeditor'}
+                    - { property: 'imageFile', label: 'Image Principale', type: 'vich_image'}
+                    - { property: 'screenshotFile', label: 'screenshot', type: 'vich_image'}
                     - { property: 'keywords', label: 'Mots Clés'}
                     - { property: 'websiteType', label: 'Type'}
                     - { property: 'activityArea', label: 'Activités'}
@@ -212,6 +218,7 @@ easy_admin:
                     - { property: 'averageGrade', label: 'Note moyenne'}
                     - { property: 'averageJuryGrade', label: 'Note moyenne du jury'}
                     - { property: 'categoryAwards', label: 'Catégorie de prix'}
+                    - { property: 'isNominated', label: 'Nominé'}
         Colors:
             class: BackBundle\Entity\Colors
             list:

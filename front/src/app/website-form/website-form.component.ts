@@ -7,6 +7,7 @@ import {Color} from "../model/color";
 import {Technology} from "../model/technology";
 import {Award} from "../model/award";
 import {Country} from "../model/country";
+import {isBoolean} from "util";
 
 @Component({
   selector: 'app-website-form',
@@ -45,6 +46,9 @@ export class WebsiteFormComponent implements OnInit {
     this.websiteForm = this.formBuilder.group({
       project_name: ['', Validators.required ],
       project_description: ['', Validators.required ],
+      image: ['', Validators.required ],
+      screenshot: ['', Validators.required ],
+      second: ['', Validators.required ],
       keywords: ['', Validators.required ],
       website_type: ['', Validators.required ],
       activity_area: ['', Validators.required ],
@@ -71,6 +75,7 @@ export class WebsiteFormComponent implements OnInit {
       technology: this.formBuilder.group(new Technology()),
       award: this.formBuilder.group(new Award()),
       country: this.formBuilder.group(new Country()),
+      isNominated: ['', Validators.required ],
     });
   }
 
@@ -95,6 +100,9 @@ export class WebsiteFormComponent implements OnInit {
       project_name: formModel.project_name as string,
       project_description: formModel.project_description as string,
       keywords: formModel.keywords as string,
+      image: formModel.image as string,
+      screenshot: formModel.screenshot as string,
+      second: formModel.second as string,
       website_type: formModel.website_type as string,
       activity_area: formModel.activity_area as string,
       target: formModel.target as string,
@@ -120,6 +128,7 @@ export class WebsiteFormComponent implements OnInit {
       technology: technologyDeepCopy,
       award: awardDeepCopy,
       country: coutryDeepCopy,
+      isNominated: formModel.isNominated
     };
     return saveWebsite;
   }

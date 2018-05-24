@@ -33,7 +33,7 @@ class AwardsController extends Controller
 
         $awards = $em->getRepository(Awards::class)->findAll();
 
-        return array('awards' => $awards);
+        return $awards;
     }
 
     /**
