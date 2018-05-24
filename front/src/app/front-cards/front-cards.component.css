@@ -2,3 +2,7 @@ i {
   font-size: 12px;
   color: #989898;
 }
+
+.grey{
+  min-height: calc(100vh - 50px);
+}
