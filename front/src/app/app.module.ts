@@ -42,7 +42,12 @@ import {WebsitesService} from '../providers/websites.service';
 import {AgencyService} from '../providers/agency.service';
 import { NavbarProfilComponent } from './navbar-profil/navbar-profil.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {CustomerService} from "../providers/customer.service";
+import {CustomerService} from '../providers/customer.service';
+import { NominatedComponent } from './nominated/nominated.component';
+import { AwardsComponent } from './awards/awards.component';
+import {AwardService} from '../providers/award.service';
+import {CategAwardService} from '../providers/categAward.service';
+import {VoteCriteriaService} from '../providers/voteCriteria.service';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -78,6 +83,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsiteFormComponent,
         AlertComponent,
         NavbarProfilComponent,
+        NominatedComponent,
+        AwardsComponent,
     ],
     imports: [
         BrowserModule,
@@ -109,7 +116,10 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,
             multi: true
-        }
+        },
+        AwardService,
+        VoteCriteriaService,
+        CategAwardService
     ],
     bootstrap: [AppComponent]
 })

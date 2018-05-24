@@ -69,7 +69,7 @@ class CustomerController extends Controller
 
         $customer = $em->getRepository(Customer::class)->findAll();
 
-        return array('customer' => $customer);
+        return $customer;
     }
 
 //    /**
