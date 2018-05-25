@@ -1,10 +1,10 @@
-<div class="grey spacing">
+<div class="grey">
     <p class="text-center font-weight-bold">Derniers sites soumis aux votes</p>
     <div class="container_custom">
         <div class="card-columns" *ngIf="website">
             <div *ngFor="let web of website" class="card">
                 <img class="card-img-top" [routerLink]="['/website/'+ web.id]"
-                     src="http://via.placeholder.com/420x300"
+                     src="http://localhost/3w_awards/back/web/uploads/images/website/{{web.image}}"
                      alt="Card image cap">
                 <div class="card-body">
                     <p class="card-title"></p>

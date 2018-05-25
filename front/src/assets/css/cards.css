@@ -20,6 +20,9 @@
   color: #5b5b5b;
   text-decoration: none;
 }
+.card img{
+  max-height: 100%;
+}
 
 .card-img-top{
   display: block;
@@ -30,10 +33,16 @@
 }
 .card .card-body{
   padding: 0.8rem;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  bottom: -40%;
 }
 .card-columns .card {
   display: flex !important;
   width: 100% !important;
+  height:100% !important;
+  margin:0 !important;
 }
 .footerCard{
   display: flex;
@@ -47,6 +56,8 @@
 }
 .container_custom .card-columns{
   column-count: 4;
+  column-fill: auto;
+  height: 202px;
 }
 .footerCard .linking {
   margin-left: 7%;
