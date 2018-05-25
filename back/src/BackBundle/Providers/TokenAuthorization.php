@@ -61,6 +61,4 @@ class TokenAuthorization
             throw new HttpException(403, 'You can\'t access to this data !! ');
         }
     }
-
-
 }

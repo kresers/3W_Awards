@@ -13,7 +13,8 @@ parameters:
     app.path.customer_images: uploads/images/customers
     app.path.agency_images: uploads/images/agency
     app.path.parameter_images: uploads/images/parameter
-    app.path.project_images: uploads/images/project
+    app.path.project_images: uploads/images/website
+    app.path.user_images: uploads/images/user
 
 framework:
     serializer:
@@ -121,9 +122,13 @@ vich_uploader:
         parameter_images:
             uri_prefix: '%app.path.parameter_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/parameter'
+        user_images:
+            uri_prefix: '%app.path.user_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/user'
         project_images:
             uri_prefix: '%app.path.project_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/website'
+
 
 
 lexik_jwt_authentication:
@@ -165,3 +170,21 @@ nelmio_cors:
               max_age: 3600
 
 nelmio_api_doc: ~
+
+jms_serializer:
+    metadata:
+        directories:
+            FOSUserBundle:
+                path: "@UserBundle/Resources/config/serializer/"
+                namespace_prefix: "FOS\\UserBundle"
+
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        product_images:
+            uri_prefix:         '%app.path.product_images%'
+            upload_destination: '%kernel.root_dir%/../web/assets/upload'
+
+parameters:
+
