@@ -14,8 +14,14 @@ export class ProfilInfoComponent implements OnInit {
     isActive = true;
 
     username: string;
-    user: Member;
+    user: any;
+    role : string;
+    roles =  [];
+    mainSkin: string;
+    country:string;
+    loading : boolean;
     constructor(private route: ActivatedRoute, public  userService: UserService) {
+
     }
 
     ngOnInit() {
@@ -23,14 +29,17 @@ export class ProfilInfoComponent implements OnInit {
     }
 
     getUser() {
+        this.loading = true;
         this.route.params.subscribe(params => {
-            this.username = params['username']; // (+) converts string 'id' to a number
+            this.username = params['username'];
         });
         console.log('username : ' + this.username);
         this.userService.getByUsername(this.username)
             .subscribe(data => {
                 console.log(data);
-                this.user = data
+                this.user = data;
+                this.initValue();
+                this.loading = false;
             });
     }
 
@@ -39,7 +48,22 @@ export class ProfilInfoComponent implements OnInit {
         this.id = id;
     }
 
+    initValue()
+    {
 
+        this.roles = this.user.roles;
+        this.roles.forEach((val, index) => {
+            if (val == 'ROLE_ADMIN')
+            {
+                this.role = 'Administrateur';
+            }
+            else
+            {
+                this.role = 'Membre'
+            }
+        });
+        this.mainSkin = this.user.main_skin;
+        this.country = this.user.country;
 
-
+    }
 }
