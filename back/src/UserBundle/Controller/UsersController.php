@@ -2,6 +2,7 @@
 
 namespace UserBundle\Controller;
 
+use JMS\Serializer\SerializerBuilder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -18,7 +19,7 @@ class UsersController extends Controller
     public function getUserAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $serializer = SerializerBuilder::create()->build();
         $user= $em->getRepository(User::class)->findAll();
 
         return array('user' => $user);

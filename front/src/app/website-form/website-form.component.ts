@@ -38,7 +38,7 @@ export class WebsiteFormComponent implements OnInit {
     return this.websiteForm.get('award') as FormArray;
   };
   get country(): FormArray{
-      return this.websiteForm.get("country") as FormArray;
+      return this.websiteForm.get('country') as FormArray;
   }
 
   createForm()

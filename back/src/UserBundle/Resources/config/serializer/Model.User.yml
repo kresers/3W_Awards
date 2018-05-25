@@ -1,0 +1,4 @@
+#UserBundle/Resources/config/serializer/Entity.User.yml
+FOS\UserBundle\Model\User:
+    exclusion_policy: NONE
+
