@@ -1,0 +1,67 @@
+<div class="grey">
+  <div class="container_custom custom_position">
+    <div *ngIf="website" id="cover">
+      <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div  class="carousel-item active">
+            <img class="d-block w-100" src="http://localhost/3w_awards/back/web/uploads/images/website/{{website.image}}"
+                 alt="First slide">
+            <div class="headCarousel">
+              <div class="dateinfo">
+                <i class="far fa-star"></i><span>Site du jour</span>
+                <span>{{website.release_date.slice(0,10)}}</span>
+              </div>
+              <div class="carouselbtn">
+                <button><i class="fas fa-share-alt"></i></button>
+              </div>
+            </div>
+            <div class="bodyCarousel">
+              <div class="textCarousel">
+                <h3>{{website.project_name}}</h3>
+                <div class="textCreation">
+                  <span>par {{website.created_by}}</span>
+                  <div class="vertical_line_grey"></div>
+                  <span>France</span>
+                </div>
+              </div>
+            </div>
+            <div class="circleCarousel">
+              <div class="clearfix">
+                <div class="c100 p72">
+                  <span><b>7</b>.2</span>
+                  <p> Jury </p>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+                <div class="c100 p89">
+                  <span>8.9</span>
+                  <p> Membres </p>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+                <div class="c100 p86">
+                  <span>8.6</span>
+                  <p> Note finale </p>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="linksCarousel">
+              <div class="linksBtn">
+                <button>Visiter le site</button>
+                <button ><a [routerLink]="['/website/'+ website.id]" >Voir la fiche</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
