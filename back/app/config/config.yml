@@ -13,6 +13,7 @@ parameters:
     app.path.customer_images: uploads/images/customers
     app.path.agency_images: uploads/images/agency
     app.path.parameter_images: uploads/images/parameter
+    app.path.project_images: uploads/images/project
 
 framework:
     serializer:
@@ -120,6 +121,9 @@ vich_uploader:
         parameter_images:
             uri_prefix: '%app.path.parameter_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/parameter'
+        project_images:
+            uri_prefix: '%app.path.project_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/website'
 
 
 lexik_jwt_authentication:

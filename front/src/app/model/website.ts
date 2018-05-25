@@ -9,6 +9,9 @@ export class Website {
   project_name: string;
   project_description: string;
   keywords: string;
+  image: string;
+  screenshot: string;
+  second: string;
   website_type: string;
   activity_area: string;
   target: string;
@@ -34,5 +37,5 @@ export class Website {
   technology: Technology;
   award: Award;
   country: Country;
-  isNominated: boolean;
+  is_nominated: boolean;
 }

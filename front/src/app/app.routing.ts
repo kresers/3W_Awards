@@ -16,6 +16,8 @@ import {WebsiteComponent} from './website/website.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
 import {AppComponent} from "./app.component";
 import {NavbarComponent} from "./navbar/navbar.component";
+import {NominatedComponent} from "./nominated/nominated.component";
+import {AwardsComponent} from "./awards/awards.component";
 
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -62,6 +64,14 @@ const routes: Routes = [
     {
         path: 'website/:id',
         component: WebsiteComponent,
+    },
+    {
+        path: 'nominated',
+        component: NominatedComponent,
+    },
+    {
+        path: 'awards',
+        component: AwardsComponent,
     },
 ];
 
