@@ -13,7 +13,7 @@ parameters:
     app.path.customer_images: uploads/images/customers
     app.path.agency_images: uploads/images/agency
     app.path.parameter_images: uploads/images/parameter
-    app.path.project_images: uploads/images/project
+    app.path.project_images: uploads/images/website
 
 framework:
     serializer:

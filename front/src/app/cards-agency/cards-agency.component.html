@@ -1,12 +1,12 @@
 <div class="grey spacing">
   <div class="pt-5">
-    <p class="text-center font-weight-bold">12 sites Nominées 3 awards gagnés</p>
+    <p class="text-center font-weight-bold">{{agency.project.length}} sites.</p>
   </div>
   <div class="container_custom">
     <div class="card-columns" *ngIf="agency">
       <!-- il faut faire un *ngFor afin de récupérer les site sous formes de cards   -->
       <div *ngFor="let web of agency.project" class="card">
-        <img class="card-img-top" [routerLink]="['/website/'+ web.id]" src="http://via.placeholder.com/420x300"
+        <img class="card-img-top" [routerLink]="['/website/'+ web.id]" src="http://localhost/3w_awards/back/web/uploads/images/website/{{web.image}}"
              alt="Card image cap">
         <div class="card-body">
           <p class="card-title">{{web.name}}</p>
@@ -16,8 +16,9 @@
               <p class="text-muted">29 novembre 2017</p>
             </div>
             <div class="linking">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-star"> 110 K</i>
+              <i class="fas fa-eye">{{web.view_number}}</i>
+              <i class="fas fa-heart">{{web.like_number}}</i>
             </div>
           </div>
         </div>

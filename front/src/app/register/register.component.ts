@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
                     this.modalReference.close();
                 },
                 error => {
-                    this.alertService.error('Faudra que l on vérifie les patterns');
+                    this.alertService.error('Oups, une erreur');
                     this.loading = false;
                     this.modalReference.close();
                 });
