@@ -119,6 +119,7 @@ easy_admin:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails du client', icon: 'user' }
                     - { property: 'name', label: 'Nom'}
+                    - { property: 'mainSkin', label: 'Catégorie Principal'}
                     - { property: 'type', label: 'Type'}
                     - { property: 'website', label: 'Site internet', type: 'url'}
                     - { property: 'category', label: 'Catégorie'}
@@ -263,8 +264,46 @@ easy_admin:
                 title: "Les Utilisateurs"
                 actions:
                     - { name: 'new', label: 'Ajouter un Utilisateur' }
+                fields:
+                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
+                    - country
+                    - password
+                    - email
+                    - roles
+                    - presentation
+                    - mainSkin
             form:
                 title: "Ajouter un nouvelle utilisateur"
+                fields:
+                    - username
+                    - country
+                    - password
+                    - email
+                    - roles
+                    - presentation
+                    - mainSkin
+                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
+
+
+            list:
+                fiels:
+                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
+                    - username
+                    - country
+                    - password
+                    - email
+                    - roles
+                    - presentation
+                    - mainSkin
+            show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: 'app.path.user_images' }
+                    - country
+                    - password
+                    - email
+                    - roles
+                    - presentation
+                    - mainSkin
         VoteCriteria:
             class: BackBundle\Entity\VoteCriteria
             list:
@@ -277,6 +316,8 @@ easy_admin:
                     - { property: 'name', label: 'Titre', css_class: 'col-sm-4'}
                     - { property: 'color', label: 'Couleur', css_class: 'col-sm-4'}
                     - { property: 'categoryAwards', label: 'Catégorie de Prix', css_class: 'col-sm-4'}
+                    - { property: 'picture', type: 'image', base_path: 'app.path.user_images' }
+
 
     design:
         form_theme: 'vertical'

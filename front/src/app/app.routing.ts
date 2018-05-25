@@ -53,13 +53,16 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'client/:id',
-        component: ClientComponent,
+        path: 'admin',
+        resolve: {
+            url: externalUrlProvider,
+        },
+        // We need a component here because we cannot define the route otherwise
+        component: NavbarComponent,
     },
     {
-        path: 'admin',
-        component: PostComponent,
-        canActivate: [AuthGuard]
+        path: 'client/:id',
+        component: ClientComponent,
     },
     {
         path: 'website/:id',

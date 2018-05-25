@@ -6,12 +6,17 @@ namespace UserBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Hateoas\Configuration\Annotation as Hateoas;
+use JMS\Serializer\Annotation as Serializer;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
+ * @Vich\Uploadable()
  *
  *
  * @Hateoas\Relation(
@@ -22,6 +27,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *          absolute=true
  *      )
  * )
+ * @Serializer\ExclusionPolicy("all")
  */
 class User extends BaseUser
 {
@@ -36,103 +42,118 @@ class User extends BaseUser
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="gender", type="string", length=255, nullable=true))
      */
     protected $gender;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
+     * @ORM\Column(name="main_skin", type="string", length=255, nullable=true))
+     */
+    protected $mainSkin;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
      * @ORM\Column(name="lastName", type="string", length=255, nullable=true)
      */
     protected $lastName;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="firstName", type="string", length=255, nullable=true)
      */
     protected $firstName;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="country", type="string", length=255, nullable=true)
      */
     protected $country;
 
     /**
-     * @var string
-     *
+     * @var
+     * @Serializer\Expose()
      * @ORM\Column(name="picture", type="string", length=255, nullable=true)
      */
-    protected $picture;
+    protected $image;
+
+    /**
+     * @Vich\UploadableField(mapping="user_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+
 
     /**
      * @var \DateTime
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="birthDate", type="datetime", nullable=true)
      */
     protected $birthDate;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="job", type="string", length=255,nullable=true)
      */
     protected $job;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="memberOfJury", type="string", length=255,nullable=true)
      */
     protected $memberOfJury;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="presentation", type="string", length=255,nullable=true)
      */
     protected $presentation;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="keyword", type="string", length=255,nullable=true)
      */
     protected $keyword;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="website", type="string", length=255,nullable=true)
      */
     protected $website;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="social", type="string", length=255,nullable=true)
      */
     protected $social;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="autNotification", type="boolean",nullable=true)
      */
     protected $autoNotification;
 
     /**
      * @var string
-     *
+     * @Serializer\Expose()
      * @ORM\Column(name="optIn", type="string", length=255,nullable=true)
      */
     protected $optIn;
 
-    /**
+    /**@Serializer\Expose()
      * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Project", cascade={"persist"})
      */
     protected $project;
@@ -152,6 +173,34 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setImageFile( $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**
@@ -250,29 +299,6 @@ class User extends BaseUser
         return $this->country;
     }
 
-    /**
-     * Set picture
-     *
-     * @param string $picture
-     *
-     * @return User
-     */
-    public function setPicture($picture)
-    {
-        $this->picture = $picture;
-
-        return $this;
-    }
-
-    /**
-     * Get picture
-     *
-     * @return string
-     */
-    public function getPicture()
-    {
-        return $this->picture;
-    }
 
     /**
      * Set birthDate
@@ -522,5 +548,29 @@ class User extends BaseUser
     public function getProject()
     {
         return $this->project;
+    }
+
+    /**
+     * Set mainSkin
+     *
+     * @param string $mainSkin
+     *
+     * @return User
+     */
+    public function setMainSkin($mainSkin)
+    {
+        $this->mainSkin = $mainSkin;
+
+        return $this;
+    }
+
+    /**
+     * Get mainSkin
+     *
+     * @return string
+     */
+    public function getMainSkin()
+    {
+        return $this->mainSkin;
     }
 }
