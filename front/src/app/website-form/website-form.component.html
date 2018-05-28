@@ -112,7 +112,7 @@
     <div formArrayName="color" class="form-group">
       <div>
         <label>color</label>
-        <select [formControlName]="color" >
+        <select [formControlName]="color" multiple >
           <option *ngFor="let color of color" [value]="color.label">{{color.label}} </option>
         </select>
       </div>
@@ -120,7 +120,7 @@
     <div formArrayName="technology" class="form-group">
         <div>
       <label>technology</label>
-      <select [formControlName]="technology" >
+      <select [formControlName]="technology" multiple >
         <option *ngFor="let technology of technology" [value]="technology.label">{{technology.label}} </option>
       </select>
     </div>
@@ -134,8 +134,8 @@
     </div>
     </div>
     <div class="form-group">
-        <label>isNominated</label>
-        <input type="text" class="form-control" formControlName="is_nominated" required>
+      <label> Nominée</label>
+        <input type="radio" class="form-control" formControlName="is_nominated" required>
     </div>
   <button type="submit" class="btn btn-success">Submit</button>
   </form>

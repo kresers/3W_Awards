@@ -8,6 +8,8 @@ import {Technology} from '../model/technology';
 import {Award} from '../model/award';
 import {Country} from '../model/country';
 import {isBoolean} from 'util';
+import {TechnologyService} from '../../providers/technology.service';
+import {ColorService} from '../../providers/color.service';
 
 @Component({
   selector: 'app-website-form',
@@ -18,31 +20,42 @@ import {isBoolean} from 'util';
 
 export class WebsiteFormComponent implements OnInit {
   @Input() website: Website;
+   color: Color;
+   technology: Technology;
+
   model: any = {};
   websiteForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private alertService: AlertService) {
+  constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private technologyService: TechnologyService, private colorService: ColorService, private alertService: AlertService) {
     this.createForm();
   }
 
   ngOnInit() {
+      this.getColor();
+      this.getTechnology();
   }
-
-  get color(): FormArray {
-    return this.websiteForm.get('color') as FormArray;
+  getColor() {
+      this.colorService.getColors()
+          .subscribe(data => {
+              this.color = data;
+          }
+      );
   }
-  get technology(): FormArray {
-    return this.websiteForm.get('technology') as FormArray;
+  getTechnology() {
+      this.technologyService.getTechnologies()
+          .subscribe(data => {
+                  this.technology = data;
+              }
+          );
   }
   get award(): FormArray {
     return this.websiteForm.get('award') as FormArray;
   }
-  get country(): FormArray{
+  get country(): FormArray {
       return this.websiteForm.get('country') as FormArray;
   }
 
-  createForm()
-  {
+  createForm() {
     this.websiteForm = this.formBuilder.group({
       project_name: ['', Validators.required ],
       project_description: ['', Validators.required ],
