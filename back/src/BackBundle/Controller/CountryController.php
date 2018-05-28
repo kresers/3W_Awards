@@ -27,8 +27,8 @@ class CountryController extends FOSRestController
      *
      *
      * @Get(
-     *     path="/country",
-     *     name="app_country_all_show"
+     *     path="/countries",
+     *     name="app_countries_all_show"
      * )
      *
      * @Rest\View(
@@ -51,8 +51,8 @@ class CountryController extends FOSRestController
      * )
      *
      * @Get(
-     *     path = "/country/{id}",
-     *     name = "app_country_show",
+     *     path = "/countries/{id}",
+     *     name = "app_countries_show",
      *     requirements = {"id"="\d+"}
      * )
      * @Rest\View(

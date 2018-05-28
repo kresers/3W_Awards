@@ -70,28 +70,4 @@ class ColorController extends FOSRestController
         $allColors = $em->getRepository(Colors::class)->findAll();
         return $allColors;
     }
-
-    /**
-     *
-     * * @ApiDoc(
-     *     section="Website",
-     *     description="Create a Color."
-     * )
-     * @Post(
-     *     path="/colors",
-     *     name="app_color_create"
-     * )
-     * @Rest\View(
-     *     statusCode=201
-     * )
-     * @ParamConverter("color", converter="fos_rest.request_body")
-     */
-    public function createAction(Colors $colors)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($colors);
-
-        return $this->view($colors, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_color_show', ['id' => $colors->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
-    }
 }
