@@ -26,7 +26,12 @@ export class WebsiteFormComponent implements OnInit {
   model: any = {};
   websiteForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private technologyService: TechnologyService, private colorService: ColorService, private alertService: AlertService) {
+  constructor(
+      private formBuilder: FormBuilder,
+      private websiteService: WebsitesService,
+      private technologyService: TechnologyService,
+      private colorService: ColorService,
+      private alertService: AlertService) {
     this.createForm();
   }
 
