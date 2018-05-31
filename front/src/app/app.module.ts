@@ -49,6 +49,7 @@ import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -87,6 +88,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         NominatedComponent,
         AwardsComponent,
         WebsitecarouselComponent,
+        ContactComponent,
     ],
     imports: [
         BrowserModule,
