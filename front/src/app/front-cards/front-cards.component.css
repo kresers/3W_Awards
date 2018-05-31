@@ -3,9 +3,5 @@ i {
   color: #989898;
 }
 .grey{
-  min-height:50vh;
-}
-
-.grey{
-  min-height: calc(100vh - 50px);
+  min-height: 390px;
 }

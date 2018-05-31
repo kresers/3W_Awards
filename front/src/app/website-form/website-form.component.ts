@@ -128,7 +128,7 @@ export class WebsiteFormComponent implements OnInit {
       technology: technologyDeepCopy,
       award: awardDeepCopy,
       country: coutryDeepCopy,
-      isNominated: formModel.isNominated
+      is_nominated: formModel.is_nominated as boolean
     };
     return saveWebsite;
   }
