@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Website} from '../model/website';
 import {WebsitesService} from '../../providers/websites.service';
-import {FormBuilder, FormControl, FormGroup, Validators,FormArray} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators, FormArray} from '@angular/forms';
 import {AlertService} from '../../providers/alert.service';
-import {Color} from "../model/color";
-import {Technology} from "../model/technology";
-import {Award} from "../model/award";
-import {Country} from "../model/country";
-import {isBoolean} from "util";
+import {Color} from '../model/color';
+import {Technology} from '../model/technology';
+import {Award} from '../model/award';
+import {Country} from '../model/country';
+import {isBoolean} from 'util';
 
 @Component({
   selector: 'app-website-form',
@@ -22,7 +22,7 @@ export class WebsiteFormComponent implements OnInit {
   websiteForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private websiteService: WebsitesService, private alertService: AlertService) {
-    this.createForm()
+    this.createForm();
   }
 
   ngOnInit() {
@@ -30,13 +30,13 @@ export class WebsiteFormComponent implements OnInit {
 
   get color(): FormArray {
     return this.websiteForm.get('color') as FormArray;
-  };
+  }
   get technology(): FormArray {
     return this.websiteForm.get('technology') as FormArray;
-  };
+  }
   get award(): FormArray {
     return this.websiteForm.get('award') as FormArray;
-  };
+  }
   get country(): FormArray{
       return this.websiteForm.get('country') as FormArray;
   }
@@ -80,22 +80,22 @@ export class WebsiteFormComponent implements OnInit {
   }
 
   prepareSaveWebsite(): Website {
-    let formModel = this.websiteForm.value;
+    const formModel = this.websiteForm.value;
 
-    let colorDeepCopy: Color = formModel.color.map(
+      const colorDeepCopy: Color = formModel.color.map(
       (color: Color) => Object.assign({}, color)
     );
-    let technologyDeepCopy: Technology = formModel.technology.map(
+      const technologyDeepCopy: Technology = formModel.technology.map(
       (technology: Technology) => Object.assign({}, technology)
     );
-    let awardDeepCopy: Award = formModel.award.map(
+      const awardDeepCopy: Award = formModel.award.map(
       (award: Award) => Object.assign({}, award)
     );
-    let coutryDeepCopy: Country = formModel.country.map(
-        (country: Country) => Object.assign({},country)
+      const coutryDeepCopy: Country = formModel.country.map(
+        (country: Country) => Object.assign({}, country)
     );
 
-    let saveWebsite: Website = {
+    const saveWebsite: Website = {
       id: this.website.id,
       project_name: formModel.project_name as string,
       project_description: formModel.project_description as string,
@@ -133,7 +133,7 @@ export class WebsiteFormComponent implements OnInit {
     return saveWebsite;
   }
 
-  onSubmit(){
+  onSubmit() {
     this.website = this.prepareSaveWebsite();
     this.websiteService.addWebsite(this.website).subscribe();
   }

@@ -48,6 +48,7 @@ import { AwardsComponent } from './awards/awards.component';
 import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
+import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -85,6 +86,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         NavbarProfilComponent,
         NominatedComponent,
         AwardsComponent,
+        WebsitecarouselComponent,
     ],
     imports: [
         BrowserModule,

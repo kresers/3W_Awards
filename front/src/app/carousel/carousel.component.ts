@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Website} from "../model/website";
-import {WebsitesService} from "../../providers/websites.service";
+import {Website} from '../model/website';
+import {WebsitesService} from '../../providers/websites.service';
 
 @Component({
   selector: 'app-carousel',
@@ -14,14 +14,14 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getWebsite()
+    this.getWebsite();
   }
-  getWebsite(){
+  getWebsite() {
     this.websiteService.getWebsites()
       .subscribe(
         data => {
           console.log(data);
-          this.website = data
+          this.website = data;
         });
   }
 

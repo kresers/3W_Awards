@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WebsitesService} from '../../providers/websites.service';
-import {Website} from "../model/website";
+import {Website} from '../model/website';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 export class WebsiteComponent implements OnInit {
 
   website: Website;
-  constructor(private websiteService: WebsitesService,private activatedRoute: ActivatedRoute, private location: Location) {
+  constructor(private websiteService: WebsitesService, private activatedRoute: ActivatedRoute, private location: Location) {
   }
 
   ngOnInit() {
@@ -21,11 +21,11 @@ export class WebsiteComponent implements OnInit {
   }
 
   getWebsite() {
-    let id  = +this.activatedRoute.snapshot.paramMap.get('id');
+    const id  = +this.activatedRoute.snapshot.paramMap.get('id');
     this.websiteService.getWebsite(id)
       .subscribe(data => {
         console.log(data);
-        this.website = data
+        this.website = data;
       });
   }
 
