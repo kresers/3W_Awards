@@ -19,9 +19,9 @@ export class ColorService {
     }
 
     /**GET all Color*/
-    getColors(): Observable<Color> {
-        return this.http.get<Color>(this.colorUrl).map(
-            (res) => res as Color
+    getColors(): Observable<Color[]> {
+        return this.http.get<Color[]>(this.colorUrl).map(
+            (res) => res as Color[]
         );
     }
 
@@ -29,31 +29,6 @@ export class ColorService {
     getColor(id: number): Observable<Color> {
         const url = `${this.colorUrl}/${id}`;
         return this.http.get<Color>(url).map(
-            (res) => res as Color
-        );
-    }
-
-    /** Post: add a new Color into the database */
-    addWebsite(color: Color): Observable<Color> {
-        return this.http.post<Color>(this.colorUrl, color, httpOptions).map(
-            (res) => res as Color
-        );
-    }
-
-    /** DELETE: delete the Color from the database */
-    deleteColor(id: number): Observable<{}> {
-        const url = `${this.colorUrl}/${id}`;
-        return this.http.delete(url, httpOptions).map(
-            (res) => res as Color
-        );
-    }
-
-    /** PUT: update the Color on the server. Returns the updated Color upon success. */
-    updateColor(color: Color): Observable<Color> {
-        httpOptions.headers =
-            httpOptions.headers.set('Authorization', 'my-new-auth-token');
-
-        return this.http.put<Color>(this.colorUrl, color, httpOptions).map(
             (res) => res as Color
         );
     }

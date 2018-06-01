@@ -51,7 +51,7 @@ import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
 import {TechnologyService} from '../providers/technology.service';
 import {ColorService} from '../providers/color.service';
-
+import {CountryService} from '../providers/country.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -118,6 +118,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         AgencyService,
         TechnologyService,
         ColorService,
+        CountryService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,

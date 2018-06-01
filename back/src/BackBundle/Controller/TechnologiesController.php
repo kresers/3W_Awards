@@ -80,7 +80,7 @@ class TechnologiesController extends FOSRestController
         $em = $this->getDoctrine()->getManager();
         $em->persist($technologies);
 
-        return $this->view($technologies, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_color_show', ['id' => $technologies->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
+        return $this->view($technologies, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_technologie_show', ['id' => $technologies->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
     }
 
 }

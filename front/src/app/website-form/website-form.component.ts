@@ -10,6 +10,7 @@ import {Country} from '../model/country';
 import {isBoolean} from 'util';
 import {TechnologyService} from '../../providers/technology.service';
 import {ColorService} from '../../providers/color.service';
+import {CountryService} from '../../providers/country.service';
 
 @Component({
   selector: 'app-website-form',
@@ -22,6 +23,7 @@ export class WebsiteFormComponent implements OnInit {
   @Input() website: Website;
    color: Color;
    technology: Technology;
+   country: Country;
 
   model: any = {};
   websiteForm: FormGroup;
@@ -31,6 +33,7 @@ export class WebsiteFormComponent implements OnInit {
       private websiteService: WebsitesService,
       private technologyService: TechnologyService,
       private colorService: ColorService,
+      private countryService: CountryService,
       private alertService: AlertService) {
     this.createForm();
   }
@@ -38,28 +41,37 @@ export class WebsiteFormComponent implements OnInit {
   ngOnInit() {
       this.getColor();
       this.getTechnology();
+      this.getCountries();
   }
   getColor() {
       this.colorService.getColors()
-          .subscribe(data => {
-              console.log(data);
-              // this.color = data;
-          }
-      );
+          .subscribe((data) => {
+              for (const color of  data) {
+                  console.log(color);
+                  this.color = color;
+              }
+          });
   }
   getTechnology() {
       this.technologyService.getTechnologies()
           .subscribe(data => {
-              console.log(data);
-              // this.technology = data;
+              for (const techno of data) {
+                  console.log(techno);
+                  this.technology = techno;
               }
-          );
+          });
+  }
+
+  getCountries() {
+      this.countryService.getCountries()
+          .subscribe(data => {
+              for (const country of data) {
+                  console.log(country);
+              }
+          });
   }
   get award(): FormArray {
     return this.websiteForm.get('award') as FormArray;
-  }
-  get country(): FormArray {
-      return this.websiteForm.get('country') as FormArray;
   }
 
   createForm() {
