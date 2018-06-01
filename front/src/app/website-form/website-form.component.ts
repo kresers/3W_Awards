@@ -42,14 +42,16 @@ export class WebsiteFormComponent implements OnInit {
   getColor() {
       this.colorService.getColors()
           .subscribe(data => {
-              this.color = data;
+              console.log(data);
+              // this.color = data;
           }
       );
   }
   getTechnology() {
       this.technologyService.getTechnologies()
           .subscribe(data => {
-                  this.technology = data;
+              console.log(data);
+              // this.technology = data;
               }
           );
   }

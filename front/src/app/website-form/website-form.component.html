@@ -113,7 +113,7 @@
       <div>
         <label>color</label>
         <select [formControlName]="color" multiple >
-          <option *ngFor="let color of color" [value]="color.label">{{color.label}} </option>
+          <option *ngFor="let col of color" [value]="col.label">{{col.label}} </option>
         </select>
       </div>
     </div>
@@ -121,7 +121,7 @@
         <div>
       <label>technology</label>
       <select [formControlName]="technology" multiple >
-        <option *ngFor="let technology of technology" [value]="technology.label">{{technology.label}} </option>
+        <option *ngFor="let techno of technology" [value]="techno.label">{{techno.label}} </option>
       </select>
     </div>
     </div>
