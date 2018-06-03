@@ -161,7 +161,7 @@ easy_admin:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Détails du client', icon: 'user' }
                     - { property: 'applicationNale', label: 'Nom'}
-                    - { property: 'imageFile', label: 'Logo', type: 'vich_image', }
+                    - { property: 'imageFile', label: 'Logo', type: 'vich_image' }
                     - { property: 'updatedAt', label: 'Mise à jour le:', type: 'date'}
                     - { type: 'group', css_class: 'col-sm-6', label: 'Contact', icon: 'map-marker' }
                     - { property: 'adress', label: 'Adresse'}
@@ -265,45 +265,60 @@ easy_admin:
                 actions:
                     - { name: 'new', label: 'Ajouter un Utilisateur' }
                 fields:
-                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
+                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'image', label: 'Image du profil', type: 'image', base_path: '%app.path.user_images%' }
                     - country
-                    - password
-                    - email
+                    - { property: 'email', label: 'Email :', type: 'email'}
                     - roles
                     - presentation
                     - mainSkin
+                    - { property: 'category', label: 'Catégorie'}
+                    - urlWebsite
             form:
                 title: "Ajouter un nouvelle utilisateur"
                 fields:
-                    - username
+                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'firstName', label: 'Prénom :'}
+                    - { property: 'lastName', label: 'Nom :'}
                     - country
-                    - password
+                    - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
+                    - { property: 'email', label: 'Email :', type: 'email'}
                     - email
                     - roles
                     - presentation
                     - mainSkin
-                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
-
-
+                    - category
+                    - urlWebsite
+                    - { property: 'imageFile', label: 'Image du profil', type: 'vich_image' }
+                    - { property: 'enabled', label: 'activer ?'}
             list:
                 fiels:
                     - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
-                    - username
+                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'firstName', label: 'Prénom :'}
+                    - { property: 'lastName', label: 'Nom :'}
                     - country
-                    - password
+                    - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
                     - email
                     - roles
                     - presentation
                     - mainSkin
+                    - { property: 'category', label: 'Catégorie'}
+                    - { property: 'enabled', label: 'activer ?'}
             show:
                 fields:
                     - { property: 'image', type: 'image', base_path: 'app.path.user_images' }
+                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'firstName', label: 'Prénom :'}
+                    - { property: 'lastName', label: 'Nom :'}
                     - country
-                    - password
+                    - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
                     - email
                     - roles
                     - presentation
                     - mainSkin
+                    - { property: 'category', label: 'Catégorie'}
+                    - { property: 'enabled', label: 'activer ?'}
         VoteCriteria:
             class: BackBundle\Entity\VoteCriteria
             list:

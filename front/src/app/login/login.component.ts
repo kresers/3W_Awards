@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                     localStorage.setItem('id_token', data.token);
-                    this.router.navigate(['home']);
+                    this.router.navigate(['']);
                     this.alertService.success('Connexion réussi ! ', true);
                     this.loading = false;
                     this.showModal = false;

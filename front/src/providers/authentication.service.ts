@@ -53,6 +53,14 @@ export class AuthenticationService {
         return tokenDecode.roles;
     }
 
+
+    getUsername()
+    {
+        let token = localStorage.getItem('id_token');
+        let tokenDecode = JWT(token);
+
+        return tokenDecode.username;
+    }
     /**
      * Description: this function return if the current user is logged or not
      * @returns {boolean}
