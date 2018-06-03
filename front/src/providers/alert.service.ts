@@ -7,6 +7,7 @@ import { Subject } from 'rxjs/Subject';
 export class AlertService {
     private subject = new Subject<any>();
     private keepAfterNavigationChange = false;
+    private loading = false ;
 
     constructor(private router: Router) {
         // clear alert message on route change
@@ -35,5 +36,16 @@ export class AlertService {
 
     getMessage(): Observable<any> {
         return this.subject.asObservable();
+    }
+
+    switchStateLoading()
+    {
+        if(this.loading)
+        {
+            return this.loading = false;
+        }
+        else {
+            return this.loading = true;
+        }
     }
 }

@@ -1,31 +1,23 @@
 <p class="text-center">
-    <img *ngIf="loading"
+    <img *ngIf="showLoader"
          src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
 
 </p>
-<div *ngIf="!loading" class="page-profil">
+<div *ngIf="!showLoader" class="page-profil">
     <div class="container_custom">
         <div class="top-profil">
-            <img src="http://www.businesspme.net/public/_upload/images/photos_personnes/11_img-9909-1-carre-zoom.jpg"
+            <img src="http://localhost:8000/uploads/images/user/{{ image}}"
                  class="rounded-circle img-thumbnail resizePP" alt="...">
             <h1></h1>
             <div class="description-profil">
                 <span class="function-profil">{{ role }}</span>
-                <span> | {{ mainSkin }} | {{ country}}</span>
+                <span> | {{ mainSkin }} | {{ country.label }}</span>
             </div>
-            <button type="button" class="btn btn-outline-secondary tags-under-pp">SITE WEB</button>
+            <a href="{{ websiteUrl }}" target="_blank" type="button" class="btn btn-outline-secondary tags-under-pp">SITE WEB</a>
             <button type="button" class="btn btn-outline-secondary tags-under-pp"><i class="fa fa-share"></i></button>
-            <p>Co-fondateur et directeur de création de l'agence digitale Mentalworks, DA UX/UI.</p>
+            <p>{{ presentation }}</p>
             <div class="profil-btn">
-                <button type="button" class="btn btn-outline-secondary">ux design</button>
-                <button type="button" class="btn btn-outline-secondary">Création de site web</button>
-                <button type="button" class="btn btn-outline-secondary">web design</button>
-                <button type="button" class="btn btn-outline-secondary">e-marketing</button>
-                <button type="button" class="btn btn-outline-secondary">e-marketing</button>
-                <button type="button" class="btn btn-outline-secondary">stratégie web</button>
-                <button type="button" class="btn btn-outline-secondary">création de logo</button>
-                <button type="button" class="btn btn-outline-secondary">ui design</button>
-                <button type="button" class="btn btn-outline-secondary">charte & identité visuelle</button>
+                <button *ngFor="let itemCateg of categories" type="button" class="btn btn-outline-secondary">{{ itemCateg.label }}</button>
             </div>
         </div>
         <div class="profil-menu">
