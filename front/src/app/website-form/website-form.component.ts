@@ -21,9 +21,9 @@ import {CountryService} from '../../providers/country.service';
 
 export class WebsiteFormComponent implements OnInit {
   @Input() website: Website;
-   color: Color;
-   technology: Technology;
-   country: Country;
+   color: Color[];
+   technology: Technology[];
+   country: Country[];
 
   model: any = {};
   websiteForm: FormGroup;
@@ -46,28 +46,23 @@ export class WebsiteFormComponent implements OnInit {
   getColor() {
       this.colorService.getColors()
           .subscribe((data) => {
-              for (const color of  data) {
-                  console.log(color);
-                  this.color = color;
-              }
+              console.log(data);
+              this.color = data;
           });
   }
   getTechnology() {
       this.technologyService.getTechnologies()
           .subscribe(data => {
-              for (const techno of data) {
-                  console.log(techno);
-                  this.technology = techno;
-              }
+              console.log(data);
+              this.technology = data;
           });
   }
 
   getCountries() {
       this.countryService.getCountries()
           .subscribe(data => {
-              for (const country of data) {
-                  console.log(country);
-              }
+              console.log(data);
+              this.country = data;
           });
   }
   get award(): FormArray {

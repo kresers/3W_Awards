@@ -2,140 +2,140 @@
   <h1>Wesbite Form</h1>
   <form  [formGroup]="websiteForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label>project_name</label>
-        <input type="text" class="form-control" formControlName="project_name" required>
+        <label for="ProjectName">Nom du projet</label>
+        <input id="ProjectName" type="text" class="form-control" formControlName="project_name" required>
     </div>
     <div class="form-group">
-        <label>project_name</label>
-        <input type="text" class="form-control" formControlName="project_description" required>
+        <label for="ProjectDescription">Description</label>
+        <input id="ProjectDescription" type="text" class="form-control" formControlName="project_description" required>
     </div>
     <div class="form-group">
-        <label>keywords</label>
-        <input type="text" class="form-control" formControlName="keywords" required>
+        <label for="keywords">keywords</label>
+        <input id="keywords" type="text" class="form-control" formControlName="keywords" required>
     </div>
     <div class="form-group">
-        <label>image</label>
-        <input type="file" class="form-control" formControlName="image" required>
+        <label for="image1">image</label>
+        <input id="image1" type="file" class="form-control" formControlName="image" required>
     </div>
     <div class="form-group">
-        <label>screenshot</label>
-        <input type="file" class="form-control" formControlName="screenshot" >
+        <label for="image2">screenshot</label>
+        <input id="image2" type="file" class="form-control" formControlName="screenshot" >
     </div>
     <div class="form-group">
-        <label>second</label>
-        <input type="file" class="form-control" formControlName="second" >
+        <label for="image3">second</label>
+        <input id="image3" type="file" class="form-control" formControlName="second" >
     </div>
     <div class="form-group">
-        <label>website_type</label>
-        <input type="text" class="form-control" formControlName="website_type" required>
+        <label for="websitetype">website_type</label>
+        <input id="websitetype" type="text" class="form-control" formControlName="website_type" required>
     </div>
     <div class="form-group">
-        <label>activity_area</label>
-        <input type="text" class="form-control" formControlName="activity_area" required>
+        <label for="activity">activity_area</label>
+        <input id="activity" type="text" class="form-control" formControlName="activity_area" required>
     </div>
     <div class="form-group">
-        <label>target</label>
-        <input type="text" class="form-control" formControlName="target" required>
+        <label for="target">target</label>
+        <input id="target" type="text" class="form-control" formControlName="target" required>
     </div>
     <div class="form-group">
-        <label>project_focus</label>
-        <input type="text" class="form-control" formControlName="project_focus" required>
+        <label for="projectFocus">project_focus</label>
+        <input id="projectFocus" type="text" class="form-control" formControlName="project_focus" required>
     </div>
     <div class="form-group">
-        <label>project_budget</label>
-        <input type="number" class="form-control" formControlName="project_budget" required>
+        <label for="projectBudjet">project_budget</label>
+        <input id="projectBudjet" type="number" class="form-control" formControlName="project_budget" required>
     </div>
     <div class="form-group">
-        <label>languages</label>
-        <input type="text" class="form-control" formControlName="languages" required>
+        <label for="languages">languages</label>
+        <input id="languages" type="text" class="form-control" formControlName="languages" required>
     </div>
     <div class="form-group">
-        <label>created_by</label>
-        <input type="text" class="form-control" formControlName="created_by" required>
+        <label for="createdBy">created_by</label>
+        <input id="createdBy" type="text" class="form-control" formControlName="created_by" required>
     </div>
     <div class="form-group">
-        <label>client_name</label>
-        <input type="text" class="form-control" formControlName="client_name" required>
+        <label for="client">client_name</label>
+        <input id="client" type="text" class="form-control" formControlName="client_name" required>
     </div>
     <div class="form-group">
-        <label>release_date</label>
-        <input type="text" class="form-control" formControlName="release_date" required>
+        <label for="releasedate">release_date</label>
+        <input id="releasedate" type="text" class="form-control" formControlName="release_date" required>
     </div>
     <div class="form-group">
-        <label>giving_to_agency</label>
-        <input type="text" class="form-control" formControlName="giving_to_agency" required>
+        <label for="agency" >giving_to_agency</label>
+        <input id="agency" type="text" class="form-control" formControlName="giving_to_agency" required>
     </div>
     <div class="form-group">
-        <label>keyFunctionnality</label>
-        <input type="text" class="form-control" formControlName="keyFunctionnality" required>
+        <label for="keyFunctionallity">keyFunctionnality</label>
+        <input id="keyFunctionallity" type="text" class="form-control" formControlName="keyFunctionnality" required>
     </div>
     <div class="form-group">
-        <label>tech_front</label>
-        <input type="text" class="form-control" formControlName="tech_front" required>
+        <label for="technofront">tech_front</label>
+        <input id="technofront" type="text" class="form-control" formControlName="tech_front" required>
     </div>
     <div class="form-group">
-        <label>dev_languages</label>
-        <input type="text" class="form-control" formControlName="dev_languages" required>
+        <label for="devlanguage">dev_languages</label>
+        <input id="devlanguage" type="text" class="form-control" formControlName="dev_languages" required>
     </div>
     <div class="form-group">
-        <label>framework</label>
-        <input type="text" class="form-control" formControlName="framework" required>
+        <label for="framework">framework</label>
+        <input id="framework" type="text" class="form-control" formControlName="framework" required>
     </div>
     <div class="form-group">
-        <label>cms</label>
-        <input type="text" class="form-control" formControlName="cms" required>
+        <label for="cms">cms</label>
+        <input id="cms" type="text" class="form-control" formControlName="cms" required>
     </div>
     <div class="form-group">
-        <label>technical_challenges</label>
-        <input type="text" class="form-control" formControlName="technical_challenges" required>
+        <label for="technical">technical_challenges</label>
+        <input id="technical" type="text" class="form-control" formControlName="technical_challenges" required>
     </div>
     <div class="form-group">
-        <label>focal_points</label>
-        <input type="text" class="form-control" formControlName="focal_points" required>
+        <label for="focal">focal_points</label>
+        <input id="focal" type="text" class="form-control" formControlName="focal_points" required>
     </div>
     <div class="form-group">
-        <label>view_number</label>
-        <input type="number" class="form-control" formControlName="view_number" required>
+        <label for="view_number">view_number</label>
+        <input id="view_number" type="number" class="form-control" formControlName="view_number" required>
     </div>
     <div class="form-group">
-        <label>like_number</label>
-        <input type="number" class="form-control" formControlName="like_number" required>
+        <label for="like">like_number</label>
+        <input id="like" type="number" class="form-control" formControlName="like_number" required>
     </div>
     <div class="form-group">
-        <label>average_grade</label>
-        <input type="number" class="form-control" formControlName="average_grade" required>
+        <label for="average_grade">average_grade</label>
+        <input id="average_grade" type="number" class="form-control" formControlName="average_grade" required>
     </div>
     <div class="form-group">
-        <label>average_jury_grade</label>
-        <input type="number" class="form-control" formControlName="average_jury_grade" required>
+        <label for="jury_grade">average_jury_grade</label>
+        <input id="jury_grade" type="number" class="form-control" formControlName="average_jury_grade" required>
     </div>
     <div formArrayName="color" class="form-group">
       <div>
-        <label>color</label>
-        <select [formControlName]="color" multiple >
+        <label for="colors">color</label>
+        <select id="colors" [formControlName]="color" multiple >
           <option *ngFor="let col of color" [value]="col.label">{{col.label}} </option>
         </select>
       </div>
     </div>
     <div formArrayName="technology" class="form-group">
         <div>
-      <label>technology</label>
-      <select [formControlName]="technology" multiple >
+      <label for="techno">technology</label>
+      <select id="techno" [formControlName]="technology" multiple >
         <option *ngFor="let techno of technology" [value]="techno.label">{{techno.label}} </option>
       </select>
     </div>
     </div>
     <div  formArrayName="country" class="form-group">
         <div>
-      <label>Country</label>
-      <select [formControlName]="country" >
+      <label for="country">Country</label>
+      <select id="country"  [formControlName]="country" >
         <option *ngFor="let country of country" [value]="country.label">{{country.label}} </option>
       </select>
     </div>
     </div>
     <div class="form-group">
-      <label> Nominée</label>
-        <input type="radio" class="form-control" formControlName="is_nominated" required>
+      <label for="nominated"> Nominée</label>
+      <input id="nominated" type="radio" class="form-control" formControlName="is_nominated" required>
     </div>
   <button type="submit" class="btn btn-success">Submit</button>
   </form>
