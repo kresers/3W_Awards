@@ -61,12 +61,19 @@ export class ProfilInfoComponent implements OnInit {
             }
         });
         this.mainSkin = this.user.main_skin;
-        this.country = this.user.country.label;
+        if (this.user.country)
+        {
+            this.country = this.user.country.label;
+        }
+        else
+        {
+            this.country = '';
+        }
+
         this.image = this.user.image;
         this.websiteUrl = this.user.url_website;
         this.presentation = this.user.presentation;
         this.categories = this.user.category;
         this.loaderService.display(false);
-
     }
 }
