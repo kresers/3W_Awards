@@ -4,5 +4,6 @@ export namespace User {
     password: string;
     firstName: string;
     lastName: string;
+    image: string;
   }
 }
