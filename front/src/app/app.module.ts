@@ -49,7 +49,8 @@ import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import {WebsitecarouselComponent} from './websitecarousel/websitecarousel.component';
-import {LoaderService} from '../providers/loader.service';
+import {LoaderService} from "../providers/loader.service";
+import {LoadDataForSelectService} from "../providers/loadDataForSelect.service";
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -119,6 +120,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         CustomerService,
         AgencyService,
         LoaderService,
+        LoadDataForSelectService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,
