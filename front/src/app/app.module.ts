@@ -50,6 +50,7 @@ import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
 import { ContactComponent } from './contact/contact.component';
+import {ContactService} from '../providers/contact.service';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -116,6 +117,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsitesService,
         CustomerService,
         AgencyService,
+        ContactService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,

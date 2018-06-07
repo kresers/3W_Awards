@@ -18,7 +18,7 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {NominatedComponent} from './nominated/nominated.component';
 import {AwardsComponent} from './awards/awards.component';
-import {ContactComponent} from "./contact/contact.component";
+import {ContactComponent} from './contact/contact.component';
 
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');

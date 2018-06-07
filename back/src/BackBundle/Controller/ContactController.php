@@ -57,9 +57,9 @@ class ContactController extends FOSRestController
      */
 
     public function createContactAction(Contact $contact){
-        var_dump($contact);
         $em = $this->getDoctrine()->getManager();
         $em->persist($contact);
+        $em->flush();
         return $this->view($contact, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_contact_show', ['id' => $contact->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
     }
 }
