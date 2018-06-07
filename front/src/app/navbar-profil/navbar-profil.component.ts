@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../providers/authentication.service";
-import {Router,ActivatedRoute} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 import {User} from "../model/user";
 import Member = User.Member;
 import {UserService} from "../../providers/user-service.service";
@@ -12,9 +12,11 @@ import {UserService} from "../../providers/user-service.service";
 })
 export class NavbarProfilComponent implements OnInit {
 
-    username:string;
-    user:Member;
-    constructor(public authenticationService: AuthenticationService, public router: Router,public route: ActivatedRoute, private userService: UserService) {
+    username: string;
+    user: any;
+    image: string;
+
+    constructor(public authenticationService: AuthenticationService, public router: Router, public route: ActivatedRoute, private userService: UserService) {
     }
 
     ngOnInit() {
@@ -28,23 +30,20 @@ export class NavbarProfilComponent implements OnInit {
 
     logout() {
         this.authenticationService.logout();
-        this.router.navigate(['home']);
+        this.router.navigate(['']);
     }
+
     getUser() {
-        this.route.params.subscribe(params => {
-            this.username = params['username']; // (+) converts string 'id' to a number
-        });
-        console.log('username : ' + this.username);
-        this.userService.getByUsername(this.username)
+        let username = this.authenticationService.getUsername();
+        console.log(username);
+        this.userService.getByUsername(username)
             .subscribe(data => {
-                console.log(data);
-                this.user = data
+                this.image = data.image;
             });
     }
 
     navToMyProfile() {
         let username = this.authenticationService.getUsernameCurrentUser();
-        console.log(username);
-        this.router.navigate(['profil',username])
+        this.router.navigate(['profil', username])
     }
 }
