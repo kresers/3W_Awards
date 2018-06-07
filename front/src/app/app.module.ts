@@ -51,6 +51,7 @@ import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from '../providers/contact.service';
+import {LoaderService} from '../providers/loader.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);

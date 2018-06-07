@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from "../../providers/authentication.service";
-import {Router, ActivatedRoute} from "@angular/router";
-import {User} from "../model/user";
+import {AuthenticationService} from '../../providers/authentication.service';
+import {Router, ActivatedRoute} from '@angular/router';
+import {User} from '../model/user';
 import Member = User.Member;
-import {UserService} from "../../providers/user-service.service";
+import {UserService} from '../../providers/user-service.service';
 
 @Component({
     selector: 'app-navbar-profil',
@@ -15,7 +15,6 @@ export class NavbarProfilComponent implements OnInit {
     username: string;
     user: any;
     image: string;
-
     constructor(public authenticationService: AuthenticationService, public router: Router, public route: ActivatedRoute, private userService: UserService) {
     }
 
@@ -34,8 +33,7 @@ export class NavbarProfilComponent implements OnInit {
     }
 
     getUser() {
-        let username = this.authenticationService.getUsername();
-        console.log(username);
+        const username = this.authenticationService.getUsername();
         this.userService.getByUsername(username)
             .subscribe(data => {
                 this.image = data.image;
@@ -43,7 +41,7 @@ export class NavbarProfilComponent implements OnInit {
     }
 
     navToMyProfile() {
-        let username = this.authenticationService.getUsernameCurrentUser();
-        this.router.navigate(['profil', username])
+        const username = this.authenticationService.getUsernameCurrentUser();
+        this.router.navigate(['profil', username]);
     }
 }
