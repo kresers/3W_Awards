@@ -3,6 +3,8 @@
 namespace UserBundle\Entity;
 
 
+use BackBundle\Entity\Category;
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Hateoas\Configuration\Annotation as Hateoas;
@@ -69,9 +71,9 @@ class User extends BaseUser
     protected $firstName;
 
     /**
-     * @var string
      * @Serializer\Expose()
-     * @ORM\Column(name="country", type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Country")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $country;
 
@@ -87,7 +89,6 @@ class User extends BaseUser
      * @var File
      */
     private $imageFile;
-
 
 
     /**
@@ -147,6 +148,13 @@ class User extends BaseUser
     protected $autoNotification;
 
     /**
+     * @var ArrayCollection
+     * @Serializer\Expose()
+     * @ORM\ManyToMany(targetEntity="BackBundle\Entity\Category",cascade={"persist"})
+     */
+    protected $category;
+
+    /**
      * @var string
      * @Serializer\Expose()
      * @ORM\Column(name="optIn", type="string", length=255,nullable=true)
@@ -158,10 +166,34 @@ class User extends BaseUser
      */
     protected $project;
 
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="url_website", type="string", length=255,nullable=true)
+     */
+     protected $urlWebsite;
+
 
     public function __construct()
     {
+        $this->category = new ArrayCollection();
         parent::__construct();
+    }
+
+    public function addCategory(Category $category)
+    {
+        $this->category[] = $category;
+        return $this;
+    }
+
+    public function removeCategory(Category $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
     }
 
 
@@ -572,5 +604,29 @@ class User extends BaseUser
     public function getMainSkin()
     {
         return $this->mainSkin;
+    }
+
+    /**
+     * Set urlWebsite
+     *
+     * @param string $urlWebsite
+     *
+     * @return User
+     */
+    public function setUrlWebsite($urlWebsite)
+    {
+        $this->urlWebsite = $urlWebsite;
+
+        return $this;
+    }
+
+    /**
+     * Get urlWebsite
+     *
+     * @return string
+     */
+    public function getUrlWebsite()
+    {
+        return $this->urlWebsite;
     }
 }
