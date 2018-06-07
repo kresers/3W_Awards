@@ -40,18 +40,17 @@ import {AlertComponent} from './alert/alert.component';
 import {AlertService} from '../providers/alert.service';
 import {WebsitesService} from '../providers/websites.service';
 import {AgencyService} from '../providers/agency.service';
-import { NavbarProfilComponent } from './navbar-profil/navbar-profil.component';
+import {NavbarProfilComponent} from './navbar-profil/navbar-profil.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {CustomerService} from '../providers/customer.service';
-import { NominatedComponent } from './nominated/nominated.component';
-import { AwardsComponent } from './awards/awards.component';
+import {NominatedComponent} from './nominated/nominated.component';
+import {AwardsComponent} from './awards/awards.component';
 import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
 import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from '../providers/contact.service';
-
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -102,6 +101,10 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         HttpClientModule,
         NgbModule.forRoot(),
     ],
+    exports: [
+
+    ],
+
     providers: [
         {
             provide: AuthHttp,
@@ -117,6 +120,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsitesService,
         CustomerService,
         AgencyService,
+        LoaderService,
         ContactService,
         {
             provide: HTTP_INTERCEPTORS,
@@ -127,7 +131,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         VoteCriteriaService,
         CategAwardService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {
 }

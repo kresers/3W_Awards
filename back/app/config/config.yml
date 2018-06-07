@@ -102,6 +102,7 @@ fos_rest:
            - { path: '^/login', priorities: [ 'text/html', '*/*'], fallback_format: html, prefer_extension: true }
            - { path: '^/admin', priorities: [ 'text/html', '*/*'], fallback_format: html, prefer_extension: true }
            - { path: '^/api/login_check', priorities: ['json'], fallback_format: 'json' }
+           - { path: '^/3w_awards/back/web/uploads/images/user', priorities: [ 'text/html', '*/*'], prefer_extension: true }
 
 
 # disable @View  of SensioFrameworkExtraBundle
