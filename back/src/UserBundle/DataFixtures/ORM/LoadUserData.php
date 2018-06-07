@@ -2,6 +2,7 @@
 
 namespace UserBundle\DataFixtures\ORM;
 
+use BackBundle\Entity\Country;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use UserBundle\Entity\User;
@@ -38,6 +39,9 @@ class LoadUserData implements FixtureInterface
                 $tabRoles = 'ROLE_'.$datas[4];
                 $email = $datas[5];
                 $pass = $datas[6];
+                $countryObject = $manager->getRepository(Country::class)->findOneBy([
+                    'label' => $country
+                ]);
 
                 //set datas
                 $user = new User();
@@ -46,7 +50,7 @@ class LoadUserData implements FixtureInterface
                 $user->setUsername($username);
                 $user->setUsernameCanonical($username_canonical);
                 $user->setPlainPassword($pass);
-                $user->setCountry($country);
+                $user->setCountry($countryObject);
                 $user->setGender($gender);
                 $user->setEnabled(true);
                 $user->setRoles(array($tabRoles));
