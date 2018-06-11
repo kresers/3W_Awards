@@ -40,7 +40,6 @@ export class ProfilInfoComponent implements OnInit {
         });
         this.userService.getByUsername(this.username)
             .subscribe(data => {
-                console.log(data);
                 this.user = data;
                 this.initValue();
             });
@@ -61,6 +60,7 @@ export class ProfilInfoComponent implements OnInit {
             }
         });
         this.mainSkin = this.user.main_skin;
+        console.log(this.user.country);
         if (this.user.country)
         {
             this.country = this.user.country.label;
