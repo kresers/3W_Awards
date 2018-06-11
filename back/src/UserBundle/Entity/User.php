@@ -59,9 +59,61 @@ class User extends BaseUser
     /**
      * @var string
      * @Serializer\Expose()
+     * @ORM\Column(name="interest_center", type="string", length=255, nullable=true))
+     */
+    protected $interestCenter;
+
+
+    /**
+     * @var string
+     * @Serializer\Expose()
      * @ORM\Column(name="lastName", type="string", length=255, nullable=true)
      */
     protected $lastName;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="facebook", type="string", length=255, nullable=true)
+     */
+    protected $facebook;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="twitter", type="string", length=255, nullable=true)
+     */
+    protected $twitter;
+
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="linked_in", type="string", length=255, nullable=true)
+     */
+    protected $linkedIn;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="instagram", type="string", length=255, nullable=true)
+     */
+    protected $instagram;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="behance", type="string", length=255, nullable=true)
+     */
+    protected $behance;
+
+    /**
+     * @var string
+     * @Serializer\Expose()
+     * @ORM\Column(name="dribble", type="string", length=255, nullable=true)
+     */
+    protected $dribble;
+
 
     /**
      * @var string
@@ -628,5 +680,173 @@ class User extends BaseUser
     public function getUrlWebsite()
     {
         return $this->urlWebsite;
+    }
+
+    /**
+     * Set interestCenter
+     *
+     * @param string $interestCenter
+     *
+     * @return User
+     */
+    public function setInterestCenter($interestCenter)
+    {
+        $this->interestCenter = $interestCenter;
+
+        return $this;
+    }
+
+    /**
+     * Get interestCenter
+     *
+     * @return string
+     */
+    public function getInterestCenter()
+    {
+        return $this->interestCenter;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return User
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Set twitter
+     *
+     * @param string $twitter
+     *
+     * @return User
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set linkedIn
+     *
+     * @param string $linkedIn
+     *
+     * @return User
+     */
+    public function setLinkedIn($linkedIn)
+    {
+        $this->linkedIn = $linkedIn;
+
+        return $this;
+    }
+
+    /**
+     * Get linkedIn
+     *
+     * @return string
+     */
+    public function getLinkedIn()
+    {
+        return $this->linkedIn;
+    }
+
+    /**
+     * Set instagram
+     *
+     * @param string $instagram
+     *
+     * @return User
+     */
+    public function setInstagram($instagram)
+    {
+        $this->instagram = $instagram;
+
+        return $this;
+    }
+
+    /**
+     * Get instagram
+     *
+     * @return string
+     */
+    public function getInstagram()
+    {
+        return $this->instagram;
+    }
+
+    /**
+     * Set behance
+     *
+     * @param string $behance
+     *
+     * @return User
+     */
+    public function setBehance($behance)
+    {
+        $this->behance = $behance;
+
+        return $this;
+    }
+
+    /**
+     * Get behance
+     *
+     * @return string
+     */
+    public function getBehance()
+    {
+        return $this->behance;
+    }
+
+    /**
+     * Set dribble
+     *
+     * @param string $dribble
+     *
+     * @return User
+     */
+    public function setDribble($dribble)
+    {
+        $this->dribble = $dribble;
+
+        return $this;
+    }
+
+    /**
+     * Get dribble
+     *
+     * @return string
+     */
+    public function getDribble()
+    {
+        return $this->dribble;
     }
 }

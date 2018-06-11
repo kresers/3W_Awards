@@ -26,7 +26,7 @@ class Category
      *
      * @ORM\Column(name="label", type="string", length=255)
      */
-    private $label;
+    private $name;
 
 
     /**
@@ -39,33 +39,34 @@ class Category
         return $this->id;
     }
 
+
+
     /**
-     * Set label
+     * Set name
      *
-     * @param string $label
+     * @param string $name
      *
      * @return Category
      */
-    public function setLabel($label)
+    public function setName($name)
     {
-        $this->label = $label;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get label
+     * Get name
      *
      * @return string
      */
-    public function getLabel()
+    public function getName()
     {
-        return $this->label;
+        return $this->name;
     }
 
     public function __toString()
     {
-        // TODO: Implement __toString() method.
-        return $this->label;
+        return (string) $this->getName();
     }
 }
