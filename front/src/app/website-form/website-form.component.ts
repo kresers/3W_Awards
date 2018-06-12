@@ -21,7 +21,7 @@ import {CountryService} from '../../providers/country.service';
 
 export class WebsiteFormComponent implements OnInit {
   @Input() website: Website;
-   color: Color[];
+   color: any ;
    technology: Technology[];
    country: Country[];
 

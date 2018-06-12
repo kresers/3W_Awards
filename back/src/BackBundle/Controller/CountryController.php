@@ -1,65 +1,37 @@
 <?php
-
 namespace BackBundle\Controller;
-
+use BackBundle\Entity\Agency;
 use BackBundle\Entity\Country;
-use FOS\RestBundle\Controller\FOSRestController;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use FOS\RestBundle\Controller\Annotations as Rest;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\Annotations\Get;
+use FOS\RestBundle\Controller\Annotations\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use FOS\RestBundle\Controller\Annotations\Get;
-use FOS\RestBundle\Controller\Annotations\Post;
-
-class CountryController extends FOSRestController
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+class CountryController extends Controller
 {
-
     /**
-     * Get all Colors.
+     * Get all country.
      *
      * @ApiDoc(
      *     section="country",
-     *     description="Get all country."
+     *     description="Get all country"
      * )
      *
      *
      * @Get(
      *     path="/countries",
-     *     name="app_countries_all_show"
+     *     name="app_country_all_show"
      * )
      *
-     * @Rest\View(
-     *
-     * )
+     * @View
      */
-    public function showAllAction(){
-        $em = $this->getDoctrine()->getManager();
-        $allCountry = $em->getRepository(Country::class)->findAll();
-        return $allCountry;
-    }
+    public function showAllAction()
+    {
 
-
-    /**
-     * Get an website from the ID.
-     *
-     ** @ApiDoc(
-     *     section="Country",
-     *     description="Get a Country with his ID."
-     * )
-     *
-     * @Get(
-     *     path = "/countries/{id}",
-     *     name = "app_countries_show",
-     *     requirements = {"id"="\d+"}
-     * )
-     * @Rest\View(
-     *     statusCode=200
-     * )
-     */
-    public function showAction(Country $country) {
-        return $country;
+        return $this->getDoctrine()->getRepository(Country::class)->findBy([],['label' => 'ASC']);
     }
 }

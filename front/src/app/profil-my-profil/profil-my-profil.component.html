@@ -7,10 +7,10 @@
                     <label class="civility">Civilité :</label>
                     <div class="civility-checkbox">
                         <label class="radio-inline" for="inlineCheckbox1">
-                            <input type="radio" name="optradio" id="inlineCheckbox1">Monsieur
+                            <input class="dataForm" [checked]="civility == 'M'" type="radio" name="optradio" id="inlineCheckbox1">Monsieur
                         </label>
                         <label class="radio-inline" for="inlineCheckbox2">
-                            <input type="radio" name="optradio" id="inlineCheckbox2">Madame
+                            <input class="dataForm" [checked]="civility == 'F'" type="radio" name="optradio" id="inlineCheckbox2">Madame
                         </label>
                     </div>
                 </div>
@@ -20,13 +20,13 @@
                     <label for="lastName" class="col-sm-4 col-form-label">Nom ou pseudo :</label>
                     <div class="vertical_line_red"></div>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners" id="lastName" value="{{ pseudo }}">
+                        <input  type="text" class="form-control noRoundedCorners dataForm" id="lastName" value="{{ pseudo }}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="firstName" class="col-sm-4 col-form-label">Prénom :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners" id="firstName" placeholder="Olivier">
+                        <input value="{{ firstName }}" type="text" class="form-control noRoundedCorners" id="firstName">
                     </div>
                 </div>
             </div>
@@ -36,16 +36,14 @@
                     <label for="inputEmail" class="col-sm-4 col-form-label">E-mail :</label>
                     <div class="vertical_line_red"></div>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners" id="inputEmail"
-                               placeholder="olivier@salesse.fr">
+                        <input value="{{ email }}" type="text" class="form-control noRoundedCorners" id="inputEmail">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Prénom :</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Mot de passe :</label>
                     <div class="vertical_line_red"></div>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control noRoundedCorners" id="inputPassword"
-                               placeholder="*******">
+                        <input type="password" class="form-control noRoundedCorners" id="inputPassword">
                     </div>
                 </div>
             </div>
@@ -54,31 +52,23 @@
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-4 col-form-label">Date de naissance :</label>
                     <div class="col-sm-2">
-                        <input type="date" class="form-control noRoundedCorners" id="13/08/1993" placeholder="">
+                        <input [ngModel]="birthday | date:'yyyy-MM-dd'" type="date"
+                               class="form-control noRoundedCorners clickable" id="birthday">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="FormControlSelect1" class="col-sm-4 col-form-label">Pays :</label>
                     <div class="col-sm-7">
-                        <select class="form-control noRoundedCorners" id="FormControlSelect1">
-                            <option>France</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select [(ngModel)]="country" class="form-control noRoundedCorners clickable"
+                                id="FormControlSelect1">
+                            <option *ngFor="let item of countries" [value]="item.label">{{ item.label }}</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Métier/profession :</label>
+                    <label class="col-sm-4 col-form-label">Métier/profession :</label>
                     <div class="col-sm-7">
-                        <select class="form-control noRoundedCorners">
-                            <option>Directeur de création</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        <input value="{{ job }}" type="text" class="form-control noRoundedCorners" id="profession">
                     </div>
                 </div>
             </div>
@@ -87,72 +77,63 @@
                     <label for="inputPresentation" class="col-sm-4 col-form-label">Présentation/bio :</label>
                     <div class="col-sm-7">
                         <input type="textarea" class="form-control noRoundedCorners"
-                               placeholder="Co fondateur de mentalworks" id="inputPresentation">
+                               value="{{ presentation }}" id="inputPresentation">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputComp" class="col-sm-4 col-form-label">Compétences clés :</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners" placeholder="" id="inputComp">
-                    </div>
+                    <label for="inputPresentation" class="col-sm-4 col-form-label">Compétences clés :</label>
+                    <ss-multiselect-dropdown id="multi-select" [options]="myOptions" [texts]="myTexts"
+                                             [settings]="mySettings"
+                                             [(ngModel)]="optionsModel"></ss-multiselect-dropdown>
                 </div>
                 <div class="form-group row">
                     <label for="inputInterest" class="col-sm-4 col-form-label">Centres d'intérêts :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="" id="inputInterest">
+                        <input value="{{ interestCenter }}" type="text" class="form-control noRoundedCorners"
+                               placeholder="" id="inputInterest">
                     </div>
                 </div>
-                <!--**********-->
-                <!--SOCIAL-->
-                <!--**********-->
                 <h2>Liens web</h2>
                 <div class="form-group row">
                     <label for="inputSite" class="col-sm-4 col-form-label">Site web personnel :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputSite">
+                        <input  value="{{ websiteUrl }}" type="text" class="form-control noRoundedCorners" id="inputSite">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputFacebook" class="col-sm-4 col-form-label">Facebook :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputFacebook">
+                        <input value="{{ facebook }}" type="text" class="form-control noRoundedCorners" id="inputFacebook">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputTwitter" class="col-sm-4 col-form-label">Twitter :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputTwitter">
+                        <input value="{{ twitter }}" type="text" class="form-control noRoundedCorners" id="inputTwitter">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputLinkedIn" class="col-sm-4 col-form-label">LinkedIn :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputLinkedIn">
+                        <input value="{{ linkedIn }}"  type="text" class="form-control noRoundedCorners"  id="inputLinkedIn">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputInstagram" class="col-sm-4 col-form-label">Instagram :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputInstagram">
+                        <input value="{{ instagram }}" type="text" class="form-control noRoundedCorners" id="inputInstagram">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputBehance" class="col-sm-4 col-form-label">Behance :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputBehance">
+                        <input value="{{ behance}}" type="text" class="form-control noRoundedCorners" id="inputBehance">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputDribbble" class="col-sm-4 col-form-label">Dribbble :</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control noRoundedCorners"
-                               placeholder="https://www.salesse.com" id="inputDribbble">
+                        <input value="{{ dribble }}" type="text" class="form-control noRoundedCorners" id="inputDribbble">
                     </div>
                 </div>
             </div>
@@ -174,7 +155,7 @@
                             J'accepte de recevoir la newsletter et des informations de la part de 3wawards.
                         </label>
                         <button type="button" class="btn btn-cancel">Annuler</button>
-                        <button type="button" class="btn btn-submit">Sauvegarder</button>
+                        <button (click)="onSubmit()" type="button" class="btn btn-submit">Sauvegarder</button>
                     </div>
                 </div>
             </div>
@@ -190,183 +171,3 @@
         </div>
     </div>
 </div>
-
-<!--<div class="col-md-12 formDiv">-->
-<!--<h2>Identité</h2>-->
-<!--<div class="form-group row">-->
-<!--<label class="">Civilité :</label>-->
-<!--<div class="">-->
-<!--<div class="form-check form-check-inline">-->
-<!--<input class="form-check-input checkmark" checked="" type="radio" id="inlineCheckbox1"-->
-<!--value="option1">-->
-<!--<label class="form-check-label" for="inlineCheckbox1">Monsieur</label>-->
-<!--</div>-->
-<!--<div class="form-check form-check-inline">-->
-<!--<input class="form-check-input checkmark" type="radio" id="inlineCheckbox2" value="option2">-->
-<!--<label class="form-check-label" for="inlineCheckbox2">Madame</label>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="imageProfil">-->
-<!--<p>Photo/avatar :</p>-->
-<!--<img src="http://www.businesspme.net/public/_upload/images/photos_personnes/11_img-9909-1-carre-zoom.jpg"-->
-<!--class="resizePP" alt="...">-->
-<!--<div class="upload-content">-->
-<!--<button type="button" class="btn btn-light roundedCorners upload">Upload</button>-->
-<!--<i class="fa fa-info-circle"></i>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-3 col-form-label">Nom ou pseudo :</label>-->
-<!--<div class="vertical_line_red"></div>-->
-<!--<div class="col-sm-7">-->
-<!--<input type="text" class="form-control noRoundedCorners" id="lastName" placeholder="SALESSE">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-3 col-form-label">Prénom :</label>-->
-<!--<div class="col-sm-7">-->
-<!--<input type="text" class="form-control noRoundedCorners" id="firstName" placeholder="Olivier">-->
-<!--</div>-->
-<!--</div>-->
-<!--<h2>Connexion</h2>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-3 col-form-label">E-mail :</label>-->
-<!--<div class="col-sm-7">-->
-<!--<input type="text" class="form-control noRoundedCorners" id="email"-->
-<!--placeholder="olivier@salesse.fr">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-3 col-form-label">Mot de passe :</label>-->
-<!--<div class="col-sm-7">-->
-<!--<input type="password" class="form-control noRoundedCorners" id="inputPassword"-->
-<!--placeholder="******">-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;**********&ndash;&gt;-->
-<!--&lt;!&ndash;PROFIL&ndash;&gt;-->
-<!--&lt;!&ndash;**********&ndash;&gt;-->
-<!--<h2>Profil</h2>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Date de naissance :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="date" class="form-control noRoundedCorners" id="13/08/1993" placeholder="">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="FormControlSelect1" class="col-sm-2 col-form-label">Pays :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<select class="form-control noRoundedCorners" id="FormControlSelect1">-->
-<!--<option>France</option>-->
-<!--<option>2</option>-->
-<!--<option>3</option>-->
-<!--<option>4</option>-->
-<!--<option>5</option>-->
-<!--</select>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Métier/profession :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<select class="form-control noRoundedCorners">-->
-<!--<option>Directeur de création</option>-->
-<!--<option>2</option>-->
-<!--<option>3</option>-->
-<!--<option>4</option>-->
-<!--<option>5</option>-->
-<!--</select>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Présentation/bio :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="Co fondateur de mentalworks">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Compétences clés :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners" placeholder="">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Centres d'intérêts :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners" placeholder="">-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;**********&ndash;&gt;-->
-<!--&lt;!&ndash;SOCIAL&ndash;&gt;-->
-<!--&lt;!&ndash;**********&ndash;&gt;-->
-<!--<h2>Liens web</h2>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Site web personnel :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Facebook :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Twitter :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">LinkedIn :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Instagram :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Behance :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="form-group row">-->
-<!--<label for="inputPassword" class="col-sm-2 col-form-label">Dribbble :</label>-->
-<!--<div class="col-sm-5">-->
-<!--<input type="password" class="form-control noRoundedCorners"-->
-<!--placeholder="https://www.salesse.com">-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;***********&ndash;&gt;-->
-<!--&lt;!&ndash;CHECKBOXES OPT IN&ndash;&gt;-->
-<!--&lt;!&ndash;***********&ndash;&gt;-->
-<!--<div class="optInSubmit">-->
-<!--<div class="form-check col-sm-7">-->
-<!--<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">-->
-<!--<label class="form-check-label" for="defaultCheck1">-->
-<!--Etre informé par e-mail des nouveaux sites publiés.-->
-<!--</label>-->
-<!--</div>-->
-<!--<div class="form-check col-sm-6">-->
-<!--<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">-->
-<!--<label class="form-check-label" for="defaultCheck2">-->
-<!--J'accepte de recevoir la newsletter et des informations de la part de 3wawards.-->
-<!--</label>-->
-<!--</div>-->
-<!--<button type="button" class="btn btn-cancel">Annuler</button>-->
-<!--<button type="button" class="btn btn-submit">Sauvegarder</button>-->
-<!--</div>-->
-<!--</div>-->

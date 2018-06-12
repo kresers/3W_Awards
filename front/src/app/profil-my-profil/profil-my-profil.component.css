@@ -20,6 +20,10 @@
     flex-direction: row;
 
 }
+#multi-select
+{
+    margin-left: 15px;
+}
 .civility-checkbox{
     margin-left: 27%;
 }

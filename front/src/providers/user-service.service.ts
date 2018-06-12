@@ -23,19 +23,19 @@ export class UserService {
 
     create(user: Member) {
         return this.http.post(appConfig.apiUrl + '/user/', user).map(
-            (res) => res as Member
+            (res) => res
         );
     }
 
     update(user: Member) {
-        return this.http.put(appConfig.apiUrl + '/users/' + user.firstName, user).map(
-            (res) => res as Member
+        return this.http.put(appConfig.apiUrl + '/users/' + user.first_name, user).map(
+            (res) => res
         );
     }
 
     remove(_id: string) {
         return this.http.delete(appConfig.apiUrl + '/users/' + _id).map(
-            (res) => res as Member
+            (res) => res
         );
     }
 }
