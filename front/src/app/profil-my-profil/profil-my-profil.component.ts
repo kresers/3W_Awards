@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {UserService} from "../../providers/user-service.service";
-import {AuthenticationService} from "../../providers/authentication.service";
-import {LoaderService} from "../../providers/loader.service";
-import {LoadDataForSelectService} from "../../providers/loadDataForSelect.service";
-import {Country} from "../model/country";
-import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "angular-2-dropdown-multiselect";
-import {Category} from "../model/category";
+import {ActivatedRoute} from '@angular/router';
+import {UserService} from '../../providers/user-service.service';
+import {AuthenticationService} from '../../providers/authentication.service';
+import {LoaderService} from '../../providers/loader.service';
+import {LoadDataForSelectService} from '../../providers/loadDataForSelect.service';
+import {Country} from '../model/country';
+import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
+import {Category} from '../model/category';
 
 @Component({
     selector: 'app-profil-my-profil',
@@ -92,8 +92,7 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.birthday = data.birth_date;
                 if (data.country) {
                     this.country = data.country.label;
-                }
-                else {
+                } else {
                     this.country = null;
                 }
                 this.presentation = data.presentation;
@@ -145,11 +144,10 @@ export class ProfilMyProfilComponent implements OnInit {
     /**
      * Description : this function keep and return current value in profil inputs
      */
-    protected getCurrentDatas()
-    {
-        this.firstName = document.getElementById('firstName').value;
-        this.civilityM = document.getElementById('inlineCheckbox1').checked;
-        this.civilityF = document.getElementById('inlineCheckbox2').checked;
+    protected getCurrentDatas() {
+        this.firstName = (<HTMLInputElement>document.getElementById('firstName')).value;
+        this.civilityM = (<HTMLInputElement>document.getElementById('inlineCheckbox1')).checked;
+        this.civilityF = (<HTMLInputElement>document.getElementById('inlineCheckbox2')).checked;
 
         // we transmit this.civility to API post
         switch (true) {
@@ -163,17 +161,17 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.civility = '';
                 break;
         }
-        this.pseudo = document.getElementById('lastName').value;
-        this.email = document.getElementById('inputEmail').value;
-        this.password = document.getElementById('inputPassword').value;
-        this.birthday = document.getElementById('birthday').value;
-        let select = document.getElementById("FormControlSelect1");
+        this.pseudo = (<HTMLInputElement>document.getElementById('lastName')).value;
+        this.email = (<HTMLInputElement>document.getElementById('inputEmail')).value;
+        this.password = (<HTMLInputElement>document.getElementById('inputPassword')).value;
+        this.birthday = (<HTMLInputElement>document.getElementById('birthday')).value;
+        const select = document.getElementById('FormControlSelect1');
         this.country = select.options[select.selectedIndex].text;
-        this.job = document.getElementById('profession').value;
-        this.presentation = document.getElementById('inputPresentation').value;
-        let multiSelect = document.getElementsByClassName("dropdown-menu");
+        this.job = (<HTMLInputElement>document.getElementById('profession')).value;
+        this.presentation = (<HTMLInputElement>document.getElementById('inputPresentation')).value;
+        const multiSelect = document.getElementsByClassName('dropdown-menu');
         console.log(multiSelect);
-        let selected1 = [];
+        const selected1 = [];
 
     }
 

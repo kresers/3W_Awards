@@ -1,143 +1,146 @@
-<div class="container">
+<div class="container_custom" style="background-color: #dddddd">
   <h1>Wesbite Form</h1>
-  <form  [formGroup]="websiteForm" (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" #websiteForm="ngForm">
     <div class="form-group">
         <label for="ProjectName">Nom du projet</label>
-        <input id="ProjectName" type="text" class="form-control" formControlName="project_name" required>
+        <input id="ProjectName" type="text" class="form-control" [(ngModel)]="project_name" name="project_name" required>
     </div>
     <div class="form-group">
         <label for="ProjectDescription">Description</label>
-        <input id="ProjectDescription" type="text" class="form-control" formControlName="project_description" required>
+        <input id="ProjectDescription" type="text" class="form-control" [(ngModel)]="project_description" name="project_description" required>
     </div>
     <div class="form-group">
         <label for="keywords">keywords</label>
-        <input id="keywords" type="text" class="form-control" formControlName="keywords" required>
+        <input id="keywords" type="text" class="form-control" [(ngModel)]="keywords" name="keywords" required>
     </div>
     <div class="form-group">
         <label for="image1">image</label>
-        <input id="image1" type="file" class="form-control" formControlName="image" required>
+        <input id="image1" type="file" class="form-control" [(ngModel)]="image" name="image" required>
     </div>
     <div class="form-group">
         <label for="image2">screenshot</label>
-        <input id="image2" type="file" class="form-control" formControlName="screenshot" >
+        <input id="image2" type="file" class="form-control" [(ngModel)]="screenshot" name="screenshot" >
     </div>
     <div class="form-group">
         <label for="image3">second</label>
-        <input id="image3" type="file" class="form-control" formControlName="second" >
+        <input id="image3" type="file" class="form-control" [(ngModel)]="second" name="second">
     </div>
     <div class="form-group">
         <label for="websitetype">website_type</label>
-        <input id="websitetype" type="text" class="form-control" formControlName="website_type" required>
+        <input id="websitetype" type="text" class="form-control" [(ngModel)]="website_type" name="website_type" required>
     </div>
     <div class="form-group">
         <label for="activity">activity_area</label>
-        <input id="activity" type="text" class="form-control" formControlName="activity_area" required>
+        <input id="activity" type="text" class="form-control" [(ngModel)]="activity_area" name="activity_area" required>
     </div>
     <div class="form-group">
         <label for="target">target</label>
-        <input id="target" type="text" class="form-control" formControlName="target" required>
+        <input id="target" type="text" class="form-control" [(ngModel)]="target" name="target" required>
     </div>
     <div class="form-group">
         <label for="projectFocus">project_focus</label>
-        <input id="projectFocus" type="text" class="form-control" formControlName="project_focus" required>
+        <input id="projectFocus" type="text" class="form-control" [(ngModel)]="project_focus" name="project_focus" required>
     </div>
     <div class="form-group">
-        <label for="projectBudjet">project_budget</label>
-        <input id="projectBudjet" type="number" class="form-control" formControlName="project_budget" required>
+        <label for="projectBudget">project_budget</label>
+        <input id="projectBudget" type="number" class="form-control" [(ngModel)]="project_budget" name="project_budget" required>
     </div>
     <div class="form-group">
         <label for="languages">languages</label>
-        <input id="languages" type="text" class="form-control" formControlName="languages" required>
+        <input id="languages" type="text" class="form-control" [(ngModel)]="languages" name="languages" required>
     </div>
     <div class="form-group">
         <label for="createdBy">created_by</label>
-        <input id="createdBy" type="text" class="form-control" formControlName="created_by" required>
+        <input id="createdBy" type="text" class="form-control" [(ngModel)]="created_by" name=created_by"" required>
     </div>
     <div class="form-group">
         <label for="client">client_name</label>
-        <input id="client" type="text" class="form-control" formControlName="client_name" required>
+        <input id="client" type="text" class="form-control" [(ngModel)]="client_name" name="client_name" required>
     </div>
     <div class="form-group">
         <label for="releasedate">release_date</label>
-        <input id="releasedate" type="text" class="form-control" formControlName="release_date" required>
+        <input id="releasedate" type="date"  class="form-control" [(ngModel)]="release_date" name="release_date" required>
     </div>
     <div class="form-group">
         <label for="agency" >giving_to_agency</label>
-        <input id="agency" type="text" class="form-control" formControlName="giving_to_agency" required>
+        <input id="agency" type="text" class="form-control" [(ngModel)]="giving_to_agency" name="giving_to_agency" required>
     </div>
     <div class="form-group">
         <label for="keyFunctionallity">keyFunctionnality</label>
-        <input id="keyFunctionallity" type="text" class="form-control" formControlName="keyFunctionnality" required>
+        <input id="keyFunctionallity" type="text" class="form-control" [(ngModel)]="keyFunctionnality" name="keyFunctionnality" required>
     </div>
     <div class="form-group">
         <label for="technofront">tech_front</label>
-        <input id="technofront" type="text" class="form-control" formControlName="tech_front" required>
+        <input id="technofront" type="text" class="form-control" [(ngModel)]="tech_front" name="tech_front" required>
     </div>
     <div class="form-group">
         <label for="devlanguage">dev_languages</label>
-        <input id="devlanguage" type="text" class="form-control" formControlName="dev_languages" required>
+        <input id="devlanguage" type="text" class="form-control" [(ngModel)]="dev_languages" name="dev_languages" required>
     </div>
     <div class="form-group">
         <label for="framework">framework</label>
-        <input id="framework" type="text" class="form-control" formControlName="framework" required>
+        <input id="framework" type="text" class="form-control" [(ngModel)]="framework" name="framework" required>
     </div>
     <div class="form-group">
         <label for="cms">cms</label>
-        <input id="cms" type="text" class="form-control" formControlName="cms" required>
+        <input id="cms" type="text" class="form-control" [(ngModel)]="cms" name="cms" required>
     </div>
     <div class="form-group">
         <label for="technical">technical_challenges</label>
-        <input id="technical" type="text" class="form-control" formControlName="technical_challenges" required>
+        <input id="technical" type="text" class="form-control" [(ngModel)]="technical_challenges" name="technical_challenges" required>
     </div>
     <div class="form-group">
         <label for="focal">focal_points</label>
-        <input id="focal" type="text" class="form-control" formControlName="focal_points" required>
+        <input id="focal" type="text" class="form-control" [(ngModel)]="focal_points" name="focal_points" required>
     </div>
     <div class="form-group">
         <label for="view_number">view_number</label>
-        <input id="view_number" type="number" class="form-control" formControlName="view_number" required>
+        <input id="view_number" type="number" class="form-control" [(ngModel)]="view_number" name="view_number" required>
     </div>
     <div class="form-group">
         <label for="like">like_number</label>
-        <input id="like" type="number" class="form-control" formControlName="like_number" required>
+        <input id="like" type="number" class="form-control" [(ngModel)]="like_number" name="like_number" required>
     </div>
     <div class="form-group">
         <label for="average_grade">average_grade</label>
-        <input id="average_grade" type="number" class="form-control" formControlName="average_grade" required>
+        <input id="average_grade" type="number" class="form-control" [(ngModel)]="average_grade" name="average_grade" required>
     </div>
     <div class="form-group">
         <label for="jury_grade">average_jury_grade</label>
-        <input id="jury_grade" type="number" class="form-control" formControlName="average_jury_grade" required>
-    </div>
-    <div formArrayName="color" class="form-group">
-      <div>
-        <label for="colors">color</label>
-        <select id="colors" [formControlName]="color" multiple >
-          <option *ngFor="let col of color" [value]="col">{{col.label}} </option>
-        </select>
-      </div>
-    </div>
-    <div formArrayName="technology" class="form-group">
-        <div>
-      <label for="techno">technology</label>
-      <select id="techno" [formControlName]="technology" multiple >
-        <option *ngFor="let techno of technology" [value]="techno">{{techno.label}} </option>
-      </select>
-    </div>
-    </div>
-    <div  formArrayName="country" class="form-group">
-        <div>
-      <label for="country">Country</label>
-      <select id="country"  [formControlName]="country" >
-        <option *ngFor="let country of country" [value]="country">{{country.label}} </option>
-      </select>
-    </div>
+        <input id="jury_grade" type="number" class="form-control" [(ngModel)]="average_jury_grade" name="average_jury_grade" required>
     </div>
     <div class="form-group">
       <label for="nominated"> Nominée</label>
-      <input id="nominated" type="radio" class="form-control" formControlName="is_nominated" required>
+      <input id="nominated" type="radio" class="form-control" [(ngModel)]="is_nominated" name="is_nominated" required>
     </div>
+      <div>
+          <label for="SelectCountry">
+              <select id="SelectCountry">
+                  <option *ngFor="let item of countries" [value]="item.label">{{ item.label }}</option>
+              </select>
+          </label>
+      </div>
+      <div>
+          <label for="ColorSelect">
+              <ss-multiselect-dropdown id="ColorSelect" [options]="myOptionsColors"
+                                       [texts]="myTextsColor"
+                                       [settings]="mySettings"
+                                       [(ngModel)]="colors"
+                                       [ngModelOptions]="{standalone: true}"
+              ></ss-multiselect-dropdown>
+      </label>
+      </div>
+      <div>
+          <label for="TechnoSelect">
+              <ss-multiselect-dropdown id="TechnoSelect" [options]="myOptionsTechnos"
+                                       [texts]="myTextsTechno"
+                                       [settings]="mySettings"
+                                       [(ngModel)]="technologies"
+                                       [ngModelOptions]="{standalone: true}"
+              ></ss-multiselect-dropdown>
+      </label>
+      </div>
   <button type="submit" class="btn btn-success">Submit</button>
   </form>
-  <pre>{{websiteForm.value | json}}</pre>
+    <pre>{{websiteForm.value | json}}</pre>
 </div>

@@ -1,16 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Website} from '../model/website';
-import {WebsitesService} from '../../providers/websites.service';
-import {FormBuilder, FormControl, FormGroup, Validators, FormArray} from '@angular/forms';
-import {AlertService} from '../../providers/alert.service';
 import {Color} from '../model/color';
 import {Technology} from '../model/technology';
 import {Award} from '../model/award';
 import {Country} from '../model/country';
-import {isBoolean} from 'util';
-import {TechnologyService} from '../../providers/technology.service';
-import {ColorService} from '../../providers/color.service';
-import {CountryService} from '../../providers/country.service';
+import {LoaderService} from '../../providers/loader.service';
+import {LoadDataForSelectService} from '../../providers/loadDataForSelect.service';
+import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-website-form',
@@ -20,150 +16,155 @@ import {CountryService} from '../../providers/country.service';
 
 
 export class WebsiteFormComponent implements OnInit {
-  @Input() website: Website;
-   color: any ;
-   technology: Technology[];
-   country: Country[];
 
-  model: any = {};
-  websiteForm: FormGroup;
+    website: any;
+    project_name: string;
+    project_description: string;
+    keywords: string;
+    image: string;
+    screenshot: string;
+    second: string;
+    website_type: string;
+    activity_area: string;
+    target: string;
+    project_focus: string;
+    project_budget: any;
+    languages: string;
+    created_by: string;
+    client_name: any;
+    release_date: string;
+    giving_to_agency: string;
+    keyFunctionnality: string;
+    tech_front: string;
+    dev_languages: string;
+    framework: string;
+    cms: string;
+    technical_challenges: string;
+    focal_points: string;
+    view_number: any;
+    like_number: any;
+    average_grade: string;
+    average_jury_grade: string;
+    color: Color;
+    technology: Technology;
+    award: Award;
+    country: Country;
+    is_nominated: any;
 
-  constructor(
-      private formBuilder: FormBuilder,
-      private websiteService: WebsitesService,
-      private technologyService: TechnologyService,
-      private colorService: ColorService,
-      private countryService: CountryService,
-      private alertService: AlertService) {
-    this.createForm();
-  }
+    colors: any;
+    countries: any;
+    technologies: any;
 
-  ngOnInit() {
-      this.getColor();
-      this.getTechnology();
-      this.getCountries();
-  }
-  getColor() {
-      this.colorService.getColors()
-          .subscribe((data) => {
-              console.log(data);
-              this.color = data;
-          });
-  }
-  getTechnology() {
-      this.technologyService.getTechnologies()
-          .subscribe(data => {
-              console.log(data);
-              this.technology = data;
-          });
-  }
 
-  getCountries() {
-      this.countryService.getCountries()
-          .subscribe(data => {
-              console.log(data);
-              this.country = data;
-          });
-  }
-  get award(): FormArray {
-    return this.websiteForm.get('award') as FormArray;
-  }
-
-  createForm() {
-    this.websiteForm = this.formBuilder.group({
-      project_name: ['', Validators.required ],
-      project_description: ['', Validators.required ],
-      image: ['', Validators.required ],
-      screenshot: ['', Validators.required ],
-      second: ['', Validators.required ],
-      keywords: ['', Validators.required ],
-      website_type: ['', Validators.required ],
-      activity_area: ['', Validators.required ],
-      target: ['', Validators.required ],
-      project_focus: ['', Validators.required ],
-      project_budget: ['', Validators.required ],
-      languages: ['', Validators.required ],
-      created_by: ['', Validators.required ],
-      client_name: ['', Validators.required ],
-      release_date: ['', Validators.required ],
-      giving_to_agency: ['', Validators.required ],
-      keyFunctionnality: ['', Validators.required ],
-      tech_front: ['', Validators.required ],
-      dev_languages: ['', Validators.required ],
-      framework: ['', Validators.required ],
-      cms: ['', Validators.required ],
-      technical_challenges: ['', Validators.required ],
-      focal_points: ['', Validators.required ],
-      view_number: ['', Validators.required ],
-      like_number: ['', Validators.required ],
-      average_grade: ['', Validators.required ],
-      average_jury_grade: ['', Validators.required ],
-      color: this.formBuilder.group(new Color()),
-      technology: this.formBuilder.group(new Technology()),
-      award: this.formBuilder.group(new Award()),
-      country: this.formBuilder.group(new Country()),
-      isNominated: ['', Validators.required ],
-    });
-  }
-
-  prepareSaveWebsite(): Website {
-    const formModel = this.websiteForm.value;
-
-      const colorDeepCopy: Color = formModel.color.map(
-      (color: Color) => Object.assign({}, color)
-    );
-      const technologyDeepCopy: Technology = formModel.technology.map(
-      (technology: Technology) => Object.assign({}, technology)
-    );
-      const awardDeepCopy: Award = formModel.award.map(
-      (award: Award) => Object.assign({}, award)
-    );
-      const coutryDeepCopy: Country = formModel.country.map(
-        (country: Country) => Object.assign({}, country)
-    );
-
-    const saveWebsite: Website = {
-      id: this.website.id,
-      project_name: formModel.project_name as string,
-      project_description: formModel.project_description as string,
-      keywords: formModel.keywords as string,
-      image: formModel.image as string,
-      screenshot: formModel.screenshot as string,
-      second: formModel.second as string,
-      website_type: formModel.website_type as string,
-      activity_area: formModel.activity_area as string,
-      target: formModel.target as string,
-      project_focus: formModel.project_focus as string,
-      project_budget: formModel.project_budget as number,
-      languages: formModel.languages as string,
-      created_by: formModel.created_by as string,
-      client_name: formModel.client_name as string,
-      release_date: formModel.release_date as string,
-      giving_to_agency: formModel.giving_to_agency as string,
-      keyFunctionnality: formModel.keyFunctionnality as string,
-      tech_front: formModel.tech_front as string,
-      dev_languages: formModel.dev_languages as string,
-      framework: formModel.framework as string,
-      cms: formModel.cms as string,
-      technical_challenges: formModel.technical_challenges as string,
-      focal_points: formModel.focal_points as string,
-      view_number: formModel.view_number as number,
-      like_number: formModel.like_number as number,
-      average_grade: formModel.average_grade as string,
-      average_jury_grade: formModel.average_jury_grade as string,
-      color: colorDeepCopy,
-      technology: technologyDeepCopy,
-      award: awardDeepCopy,
-      country: coutryDeepCopy,
-      is_nominated: formModel.is_nominated
+    mySettings: IMultiSelectSettings = {
+        enableSearch: true,
+        checkedStyle: 'fontawesome',
+        buttonClasses: 'form-control clickable',
+        dynamicTitleMaxItems: 3,
+        displayAllSelectedText: true
     };
-    return saveWebsite;
-  }
 
-  onSubmit() {
-    this.website = this.prepareSaveWebsite();
-    this.websiteService.addWebsite(this.website).subscribe();
-  }
+    myTextsColor: IMultiSelectTexts = {
+        checkAll: 'Tous selectionner',
+        uncheckAll: 'Tous déselectionner',
+        checked: 'selectionnez d\'autres couleurs',
+        checkedPlural: 'couleurs selectionnées',
+        searchPlaceholder: 'Chercher',
+        searchEmptyResult: 'Aucun resultat...',
+        searchNoRenderText: 'Type in search box to see resul...',
+        defaultTitle: 'Selectionnez une couleur',
+        allSelected: 'Toute les couleurs sont selectionnées',
+    };
 
+    myTextsTechno: IMultiSelectTexts = {
+        checkAll: 'Tous selectionner',
+        uncheckAll: 'Tous déselectionner',
+        checked: 'selectionnez d\'autres technologies',
+        checkedPlural: 'technologies selectionnées',
+        searchPlaceholder: 'Chercher',
+        searchEmptyResult: 'Aucun resultat...',
+        searchNoRenderText: 'Type in search box to see resul...',
+        defaultTitle: 'Selectionnez une technologie',
+        allSelected: 'Toute les technologies sont selectionnées',
+    };
 
+    myOptionsColors: IMultiSelectOption[];
+    myOptionsTechnos: IMultiSelectOption[];
+
+    constructor(
+        private loaderService: LoaderService,
+        private loadDataForSelectService: LoadDataForSelectService
+    ) {
+
+    }
+
+    ngOnInit() {
+        this.myOptionsTechnos;
+        this.myOptionsColors;
+        this.getTechnologies();
+        this.getColors();
+        this.getCountries();
+    }
+
+    onSubmit() {
+        this.getData();
+    }
+    protected getData() {
+        this.project_name = (<HTMLInputElement>document.getElementById('ProjectName')).value;
+        this.project_description = (<HTMLInputElement>document.getElementById('ProjectDescription')).value;
+        this.keywords = (<HTMLInputElement>document.getElementById('keywords')).value;
+        this.image = (<HTMLInputElement>document.getElementById('image1')).value;
+        this.screenshot = (<HTMLInputElement>document.getElementById('image2')).value;
+        this.second = (<HTMLInputElement>document.getElementById('image3')).value;
+        this.website_type = (<HTMLInputElement>document.getElementById('websitetype')).value;
+        this.activity_area = (<HTMLInputElement>document.getElementById('activity')).value;
+        this.target = (<HTMLInputElement>document.getElementById('target')).value;
+        this.project_focus = (<HTMLInputElement>document.getElementById('projectFocus')).value;
+        this.project_budget = (<HTMLInputElement>document.getElementById('projectBudget')).value;
+        this.languages = (<HTMLInputElement>document.getElementById('languages')).value;
+        this.created_by = (<HTMLInputElement>document.getElementById('createdBy')).value;
+        this.client_name = (<HTMLInputElement>document.getElementById('client')).value;
+        this.release_date = (<HTMLInputElement>document.getElementById('releasedate')).value;
+        this.giving_to_agency = (<HTMLInputElement>document.getElementById('agency')).value;
+        this.keyFunctionnality = (<HTMLInputElement>document.getElementById('keyFunctionallity')).value;
+        this.tech_front = (<HTMLInputElement>document.getElementById('technofront')).value;
+        this.dev_languages = (<HTMLInputElement>document.getElementById('devlanguage')).value;
+        this.framework = (<HTMLInputElement>document.getElementById('framework')).value;
+        this.cms = (<HTMLInputElement>document.getElementById('cms')).value;
+        this.technical_challenges = (<HTMLInputElement>document.getElementById('technical')).value;
+        this.focal_points = (<HTMLInputElement>document.getElementById('focal')).value;
+        this.view_number = (<HTMLInputElement>document.getElementById('view_number')).value;
+        this.like_number = (<HTMLInputElement>document.getElementById('like')).value;
+        this.average_grade = (<HTMLInputElement>document.getElementById('average_grade')).value;
+        this.average_jury_grade = (<HTMLInputElement>document.getElementById('jury_grade')).value;
+        this.is_nominated = (<HTMLInputElement>document.getElementById('nominated')).value;
+        this.colors = (<HTMLInputElement>document.getElementById('')).value;
+        this.countries = select.options[select.selectedIndex].text;
+        this.technologies = (<HTMLInputElement>document.getElementById('')).value;
+    }
+
+    getTechnologies() {
+        this.loadDataForSelectService.getTechnology()
+            .subscribe(data => {
+                this.technologies = data;
+                this.myOptionsTechnos = this.technologies;
+                console.log(this.myOptionsTechnos);
+                });
+    }
+
+    getColors() {
+        this.loadDataForSelectService.getColor()
+            .subscribe(data => {
+                this.colors = data;
+                this.myOptionsColors = this.colors;
+                console.log(this.myOptionsColors);
+            });
+    }
+
+    getCountries() {
+        this.loadDataForSelectService.getCountry()
+            .subscribe(data => {
+                this.countries = data;
+            });
+    }
 }
