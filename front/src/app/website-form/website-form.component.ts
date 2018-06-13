@@ -99,8 +99,6 @@ export class WebsiteFormComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.myOptionsTechnos;
-        this.myOptionsColors;
         this.getTechnologies();
         this.getColors();
         this.getCountries();
@@ -139,7 +137,8 @@ export class WebsiteFormComponent implements OnInit {
         this.average_jury_grade = (<HTMLInputElement>document.getElementById('jury_grade')).value;
         this.is_nominated = (<HTMLInputElement>document.getElementById('nominated')).value;
         this.colors = (<HTMLInputElement>document.getElementById('')).value;
-        this.countries = select.options[select.selectedIndex].text;
+        const selectCountries = (<HTMLInputElement>document.getElementById('SelectCountry'));
+        // this.countries = selectCountries.options[selectCountries.selectedIndex].text;
         this.technologies = (<HTMLInputElement>document.getElementById('')).value;
     }
 

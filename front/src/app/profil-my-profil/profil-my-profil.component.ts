@@ -166,7 +166,7 @@ export class ProfilMyProfilComponent implements OnInit {
         this.password = (<HTMLInputElement>document.getElementById('inputPassword')).value;
         this.birthday = (<HTMLInputElement>document.getElementById('birthday')).value;
         const select = document.getElementById('FormControlSelect1');
-        this.country = select.options[select.selectedIndex].text;
+        //this.country = select.options[select.selectedIndex].text;
         this.job = (<HTMLInputElement>document.getElementById('profession')).value;
         this.presentation = (<HTMLInputElement>document.getElementById('inputPresentation')).value;
         const multiSelect = document.getElementsByClassName('dropdown-menu');

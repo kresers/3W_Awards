@@ -116,7 +116,7 @@
       <div>
           <label for="SelectCountry">
               <select id="SelectCountry">
-                  <option *ngFor="let item of countries" [value]="item.label">{{ item.label }}</option>
+                  <option *ngFor="let item of countries" [(ngModel)]="country" name="country" [value]="item.label">{{ item.label }}</option>
               </select>
           </label>
       </div>
@@ -126,7 +126,6 @@
                                        [texts]="myTextsColor"
                                        [settings]="mySettings"
                                        [(ngModel)]="colors"
-                                       [ngModelOptions]="{standalone: true}"
               ></ss-multiselect-dropdown>
       </label>
       </div>
@@ -136,8 +135,8 @@
                                        [texts]="myTextsTechno"
                                        [settings]="mySettings"
                                        [(ngModel)]="technologies"
-                                       [ngModelOptions]="{standalone: true}"
               ></ss-multiselect-dropdown>
+
       </label>
       </div>
   <button type="submit" class="btn btn-success">Submit</button>

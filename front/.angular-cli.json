@@ -25,7 +25,8 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.bundle.js",
-        "../node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.min.js"
+        "../node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.min.js",
+        "../node_modules/angular-bootstrap-multiselect/dist/angular-bootstrap-multiselect.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
