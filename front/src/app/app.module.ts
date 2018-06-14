@@ -52,6 +52,8 @@ import {WebsitecarouselComponent} from './websitecarousel/websitecarousel.compon
 import {LoaderService} from "../providers/loader.service";
 import {LoadDataForSelectService} from "../providers/loadDataForSelect.service";
 import {AngularMultiSelectModule} from "angular2-multiselect-dropdown";
+import {ContactComponent} from "./contact/contact.component";
+import {ContactService} from "../providers/contact.service";
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
