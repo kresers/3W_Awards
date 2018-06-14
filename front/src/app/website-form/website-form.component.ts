@@ -6,6 +6,7 @@ import {Award} from '../model/award';
 import {Country} from '../model/country';
 import {LoaderService} from '../../providers/loader.service';
 import {LoadDataForSelectService} from '../../providers/loadDataForSelect.service';
+import {WebsitesService} from '../../providers/websites.service';
 
 @Component({
   selector: 'app-website-form',
@@ -65,7 +66,8 @@ export class WebsiteFormComponent implements OnInit {
 
     constructor(
         private loaderService: LoaderService,
-        private loadDataForSelectService: LoadDataForSelectService
+        private loadDataForSelectService: LoadDataForSelectService,
+        private  websiteService: WebsitesService,
     ) {
         this.dropdownSettingsColor = {
             singleSelection: false,
@@ -77,13 +79,43 @@ export class WebsiteFormComponent implements OnInit {
         };
         this.dropdownSettingsTechno = {
             singleSelection: false,
-            text: 'Select Couleur',
+            text: 'Select Technology',
             selectAllText: 'Tous selectionner',
             unSelectAllText: 'Tous déselectionnez',
             enableSearchFilter: true,
             classes: ''
         };
 
+    }
+
+    onItemSelectColor(item: any) {
+        console.log(item);
+        console.log(this.selectedItemsColor);
+    }
+    OnItemDeSelectColor(item: any) {
+        console.log(item);
+        console.log(this.selectedItemsColor);
+    }
+    onSelectAllColor(items: any) {
+        console.log(items);
+    }
+    onDeSelectAllColor(items: any) {
+        console.log(items);
+    }
+
+    onItemSelectTechno(item: any) {
+        console.log(item);
+        console.log(this.selectedItemsTechno);
+    }
+    OnItemDeSelectTechno(item: any) {
+        console.log(item);
+        console.log(this.selectedItemsTechno);
+    }
+    onSelectAllTechno(items: any) {
+        console.log(items);
+    }
+    onDeSelectAllTechno(items: any) {
+        console.log(items);
     }
 
     ngOnInit() {
@@ -93,9 +125,13 @@ export class WebsiteFormComponent implements OnInit {
     }
 
     onSubmit() {
-        this.getData();
+        let data: any = this.getData();
+
+        this.websiteService.addWebsite(data);
     }
     protected getData() {
+        let postData = [];
+
         this.project_name = (<HTMLInputElement>document.getElementById('ProjectName')).value;
         this.project_description = (<HTMLInputElement>document.getElementById('ProjectDescription')).value;
         this.keywords = (<HTMLInputElement>document.getElementById('keywords')).value;
@@ -124,27 +160,83 @@ export class WebsiteFormComponent implements OnInit {
         this.average_grade = (<HTMLInputElement>document.getElementById('average_grade')).value;
         this.average_jury_grade = (<HTMLInputElement>document.getElementById('jury_grade')).value;
         this.is_nominated = (<HTMLInputElement>document.getElementById('nominated')).value;
-        this.colors = (<HTMLInputElement>document.getElementById('')).value;
-        const selectCountries = (<HTMLInputElement>document.getElementById('SelectCountry'));
-        // this.countries = selectCountries.options[selectCountries.selectedIndex].text;
-        this.technologies = (<HTMLInputElement>document.getElementById('')).value;
+        this.countries = document.getElementById('SelectCountry').getAttribute('ng-reflect-model');
+
+        // techno
+        let currentTechno = document.getElementsByClassName('testrecup');
+        let technos = [].slice.call(currentTechno); // transform HTML collection in Array
+        let technosSelected = [];
+        for (let techno of technos) {
+            technosSelected.push(techno.textContent);
+        }
+        console.log(technosSelected);
+        this.technologies = technosSelected;
+
+        // color
+        let currentColor = document.getElementById('colordrop');
+        let colors = [].slice.call(currentTechno); // transform HTML collection in Array
+        let colorsSelected = [];
+        for (let color of colors) {
+            colorsSelected.push(color.textContent);
+        }
+        console.log(colorsSelected);
+        this.colors = colorsSelected;
+
+        postData = postData.concat(
+            this.project_name,
+            this.project_description,
+            this.keywords,
+            this.image,
+            this.screenshot,
+            this.second,
+            this.website_type,
+            this.activity_area,
+            this.target,
+            this.project_focus,
+            this.project_budget,
+            this.languages,
+            this.created_by,
+            this.client_name,
+            this.release_date,
+            this.giving_to_agency,
+            this.keyFunctionnality,
+            this.tech_front,
+            this.dev_languages,
+            this.framework,
+            this.cms,
+            this.technical_challenges,
+            this.focal_points,
+            this.view_number,
+            this.like_number,
+            this.average_grade,
+            this.average_jury_grade,
+            this.is_nominated,
+            this.technologies,
+            this.colors,
+            this.countries
+        );
     }
 
     getTechnologies() {
         this.loadDataForSelectService.getTechnology()
             .subscribe(data => {
-                this.technologies = data;
-                this.dropdownListTechno = this.technologies;
-                console.log(this.technology);
-                });
+                let technos = [].slice.call(data);
+                for (let techno of technos) {
+                    let object = {id: techno.id, itemName: techno.label};
+                    this.dropdownListTechno.push(object);
+                }
+                console.log(this.dropdownListTechno);
+            });
     }
 
     getColors() {
         this.loadDataForSelectService.getColor()
             .subscribe(data => {
-                this.colors = data;
-                this.dropdownListColor = this.colors;
-                console.log(this.color);
+                let colors = [].slice.call(data);
+                for (let color of colors) {
+                    let object = {id: color.id, itemName: color.label };
+                    this.dropdownListColor.push(object);
+                }
             });
     }
 
