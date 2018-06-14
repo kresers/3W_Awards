@@ -57,6 +57,8 @@ import {LoadDataForSelectService} from '../providers/loadDataForSelect.service';
 import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import {Ng2ImgMaxModule} from 'ng2-img-max';
 import {ImageCropperModule} from 'ngx-image-cropper';
+import { ContactComponent } from './contact/contact.component';
+import {ContactService} from '../providers/contact.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -94,6 +96,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         NominatedComponent,
         AwardsComponent,
         WebsitecarouselComponent,
+        ContactComponent,
     ],
     imports: [
         BrowserModule,
@@ -130,6 +133,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         CountryService,
         LoaderService,
         LoadDataForSelectService,
+        ContactService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,
