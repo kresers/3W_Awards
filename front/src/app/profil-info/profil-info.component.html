@@ -10,14 +10,14 @@
                  class="rounded-circle img-thumbnail resizePP" alt="...">
             <h1></h1>
             <div class="description-profil">
-                <span class="function-profil">{{ role }}</span>
-                <span> | {{ mainSkin }} | {{ country.label }}</span>
+
+                <span class="function-profil">{{ role }}</span><span *ngIf="mainSkin != ''"> | {{ mainSkin }}  </span> <span *ngIf="country != ''"> |   {{ country }}</span>
             </div>
             <a href="{{ websiteUrl }}" target="_blank" type="button" class="btn btn-outline-secondary tags-under-pp">SITE WEB</a>
             <button type="button" class="btn btn-outline-secondary tags-under-pp"><i class="fa fa-share"></i></button>
             <p>{{ presentation }}</p>
             <div class="profil-btn">
-                <button *ngFor="let itemCateg of categories" type="button" class="btn btn-outline-secondary">{{ itemCateg.label }}</button>
+                <button *ngFor="let itemCateg of categories" type="button" class="btn btn-outline-secondary">{{ itemCateg.name }}</button>
             </div>
         </div>
         <div class="profil-menu">

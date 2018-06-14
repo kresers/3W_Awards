@@ -291,9 +291,16 @@ easy_admin:
                     - { property: 'presentation', label: 'Présentation :'}
                     - { property: 'mainSkin', label: 'Compétence principale :'}
                     - { property: 'category', label: 'Catégories :'}
-                    - { property: 'urlWebsite', label: 'Site web :'}
+                    - { property: 'interestCenter', label: "Centres d'intérêts :"}
                     - { property: 'imageFile', label: 'Image du profil :', type: 'vich_image' }
                     - { property: 'enabled', label: 'activer ?'}
+                    - { property: 'urlWebsite', label: 'Site web :'}
+                    - { property: 'facebook', label: 'Facebook :'}
+                    - { property: 'twitter', label: 'Twitter :'}
+                    - { property: 'linkedIn', label: 'LinkedIn :'}
+                    - { property: 'instagram', label: 'Instagram :'}
+                    - { property: 'behance', label: 'Behance :'}
+                    - { property: 'dribble', label: 'Dribble :'}
             show:
                 fields:
                     - { property: 'image', type: 'image', base_path: 'app.path.user_images' }
@@ -306,6 +313,7 @@ easy_admin:
                     - { property: 'roles', label: 'Rôles'}
                     - { property: 'presentation', label: 'Présentation :'}
                     - { property: 'mainSkin', label: 'Compétence principale :'}
+                    - { property: 'interestCenter', label: "Centres d'intérêts :"}
                     - { property: 'category', label: 'Catégorie'}
                     - { property: 'enabled', label: 'activer ?'}
         VoteCriteria:

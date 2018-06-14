@@ -62,9 +62,6 @@ class LoadCustomerData implements FixtureInterface
                 $customer->setName($name);
                 $customer->setCountry($country);
                 $customer->setType($type);
-                $cat = new Category();
-                $cat->setLabel('UX DESIGN');
-                $customer->addCategory($cat);
                 $customer->setAdress($adress);
                 $customer->setAdress2($adress2);
                 $customer->setPostalCode($postalCode);

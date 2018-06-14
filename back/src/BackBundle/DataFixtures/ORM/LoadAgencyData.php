@@ -52,8 +52,10 @@ class LoadAgencyData implements FixtureInterface
                 $agency = new Agency();
                 $agency->setName($name);
                 $agency->setCountry($country);
+
                 $cat = new Category();
-                $cat->setLabel('UX DESIGN');
+                $cat->setName('UX DESIGN');
+
                 $agency->addCategory($cat);
                 $agency->setAdress($adress);
                 $agency->setAdress2($adress2);

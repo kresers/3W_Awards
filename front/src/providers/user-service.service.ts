@@ -17,7 +17,7 @@ export class UserService {
 
     getByUsername(username) {
         return this.http.get<Member>(appConfig.apiUrl + '/user/' + username).map(
-            (res) => res
+            (res) => res as Member
         );
     }
 
@@ -28,7 +28,7 @@ export class UserService {
     }
 
     update(user: Member) {
-        return this.http.put(appConfig.apiUrl + '/users/' + user.firstName, user).map(
+        return this.http.put(appConfig.apiUrl + '/users/' + user.first_name, user).map(
             (res) => res
         );
     }
