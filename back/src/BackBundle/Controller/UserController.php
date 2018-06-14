@@ -32,7 +32,16 @@ class UserController extends FOSRestController
                 'username' => $username
             ]
         );
+
         return  $user;
+    }
+
+    protected function array_to_object($array) {
+        return (object) $array;
+    }
+
+    protected function object_to_array($object) {
+        return (array) $object;
     }
 
 
