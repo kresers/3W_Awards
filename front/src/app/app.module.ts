@@ -89,6 +89,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         NominatedComponent,
         AwardsComponent,
         WebsitecarouselComponent,
+        ContactComponent,
     ],
     imports: [
         BrowserModule,
@@ -121,6 +122,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         AgencyService,
         LoaderService,
         LoadDataForSelectService,
+        ContactService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: JwtInterceptor,

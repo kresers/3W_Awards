@@ -32,8 +32,8 @@
   opacity: 0.6 !important;
 }
 .card .card-body{
-  padding: 0.8rem;
-  position: absolute;
+
+
   width: 100%;
   background-color: #fff;
   bottom: -40%;
@@ -56,9 +56,7 @@
 }
 .container_custom .card-columns{
   column-count: 4;
-  column-fill: auto;
-  height: 202px;
-}
+  }
 .footerCard .linking {
   margin-left: 7%;
 }
