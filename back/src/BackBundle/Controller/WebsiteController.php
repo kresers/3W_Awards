@@ -39,6 +39,8 @@ class WebsiteController extends FOSRestController
         return $website;
     }
 
+
+
     /**
      * Get all websites.
      *

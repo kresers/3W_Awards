@@ -58,6 +58,7 @@ import {ImageCropperModule} from 'ngx-image-cropper';
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from '../providers/contact.service';
 import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown';
+import { AboutComponent } from './about/about.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -96,6 +97,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         AwardsComponent,
         WebsitecarouselComponent,
         ContactComponent,
+        AboutComponent,
     ],
     imports: [
         BrowserModule,

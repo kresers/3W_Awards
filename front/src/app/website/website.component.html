@@ -47,12 +47,10 @@
       </div>
       <div class="col-md-3">
         <p class="card-text"><b>Realisé par</b></p>
-        <p class="card-text grey-website"><b><img class="country-drag" src="../../assets/img/fr.png">{{website.giving_to_agency}}</b>
-        </p>
+        <a class="links" [routerLink]="['/agency/1']"><p class="card-text grey-website"><b><img class="country-drag" src="../../assets/img/fr.png">{{website.giving_to_agency}}</b></p></a>
 
         <p class="card-text"><b>Nom du client</b></p>
-        <p class="card-text grey-website"><b><img class="country-drag" src="../../assets/img/fr.png">{{website.client_name}}</b>
-        </p>
+        <a class="links" [routerLink]="['/client/1']"><p class="card-text grey-website"><b><img class="country-drag" src="../../assets/img/fr.png">{{website.client_name}}</b></a>
 
         <p class="card-text"><b>Taille du client</b></p>
         <p class="card-text grey-website"><b>Grande entreprise</b></p>

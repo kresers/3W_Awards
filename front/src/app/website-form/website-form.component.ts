@@ -50,6 +50,14 @@ export class WebsiteFormComponent implements OnInit {
     country: Country;
     is_nominated: any;
 
+    dropdownListColor = [];
+    dropdownListTechno = [];
+    selectedItemsColor = [];
+    selectedItemsTechno = [];
+
+    dropdownSettingsColor = {};
+    dropdownSettingsTechno = {};
+
     colors: any;
     countries: any;
     technologies: any;
@@ -59,6 +67,22 @@ export class WebsiteFormComponent implements OnInit {
         private loaderService: LoaderService,
         private loadDataForSelectService: LoadDataForSelectService
     ) {
+        this.dropdownSettingsColor = {
+            singleSelection: false,
+            text: 'Select Couleur',
+            selectAllText: 'Tous selectionner',
+            unSelectAllText: 'Tous déselectionnez',
+            enableSearchFilter: true,
+            classes: ''
+        };
+        this.dropdownSettingsTechno = {
+            singleSelection: false,
+            text: 'Select Couleur',
+            selectAllText: 'Tous selectionner',
+            unSelectAllText: 'Tous déselectionnez',
+            enableSearchFilter: true,
+            classes: ''
+        };
 
     }
 
@@ -110,7 +134,7 @@ export class WebsiteFormComponent implements OnInit {
         this.loadDataForSelectService.getTechnology()
             .subscribe(data => {
                 this.technologies = data;
-                this.technology = this.technologies;
+                this.dropdownListTechno = this.technologies;
                 console.log(this.technology);
                 });
     }
@@ -119,7 +143,7 @@ export class WebsiteFormComponent implements OnInit {
         this.loadDataForSelectService.getColor()
             .subscribe(data => {
                 this.colors = data;
-                this.color = this.colors;
+                this.dropdownListColor = this.colors;
                 console.log(this.color);
             });
     }

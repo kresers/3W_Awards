@@ -121,13 +121,25 @@
           </label>
       </div>
       <div>
-          <label for="">
+          <label for="technodrop">
+              <angular2-multiselect id="technodrop"
+                                    [data]="dropdownListTechno"
+                                    [(ngModel)]="selectedItemsTechno"
+                                    [settings]="dropdownSettingsTechno"
+              >
 
+              </angular2-multiselect>
       </label>
       </div>
       <div>
-          <label for="">
+          <label for="colordrop">
+              <angular2-multiselect id="colordrop"
+                                    [data]="dropdownListColor"
+                                    [(ngModel)]="selectedItemsColor"
+                                    [settings]="dropdownSettingsColor"
+              >
 
+              </angular2-multiselect>
 
       </label>
       </div>
