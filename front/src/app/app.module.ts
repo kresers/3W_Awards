@@ -48,8 +48,12 @@ import {AwardsComponent} from './awards/awards.component';
 import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
-import {LoadDataForSelectService} from '../providers/loadDataForSelect.service';
-import { WebsitecarouselComponent } from './websitecarousel/websitecarousel.component';
+import {WebsitecarouselComponent} from './websitecarousel/websitecarousel.component';
+import {LoaderService} from "../providers/loader.service";
+import {LoadDataForSelectService} from "../providers/loadDataForSelect.service";
+import {MultiselectDropdownModule} from "angular-2-dropdown-multiselect";
+import {Ng2ImgMaxModule} from "ng2-img-max";
+import {ImageCropperModule} from "ngx-image-cropper";
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from '../providers/contact.service';
 import {LoaderService} from '../providers/loader.service';
@@ -102,10 +106,10 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ReactiveFormsModule,
         HttpClientModule,
         NgbModule.forRoot(),
+        MultiselectDropdownModule,
+        ImageCropperModule
     ],
-    exports: [
-
-    ],
+    exports: [],
 
     providers: [
         {

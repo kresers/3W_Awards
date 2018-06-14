@@ -25,7 +25,7 @@ class UserController extends FOSRestController
     public function getAction($username, Request $request)
     {
         $credential = $this->get('lexik_jwt_authentication.security.guard.jwt_token_authenticator')->getCredentials($request); // get token in the request
-        $this->get('back.providers.token_authorization')->RestrictForCurrentUser($credential,$username); // restrict api for current User
+//        $this->get('back.providers.token_authorization')->RestrictForCurrentUser($credential,$username); // restrict api for current User
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository(User::class)->findOneBy(
             [
