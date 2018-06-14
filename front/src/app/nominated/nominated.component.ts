@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Website} from "../model/website";
-import {WebsitesService} from "../../providers/websites.service";
+import {Website} from '../model/website';
+import {WebsitesService} from '../../providers/websites.service';
 
 @Component({
-  selector: 'app-nominated',
-  templateUrl: './nominated.component.html',
-  styleUrls: ['./nominated.component.css']
+    selector: 'app-nominated',
+    templateUrl: './nominated.component.html',
+    styleUrls: ['./nominated.component.css']
 })
 export class NominatedComponent implements OnInit {
 

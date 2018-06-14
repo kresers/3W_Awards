@@ -1,11 +1,11 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {UserService} from "../../providers/user-service.service";
-import {AuthenticationService} from "../../providers/authentication.service";
-import {LoaderService} from "../../providers/loader.service";
-import {LoadDataForSelectService} from "../../providers/loadDataForSelect.service";
-import {Country} from "../model/country";
-import {Category} from "../model/category";
+import {ActivatedRoute} from '@angular/router';
+import {UserService} from '../../providers/user-service.service';
+import {AuthenticationService} from '../../providers/authentication.service';
+import {LoaderService} from '../../providers/loader.service';
+import {LoadDataForSelectService} from '../../providers/loadDataForSelect.service';
+import {Country} from '../model/country';
+import {Category} from '../model/category';
 
 @Component({
     selector: 'app-profil-my-profil',
@@ -70,7 +70,6 @@ export class ProfilMyProfilComponent implements OnInit {
 //     };
 //
 //     myOptions: IMultiSelectOption[];
-
     constructor(public route: ActivatedRoute, private userService: UserService, private authService: AuthenticationService,
                 private loaderService: LoaderService, private loadDataForSelectService: LoadDataForSelectService) {
         loaderService.status.subscribe((val: boolean) => {
@@ -79,27 +78,27 @@ export class ProfilMyProfilComponent implements OnInit {
 
         this.dropdownSettings = {
             singleSelection: false,
-            text: "Select Categories",
+            text: 'Select Categories',
             selectAllText: 'Tous selectionner',
             unSelectAllText: 'Tous déselectionnez',
             enableSearchFilter: true,
-            classes: ""
+            classes: ''
         };
 
     }
 
-    onItemSelect(item:any){
+    onItemSelect(item: any) {
         console.log(item);
         console.log(this.selectedItems);
     }
-    OnItemDeSelect(item:any){
+    OnItemDeSelect(item: any) {
         console.log(item);
         console.log(this.selectedItems);
     }
-    onSelectAll(items: any){
+    onSelectAll(items: any) {
         console.log(items);
     }
-    onDeSelectAll(items: any){
+    onDeSelectAll(items: any) {
         console.log(items);
     }
 
@@ -120,8 +119,7 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.birthday = data.birth_date;
                 if (data.country) {
                     this.country = data.country.label;
-                }
-                else {
+                } else {
                     this.country = null;
                 }
                 this.presentation = data.presentation;
@@ -134,7 +132,7 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.behance = data.behance;
                 this.websiteUrl = data.url_website;
                 this.instagram = data.instagram;
-               console.log(data.category) ;
+                console.log(data.category) ;
 
                 this.getAllCountries();
                 this.getAllCategories();
@@ -173,9 +171,9 @@ export class ProfilMyProfilComponent implements OnInit {
      * Description : this function keep and return current value of profil inputs
      */
     @ViewChild('checkM')
-    checkM: ElementRef;// look checkbox input and see #checkM attr to understand
+    checkM: ElementRef; // look checkbox input and see #checkM attr to understand
     @ViewChild('checkF')
-    checkF: ElementRef;// look checkbox input and see #checkF attr to understand
+    checkF: ElementRef; // look checkbox input and see #checkF attr to understand
     protected getCurrentDatas() {
         this.firstName = document.getElementById('firstName').textContent;
         this.civilityM = this.checkM.nativeElement.checked;
@@ -197,7 +195,7 @@ export class ProfilMyProfilComponent implements OnInit {
         this.email = document.getElementById('inputEmail').textContent;
         this.password = document.getElementById('inputPassword').textContent;
         this.birthday = document.getElementById('birthday').textContent;
-        this.country = document.getElementById("FormControlSelect1").getAttribute("ng-reflect-model"); // for simple select
+        this.country = document.getElementById('FormControlSelect1').getAttribute('ng-reflect-model'); // for simple select
         this.job = document.getElementById('profession').textContent;
         this.presentation = document.getElementById('inputPresentation').textContent;
     }
@@ -215,9 +213,7 @@ export class ProfilMyProfilComponent implements OnInit {
     /**
      * Description : load into multi-select all categories of api
      */
-    protected
-
-    getAllCategories() {
+    protected getAllCategories() {
         this.loadDataForSelectService.getCategory()
             .subscribe(data => {
                 this.categories = data;

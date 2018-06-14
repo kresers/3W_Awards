@@ -32,7 +32,6 @@ import {ClientCardsComponent} from './client-cards/client-cards.component';
 import {ClientInfoComponent} from './client-info/client-info.component';
 import {ProfileNotedProjectsComponent} from './profile-noted-projects/profile-noted-projects.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
-
 import {UserService} from '../providers/user-service.service';
 import {JwtInterceptor} from '../interceptor/jwt.interceptor';
 import {ErrorInterceptor} from '../interceptor/error.interceptor';
@@ -48,12 +47,17 @@ import {AwardsComponent} from './awards/awards.component';
 import {AwardService} from '../providers/award.service';
 import {CategAwardService} from '../providers/categAward.service';
 import {VoteCriteriaService} from '../providers/voteCriteria.service';
+import {TechnologyService} from '../providers/technology.service';
+import {ColorService} from '../providers/color.service';
+import {CountryService} from '../providers/country.service';
+import {LoaderService} from '../providers/loader.service';
 import {WebsitecarouselComponent} from './websitecarousel/websitecarousel.component';
-import {LoaderService} from "../providers/loader.service";
-import {LoadDataForSelectService} from "../providers/loadDataForSelect.service";
-import {AngularMultiSelectModule} from "angular2-multiselect-dropdown";
-import {ContactComponent} from "./contact/contact.component";
-import {ContactService} from "../providers/contact.service";
+import {LoadDataForSelectService} from '../providers/loadDataForSelect.service';
+import {Ng2ImgMaxModule} from 'ng2-img-max';
+import {ImageCropperModule} from 'ngx-image-cropper';
+import { ContactComponent } from './contact/contact.component';
+import {ContactService} from '../providers/contact.service';
+import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown';
 import { AboutComponent } from './about/about.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -124,6 +128,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         WebsitesService,
         CustomerService,
         AgencyService,
+        TechnologyService,
+        ColorService,
+        CountryService,
         LoaderService,
         LoadDataForSelectService,
         ContactService,

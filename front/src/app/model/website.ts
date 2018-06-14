@@ -1,7 +1,7 @@
-import {Country} from "./country";
-import {Color} from "./color";
-import {Technology} from "./technology";
-import {Award} from "./award";
+import {Country} from './country';
+import {Color} from './color';
+import {Technology} from './technology';
+import {Award} from './award';
 
 
 export class Website {
