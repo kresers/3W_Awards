@@ -265,58 +265,55 @@ easy_admin:
                 actions:
                     - { name: 'new', label: 'Ajouter un Utilisateur' }
                 fields:
-                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'username', label: 'Pseudo'}
                     - { property: 'image', label: 'Image du profil', type: 'image', base_path: '%app.path.user_images%' }
-                    - country
+                    - { property: 'country', label: 'Pays :'}
                     - { property: 'email', label: 'Email :', type: 'email'}
-                    - roles
-                    - presentation
-                    - mainSkin
+                    - { property: 'roles', label: 'Rôles'}
+                    - { property: 'presentation', label: 'Présentation'}
+                    - { property: 'mainSkin', label: 'Compétence principale'}
                     - { property: 'category', label: 'Catégorie'}
-                    - urlWebsite
+                    - { property: 'urlWebsite', label: 'Site web'}
             form:
                 title: "Ajouter un nouvelle utilisateur"
                 fields:
                     - { property: 'username', label: 'Pseudo :'}
-                    - { property: 'firstName', label: 'Prénom :'}
-                    - { property: 'lastName', label: 'Nom :'}
-                    - country
                     - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
                     - { property: 'email', label: 'Email :', type: 'email'}
-                    - email
-                    - roles
-                    - presentation
-                    - mainSkin
-                    - category
-                    - urlWebsite
-                    - { property: 'imageFile', label: 'Image du profil', type: 'vich_image' }
-                    - { property: 'enabled', label: 'activer ?'}
-            list:
-                fiels:
-                    - { property: 'imageFile', type: 'file', base_path: 'app.path.user_images' }
-                    - { property: 'username', label: 'Pseudo :'}
+                    - { property: 'email', label: 'Email :', type: 'email'}
                     - { property: 'firstName', label: 'Prénom :'}
                     - { property: 'lastName', label: 'Nom :'}
-                    - country
-                    - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
-                    - email
-                    - roles
-                    - presentation
-                    - mainSkin
-                    - { property: 'category', label: 'Catégorie'}
+                    - { property: 'birthDate',label: 'Date de naissance', type: 'date'}
+                    - { property: 'country', label: 'Pays :'}
+                    - { property: 'job', label: 'Métier/profession :'}
+                    - { property: 'roles', label: 'Rôles :'}
+                    - { property: 'gender',label: 'Civilité', type: 'choice', type_options: { expanded: true, choices: '%gender%' }}
+                    - { property: 'presentation', label: 'Présentation :'}
+                    - { property: 'mainSkin', label: 'Compétence principale :'}
+                    - { property: 'category', label: 'Catégories :'}
+                    - { property: 'interestCenter', label: "Centres d'intérêts :"}
+                    - { property: 'imageFile', label: 'Image du profil :', type: 'vich_image' }
                     - { property: 'enabled', label: 'activer ?'}
+                    - { property: 'urlWebsite', label: 'Site web :'}
+                    - { property: 'facebook', label: 'Facebook :'}
+                    - { property: 'twitter', label: 'Twitter :'}
+                    - { property: 'linkedIn', label: 'LinkedIn :'}
+                    - { property: 'instagram', label: 'Instagram :'}
+                    - { property: 'behance', label: 'Behance :'}
+                    - { property: 'dribble', label: 'Dribble :'}
             show:
                 fields:
                     - { property: 'image', type: 'image', base_path: 'app.path.user_images' }
                     - { property: 'username', label: 'Pseudo :'}
                     - { property: 'firstName', label: 'Prénom :'}
                     - { property: 'lastName', label: 'Nom :'}
-                    - country
+                    - { property: 'country', label: 'Pays :'}
                     - { property: 'plainPassword', label: 'Mot de passe :', type: 'password'}
-                    - email
-                    - roles
-                    - presentation
-                    - mainSkin
+                    - { property: 'email', label: 'Email :', type: 'email'}
+                    - { property: 'roles', label: 'Rôles'}
+                    - { property: 'presentation', label: 'Présentation :'}
+                    - { property: 'mainSkin', label: 'Compétence principale :'}
+                    - { property: 'interestCenter', label: "Centres d'intérêts :"}
                     - { property: 'category', label: 'Catégorie'}
                     - { property: 'enabled', label: 'activer ?'}
         VoteCriteria:

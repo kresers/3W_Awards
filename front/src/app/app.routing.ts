@@ -14,10 +14,11 @@ import {ProfilInfoComponent} from './profil-info/profil-info.component';
 import {ProfilMyProfilComponent} from './profil-my-profil/profil-my-profil.component';
 import {WebsiteComponent} from './website/website.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
-import {AppComponent} from "./app.component";
-import {NavbarComponent} from "./navbar/navbar.component";
-import {NominatedComponent} from "./nominated/nominated.component";
-import {AwardsComponent} from "./awards/awards.component";
+import {AppComponent} from './app.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {NominatedComponent} from './nominated/nominated.component';
+import {AwardsComponent} from './awards/awards.component';
+import {ContactComponent} from './contact/contact.component';
 
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -37,6 +38,10 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
+    },
+    {
+        path: 'contact',
+        component: ContactComponent,
     },
     {
         path: 'profil/:username',

@@ -14,7 +14,7 @@
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-fixtures-bundle": "^2.3.0",
         "doctrine/orm": "^2.5",
@@ -36,7 +36,8 @@
         "symfony/symfony": "3.4.*",
         "twig/twig": "^1.0||^2.0",
         "vich/uploader-bundle": "^1.4",
-        "willdurand/hateoas-bundle": "^1.4"
+        "willdurand/hateoas-bundle": "^1.4",
+        "stephanecollot/datetimepicker-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -60,7 +61,7 @@
     },
     "config": {
         "platform": {
-            "php": "5.5.9"
+            "php": "^7.0"
         },
         "sort-packages": true
     },

@@ -40,7 +40,6 @@ export class ProfilInfoComponent implements OnInit {
         });
         this.userService.getByUsername(this.username)
             .subscribe(data => {
-                console.log(data);
                 this.user = data;
                 this.initValue();
             });
@@ -61,12 +60,20 @@ export class ProfilInfoComponent implements OnInit {
             }
         });
         this.mainSkin = this.user.main_skin;
-        this.country = this.user.country.label;
+        console.log(this.user.country);
+        if (this.user.country)
+        {
+            this.country = this.user.country.label;
+        }
+        else
+        {
+            this.country = '';
+        }
+
         this.image = this.user.image;
         this.websiteUrl = this.user.url_website;
         this.presentation = this.user.presentation;
         this.categories = this.user.category;
         this.loaderService.display(false);
-
     }
 }

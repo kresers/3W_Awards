@@ -86,6 +86,7 @@ class WebsiteController extends FOSRestController
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($project);
+        $em->flush();
 
         return $this->view($project, Response::HTTP_CREATED, ['Location' => $this->generateUrl('app_website_show', ['id' => $project->getId(), UrlGeneratorInterface::ABSOLUTE_URL])]);
     }

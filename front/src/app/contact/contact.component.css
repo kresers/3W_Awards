@@ -1,0 +1,21 @@
+.titleContactForm{
+    text-align: center;
+    font-weight: bold;
+    color:red;
+}
+.contactForm{
+    margin: 0 auto 50px auto;
+    width: 40%;
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contactForm button{
+    text-align: center;
+    border-color: red;
+    border-radius:10px;
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+}
