@@ -31,8 +31,7 @@ class CategoryController extends Controller
     public function getCategoriesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $category = $em->getRepository(Category::class)->findBy([],['name' => 'ASC']);
-
+        $category = $em->getRepository(Category::class)->findAllCategoriesWithRenameAttrObject();
         return $category;
     }
 

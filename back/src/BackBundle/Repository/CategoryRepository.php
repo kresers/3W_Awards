@@ -10,4 +10,13 @@ namespace BackBundle\Repository;
  */
 class CategoryRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findAllCategoriesWithRenameAttrObject()
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('c.id as id,c.itemName as itemName')
+            ->from($this->_entityName, 'c');
+
+        return $qb->getQuery()->getResult();
+    }
 }

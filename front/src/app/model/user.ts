@@ -1,4 +1,5 @@
 import {Country} from "./country";
+import {Category} from "./category";
 
 export namespace User {
     export class Member {
@@ -22,5 +23,6 @@ export namespace User {
         twitter: string;
         interest_center: string;
         picture: string|any;
+        category: Category;
     }
 }
