@@ -12,21 +12,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AwardsController extends Controller
 {
     /**
-     * Get all awards
-     *
-     * @ApiDoc(
-     *     section="awards",
-     *     description="Get all awards."
-     * )
-     *
-     *
-     * @Rest\Get(
-     *     path="/award",
-     *     name="app_award_all_show"
-     * )
-     *
-     * @Rest\View()
-     */
+ * Get all awards
+ *
+ * @ApiDoc(
+ *     section="awards",
+ *     description="Get all awards."
+ * )
+ *
+ *
+ * @Rest\Get(
+ *     path="/award",
+ *     name="app_award_all_show"
+ * )
+ *
+ * @Rest\View()
+ */
     public function getAwardsAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -35,6 +35,8 @@ class AwardsController extends Controller
 
         return $awards;
     }
+
+
 
     /**
      * Get an award from the ID.
