@@ -23,9 +23,9 @@
     "@angular/platform-browser-dynamic": "^5.2.11",
     "@angular/router": "^5.2.11",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
-    "angular-2-dropdown-multiselect": "^1.8.0",
     "angular-authentication-service": "^1.1.8",
     "angular2-jwt": "^0.2.3",
+    "angular2-multiselect-dropdown": "^2.9.0",
     "blueimp-canvas-to-blob": "^3.14.0",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.7",
@@ -35,6 +35,8 @@
     "ng-recaptcha": "^3.0.5",
     "ng2-img-max": "^2.1.15",
     "ngx-image-cropper": "^0.2.8",
+    "primeicons": "^1.0.0-beta.6",
+    "primeng": "^6.0.0-beta.1",
     "rxjs": "^5.5.11",
     "zone.js": "^0.8.25"
   },
@@ -53,7 +55,7 @@
     "karma-coverage-istanbul-reporter": "^1.4.3",
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.1.2",
+    "protractor": "^5.3.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"

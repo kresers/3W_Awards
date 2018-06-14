@@ -24,9 +24,9 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="label", type="string", length=255)
+     * @ORM\Column(name="itemName", type="string", length=255)
      */
-    private $name;
+    private $itemName;
 
 
     /**
@@ -41,32 +41,32 @@ class Category
 
 
 
+    public function __toString()
+    {
+        return (string) $this->getItemName();
+    }
+
     /**
-     * Set name
+     * Set itemName
      *
-     * @param string $name
+     * @param string $itemName
      *
      * @return Category
      */
-    public function setName($name)
+    public function setItemName($itemName)
     {
-        $this->name = $name;
+        $this->itemName = $itemName;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get itemName
      *
      * @return string
      */
-    public function getName()
+    public function getItemName()
     {
-        return $this->name;
-    }
-
-    public function __toString()
-    {
-        return (string) $this->getName();
+        return $this->itemName;
     }
 }

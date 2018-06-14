@@ -1,11 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../providers/user-service.service";
 import {AuthenticationService} from "../../providers/authentication.service";
 import {LoaderService} from "../../providers/loader.service";
 import {LoadDataForSelectService} from "../../providers/loadDataForSelect.service";
 import {Country} from "../model/country";
-import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "angular-2-dropdown-multiselect";
 import {Category} from "../model/category";
 
 @Component({
@@ -13,6 +12,7 @@ import {Category} from "../model/category";
     templateUrl: './profil-my-profil.component.html',
     styleUrls: ['./profil-my-profil.component.css']
 })
+
 export class ProfilMyProfilComponent implements OnInit {
 
     username: string;
@@ -20,8 +20,8 @@ export class ProfilMyProfilComponent implements OnInit {
     pseudo: string;
     firstName: string;
     civility: string;
-    civilityM: boolean;
-    civilityF: boolean;
+    civilityM: any;
+    civilityF: any;
     showLoader: boolean;
     email: string;
     birthday: any;
@@ -29,7 +29,9 @@ export class ProfilMyProfilComponent implements OnInit {
     country: any;
     presentation: string;
     job: string;
-    optionsModel: number[] = [1, 2];
+    dropdownList = [];
+    selectedItems = [];
+    dropdownSettings = {};
     categories: any;
     category: Category;
     interestCenter: string;
@@ -45,40 +47,66 @@ export class ProfilMyProfilComponent implements OnInit {
     password: string;
 
 
-// Settings configuration
-    mySettings: IMultiSelectSettings = {
-        enableSearch: true,
-        checkedStyle: 'fontawesome',
-        buttonClasses: 'form-control clickable',
-        dynamicTitleMaxItems: 3,
-        displayAllSelectedText: true
-    };
-
-// Text configuration
-    myTexts: IMultiSelectTexts = {
-        checkAll: 'Tous selectionner',
-        uncheckAll: 'Tous déselectionner',
-        checked: 'selectionnez d\'autres compétences',
-        checkedPlural: 'compétences selectionnées',
-        searchPlaceholder: 'Chercher',
-        searchEmptyResult: 'Aucun resultat...',
-        searchNoRenderText: 'Type in search box to see resul...',
-        defaultTitle: 'Selectionnez compétences',
-        allSelected: 'Toute les compétences sont selectionnées',
-    };
-
-    myOptions: IMultiSelectOption[];
+// // Settings configuration
+//     mySettings: IMultiSelectSettings = {
+//         enableSearch: true,
+//         checkedStyle: 'fontawesome',
+//         buttonClasses: 'form-control clickable',
+//         dynamicTitleMaxItems: 3,
+//         displayAllSelectedText: true
+//     };
+//
+// // Text configuration
+//     myTexts: IMultiSelectTexts = {
+//         checkAll: 'Tous selectionner',
+//         uncheckAll: 'Tous déselectionner',
+//         checked: 'selectionnez d\'autres compétences',
+//         checkedPlural: 'compétences selectionnées',
+//         searchPlaceholder: 'Chercher',
+//         searchEmptyResult: 'Aucun resultat...',
+//         searchNoRenderText: 'Type in search box to see resul...',
+//         defaultTitle: 'Selectionnez compétences',
+//         allSelected: 'Toute les compétences sont selectionnées',
+//     };
+//
+//     myOptions: IMultiSelectOption[];
 
     constructor(public route: ActivatedRoute, private userService: UserService, private authService: AuthenticationService,
                 private loaderService: LoaderService, private loadDataForSelectService: LoadDataForSelectService) {
         loaderService.status.subscribe((val: boolean) => {
             this.showLoader = val;
         });
+
+        this.dropdownSettings = {
+            singleSelection: false,
+            text: "Select Categories",
+            selectAllText: 'Tous selectionner',
+            unSelectAllText: 'Tous déselectionnez',
+            enableSearchFilter: true,
+            classes: ""
+        };
+
+    }
+
+    onItemSelect(item:any){
+        console.log(item);
+        console.log(this.selectedItems);
+    }
+    OnItemDeSelect(item:any){
+        console.log(item);
+        console.log(this.selectedItems);
+    }
+    onSelectAll(items: any){
+        console.log(items);
+    }
+    onDeSelectAll(items: any){
+        console.log(items);
     }
 
     ngOnInit() {
         this.getUser();
     }
+
 
     getUser() {
         this.loaderService.display(true);
@@ -106,6 +134,7 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.behance = data.behance;
                 this.websiteUrl = data.url_website;
                 this.instagram = data.instagram;
+               console.log(data.category) ;
 
                 this.getAllCountries();
                 this.getAllCategories();
@@ -117,9 +146,7 @@ export class ProfilMyProfilComponent implements OnInit {
      * We cant use form cause we use packages like multi select and we cant bind the value with formGroups
      */
     onSubmit() {
-
         this.getCurrentDatas();
-
         // this.firstName = data.first_name;
         // this.civility = data.gender;
         // this.email = data.email;
@@ -143,15 +170,18 @@ export class ProfilMyProfilComponent implements OnInit {
     }
 
     /**
-     * Description : this function keep and return current value in profil inputs
+     * Description : this function keep and return current value of profil inputs
      */
-    protected getCurrentDatas()
-    {
-        this.firstName = document.getElementById('firstName').value;
-        this.civilityM = document.getElementById('inlineCheckbox1').checked;
-        this.civilityF = document.getElementById('inlineCheckbox2').checked;
+    @ViewChild('checkM')
+    checkM: ElementRef;// look checkbox input and see #checkM attr to understand
+    @ViewChild('checkF')
+    checkF: ElementRef;// look checkbox input and see #checkF attr to understand
+    protected getCurrentDatas() {
+        this.firstName = document.getElementById('firstName').textContent;
+        this.civilityM = this.checkM.nativeElement.checked;
+        this.civilityF = this.checkF.nativeElement.checked;
 
-        // we transmit this.civility to API post
+        // we transmit this.civility to API post not civilityF and civilityM
         switch (true) {
             case this.civilityM == true:
                 this.civility = 'M';
@@ -163,36 +193,38 @@ export class ProfilMyProfilComponent implements OnInit {
                 this.civility = '';
                 break;
         }
-        this.pseudo = document.getElementById('lastName').value;
-        this.email = document.getElementById('inputEmail').value;
-        this.password = document.getElementById('inputPassword').value;
-        this.birthday = document.getElementById('birthday').value;
-        let select = document.getElementById("FormControlSelect1");
-        this.country = select.options[select.selectedIndex].text;
-        this.job = document.getElementById('profession').value;
-        this.presentation = document.getElementById('inputPresentation').value;
-        let multiSelect = document.getElementsByClassName("dropdown-menu");
-        console.log(multiSelect);
-        let selected1 = [];
-
+        this.pseudo = document.getElementById('lastName').textContent;
+        this.email = document.getElementById('inputEmail').textContent;
+        this.password = document.getElementById('inputPassword').textContent;
+        this.birthday = document.getElementById('birthday').textContent;
+        this.country = document.getElementById("FormControlSelect1").getAttribute("ng-reflect-model"); // for simple select
+        this.job = document.getElementById('profession').textContent;
+        this.presentation = document.getElementById('inputPresentation').textContent;
     }
 
-    protected getAllCountries() {
+    /**
+     * Description : load all countries into simple select  of api
+     */
+    getAllCountries() {
         this.loadDataForSelectService.getCountry()
             .subscribe(data => {
-                console.log(data);
                 this.countries = data;
             });
     }
 
+    /**
+     * Description : load into multi-select all categories of api
+     */
+    protected
 
-    protected getAllCategories() {
+    getAllCategories() {
         this.loadDataForSelectService.getCategory()
             .subscribe(data => {
-                console.log(data);
                 this.categories = data;
-                console.log(this.categories);
-                this.myOptions = this.categories;
+                this.dropdownList = this.categories;
+                console.log(this.dropdownList);
+                console.log(this.selectedItems);
+                // this.myOptions = ;
                 this.loaderService.display(false);
             });
     }
