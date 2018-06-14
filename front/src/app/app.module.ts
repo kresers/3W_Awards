@@ -53,7 +53,6 @@ import {CountryService} from '../providers/country.service';
 import {LoaderService} from '../providers/loader.service';
 import {WebsitecarouselComponent} from './websitecarousel/websitecarousel.component';
 import {LoadDataForSelectService} from '../providers/loadDataForSelect.service';
-import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import {Ng2ImgMaxModule} from 'ng2-img-max';
 import {ImageCropperModule} from 'ngx-image-cropper';
 import { ContactComponent } from './contact/contact.component';

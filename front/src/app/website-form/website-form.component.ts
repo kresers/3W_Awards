@@ -6,7 +6,6 @@ import {Award} from '../model/award';
 import {Country} from '../model/country';
 import {LoaderService} from '../../providers/loader.service';
 import {LoadDataForSelectService} from '../../providers/loadDataForSelect.service';
-import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-website-form',
@@ -55,41 +54,6 @@ export class WebsiteFormComponent implements OnInit {
     countries: any;
     technologies: any;
 
-
-    mySettings: IMultiSelectSettings = {
-        enableSearch: true,
-        checkedStyle: 'fontawesome',
-        buttonClasses: 'form-control clickable',
-        dynamicTitleMaxItems: 3,
-        displayAllSelectedText: true
-    };
-
-    myTextsColor: IMultiSelectTexts = {
-        checkAll: 'Tous selectionner',
-        uncheckAll: 'Tous déselectionner',
-        checked: 'selectionnez d\'autres couleurs',
-        checkedPlural: 'couleurs selectionnées',
-        searchPlaceholder: 'Chercher',
-        searchEmptyResult: 'Aucun resultat...',
-        searchNoRenderText: 'Type in search box to see resul...',
-        defaultTitle: 'Selectionnez une couleur',
-        allSelected: 'Toute les couleurs sont selectionnées',
-    };
-
-    myTextsTechno: IMultiSelectTexts = {
-        checkAll: 'Tous selectionner',
-        uncheckAll: 'Tous déselectionner',
-        checked: 'selectionnez d\'autres technologies',
-        checkedPlural: 'technologies selectionnées',
-        searchPlaceholder: 'Chercher',
-        searchEmptyResult: 'Aucun resultat...',
-        searchNoRenderText: 'Type in search box to see resul...',
-        defaultTitle: 'Selectionnez une technologie',
-        allSelected: 'Toute les technologies sont selectionnées',
-    };
-
-    myOptionsColors: IMultiSelectOption[];
-    myOptionsTechnos: IMultiSelectOption[];
 
     constructor(
         private loaderService: LoaderService,
@@ -146,8 +110,8 @@ export class WebsiteFormComponent implements OnInit {
         this.loadDataForSelectService.getTechnology()
             .subscribe(data => {
                 this.technologies = data;
-                this.myOptionsTechnos = this.technologies;
-                console.log(this.myOptionsTechnos);
+                this.technology = this.technologies;
+                console.log(this.technology);
                 });
     }
 
@@ -155,8 +119,8 @@ export class WebsiteFormComponent implements OnInit {
         this.loadDataForSelectService.getColor()
             .subscribe(data => {
                 this.colors = data;
-                this.myOptionsColors = this.colors;
-                console.log(this.myOptionsColors);
+                this.color = this.colors;
+                console.log(this.color);
             });
     }
 
