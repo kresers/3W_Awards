@@ -205,8 +205,6 @@ export class ProfilMyProfilComponent implements OnInit {
     /**
      * Description : load all countries into simple select  of api
      */
-    protected
-
     getAllCountries() {
         this.loadDataForSelectService.getCountry()
             .subscribe(data => {
