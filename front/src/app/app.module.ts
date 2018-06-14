@@ -32,7 +32,6 @@ import {ClientCardsComponent} from './client-cards/client-cards.component';
 import {ClientInfoComponent} from './client-info/client-info.component';
 import {ProfileNotedProjectsComponent} from './profile-noted-projects/profile-noted-projects.component';
 import {WebsiteFormComponent} from './website-form/website-form.component';
-
 import {UserService} from '../providers/user-service.service';
 import {JwtInterceptor} from '../interceptor/jwt.interceptor';
 import {ErrorInterceptor} from '../interceptor/error.interceptor';
@@ -59,6 +58,7 @@ import {Ng2ImgMaxModule} from 'ng2-img-max';
 import {ImageCropperModule} from 'ngx-image-cropper';
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from '../providers/contact.service';
+import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     return new AuthHttp(new AuthConfig({}), http, options);
@@ -108,8 +108,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
         ReactiveFormsModule,
         HttpClientModule,
         NgbModule.forRoot(),
-        MultiselectDropdownModule,
-        ImageCropperModule
+        AngularMultiSelectModule
     ],
     exports: [],
 
